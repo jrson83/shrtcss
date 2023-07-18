@@ -1,0 +1,11 @@
+@use "../functions" as *;
+
+// Variables: Themes
+$themes: (
+  light: (
+    color-border: #ccc,
+  ),
+  dark: (
+    color-border: #ccc,
+  ),
+) !default;

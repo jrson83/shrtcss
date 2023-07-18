@@ -1,7 +1,3 @@
-.keep-m {
-  color: #fff;
-}
-
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -119,10 +115,18 @@ svg {
   pointer-events: none;
 }
 
-.keep-v {
-  color: #fff;
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --color-border: #ccc;
+  }
 }
-
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-border: #ccc;
+  }
+}
 .keep-u {
   color: #fff;
 }
