@@ -1,0 +1,8 @@
+@use "../mixins" as *;
+
+// Mixin: Font-Face
+@include mix-font-face("Inter", "/fonts/inter-300-700", 300, normal);
+@include mix-font-face("Inter", "/fonts/inter-300-700", 400, normal);
+@include mix-font-face("Inter", "/fonts/inter-300-700", 500, normal);
+@include mix-font-face("Inter", "/fonts/inter-300-700", 600, normal);
+@include mix-font-face("Inter", "/fonts/inter-300-700", 700, normal);

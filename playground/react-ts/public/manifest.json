@@ -1,0 +1,12 @@
+{
+  "name": "shrtcss Playground - React",
+  "short_name": "shrtcss",
+  "description": "shrtcss Playground react-ts",
+  "lang": "en",
+  "id": "/",
+  "start_url": "/",
+  "theme_color": "#6190ff",
+  "background_color": "#f8f8f8",
+  "orientation": "natural",
+  "display": "standalone"
+}
