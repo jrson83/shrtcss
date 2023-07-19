@@ -1,0 +1,7 @@
+@use "sass:map";
+
+// Utility: Divider
+hr {
+  border: 0;
+  border-block-start: 1px solid var(--color-border);
+}
