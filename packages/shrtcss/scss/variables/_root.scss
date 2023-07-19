@@ -1,0 +1,21 @@
+// Variables: Default config
+$root: (
+  font-family: (
+    "Inter", system-ui, -apple-system, "BlinkMacSystemFont",
+    "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji"
+  ),
+  -webkit-font-smoothing: antialiased,
+  -moz-osx-font-smoothing: grayscale,
+  font-weight: normal,
+  line-height: 1.5,
+  text-rendering: optimizelegibility,
+  font-synthesis: none,
+  text-size-adjust: 100%,
+  scrollbar-gutter: stable both-edges,
+
+  --border-radius: 0.25rem,
+  --spacing: 1rem,
+  --doc-height: 100%,
+) !default;
