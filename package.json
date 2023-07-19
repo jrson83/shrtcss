@@ -9,7 +9,7 @@
     "reinstall": "pnpm run clean:workspace && pnpm install",
     "list": "pnpm recursive list",
     "list:workspaces": "pnpm m ls --depth -1 --porcelain",
-    "============= ROME ==================": "",
+    "============= STYLE =================": "",
     "style:check": "stylelint \"./packages/shrtcss/**/*.scss\" -f verbose --color",
     "style": "stylelint \"./packages/shrtcss/**/*.scss\" --fix -f verbose —color",
     "lint": "rome check --apply-unsafe .",
@@ -54,7 +54,7 @@
     "yarn": "use `pnpm` instead"
   },
   "nano-staged": {
-    "*.ts": "rome check --apply-unsafe .",
+    "*.{ts,tsx}": "rome check --apply-unsafe .",
     "*": "rome format --write .",
     "*.scss": "stylelint \"./packages/shrtcss/**/*.scss\" --fix"
   },
