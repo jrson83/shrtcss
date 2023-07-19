@@ -127,8 +127,9 @@ svg {
     --color-border: #ccc;
   }
 }
-.keep-u {
-  color: #fff;
+hr {
+  border: 0;
+  border-block-start: 1px solid var(--color-border);
 }
 
 .keep-e {
