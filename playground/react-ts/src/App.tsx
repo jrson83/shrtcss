@@ -1,4 +1,4 @@
-import { Divider, Heading } from '#/components'
+import { Divider, Heading } from '#/components/ui'
 
 type AppType = React.FC
 
