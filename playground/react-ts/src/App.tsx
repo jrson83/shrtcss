@@ -1,4 +1,4 @@
-import { Divider, Heading, List, ListItem } from '#/components/ui'
+import { Button, Divider, Heading, List, ListItem } from '#/components/ui'
 import { testMapData } from '#/constants'
 
 type AppType = React.FC
@@ -32,10 +32,10 @@ const App: AppType = () => {
         items={testMapData}
         itemRenderer={({ id, title, createdAt }) => (
           <ListItem key={`test-data-list-${id}`}>
-            <button type='button' className='list-group__btn'>
+            <Button className='list-group__btn'>
               <span className='list-group__title'>{title}</span>
               <small className='list-group__desc'>{createdAt}</small>
-            </button>
+            </Button>
           </ListItem>
         )}
       />
