@@ -1,8 +1,14 @@
 @use "../variables" as *;
 
-// Mixin: Root
-@mixin mix-root {
-  :root {
+/// Generate variables from a map.
+/// @param {map} $root - The map.
+/// @param {string} $selector - The selector.
+/// @return {string} - The generated variables.
+@mixin mix-selector(
+    $root: $root,
+    $selector: ':root'
+  ) {
+    #{$selector} {
     @each $item, $value in $root {
       #{$item}: #{$value};
     }

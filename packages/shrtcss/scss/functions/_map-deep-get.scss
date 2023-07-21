@@ -1,6 +1,9 @@
 @use "sass:map";
 
-// Function: map-deep-get
+/// Map deep get.
+/// @param {Map} $map - The map.
+/// @param {Arglist} $keys - The key chain.
+/// @return {*} - The desired value.
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
     $map: map.get($map, $key);

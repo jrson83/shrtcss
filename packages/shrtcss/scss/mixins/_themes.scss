@@ -1,11 +1,17 @@
 @use "../functions" as *;
 @use "../variables" as *;
 
-// Mixin: Themes
-@mixin mix-themes {
+/// Generate theme variables.
+/// @param {map} $themes - The themes map.
+/// @param {string} $selector - The selector.
+/// @return {string} - The generated theme variables.
+@mixin mix-themes(
+    $themes: $themes,
+    $selector: ':root'
+  ) {
   @each $theme, $map in $themes {
     @media (prefers-color-scheme: #{$theme}) {
-      :root {
+      #{$selector} {
         color-scheme: #{$theme};
 
         @each $key, $submap in $map {
