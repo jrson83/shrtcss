@@ -1,9 +1,9 @@
-type DividerProps = {}
-
-type DividerType = React.FC<React.HTMLAttributes<HTMLHRElement> & DividerProps>
+import type { DividerType } from '#/types'
 
 const Divider: DividerType = () => {
   return <hr />
 }
+
+Divider.displayName = 'Divider'
 
 export default Divider

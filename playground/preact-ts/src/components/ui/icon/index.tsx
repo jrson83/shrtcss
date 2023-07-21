@@ -1,13 +1,5 @@
 import { icons } from '#/constants'
-
-interface IconProps extends JSX.HTMLAttributes<SVGAElement> {
-  color?: string
-  icon: keyof typeof icons
-  size?: number
-  title: string
-}
-
-type IconType = FunctionComponent<IconProps>
+import type { IconType } from '#/types'
 
 const Icon: IconType = ({ className, color, icon, size = 32, title }) => {
   return (
@@ -34,5 +26,7 @@ const Icon: IconType = ({ className, color, icon, size = 32, title }) => {
     </svg>
   )
 }
+
+Icon.displayName = 'Icon'
 
 export default Icon
