@@ -1,16 +1,5 @@
+import type { ListItemType, ListProps } from '#/types'
 import { h } from 'preact'
-
-/** include missing types from: https://github.com/DefinitelyTyped/DefinitelyTyped/blob/3c9701a7e54a1bd553cf66ebcaca5ac7f91d0f99/types/react/index.d.ts#L819C5-L823C74 */
-type PropsWithoutRef<P> = P extends any
-  ? 'ref' extends keyof P
-    ? Omit<P, 'ref'>
-    : P
-  : P
-
-/** include missing types from: https://github.com/DefinitelyTyped/DefinitelyTyped/blob/3c9701a7e54a1bd553cf66ebcaca5ac7f91d0f99/types/react/index.d.ts#L851 */
-type ComponentPropsWithoutRef<T extends ElementType> = PropsWithoutRef<
-  ComponentProps<T>
->
 
 /**
  * fix preact wrong types!!! (4 year open preact issue) https://github.com/preactjs/preact/issues/1930
@@ -32,20 +21,9 @@ declare module 'preact' {
   ): VNode<unknown>
 }
 
-type ListItemType = FunctionComponent
-
 const ListItem: ListItemType = ({ children }) => {
   return <li className='list-group__item'>{children}</li>
 }
-
-export interface BaseListProps<Item, As extends ElementType> {
-  as?: As
-  items: Item[]
-  itemRenderer: (item: Item) => VNode<unknown>
-}
-
-export type ListProps<Item, As extends ElementType> = BaseListProps<Item, As> &
-  Omit<ComponentPropsWithoutRef<As>, keyof BaseListProps<Item, As>>
 
 const List = <Item, As extends ElementType>({
   as,
@@ -65,5 +43,7 @@ const List = <Item, As extends ElementType>({
     items.map(itemRenderer)
   )
 }
+
+List.displayName = 'List'
 
 export { List as default, ListItem }

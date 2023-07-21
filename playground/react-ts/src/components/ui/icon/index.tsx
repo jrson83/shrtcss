@@ -1,15 +1,5 @@
 import { icons } from '#/constants'
-
-export interface IconProps {
-  color?: string
-  icon: keyof typeof icons
-  size?: number
-  title: string
-}
-
-export type IconType = React.FC<
-  React.ComponentPropsWithoutRef<'svg'> & IconProps
->
+import type { IconType } from '#/types'
 
 const Icon: IconType = ({ className, color, icon, size = 32, title }) => {
   return (
@@ -36,5 +26,7 @@ const Icon: IconType = ({ className, color, icon, size = 32, title }) => {
     </svg>
   )
 }
+
+Icon.displayName = 'Icon'
 
 export default Icon

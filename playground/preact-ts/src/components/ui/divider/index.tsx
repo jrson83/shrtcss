@@ -1,11 +1,9 @@
-type DividerProps = {}
-
-type DividerType = FunctionComponent<
-  JSX.HTMLAttributes<HTMLHRElement> & DividerProps
->
+import type { DividerType } from '#/types'
 
 const Divider: DividerType = () => {
   return <hr />
 }
+
+Divider.displayName = 'Divider'
 
 export default Divider
