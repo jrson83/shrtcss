@@ -8,7 +8,7 @@
 ## Documentation
 
 > **Note**  
-> shrtcss is urrently in development.
+> shrtcss is currently in development.
 
 ## Components
 
