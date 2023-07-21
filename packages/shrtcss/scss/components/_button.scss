@@ -1,3 +1,75 @@
+@use "sass:color";
+@use "../mixins" as *;
+
 .btn {
-  color: #fff;
+  --btn-scale: 1;
+
+  padding-block: .75ch;
+  padding-inline: 1.75ch;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background: var(--color-surface);
+  color: inherit;
+  font-size: calc(var(--btn-scale, 1) * 1rem);
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  will-change: transform;
+
+  &:focus {
+    outline-color: transparent; /* Change outline color to transparent so it's invisible but still appears in Windows High Contrast Mode */
+    outline-style: solid; /* Necessary to hide the default outline style in Edge since it has 2 tones. */
+    box-shadow: 0 0 0 3px var(--color-bg), 0 0 0 5px var(--color-accent);
+  }
+
+  &:active {
+    transform: scale(.98);
+    transition: none;
+  }
+
+  &[disabled],
+  &:disabled,
+  &.disabled {
+    opacity: 0.8;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  // https://www.kevinpowell.co/article/scaling-buttons-with-css-custom-properties/
+  &-sm {
+    --btn-scale: 0.8;
+  }
+
+  &-lg {
+    --btn-scale: 1.2;
+  }
+
+  &-fw {
+    width: 100%;
+    font-weight: 600;
+  }
+
+  &-float {
+    display: inline-flex;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-color: var(--color-border);
+    background: var(--color-accent);
+    text-align: center;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: color.scale(#375bd2, $lightness: 1%);
+    }
+  }
 }
+
+@include mix-background-color;
+@include mix-text-color;

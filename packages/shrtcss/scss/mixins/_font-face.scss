@@ -1,6 +1,11 @@
 @use "sass:string";
 
-// Mixin: Font-face
+/// Generate font-face declaration.
+/// @param {string} $font-name - The font family name.
+/// @param {string} $file-name - The font file name.
+/// @param {string} $weight - The font weight.
+/// @param {string} $style - The font style.
+/// @return {string} - The generated font-face declaration.
 @mixin mix-font-face($font-name, $file-name, $weight: normal, $style: normal) {
   @font-face {
     font-family: string.quote($font-name);
@@ -14,6 +19,10 @@
   }
 }
 
+/// Generate font-face fallback declaration.
+/// @param {string} $fallback-name - The font family fallback-name.
+/// @param {string} $font-name - The font family name.
+/// @return {string} - The generated font-face fallback declaration.
 @mixin mix-font-fallback($fallback-name, $font-name) {
   @font-face {
     font-family: string.quote($fallback-name);

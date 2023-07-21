@@ -1,11 +1,32 @@
 @use "../functions" as *;
 
 // Variables: Themes
+// PLACEHOLDER COLORS
 $themes: (
   light: (
     color-border: #ccc,
+
+    color-text-base: #1b1b1b,
+    color-text-weak: #434343,
+    color-text-weaker: #666,
+    color-text-weakest: #c8c8c8,
+
+    color-status-info: #4091d7,
+    color-status-danger: #b34045,
+    color-status-success: #2d884d,
+    color-status-warning: #fecf6d,
   ),
   dark: (
     color-border: #ccc,
+
+    color-text-base: #c8c8c8,
+    color-text-weak: #666,
+    color-text-weaker: #434343,
+    color-text-weakest: #1b1b1b,
+
+    color-status-info: #4091d7,
+    color-status-danger: #b34045,
+    color-status-success: #2d884d,
+    color-status-warning: #fecf6d,
   ),
 ) !default;
