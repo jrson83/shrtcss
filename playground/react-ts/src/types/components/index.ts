@@ -1,4 +1,5 @@
 export * from './button'
+export * from './dialog'
 export * from './divider'
 export * from './heading'
 export * from './icon'

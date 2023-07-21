@@ -1,9 +1,22 @@
-import { Button, Divider, Heading, List, ListItem } from '#/components/ui'
+import {
+  Button,
+  Dialog,
+  Divider,
+  Heading,
+  Icon,
+  List,
+  ListItem,
+} from '#/components/ui'
 import { testMapData } from '#/constants'
+import { useState } from 'preact/hooks'
 
 type AppType = FunctionComponent
 
 const App: AppType = () => {
+  const [isDialogVisible, setIsDialogVisible] = useState(false)
+  const showDialog = () => setIsDialogVisible(true)
+  const closeDialog = () => setIsDialogVisible(false)
+
   return (
     <div>
       <Heading level={'h1'}>
@@ -39,6 +52,24 @@ const App: AppType = () => {
           </ListItem>
         )}
       />
+      <Divider />
+      <Button className='btn-float' onClick={showDialog}>
+        <Icon title='Add Item' icon={'question'} />
+      </Button>
+      <Dialog
+        name='test'
+        type='info'
+        title='Test Heading'
+        submitButton={{
+          label: 'Submit',
+          action: () => console.log('action'),
+        }}
+        cancelButton={{ label: 'Cancel' }}
+        isDialogVisible={isDialogVisible}
+        closeDialog={closeDialog}
+      >
+        <p>Please confirm to placeholder.</p>
+      </Dialog>
     </div>
   )
 }
