@@ -1,8 +1,7 @@
-import { Button } from '../'
+import { Button, Divider } from '../'
 import { Icon } from '../'
 import { List, ListItem } from '../'
-import { icons } from '../icon/icon.data'
-import { useCloseOnClickOutside } from '@shrtcss/react-hooks'
+import { useOnClickOutside } from '@shrtcss/react-hooks'
 import { cx } from 'classix'
 import { useRef, useState } from 'react'
 
@@ -18,7 +17,7 @@ const Dropdown: React.FC<DropdownProps> = ({ icon, label, position }) => {
 
   const toggleDropdown = () => setIsOpen(!isOpen)
 
-  const ref = useCloseOnClickOutside(() => {
+  const ref = useOnClickOutside(() => {
     if (isOpen) {
       toggleDropdown()
     }
@@ -43,33 +42,21 @@ const Dropdown: React.FC<DropdownProps> = ({ icon, label, position }) => {
           role='list'
           ref={ref}
           aria-expanded={true}
-          items={
-            [
-              {
-                id: '1',
-                title: 'Games',
-                icon: 'ps4',
-              },
-              {
-                id: '2',
-                title: 'Settings',
-                icon: 'settings',
-              },
-            ] as Array<{
-              id: string
-              title: string
-              icon: keyof typeof icons
-            }>
-          }
-          itemRenderer={({ id, title, icon }) => (
-            <ListItem key={`test-data-menu-${id}`} className='menu__item'>
-              <a href='#1'>
-                <Icon title={title} icon={icon} size={16} />
-                <span>{title}</span>
-              </a>
-            </ListItem>
-          )}
-        ></List>
+        >
+          <ListItem className='menu__item'>
+            <a href='#1'>
+              <Icon title='Games' icon={'ps4'} size={16} />
+              <span>Games</span>
+            </a>
+          </ListItem>
+          <Divider />
+          <ListItem className='menu__item'>
+            <a href='#1'>
+              <Icon title='Settings' icon={'settings'} size={16} />
+              <span>Settings</span>
+            </a>
+          </ListItem>
+        </List>
       )}
     </div>
   )

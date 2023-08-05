@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-const useCloseOnClickOutside = (callback: () => void) => {
+const useOnClickOutside = (callback: () => void) => {
   const ref = useRef<HTMLUListElement>(null)
 
   useEffect(() => {
@@ -19,4 +19,4 @@ const useCloseOnClickOutside = (callback: () => void) => {
   return ref
 }
 
-export { useCloseOnClickOutside }
+export { useOnClickOutside }

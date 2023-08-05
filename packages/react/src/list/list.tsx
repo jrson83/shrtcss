@@ -7,9 +7,13 @@ import type {
 import { cx } from 'classix'
 import { forwardRef } from 'react'
 
-const ListItem: ListItemType = ({ children, className }) => {
+const ListItem: ListItemType = ({ children, className, role, ...props }) => {
   return (
-    <li className={cx(className ? className : 'list-group__item')}>
+    <li
+      role={role}
+      className={cx(className ? className : 'list-group__item')}
+      {...props}
+    >
       {children}
     </li>
   )
@@ -17,10 +21,21 @@ const ListItem: ListItemType = ({ children, className }) => {
 
 const List: ListType = forwardRef(
   <Item, C extends React.ElementType = 'ul'>(
-    { as, className, items, itemRenderer, ...props }: TextProps<Item, C>,
+    {
+      as,
+      children,
+      className,
+      items,
+      itemRenderer,
+      ...props
+    }: TextProps<Item, C>,
     ref?: PolymorphicRef<C>
   ) => {
     const Component = as || 'ul'
+
+    if (Array.isArray(items) && items.length > 0 && children) {
+      throw new Error('Error in List component')
+    }
 
     return (
       <Component
@@ -29,7 +44,7 @@ const List: ListType = forwardRef(
         ref={ref}
         {...props}
       >
-        {items.map(itemRenderer)}
+        {items && itemRenderer ? items.map(itemRenderer) : children}
       </Component>
     )
   }

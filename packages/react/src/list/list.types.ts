@@ -32,8 +32,8 @@ export type TextProps<
 > = PolymorphicComponentPropWithRef<
   C,
   {
-    items: Item[]
-    itemRenderer: (item: Item) => React.ReactNode
+    items?: Item[]
+    itemRenderer?: (item: Item) => React.ReactNode
   }
 >
 

@@ -38,9 +38,9 @@
       padding-inline: 0.25em;
       font-size: type-var('sm');
 
-      &:not(:last-child) {
+      /* &:not(:last-child) {
         border-block-end: 1px solid color('border');
-      }
+      } */
 
       a {
         display: block;

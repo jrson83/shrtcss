@@ -1,4 +1,4 @@
-export * from './use-close-on-click-outside'
+export * from './use-on-click-outside'
 export * from './use-event-listener'
 export * from './use-focus-trap'
 export * from './use-form'
