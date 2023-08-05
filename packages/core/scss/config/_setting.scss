@@ -1,0 +1,27 @@
+@use 'sass:map';
+
+$settings: () !default;
+$settings: map.merge(
+  (
+    'themes': ['light', 'dark'],
+    'property-prefix': 'shrt',
+    'custom-properties': true,
+    'modules': (
+      'font': true,
+      'reset': true,
+      'root': true,
+      'accessibility': true,
+      'background-color': true,
+      'button': true,
+      'dialog': true,
+      'divider': true,
+      'dropdown': true,
+      'form': true,
+      'list': true,
+      'tabs': true,
+      'utilities': true,
+      'typography': true
+    )
+  ),
+  $settings
+);

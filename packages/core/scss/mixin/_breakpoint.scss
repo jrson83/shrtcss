@@ -1,0 +1,30 @@
+@use 'sass:map';
+@use 'sass:string';
+@use '../config' as *;
+@use '../function' as *;
+
+/// Return a media query for a breakpoint.
+/// @param {string} $breakpoint - The breakpoint name.
+/// @return {string} - The media query.
+/// @throws {warning} - If the breakpoint does not exist.
+@mixin breakpoint($breakpoint, $direction: 'min', $type: false) {
+  @if not map-has-key($breakpoints, $breakpoint) {
+    @warn 'Warning: `#{$name}` is not a valid breakpoint name.';
+  }
+
+  @if $breakpoint == 'xs' {
+    @content;
+  } @else if $type {
+    @media #{$type} and (#{$direction}-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else if $direction == 'max' {
+    @media only screen and (max-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @media (#{$direction}-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../config' as *;
+
+@function px-to-rem($size) {
+  @if unit($size) == 'rem' {
+    @return $size;
+  } @else if unit($size) == 'px' {
+    @return math.div($size, 16px) * 1rem; 
+  }
+
+  @error 'Error';
+}
+
+@function type-ratio($key) {
+  @return map.get($type-ratios, $key);
+}
+
+@function type-var($size) {
+  @return var(--font-size-#{$size});
+}
+
+@function type-size(
+  $step,
+  $base: map.get($type-sizes, 'font-size-base'),
+  $ratio: map.get($type-sizes, 'font-ratio-min'),
+) {
+  @return math.pow($ratio, $step) * $base;
+}
+
+@function rnd($number, $places: 0) {
+  $n: 1;
+
+  @if $places > 0 {
+    @for $i from 1 through $places {
+      $n: $n * 10;
+    }
+  }
+
+  @return math.div(math.round($number * $n), $n);
+}
+
+// https://stackoverflow.com/a/74399869
+@function round-number($value, $fraction-digits: 0) {
+  $power: math.pow(10, $fraction-digits);
+
+  @return math.div(math.round($power * $value), $power);
+}
+
+/// https://gist.github.com/finteractive/9fd85e3cd4fcd8e6c19701839c6a868d
+/// Converts units from pixels to EMs
+/// @require $type-sizes
+/// @param {string} $px - pixel units to convert
+/// @param {string} $base [16px] - base font size
+@function em($px, $base: map.get($type-sizes, 'font-size-base')) {
+  @return math.div($px, $base) * 1em;
+}
+
+/// Converts units from pixels to REMs
+/// @require $type-sizes
+/// @param {string} $px - pixel units to convert
+/// @param {string} $base [16px] - base font size
+@function rem($px, $base: map.get($type-sizes, 'font-size-base')) {
+  @return math.div($px, $base) * 1rem;
+}
+
+/// Converts units from REMs to pixels
+/// @require $type-sizes
+/// @param {string} $px - pixel units to convert
+/// @param {string} $base [16px] - base font size
+@function px($rem, $base: map.get($type-sizes, 'font-size-base')) {
+  @return math.div($rem, $base) * 16px;
+}

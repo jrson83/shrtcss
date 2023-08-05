@@ -11,7 +11,9 @@
     "skipLibCheck": true,
     "types": ["node", "vitest"],
     "paths": {
-      "shrtcss": ["./packages/shrtcss/scss/main.scss"]
+      "@shrtcss/core": ["./packages/core/scss/shrtcss.scss"],
+      "@shrtcss/react": ["./packages/react/src/index.ts"],
+      "@shrtcss/react-hooks": ["./packages/react-hooks/src/index.ts"]
     }
   },
   "exclude": [

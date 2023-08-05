@@ -1,0 +1,11 @@
+@use '../mixin' as *;
+
+@mixin generate-accessibility {
+  .sr-only {
+    @include visually-hidden;
+  }
+
+  [tabindex='-1']:focus {
+    outline: none !important;
+  }
+}

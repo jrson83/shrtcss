@@ -1,0 +1,37 @@
+@use '../function' as *;
+@use '../mixin' as *;
+
+@mixin generate-divider() {
+  hr {
+    box-sizing: content-box;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+    border: 0;
+    border-block-start: 1px solid color('border-strong');
+  }
+  
+  // https://melvingeorge.me/blog/add-text-in-center-on-divider-hr-html-css
+  .divider {
+    display: flex;
+    align-items: center;
+    color: color('text-weaker');
+    text-align: center;
+    user-select: none;
+  
+    &::after,
+    &::before {
+      content: '';
+      flex: 1;
+      border-block-start: 1px solid color('border-strong');
+    }
+  
+    &:not(:empty)::before {
+      @include margin('right');
+    }
+  
+    &:not(:empty)::after {
+      @include margin('left');
+    }
+  }
+}

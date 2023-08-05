@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use 'font' as *;
+@use 'type' as *;
+
+$typography: () !default;
+$typography: map.merge(
+  (
+    'font-family': map.get($fonts, 'default'),
+    '-webkit-font-smoothing': antialiased,
+    '-moz-osx-font-smoothing': grayscale,
+    '-webkit-tap-highlight-color': transparent,
+    'font-weight': normal,
+    'line-height': 1.5,
+    'text-rendering': optimizelegibility,
+    'font-synthesis': none,
+    'font-size': map.get($type-sizes, 'font-size-base'),
+    'text-size-adjust': 100%,
+    'scrollbar-gutter': 'stable both-edges',
+  ),
+  $typography,
+);

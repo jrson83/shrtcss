@@ -1,0 +1,6 @@
+@use 'shrtcss' as * with (
+  $settings: (
+    'css-custom-properties': true,
+  ),
+);
+@include generate-modules;

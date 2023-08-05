@@ -1,0 +1,22 @@
+@use 'sass:map';
+
+$modules: () !default;
+$modules: map.merge(
+  (
+    'font': true,
+    'reset': true,
+    'root': true,
+    'accessibility': true,
+    'background-color': true,
+    'button': true,
+    'dialog': true,
+    'divider': true,
+    'dropdown': true,
+    'form': true,
+    'list': true,
+    'tabs': true,
+    'utilities': true,
+    'typography': true
+  ),
+  $modules,
+);

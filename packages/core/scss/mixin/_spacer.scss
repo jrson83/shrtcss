@@ -1,0 +1,53 @@
+@use 'sass:list';
+@use 'sass:map';
+@use '../config' as *;
+@use '../function' as *;
+
+/// Generate margin on an element.
+/// @param {string} $direction - The margin direction.
+/// @param {string} $size - The margin size.
+/// @return {string} - The generated margin declaration.
+@mixin margin($direction: 'all', $size: 'base') {
+  @include spacer($direction, $size, $type: 'margin');
+}
+
+/// Generate padding on an element.
+/// @param {string} $direction - The padding direction.
+/// @param {string} $size - The padding size.
+/// @return {string} - The generated padding declaration.
+@mixin padding($direction: 'all', $size: 'base') {
+  @include spacer($direction, $size, $type: 'padding');
+}
+
+/// Use in helper `@mixin's: margin & padding
+@mixin spacer($direction: 'all', $size: 'base', $type: null) {
+  $valid-directions: all, top, bottom, left, right, x, y;
+
+  @if not list.index($valid-directions, $direction) {
+    @error '#{$direction} is not a valid direction. Expected one of #{$valid-directions}.';
+  }
+
+  @if $type != 'padding' and $type != 'margin' {
+    @error '`#{$type}` is not a valid type. Expected one of `padding`, `margin`.';
+  }
+
+  $amount: config($spacers, $size);
+
+  @if $direction == 'all' {
+    #{$type}: $amount;
+  } @else if $direction == 'x' {
+    #{$type}-inline: $amount;
+  } @else if $direction == 'y' {
+    #{$type}-block: $amount;
+  } @else if $direction == 'top' {
+    #{$type}-block-start: $amount;
+  } @else if $direction == 'right' {
+    #{$type}-inline-end: $amount;
+  } @else if $direction == 'bottom' {
+    #{$type}-block-end: $amount;
+  } @else if $direction == 'left' {
+    #{$type}-inline-start: $amount;
+  } @else {
+    @error 'Unknown direction `#{$direction}`.';
+  }
+}

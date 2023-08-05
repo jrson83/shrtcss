@@ -1,0 +1,119 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../config' as *;
+@use '../function' as *;
+
+@mixin generate-typography() {
+  :root {
+    @each $key, $value in $typography {
+      #{$key}: $value;
+    }
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: color('text-base');
+    font-weight: 500;
+  }
+
+  p {
+    color: color('text-weak');
+    font-size: type-var('base');
+  }
+
+  @include generate-type-scale;
+
+  h1 {
+    font-size: type-var('xxxl');
+  }
+  
+  h2 {
+    font-size: type-var('xxl');
+  }
+  
+  h3 {
+    font-size: type-var('xl');
+  }
+  
+  h4 {
+    font-size: type-var('lg');
+  }
+  
+  h5 {
+    font-size: type-var('md');
+  }
+
+  small {
+    font-size: type-var('sm');
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  .bottom-end, .left-start, .top-start.is-rtl {
+    transform-origin: right top 0;
+  }
+
+  .n-popout {
+    visibility: hidden;
+    position: fixed;
+    z-index: 800;
+    transform: translateY(-10px) scale(0.97);
+    transform-origin: left top 0;
+    transition: transform 0.2s ease,visibility 0.2s ease;
+    border-radius: 0.25rem;
+    opacity: 0;
+    background: color('surface');
+    box-shadow: var(--n-box-shadow-popout);
+    pointer-events: none;
+    will-change: transform, opacity, visibility;
+
+    &[open] {
+      visibility: visible;
+      transform: translateY(0) translateX(0) scale(1);
+      transition-property: transform;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  .n-dropdown-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: calc(1rem + 2px) 1rem;
+    background-color: color('surface-raised');
+    font-weight: 400;
+    border-block-end: 1px solid color('border');
+    border-start-start-radius: 0.25rem;
+    border-start-end-radius: 0.25rem;
+    gap: 1rem;
+  }
+}
+
+@mixin generate-type-scale() {
+  $min-breakpoint: config($breakpoints, 'xs');
+  $max-breakpoint: config($breakpoints, 'xl');
+  $font-size-base: config($type-sizes, 'font-size-base');
+  $font-size-max: config($type-sizes, 'font-size-max');
+  $font-ratio-min: config($type-sizes, 'font-ratio-min');
+  $font-ratio-max: config($type-sizes, 'font-ratio-max');
+  
+
+  :root {
+    @each $size, $step in $type-steps {
+      $min-px: math.pow($font-ratio-min, $step) * $font-size-base;
+      $max-px: math.pow($font-ratio-max, $step) * $font-size-max;
+      $slope: math.div($max-px - $min-px, $max-breakpoint - $min-breakpoint);
+      $slope-vw: rnd($slope * 100, 2);
+      $intercept-rems: rnd(px-to-rem($min-px - $slope * $min-breakpoint), 2);
+      $min-rems: rnd(px-to-rem($min-px), 2);
+      $max-rems: rnd(px-to-rem($max-px), 2);
+  
+      --font-size-#{$size}: clamp(#{$min-rems}, #{$slope-vw}vw + #{$intercept-rems}, #{$max-rems});
+  
+      // @debug clamp(#{$min-rems}, #{$slope-vw}vw + #{$intercept-rems}, #{$max-rems});
+    }
+  }
+}

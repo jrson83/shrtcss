@@ -1,0 +1,50 @@
+@use '@shrtcss/core/scss/shrtcss' as shrtcss with (
+  $settings: (
+    'css-custom-properties': true,
+  ),
+);
+@include shrtcss.generate-modules;
+
+/* https://github.com/sass/sass/issues/2842 */
+
+/** Display styles for stories */
+:root {
+  /** Overwrite default bg to prevent flashing */
+  --ladle-bg-color-primary: var(--shrt-color-surface);
+  --ladle-bg-color-secondary: var(--shrt-color-bg);
+  --ladle-color-primary: var(--shrt-color-text-weak);
+}
+
+body {
+  background-color: var(--ladle-bg-color-primary);
+}
+
+.ladle-aside {
+  background-color: var(--ladle-bg-color-secondary);
+  border-inline-start: 1px solid var(--shrt-color-border);
+}
+
+.story-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.example-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  border: 1px solid var(--shrt-color-border);
+  border-radius: var(--shrt-border-radius);
+}

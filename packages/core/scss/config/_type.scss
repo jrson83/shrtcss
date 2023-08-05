@@ -1,0 +1,41 @@
+@use 'sass:map';
+
+$type-ratios: () !default;
+$type-ratios: map.merge(
+  (
+    'minor-second': 1.067,
+    'major-second': 1.125,
+    'minor-third': 1.2,
+    'major-third': 1.25,
+    'perfect-fourth': 1.333,
+    'augmented-fourth': 1.414,
+    'perfect-fifth': 1.5,
+    'golden-ratio': 1.618
+  ),
+  $type-ratios
+);
+$type-sizes: () !default;
+$type-sizes: map.merge(
+  (
+    'font-size-min': 0.875rem,
+    'font-size-base': 1rem,
+    'font-size-max': 1.125rem,
+    'font-ratio-min': map.get($type-ratios, 'major-second'),
+    'font-ratio-max': map.get($type-ratios, 'minor-third'),
+  ),
+  $type-sizes
+);
+$type-steps: () !default;
+$type-steps: map.merge(
+  (
+    'xs': -2,
+    'sm': -1,
+    'base': 0,
+    'md': 1,
+    'lg': 2,
+    'xl': 3,
+    'xxl': 4,
+    'xxxl': 5,
+  ),
+  $type-steps
+);

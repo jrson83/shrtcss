@@ -1,0 +1,15 @@
+@use 'sass:map';
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map.merge(
+  (
+    'zero': 0,
+    'xs': ($spacer * 0.25),
+    'sm': ($spacer * 0.5),
+    'base': $spacer,
+    'md': ($spacer * 1.5),
+    'lg': ($spacer * 3),
+  ),
+  $spacers,
+);

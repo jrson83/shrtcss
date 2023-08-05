@@ -1,0 +1,85 @@
+@use '../function' as *;
+@use '../mixin' as *;
+
+@mixin generate-list() {
+  .list-group {
+    $this-list: &;
+
+    display: block;
+    border-radius: clamp(0px, ((100vw - 4px) - 100%) * 9999, 0.25rem);
+    background-color: color('surface');
+
+    @include breakpoint('lg', 'min', 'only screen') {
+      border: 1px solid color('border');
+    }
+    
+    &__item {
+      display: flex;
+      padding-block: 0.25rem;
+      padding-inline: 0.25rem;
+
+      @include breakpoint('lg', 'max') {
+        border-block-end: 1px solid color('border');
+      }
+
+      &:not(:last-child) {
+        border-block-end: 1px solid color('border');
+      }
+    }
+
+    &__title {
+      font-weight: 600;
+    }
+
+    &__desc {
+      color: color('text-weaker');
+      font-weight: 400;
+    }
+
+    &__btn {
+      all: unset;
+      outline: revert;
+      /* stylelint-disable-next-line order/properties-order -- Prevent breaking from unset. */
+      box-sizing: revert;
+      /* stylelint-disable-next-line order/properties-order */
+      display: flex;
+      flex: 1 1 0%;
+      flex-direction: column;
+      align-items: flex-start;
+      min-inline-size: 0;
+      padding-block: 1rem;
+      padding-inline: 1rem;
+      border-radius: var(--shrt-border-radius);
+      text-align: start;
+      cursor: pointer;
+
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+
+      &:focus-visible {
+        box-shadow: 0 0 0 2px color('accent');
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
+
+      &:hover {
+        background-color: color('info-weaker');
+        color: color('text-light');
+
+        #{$this-list}__desc {
+          @media (prefers-color-scheme: dark) {
+            color: color('text-weak');
+          }
+
+          @media (prefers-color-scheme: light) {
+            color: color('text-weakest');
+          }
+        }
+      }
+    }
+  }
+}

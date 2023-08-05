@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use 'border' as *;
+
+$button: () !default;
+$button: map.merge(
+  (
+    'border-radius': map.get($border, 'radius'),
+    'font-size': calc(var(--btn-scale, 1) * 1rem),
+    'font-weight': 500,
+    /* fix streched width when flex item */
+    'align-self': flex-start,
+    'will-change': transform,
+  ),
+  $button,
+);

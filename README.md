@@ -12,7 +12,15 @@
 
 ## Components
 
+- [ ] Button
+- [ ] Dialog
 - [ ] Divider
+- [ ] Dropdown
+- [ ] Form
+- [ ] Heading
+- [ ] Icon
+- [ ] List
+- [ ] Tabs
 
 ## License
 

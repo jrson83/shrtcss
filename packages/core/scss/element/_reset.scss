@@ -1,0 +1,90 @@
+@use '../function' as *;
+
+@mixin generate-reset {
+  :root {
+    --shrt-border-radius: 0.25rem;
+    
+    height: var(--doc-height);
+    background-color: color('bg');
+    color: color('text-weak');
+  }
+
+  html {
+    box-sizing: border-box;
+  
+    &:focus-within {
+      scroll-behavior: smooth;
+    }
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  p,
+  ol,
+  ul,
+  dl,
+  dd,
+  pre,
+  figure,
+  blockquote {
+    margin: 0;
+  }
+
+  body {
+    height: 100vh;
+    height: var(--doc-height);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    overflow-wrap: break-word;
+  }
+
+  ol,
+  ul {
+    padding: 0;
+
+    /* stylelint-disable-next-line string-quotes */
+    &[role="list"] {
+      list-style: none;
+    }
+  }
+
+  audio,
+  canvas,
+  embed,
+  iframe,
+  img,
+  object,
+  picture,
+  svg,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  svg {
+    pointer-events: none;
+  }
+  
+  [hidden] {
+    display: none;
+  }
+}

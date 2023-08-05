@@ -1,0 +1,18 @@
+@use 'sass:color';
+@use 'color' as *;
+
+/// Get text color based on background color.
+/// https://github.com/rah99/sass-via-use-forward/blob/main/src/scss/abstracts/_functions.scss
+/// @param {color} $color - The color to get the contrast color.
+/// @return {color} - The contrast color.
+@function color-contrast($color) {
+  @if type-of($color) != color {
+    @error '`#{$color}` is not a valid color but a #{type-of($color)}.';
+  }
+
+  @if color.lightness($color) > 70 { // Lightness function returns the "lightness" value of the calculated HSL (Hue, Saturation, Lightness) Color
+    @return color('text-dark');
+  } @else {
+    @return color('text-light');
+  }
+}

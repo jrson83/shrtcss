@@ -1,0 +1,14 @@
+@mixin visually-hidden {
+  position: absolute;
+  transform: scale(0);
+}
+
+@mixin full-width {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  padding: 1rem;
+  border-inline: none;
+  border-radius: 0;
+}

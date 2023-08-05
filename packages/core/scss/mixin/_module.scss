@@ -1,0 +1,62 @@
+@use 'sass:map';
+@use 'button' as *;
+@use 'color' as *;
+@use 'typography' as *;
+@use '../element' as *;
+@use '../config' as *;
+@use '../function' as *;
+
+/// Generate all mixins.
+@mixin generate-modules {
+  @if map-deep-get($settings, 'modules', 'font') {
+    @include generate-fonts;
+  }
+  
+  @if map-deep-get($settings, 'modules', 'reset') {
+    @include generate-reset;
+  }
+
+  @if map.get($settings, 'custom-properties') {
+    @include generate-color-properties;
+  }
+
+  @if map-deep-get($settings, 'modules', 'typography') {
+    @include generate-typography;
+  }
+
+  @if map-deep-get($settings, 'modules', 'background-color') {
+    @include generate-background-color;
+  }
+
+  @if map-deep-get($settings, 'modules', 'utilities') {
+    @include generate-utilities;
+  }
+
+  @if map-deep-get($settings, 'modules', 'button') {
+    @include generate-button;
+  }
+
+  @if map-deep-get($settings, 'modules', 'dialog') {
+    @include generate-dialog;
+  }
+
+  @if map-deep-get($settings, 'modules', 'divider') {
+    @include generate-divider;
+  }
+
+  @if map-deep-get($settings, 'modules', 'dropdown') {
+    @include generate-dropdown;
+  }
+
+  @if map-deep-get($settings, 'modules', 'form') {
+    @include generate-form;
+  }
+
+  @if map-deep-get($settings, 'modules', 'list') {
+    @include generate-list;
+  }
+
+  @if map-deep-get($settings, 'modules', 'tabs') {
+    @include generate-tabs;
+  }
+}

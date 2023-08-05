@@ -1,0 +1,107 @@
+@use 'sass:map';
+@use '../../function' as *;
+@use '../../mixin' as *;
+
+@mixin generate-form() {
+  .form {
+    &__group {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      width: 100%;
+      gap: 0.5rem;
+
+      @include margin('bottom');
+    }
+
+    &__label {
+      &-ifta {
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        left: 15px;
+        color: color('accent');
+        font-size: type-var('xs');
+        pointer-events: none;
+      }
+    }
+
+    &__field {
+      width: 100%;
+
+      /* margin: 0 0 20px;
+      padding: 35px 20px 15px; */
+      padding-top: 32px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+    }
+
+    &__helper {
+      color: color('text-weaker');
+      font-size: type-var('sm');
+    }
+  }
+
+  %input-element {
+    width: 100%;
+    border: 1px solid color('border');
+    border-radius: 0.25rem;
+    background: color('surface');
+    color: color('text-base');
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    vertical-align: middle;
+    word-spacing: inherit;
+    appearance: none;
+  }
+
+  input:not([type='hidden'], [type='checkbox'], [type='radio'], [type='button'], [type='submit'], [type='reset'], [type='color'], [type='file'], [type='image'], [type='range']),
+  textarea {
+    @extend %input-element !optional;
+
+    &[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &[readonly] {
+      opacity: 0.8;
+    }
+
+    &::placeholder {
+      color: color('text-weaker');
+
+      // font-size: 90%;
+      font-weight: 300;
+    }
+
+    &:focus {
+      border: 1px solid color('accent');
+      outline: none;
+      box-shadow: 4px 4px 10px rgb(0 0 0 / 6%);
+      
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &:required {
+      &:focus {
+        &:valid {
+          border-color: color('success');
+        }
+      }
+    }
+  }
+
+  input:not([type='hidden'], [type='checkbox'], [type='radio'], [type='button'], [type='submit'], [type='reset'], [type='color'], [type='file'], [type='image'], [type='range']):required:focus:invalid {
+    border-color: color('danger');
+  }
+
+  .ifta-field {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+  }
+}

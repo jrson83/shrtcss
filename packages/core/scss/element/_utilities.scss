@@ -1,0 +1,18 @@
+@mixin generate-utilities() {
+  .prevent-select {
+    user-select: none;
+  }
+
+  pre, code {
+    /* stylelint-disable-next-line font-family-no-duplicate-names */
+    font-family: monospace, monospace;
+  }
+
+  .lowercase {
+    text-transform: lowercase;
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+}

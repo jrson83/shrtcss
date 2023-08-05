@@ -1,0 +1,12 @@
+@use 'sass:map';
+
+$border: () !default;
+$border: map.merge(
+  (
+    'width': 1px,
+    'style': solid,
+    'radius': 0.25rem,
+    'color': color('border'),
+  ),
+  $border
+);
