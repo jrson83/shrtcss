@@ -5,6 +5,7 @@
 /// @param {string} $file-name - The font file name (without .woff2 extension).
 /// @param {string} $weight - The font weight.
 /// @param {string} $style - The font style.
+/// @param {string} $display - The font display property.
 /// @return {string} - The generated font-face declaration.
 @mixin font-face(
     $font-name: null,

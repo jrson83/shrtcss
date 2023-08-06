@@ -36,13 +36,14 @@
     "lint": "rome check --apply-unsafe .",
     "fmt": "rome format . --write",
     "clean": "rm -rf ./dist",
-    "build": "npm run clean && pnpm run build:sass && pnpm run build:sass-min",
+    "build": "npm run clean && pnpm run build:sass && pnpm run build:sass-min && pnpm run build:postcss",
     "build:sass": "sass --no-source-map --style=expanded scss/shrtcss-styles.scss:dist/shrt.css",
-    "build:sass-min": "sass --no-source-map --style=compressed scss/shrtcss-styles.scss:dist/shrt.min.css"
+    "build:sass-min": "sass --no-source-map --style=compressed scss/shrtcss-styles.scss:dist/shrt.min.css",
+    "build:postcss": "postcss dist/*.css -u autoprefixer --replace --no-map"
   },
   "devDependencies": {
-    "postcss": "^8.4.27",
-    "postcss-scss": "^4.0.6"
+    "autoprefixer": "^10.4.14",
+    "postcss-cli": "^10.1.0"
   },
   "sass": "scss/shrtcss.scss"
 }

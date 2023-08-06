@@ -1,6 +1,5 @@
 import Button from '../button'
 import Dialog from './dialog'
-import './dialog.style.scss'
 import type { Story, StoryDefault } from '@ladle/react'
 import { useState } from 'react'
 

@@ -1,5 +1,4 @@
 import Divider from './divider'
-import './divider.style.scss'
 import type { Story, StoryDefault } from '@ladle/react'
 
 export default {
@@ -23,7 +22,7 @@ export const DividerScreen: Story = () => {
         Display a divider with text (<code>&#x3C;div&#x3E;</code>).
       </p>
       <div className='example-wrapper column'>
-        <div className='divider'>Example Text</div>
+        <Divider label={'Example Text'} />
       </div>
     </div>
   )

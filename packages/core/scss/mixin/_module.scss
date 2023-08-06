@@ -32,6 +32,10 @@
     @include generate-utilities;
   }
 
+  @if map-deep-get($settings, 'modules', 'badge') {
+    @include generate-badge;
+  }
+
   @if map-deep-get($settings, 'modules', 'button') {
     @include generate-button;
   }

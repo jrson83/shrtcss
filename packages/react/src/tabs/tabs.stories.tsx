@@ -1,5 +1,4 @@
 import Tabs, { Tab } from './tabs'
-import './tabs.style.scss'
 import type { Story, StoryDefault } from '@ladle/react'
 
 export default {

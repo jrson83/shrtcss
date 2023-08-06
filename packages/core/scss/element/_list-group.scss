@@ -6,6 +6,8 @@
     $this-list: &;
 
     display: block;
+
+    /** https://ishadeed.com/article/conditional-border-radius/ */
     border-radius: clamp(0px, ((100vw - 4px) - 100%) * 9999, 0.25rem);
     background-color: color('surface');
 
@@ -15,8 +17,8 @@
     
     &__item {
       display: flex;
-      padding-block: 0.25rem;
-      padding-inline: 0.25rem;
+
+      @include padding('all', 'xs');
 
       @include breakpoint('lg', 'max') {
         border-block-end: 1px solid color('border');
@@ -47,8 +49,9 @@
       flex-direction: column;
       align-items: flex-start;
       min-inline-size: 0;
-      padding-block: 1rem;
-      padding-inline: 1rem;
+
+      @include padding('all');
+
       border-radius: var(--shrt-border-radius);
       text-align: start;
       cursor: pointer;

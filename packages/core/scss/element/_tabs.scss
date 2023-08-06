@@ -7,12 +7,12 @@
   .tabs {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 0.5rem;
     width: 100%;
     border-block-end: 1px solid color('border');
   
-    @include breakpoint(md) {
+    @include breakpoint('lg', 'max') {
       justify-content: space-evenly;
       gap: 0;
   

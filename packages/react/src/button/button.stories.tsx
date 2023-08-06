@@ -1,6 +1,5 @@
 import Icon from '../icon'
 import Button from './button'
-import './button.style.scss'
 import type { Story, StoryDefault } from '@ladle/react'
 
 export default {

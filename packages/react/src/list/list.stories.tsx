@@ -1,6 +1,5 @@
 import Button from '../button'
 import List, { ListItem } from './list'
-import './list.style.scss'
 import type { Story, StoryDefault } from '@ladle/react'
 
 interface TestMapData {

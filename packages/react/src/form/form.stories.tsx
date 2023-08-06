@@ -1,6 +1,5 @@
 import Form from './form'
 import FormGroup from './form-group'
-import './form.style.scss'
 import Input from './input'
 import type { Story, StoryDefault } from '@ladle/react'
 

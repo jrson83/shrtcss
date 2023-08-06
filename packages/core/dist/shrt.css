@@ -191,7 +191,9 @@ svg {
   text-rendering: optimizelegibility;
   font-synthesis: none;
   font-size: 1rem;
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
   scrollbar-gutter: "stable both-edges";
 }
 
@@ -525,7 +527,9 @@ a {
 }
 
 .prevent-select {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 pre, code {
@@ -541,6 +545,32 @@ pre, code {
   text-transform: uppercase;
 }
 
+.badge {
+  margin: 0;
+  padding: 0.25em 0.625em;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: var(--font-size-xs);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.badge:empty {
+  display: none;
+}
+.badge--tag {
+  position: relative;
+}
+.badge__link {
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 button {
   display: inline-flex;
   align-items: center;
@@ -554,8 +584,12 @@ button {
   vertical-align: middle;
   white-space: nowrap;
   cursor: pointer;
-  user-select: none;
-  appearance: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .btn {
@@ -688,7 +722,8 @@ dialog[open]::backdrop {
   animation: enter 0.15s;
   background: var(--shrt-color-overlay);
   inset: 0;
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   will-change: opacity;
 }
 
@@ -721,10 +756,11 @@ dialog.close[open]::backdrop {
 }
 .dialog__footer {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding-block: 1rem;
   padding-inline: 1.5rem;
-  column-gap: 1rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
   border-block-start: 1px solid var(--shrt-color-border);
   background: var(--shrt-color-surface);
 }
@@ -753,7 +789,9 @@ hr {
   align-items: center;
   color: var(--shrt-color-text-weaker);
   text-align: center;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .divider::after, .divider::before {
   content: "";
@@ -778,6 +816,7 @@ hr {
   right: auto;
   left: 0;
   width: 100%;
+  min-width: -moz-max-content;
   min-width: max-content;
   border: 1px solid var(--shrt-color-border);
   border-radius: var(--shrt-border-radius);
@@ -800,9 +839,9 @@ hr {
   padding-block: 0.25em;
   padding-inline: 0.25em;
   font-size: var(--font-size-sm);
-}
-.menu__item:not(:last-child) {
-  border-block-end: 1px solid var(--shrt-color-border);
+  /* &:not(:last-child) {
+    border-block-end: 1px solid color('border');
+  } */
 }
 .menu__item a {
   display: block;
@@ -867,7 +906,9 @@ textarea {
   letter-spacing: inherit;
   vertical-align: middle;
   word-spacing: inherit;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 input:not([type=hidden], [type=checkbox], [type=radio], [type=button], [type=submit], [type=reset], [type=color], [type=file], [type=image], [type=range])[disabled],
@@ -879,6 +920,10 @@ input:not([type=hidden], [type=checkbox], [type=radio], [type=button], [type=sub
 textarea[readonly] {
   opacity: 0.8;
 }
+input:not([type=hidden], [type=checkbox], [type=radio], [type=button], [type=submit], [type=reset], [type=color], [type=file], [type=image], [type=range])::-moz-placeholder, textarea::-moz-placeholder {
+  color: var(--shrt-color-text-weaker);
+  font-weight: 300;
+}
 input:not([type=hidden], [type=checkbox], [type=radio], [type=button], [type=submit], [type=reset], [type=color], [type=file], [type=image], [type=range])::placeholder,
 textarea::placeholder {
   color: var(--shrt-color-text-weaker);
@@ -889,6 +934,9 @@ textarea:focus {
   border: 1px solid var(--shrt-color-accent);
   outline: none;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+}
+input:not([type=hidden], [type=checkbox], [type=radio], [type=button], [type=submit], [type=reset], [type=color], [type=file], [type=image], [type=range]):focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color: transparent;
 }
 input:not([type=hidden], [type=checkbox], [type=radio], [type=button], [type=submit], [type=reset], [type=color], [type=file], [type=image], [type=range]):focus::placeholder,
 textarea:focus::placeholder {
@@ -911,6 +959,7 @@ input:not([type=hidden], [type=checkbox], [type=radio], [type=button], [type=sub
 
 .list-group {
   display: block;
+  /** https://ishadeed.com/article/conditional-border-radius/ */
   border-radius: clamp(0px, (100vw - 4px - 100%) * 9999, 0.25rem);
   background-color: var(--shrt-color-surface);
 }
@@ -921,8 +970,7 @@ input:not([type=hidden], [type=checkbox], [type=radio], [type=button], [type=sub
 }
 .list-group__item {
   display: flex;
-  padding-block: 0.25rem;
-  padding-inline: 0.25rem;
+  padding: 0.25rem;
 }
 @media only screen and (max-width: 62rem) {
   .list-group__item {
@@ -950,8 +998,7 @@ input:not([type=hidden], [type=checkbox], [type=radio], [type=button], [type=sub
   flex-direction: column;
   align-items: flex-start;
   min-inline-size: 0;
-  padding-block: 1rem;
-  padding-inline: 1rem;
+  padding: 1rem;
   border-radius: var(--shrt-border-radius);
   text-align: start;
   cursor: pointer;
@@ -984,12 +1031,12 @@ input:not([type=hidden], [type=checkbox], [type=radio], [type=button], [type=sub
 .tabs {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 0.5rem;
   width: 100%;
   border-block-end: 1px solid var(--shrt-color-border);
 }
-@media (min-width: 48rem) {
+@media only screen and (max-width: 62rem) {
   .tabs {
     justify-content: space-evenly;
     gap: 0;
@@ -1008,9 +1055,13 @@ input:not([type=hidden], [type=checkbox], [type=radio], [type=button], [type=sub
   font-family: inherit;
   font-weight: 600;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   gap: 0.5rem;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   /* span {
     display: none;
 

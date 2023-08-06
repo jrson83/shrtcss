@@ -1,5 +1,4 @@
 import Heading from './heading'
-import './heading.style.scss'
 import type { Story, StoryDefault } from '@ladle/react'
 
 export default {

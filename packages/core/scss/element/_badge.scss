@@ -1,0 +1,32 @@
+@use '../function' as *;
+
+@mixin generate-badge {
+  .badge {
+    margin: 0;
+    padding: 0.25em 0.625em;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: type-var('xs');
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &:empty {
+      display: none;
+    }
+
+    &--tag {
+      position: relative;
+    }
+
+    &__link {
+      position: absolute;
+      z-index: 200;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -12,7 +12,6 @@ const Button: ButtonType = forwardRef(
       size,
       uppercase,
       type = 'button',
-      ...props
     },
     ref
   ) => {
@@ -27,7 +26,6 @@ const Button: ButtonType = forwardRef(
         )}
         type={type}
         ref={ref}
-        {...props}
       >
         {children}
       </button>

@@ -5,6 +5,8 @@
 
 /// Return a media query for a breakpoint.
 /// @param {string} $breakpoint - The breakpoint name.
+/// @param {string} $direction - The breakpoint name.
+/// @param {boolean} $type - The breakpoint name.
 /// @return {string} - The media query.
 /// @throws {warning} - If the breakpoint does not exist.
 @mixin breakpoint($breakpoint, $direction: 'min', $type: false) {

@@ -1,6 +1,5 @@
 import Dropdown from '../dropdown'
 import Icon from '../icon'
-import './dropdown.style.scss'
 import type { Story, StoryDefault } from '@ladle/react'
 
 export default {
