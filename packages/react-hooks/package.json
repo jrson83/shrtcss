@@ -1,6 +1,17 @@
 {
   "name": "@shrtcss/react-hooks",
   "version": "0.1.0",
+  "description": "React-Hooks package for shrtcss.",
+  "homepage": "https://shrtcss.jrson.me",
+  "bugs": {
+    "url": "https://github.com/jrson83/shrtcss/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrson83/shrtcss.git",
+    "directory": "packages/react-hooks"
+  },
+  "license": "MIT",
   "sideEffects": false,
   "exports": {
     ".": {
@@ -27,15 +38,16 @@
     "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage"
   },
+  "dependencies": {},
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "devDependencies": {
-    "@types/node": "^20.4.5",
-    "@types/react": "^18.2.18",
-    "@types/react-dom": "^18.2.7",
-    "@vitejs/plugin-react": "^4.0.4",
-    "typescript": "^5.1.6"
+  "publishConfig": {
+    "access": "public"
   }
 }

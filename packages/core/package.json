@@ -24,12 +24,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jrson83/shrtcss.git"
+    "url": "https://github.com/jrson83/shrtcss.git",
+    "directory": "packages/core"
   },
   "license": "MIT",
-  "author": "Jörn Spangenberg <github@jrson.me> (https://jrson.me)",
   "type": "module",
-  "style": "dist/css/shrt.min.css",
+  "style": "dist/shrt.min.css",
   "scripts": {
     "style:check": "stylelint \"./scss/*.scss\" -f verbose --color",
     "style": "stylelint \"./scss/*.scss\" --fix -f verbose —color",
@@ -44,6 +44,9 @@
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "postcss-cli": "^10.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "sass": "scss/shrtcss.scss"
 }
