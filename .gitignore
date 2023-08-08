@@ -10,4 +10,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # Ignore build cache directories
-playground/*/dist
+dist/
+!packages/core/dist/

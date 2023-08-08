@@ -1,15 +1,14 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "ES2020",
     "lib": ["DOM", "DOM.Iterable", "ES2020"],
+    "module": "ESNext",
+    "skipLibCheck": true,
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "strict": true,
     "strictNullChecks": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "types": ["node", "vite"],
     "baseUrl": ".",
     "paths": {
       "@shrtcss/core": ["./packages/core/scss/shrtcss.scss"],

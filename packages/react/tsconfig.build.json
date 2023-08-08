@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src"],
+  "exclude": [
+    ".ladle",
+    "dist",
+    "node_modules",
+    "public",
+    "src/**/*.stories.tsx"
+  ]
+}

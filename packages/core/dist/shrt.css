@@ -247,45 +247,6 @@ a {
   text-decoration: inherit;
 }
 
-.bottom-end, .left-start, .top-start.is-rtl {
-  transform-origin: right top 0;
-}
-
-.n-popout {
-  visibility: hidden;
-  position: fixed;
-  z-index: 800;
-  transform: translateY(-10px) scale(0.97);
-  transform-origin: left top 0;
-  transition: transform 0.2s ease, visibility 0.2s ease;
-  border-radius: 0.25rem;
-  opacity: 0;
-  background: var(--shrt-color-surface);
-  box-shadow: var(--n-box-shadow-popout);
-  pointer-events: none;
-  will-change: transform, opacity, visibility;
-}
-.n-popout[open] {
-  visibility: visible;
-  transform: translateY(0) translateX(0) scale(1);
-  transition-property: transform;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.n-dropdown-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: calc(1rem + 2px) 1rem;
-  background-color: var(--shrt-color-surface-raised);
-  font-weight: 400;
-  border-block-end: 1px solid var(--shrt-color-border);
-  border-start-start-radius: 0.25rem;
-  border-start-end-radius: 0.25rem;
-  gap: 1rem;
-}
-
 .bg-bg {
   background-color: var(--shrt-color-bg);
   color: var(--shrt-color-text-dark);

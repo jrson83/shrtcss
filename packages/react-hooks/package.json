@@ -13,30 +13,27 @@
   },
   "license": "MIT",
   "sideEffects": false,
+  "type": "module",
   "exports": {
-    ".": {
-      "types": "./src/index.ts",
-      "require": "./src/index.ts",
-      "import": "./src/index.ts"
+    "require": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/index.cjs"
+    },
+    "import": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
     }
   },
-  "main": "src/index.ts",
-  "module": "src/index.ts",
-  "types": "src/index.ts",
-  "typesVersions": {
-    "*": {
-      "*": ["src/index.ts"]
-    }
-  },
-  "files": ["src"],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "files": ["dist", "src"],
   "scripts": {
     "clean": "rm -rf ./dist",
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "coverage": "vitest run --coverage"
+    "type:check": "tsc --noEmit",
+    "dev": "pnpm run watch",
+    "build": "pnpm run type:check && pkgroll --minify -p tsconfig.json",
+    "watch": "pkgroll --watch"
   },
   "dependencies": {},
   "devDependencies": {
