@@ -30,6 +30,11 @@ export {
   type LabelType,
 } from './form/label'
 export {
+  default as SelectInput,
+  type SelectInputProps,
+  type SelectInputType,
+} from './form/select-input'
+export {
   default as Heading,
   type HeadingProps,
   type HeadingType,

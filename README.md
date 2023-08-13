@@ -12,6 +12,7 @@
 
 ## Components
 
+- [ ] Badge
 - [ ] Button
 - [ ] Dialog
 - [ ] Divider
@@ -20,7 +21,9 @@
 - [ ] Heading
 - [ ] Icon
 - [ ] List
+- [ ] Router
 - [ ] Tabs
+- [ ] Timeline
 
 ## License
 

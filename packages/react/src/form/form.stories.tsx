@@ -1,6 +1,7 @@
 import Form from './form'
 import FormGroup from './form-group'
 import Input from './input'
+import SelectInput from './select-input'
 import type { Story, StoryDefault } from '@ladle/react'
 
 export default {
@@ -42,6 +43,30 @@ export const FormScreen: Story = () => {
               type='text'
               onInput={() => console.log('input change')}
               autoComplete='off'
+            />
+          </FormGroup>
+          <FormGroup
+            label='PlayStation model'
+            htmlFor='input-console'
+            helper='Configure the playstation model'
+            ifta
+          >
+            <SelectInput
+              id='input-console'
+              items={[
+                {
+                  id: '1',
+                  name: 'PlayStation 4',
+                },
+                {
+                  id: '2',
+                  name: 'PlayStation 5',
+                },
+              ]}
+              value={'2'}
+              labelExtractor={({ name }) => name}
+              valueExtractor={({ id }) => id}
+              onChange={() => console.log('input change')}
             />
           </FormGroup>
         </Form>
