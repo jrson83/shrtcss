@@ -12,4 +12,6 @@ const Label: LabelType = ({ children, className, error, htmlFor }) => {
   )
 }
 
+Label.displayName = 'Label'
+
 export default Label

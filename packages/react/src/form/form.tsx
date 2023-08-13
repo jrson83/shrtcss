@@ -8,4 +8,6 @@ const Form: FormType = ({ onSubmit, children }) => {
   )
 }
 
+Form.displayName = 'Form'
+
 export default Form

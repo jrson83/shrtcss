@@ -1,17 +1,14 @@
-import { Button, Divider } from '../'
-import { Icon } from '../'
-import { List, ListItem } from '../'
+import Button from '../button'
+import Divider from '../divider'
+import Icon from '../icon'
+import List, { ListItem } from '../list'
+import Link from '../router/link'
+import { DropdownType } from './dropdown.types'
 import { useOnClickOutside } from '@shrtcss/react-hooks'
 import { cx } from 'classix'
 import { useRef, useState } from 'react'
 
-export interface DropdownProps extends React.ComponentPropsWithoutRef<'div'> {
-  label?: string
-  icon?: React.ReactNode
-  position?: 'bottom-right' | 'top-left' | 'top-right'
-}
-
-const Dropdown: React.FC<DropdownProps> = ({ icon, label, position }) => {
+const Dropdown: DropdownType = ({ icon, label, position }) => {
   const buttonRef = useRef<HTMLButtonElement | null>(null)
   const [isOpen, setIsOpen] = useState(false)
 
@@ -44,22 +41,24 @@ const Dropdown: React.FC<DropdownProps> = ({ icon, label, position }) => {
           aria-expanded={true}
         >
           <ListItem className='menu__item'>
-            <a href='#1'>
+            <Link href='/' onClick={toggleDropdown}>
               <Icon title='Games' icon={'ps4'} size={16} />
               <span>Games</span>
-            </a>
+            </Link>
           </ListItem>
           <Divider />
           <ListItem className='menu__item'>
-            <a href='#1'>
+            <Link href='/settings' onClick={toggleDropdown}>
               <Icon title='Settings' icon={'settings'} size={16} />
               <span>Settings</span>
-            </a>
+            </Link>
           </ListItem>
         </List>
       )}
     </div>
   )
 }
+
+Dropdown.displayName = 'Dropdown'
 
 export default Dropdown

@@ -31,7 +31,7 @@ export const useForm = <
 
   const handleChange =
     <S>(key: keyof T, sanitizeFn?: (value: string) => S) =>
-    (e: React.ChangeEvent<HTMLInputElement>) => {
+    (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
       const value = sanitizeFn
         ? sanitizeFn(e.currentTarget.value)
         : e.currentTarget.value

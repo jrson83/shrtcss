@@ -6,7 +6,7 @@ const Link: LinkType = ({ children, ...props }) => {
   const { location } = useRouter()
   const history = useHistory()
 
-  const handleOnNavigate = (event: React.MouseEvent) => {
+  const handleOnNavigate = (event: React.MouseEvent<HTMLAnchorElement>) => {
     if (
       props.target === '_blank' ||
       event.ctrlKey ||
@@ -22,6 +22,8 @@ const Link: LinkType = ({ children, ...props }) => {
 
     history.push(props.href as string)
     window.dispatchEvent(new PopStateEvent('popstate'))
+
+    if (props.onClick) props.onClick.apply(undefined, [event])
   }
 
   const isActive =

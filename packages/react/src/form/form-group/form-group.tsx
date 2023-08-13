@@ -23,4 +23,6 @@ const FormGroup: FormGroupType = ({
   )
 }
 
+FormGroup.displayName = 'FormGroup'
+
 export default FormGroup

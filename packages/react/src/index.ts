@@ -1,3 +1,4 @@
+export { default as Badge, type BadgeProps, type BadgeType } from './badge'
 export { default as Button, type ButtonProps, type ButtonType } from './button'
 export { default as Dialog, type DialogProps, type DialogType } from './dialog'
 export {
@@ -5,6 +6,11 @@ export {
   type DividerProps,
   type DividerType,
 } from './divider'
+export {
+  default as Dropdown,
+  type DropdownProps,
+  type DropdownType,
+} from './dropdown'
 export {
   default as Form,
   type FormType,
@@ -35,13 +41,6 @@ export {
   type ListType,
   type ListItemType,
 } from './list'
-export {
-  default as Tabs,
-  Tab,
-  type TabProps,
-  type TabType,
-  type TabsType,
-} from './tabs'
 export { default as Link, type LinkProps, type LinkType } from './router/link'
 export {
   default as Route,
@@ -59,3 +58,10 @@ export {
   type RouterContextProviderProps,
   type RouterContextProviderType,
 } from './router/router'
+export {
+  default as Tabs,
+  Tab,
+  type TabProps,
+  type TabType,
+  type TabsType,
+} from './tabs'
