@@ -58,5 +58,5 @@
     "*.{ts,tsx,json}": "rome format --write .",
     "*.scss": "stylelint \"./packages/**/*.scss\" --fix"
   },
-  "packageManager": "pnpm@8.6.11"
+  "packageManager": "pnpm@8.6.12"
 }
