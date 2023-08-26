@@ -1,17 +1,16 @@
 import Badge from './badge'
-import type { Story, StoryDefault } from '@ladle/react'
+import { StoryComponent, StoryMeta } from '@storylite/storylite'
 
 export default {
   title: 'Components',
-} satisfies StoryDefault
+} satisfies StoryMeta
 
-export const BadgeScreen: Story = () => {
+const BadgeScreen: StoryComponent = () => {
   return (
     <div className='story-wrapper wrap'>
-      <h1>Dialog</h1>
+      <h1>Badge</h1>
       <p>
-        Displays a <code>&lt;dialog&gt;</code> or a component that looks like a
-        dialog.
+        Displays a <code>&lt;badge&gt;</code>.
       </p>
       <div className='example-wrapper'>
         <Badge>Test</Badge>
@@ -24,4 +23,6 @@ export const BadgeScreen: Story = () => {
   )
 }
 
-BadgeScreen.storyName = 'Badge'
+BadgeScreen.storyTitle = 'Badge'
+
+export { BadgeScreen }

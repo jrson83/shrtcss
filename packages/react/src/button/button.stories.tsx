@@ -1,12 +1,12 @@
 import Icon from '../icon'
 import Button from './button'
-import type { Story, StoryDefault } from '@ladle/react'
+import { StoryComponent, StoryMeta } from '@storylite/storylite'
 
 export default {
   title: 'Components',
-} satisfies StoryDefault
+} satisfies StoryMeta
 
-export const ButtonScreen: Story = () => {
+const ButtonScreen: StoryComponent = () => {
   return (
     <div className='story-wrapper'>
       <h1>Button</h1>
@@ -106,4 +106,6 @@ export const ButtonScreen: Story = () => {
   )
 }
 
-ButtonScreen.storyName = 'Button'
+ButtonScreen.storyTitle = 'Button'
+
+export { ButtonScreen }

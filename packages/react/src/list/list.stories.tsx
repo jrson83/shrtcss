@@ -1,6 +1,6 @@
 import Button from '../button'
 import List, { ListItem } from './list'
-import type { Story, StoryDefault } from '@ladle/react'
+import { StoryComponent, StoryMeta } from '@storylite/storylite'
 
 interface TestMapData {
   id: number
@@ -28,9 +28,9 @@ const testMapData: TestMapData[] = [
 
 export default {
   title: 'Components',
-} satisfies StoryDefault
+} satisfies StoryMeta
 
-export const ListScreen: Story = () => {
+const ListScreen: StoryComponent = () => {
   return (
     <div
       style={{
@@ -64,4 +64,6 @@ export const ListScreen: Story = () => {
   )
 }
 
-ListScreen.storyName = 'List'
+ListScreen.storyTitle = 'List'
+
+export { ListScreen }

@@ -2,13 +2,13 @@ import Form from './form'
 import FormGroup from './form-group'
 import Input from './input'
 import SelectInput from './select-input'
-import type { Story, StoryDefault } from '@ladle/react'
+import { StoryComponent, StoryMeta } from '@storylite/storylite'
 
 export default {
   title: 'Components',
-} satisfies StoryDefault
+} satisfies StoryMeta
 
-export const FormScreen: Story = () => {
+const FormScreen: StoryComponent = () => {
   return (
     <div className='story-wrapper'>
       <h1>Form</h1>
@@ -75,4 +75,6 @@ export const FormScreen: Story = () => {
   )
 }
 
-FormScreen.storyName = 'Form'
+FormScreen.storyTitle = 'Form'
+
+export { FormScreen }

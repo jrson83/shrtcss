@@ -1,11 +1,11 @@
 import Icon from './icon'
-import type { Story, StoryDefault } from '@ladle/react'
+import { StoryComponent, StoryMeta } from '@storylite/storylite'
 
 export default {
   title: 'Components',
-} satisfies StoryDefault
+} satisfies StoryMeta
 
-export const IconScreen: Story = () => {
+const IconScreen: StoryComponent = () => {
   return (
     <div className='story-wrapper'>
       <h1>Icon</h1>
@@ -55,4 +55,6 @@ export const IconScreen: Story = () => {
   )
 }
 
-IconScreen.storyName = 'Icon'
+IconScreen.storyTitle = 'Icon'
+
+export { IconScreen }

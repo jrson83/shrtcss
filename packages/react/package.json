@@ -39,7 +39,7 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "type:check": "tsc --noEmit",
-    "dev": "ladle serve",
+    "dev": "vite",
     "build": "pnpm run type:check && pkgroll --minify -p tsconfig.build.json",
     "watch": "pkgroll --watch"
   },
@@ -49,9 +49,15 @@
     "classix": "^2.1.34"
   },
   "devDependencies": {
-    "@ladle/react": "^2.16.1",
+    "@storylite/storylite": "^0.5.1",
+    "@storylite/vite-plugin": "^0.5.1",
+    "@types/node": "^20.4.8",
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vite": "^4.4.9"
   },
   "peerDependencies": {
     "react": "^18.2.0",

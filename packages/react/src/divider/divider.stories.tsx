@@ -1,11 +1,11 @@
 import Divider from './divider'
-import type { Story, StoryDefault } from '@ladle/react'
+import { StoryComponent, StoryMeta } from '@storylite/storylite'
 
 export default {
   title: 'Components',
-} satisfies StoryDefault
+} satisfies StoryMeta
 
-export const DividerScreen: Story = () => {
+export const DividerScreen: StoryComponent = () => {
   return (
     <div className='story-wrapper wrap'>
       <h1>Divider</h1>
@@ -28,4 +28,4 @@ export const DividerScreen: Story = () => {
   )
 }
 
-DividerScreen.storyName = 'Divider'
+DividerScreen.storyTitle = 'Divider'

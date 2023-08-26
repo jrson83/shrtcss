@@ -2,10 +2,10 @@
   "extends": "./tsconfig.json",
   "include": ["src"],
   "exclude": [
-    ".ladle",
     "dist",
     "node_modules",
     "public",
+    "storylite.tsx",
     "src/**/*.stories.tsx"
   ]
 }

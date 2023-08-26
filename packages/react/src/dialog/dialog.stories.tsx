@@ -1,13 +1,13 @@
 import Button from '../button'
 import Dialog from './dialog'
-import type { Story, StoryDefault } from '@ladle/react'
+import { StoryComponent, StoryMeta } from '@storylite/storylite'
 import { useState } from 'react'
 
 export default {
   title: 'Components',
-} satisfies StoryDefault
+} satisfies StoryMeta
 
-export const DialogScreen: Story = () => {
+const DialogScreen: StoryComponent = () => {
   const [isDialogVisible, setIsDialogVisible] = useState(false)
   const showDialog = () => setIsDialogVisible(true)
   const closeDialog = () => setIsDialogVisible(false)
@@ -42,4 +42,6 @@ export const DialogScreen: Story = () => {
   )
 }
 
-DialogScreen.storyName = 'Dialog'
+DialogScreen.storyTitle = 'Dialog'
+
+export { DialogScreen }

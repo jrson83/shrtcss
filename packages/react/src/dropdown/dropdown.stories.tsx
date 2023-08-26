@@ -1,12 +1,12 @@
 import Dropdown from '../dropdown'
 import Icon from '../icon'
-import type { Story, StoryDefault } from '@ladle/react'
+import { StoryComponent, StoryMeta } from '@storylite/storylite'
 
 export default {
   title: 'Components',
-} satisfies StoryDefault
+} satisfies StoryMeta
 
-export const DropdownScreen: Story = () => {
+const DropdownScreen: StoryComponent = () => {
   return (
     <div className='story-wrapper'>
       <h1>Dropdown</h1>
@@ -26,4 +26,6 @@ export const DropdownScreen: Story = () => {
   )
 }
 
-DropdownScreen.storyName = 'Dropdown'
+DropdownScreen.storyTitle = 'Dropdown'
+
+export { DropdownScreen }

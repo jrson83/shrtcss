@@ -1,11 +1,11 @@
 import Heading from './heading'
-import type { Story, StoryDefault } from '@ladle/react'
+import { StoryComponent, StoryMeta } from '@storylite/storylite'
 
 export default {
   title: 'Components',
-} satisfies StoryDefault
+} satisfies StoryMeta
 
-export const HeadingScreen: Story = () => {
+const HeadingScreen: StoryComponent = () => {
   return (
     <div className='story-wrapper wrap'>
       <h1>Heading</h1>
@@ -37,4 +37,6 @@ export const HeadingScreen: Story = () => {
   )
 }
 
-HeadingScreen.storyName = 'Heading'
+HeadingScreen.storyTitle = 'Heading'
+
+export { HeadingScreen }

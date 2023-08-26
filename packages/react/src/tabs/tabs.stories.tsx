@@ -1,11 +1,11 @@
 import Tabs, { Tab } from './tabs'
-import type { Story, StoryDefault } from '@ladle/react'
+import { StoryComponent, StoryMeta } from '@storylite/storylite'
 
 export default {
   title: 'Components',
-} satisfies StoryDefault
+} satisfies StoryMeta
 
-export const TabsScreen: Story = () => {
+const TabsScreen: StoryComponent = () => {
   return (
     <div className='story-wrapper wrap'>
       <h1>Tabs</h1>
@@ -27,4 +27,6 @@ export const TabsScreen: Story = () => {
   )
 }
 
-TabsScreen.storyName = 'Tabs'
+TabsScreen.storyTitle = 'Tabs'
+
+export { TabsScreen }
