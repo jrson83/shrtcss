@@ -9,11 +9,11 @@ importers:
   .:
     devDependencies:
       '@types/node':
-        specifier: ^20.4.8
-        version: 20.4.8
+        specifier: ^20.5.6
+        version: 20.5.6
       '@types/react':
-        specifier: ^18.2.18
-        version: 18.2.18
+        specifier: ^18.2.21
+        version: 18.2.21
       '@types/react-dom':
         specifier: ^18.2.7
         version: 18.2.7
@@ -25,34 +25,34 @@ importers:
         version: 0.8.0
       pkgroll:
         specifier: ^1.11.0
-        version: 1.11.0(typescript@5.1.6)
+        version: 1.11.0(typescript@5.2.2)
       rome:
         specifier: ^12.1.3
         version: 12.1.3
       sass:
-        specifier: ^1.64.2
-        version: 1.64.2
+        specifier: ^1.66.1
+        version: 1.66.1
       sparkee:
-        specifier: ^1.3.3
-        version: 1.3.3
+        specifier: ^1.3.4
+        version: 1.3.4
       stylelint:
-        specifier: ^15.10.2
-        version: 15.10.2
+        specifier: ^15.10.3
+        version: 15.10.3
       stylelint-config-property-sort-order-smacss:
         specifier: ^9.1.0
-        version: 9.1.0(stylelint@15.10.2)
+        version: 9.1.0(stylelint@15.10.3)
       stylelint-config-standard-scss:
         specifier: ^10.0.0
-        version: 10.0.0(postcss@8.4.28)(stylelint@15.10.2)
+        version: 10.0.0(postcss@8.4.28)(stylelint@15.10.3)
       typescript:
-        specifier: ^5.1.6
-        version: 5.1.6
+        specifier: ^5.2.2
+        version: 5.2.2
 
   packages/core:
     devDependencies:
       autoprefixer:
-        specifier: ^10.4.14
-        version: 10.4.14(postcss@8.4.28)
+        specifier: ^10.4.15
+        version: 10.4.15(postcss@8.4.28)
       postcss-cli:
         specifier: ^10.1.0
         version: 10.1.0(postcss@8.4.28)
@@ -70,17 +70,17 @@ importers:
         version: 2.1.34
     devDependencies:
       '@storylite/storylite':
-        specifier: ^0.5.1
-        version: 0.5.1(@types/node@20.4.8)(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react-router-dom@6.15.0)(react@18.2.0)(typescript@5.2.2)
+        specifier: ^0.6.0
+        version: 0.6.0(@types/node@20.5.6)(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react-router-dom@6.15.0)(react@18.2.0)(typescript@5.2.2)
       '@storylite/vite-plugin':
-        specifier: ^0.5.1
-        version: 0.5.1(@types/node@20.4.8)(sass@1.64.2)
+        specifier: ^0.6.0
+        version: 0.6.0(@types/node@20.5.6)(sass@1.66.1)
       '@types/node':
-        specifier: ^20.4.8
-        version: 20.4.8
+        specifier: ^20.5.6
+        version: 20.5.6
       '@types/react':
-        specifier: ^18.2.18
-        version: 18.2.18
+        specifier: ^18.2.21
+        version: 18.2.21
       '@types/react-dom':
         specifier: ^18.2.7
         version: 18.2.7
@@ -95,7 +95,7 @@ importers:
         version: 18.2.0(react@18.2.0)
       vite:
         specifier: ^4.4.9
-        version: 4.4.9(@types/node@20.4.8)(sass@1.64.2)
+        version: 4.4.9(@types/node@20.5.6)(sass@1.66.1)
 
   packages/react-hooks:
     devDependencies:
@@ -780,8 +780,8 @@ packages:
     dev: true
     optional: true
 
-  /@storylite/storylite@0.5.1(@types/node@20.4.8)(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react-router-dom@6.15.0)(react@18.2.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-Ow807EWBN5J7widnGw4iRLLQCFFLafxUnCTXjkS6VL36bxqyDvbUhK93oovVXT8NjJfhmA12zU5VaXRZqlaIUw==}
+  /@storylite/storylite@0.6.0(@types/node@20.5.6)(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react-router-dom@6.15.0)(react@18.2.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-naDy1zPPCWvXNqoMzqrGOsgHe4GM9yQIueGCuSORqgxU+0ksX51f2AG7AMLf9j9Px8kc8fMuQA/VYZ1jbR2O4g==}
     peerDependencies:
       '@types/node': ^20.4.9
       '@types/react': ^18.2.19
@@ -792,20 +792,20 @@ packages:
       typescript: ^5.1.6
     dependencies:
       '@r1stack/core': 0.4.3
-      '@types/node': 20.4.8
-      '@types/react': 18.2.18
+      '@types/node': 20.5.6
+      '@types/react': 18.2.21
       '@types/react-dom': 18.2.7
-      lucide-react: 0.268.0(react@18.2.0)
+      lucide-react: 0.269.0(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-router-dom: 6.15.0(react-dom@18.2.0)(react@18.2.0)
       typescript: 5.2.2
     dev: true
 
-  /@storylite/vite-plugin@0.5.1(@types/node@20.4.8)(sass@1.64.2):
-    resolution: {integrity: sha512-OZTbkUXr/5lrkI8FxMVXU5YDWk0BlfBurcN4c7BUbvFDGYZMgLWJfuG2piTMjwYJNcXf51ScjLtI0SL3XH1A8Q==}
+  /@storylite/vite-plugin@0.6.0(@types/node@20.5.6)(sass@1.66.1):
+    resolution: {integrity: sha512-LBH7Dl0kyd1V0Yn9rp2TOBN7QRDl0afGPXncCcrlykDv62/cNbcEIm+UlbFdkXk3WVctH7W5ZtglO/ZZKWfrOw==}
     dependencies:
-      vite: 4.4.9(@types/node@20.4.8)(sass@1.64.2)
+      vite: 4.4.9(@types/node@20.5.6)(sass@1.66.1)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -824,8 +824,8 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
-  /@types/node@20.4.8:
-    resolution: {integrity: sha512-0mHckf6D2DiIAzh8fM8f3HQCvMKDpK94YQ0DSVkfWTG9BZleYIWudw9cJxX8oCk9bM+vAkDyujDV6dmKHbvQpg==}
+  /@types/node@20.5.6:
+    resolution: {integrity: sha512-Gi5wRGPbbyOTX+4Y2iULQ27oUPrefaB0PxGQJnfyWN3kvEDGM3mIB5M/gQLmitZf7A9FmLeaqxD3L1CXpm3VKQ==}
     dev: true
 
   /@types/normalize-package-data@2.4.1:
@@ -839,11 +839,11 @@ packages:
   /@types/react-dom@18.2.7:
     resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==}
     dependencies:
-      '@types/react': 18.2.18
+      '@types/react': 18.2.21
     dev: true
 
-  /@types/react@18.2.18:
-    resolution: {integrity: sha512-da4NTSeBv/P34xoZPhtcLkmZuJ+oYaCxHmyHzwaDQo9RQPBeXV+06gEk2FpqEcsX9XrnNLvRpVh6bdavDSjtiQ==}
+  /@types/react@18.2.21:
+    resolution: {integrity: sha512-neFKG/sBAwGxHgXiIxnbm3/AAVQ/cMRS93hvBpg8xYRbeQSPVABp9U2bRnPf0iI4+Ucdv3plSxKK+3CW2ENJxA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
@@ -868,7 +868,7 @@ packages:
       '@babel/plugin-transform-react-jsx-self': 7.22.5(@babel/core@7.22.11)
       '@babel/plugin-transform-react-jsx-source': 7.22.5(@babel/core@7.22.11)
       react-refresh: 0.14.0
-      vite: 4.4.9(@types/node@20.4.8)(sass@1.64.2)
+      vite: 4.4.9(@types/node@20.5.6)(sass@1.66.1)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -935,8 +935,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /autoprefixer@10.4.14(postcss@8.4.28):
-    resolution: {integrity: sha512-FQzyfOsTlwVzjHxKEqRIAdJx9niO6VCBCoEwax/VLSoQF29ggECcPuBqUMZ+u8jCZOPSy8b8/8KnuFbp0SaFZQ==}
+  /autoprefixer@10.4.15(postcss@8.4.28):
+    resolution: {integrity: sha512-KCuPB8ZCIqFdA4HwKXsvz7j6gvSDNhDP7WnUjBleRkKjPdvCmHFuQ77ocavI8FT6NdvlBnE2UFr2H4Mycn8Vew==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
@@ -1362,7 +1362,7 @@ packages:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
     engines: {node: ^10.12.0 || >=12.0.0}
     dependencies:
-      flat-cache: 3.0.4
+      flat-cache: 3.1.0
     dev: true
 
   /fill-range@7.0.1:
@@ -1380,11 +1380,12 @@ packages:
       path-exists: 4.0.0
     dev: true
 
-  /flat-cache@3.0.4:
-    resolution: {integrity: sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg==}
-    engines: {node: ^10.12.0 || >=12.0.0}
+  /flat-cache@3.1.0:
+    resolution: {integrity: sha512-OHx4Qwrrt0E4jEIcI5/Xb+f+QmJYNj2rrK8wiIdQOIrB9WrrJL8cjZvXdXuBTkkEwEqLycb5BeZDV1o2i9bTew==}
+    engines: {node: '>=12.0.0'}
     dependencies:
       flatted: 3.2.7
+      keyv: 4.5.3
       rimraf: 3.0.2
     dev: true
 
@@ -1436,64 +1437,64 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /git-cliff-darwin-arm64@1.1.2:
-    resolution: {integrity: sha512-z+pSh6vLrtgoILlWzhisLHiLOuStabJh/ShgbBq0q3JRedUmxfg6WqCi+fHymMkA4AeoXOIS7GGfyV5m+sLQeQ==}
+  /git-cliff-darwin-arm64@1.2.0:
+    resolution: {integrity: sha512-zWkTEnB1SenJULqi4QzQzs8Sp2yvGkvglEH75Gia+cBe32jXar6zDw9gI3D3ikcuboyCrFNpERT+pbNIJlOT6w==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /git-cliff-darwin-x64@1.1.2:
-    resolution: {integrity: sha512-dhizA8pGobcxxTS2YQDSs960zFqKfjprDsX/pq+MqgEc68e60B2WSRwFWXd+jK2x/7d7PbnMzlXDqszeDwBpRQ==}
+  /git-cliff-darwin-x64@1.2.0:
+    resolution: {integrity: sha512-ye4AfgaDPhNGnDx2r09Wvaic2nJRVE4PZltupABjVNWoBEIiTjEA0kw32WjgdZjVkJipAwkqh27HnKnR2lVvyQ==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /git-cliff-linux-arm64@1.1.2:
-    resolution: {integrity: sha512-4TYzQHO8H8FquSxoO/O2IfYN6ZLef4SM5PEDG93jeK958s+/FWnFok8evGSJdoTeyu2MXWdw4J40o1AKl0fcxw==}
+  /git-cliff-linux-arm64@1.2.0:
+    resolution: {integrity: sha512-C6A/UAq6M1UFso4r9gfG5FF1wAyj5ysPX8X6KFVS2UgU+zJJqNBQKD5kYxDDHRsCq/bMV8oVHyYJlt2wVKAo+A==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /git-cliff-linux-x64@1.1.2:
-    resolution: {integrity: sha512-vDLQEITUPHliKVWD69baH1djdsCPpSgUqqbNdX5Xb4bzM8vugIwfpV0XE/BIDC05VUJY2TPLMK1Zh//pdaOhfg==}
+  /git-cliff-linux-x64@1.2.0:
+    resolution: {integrity: sha512-nT9QPYO1XigDrNJie4EMonBvWtZaZmOQsiYd10zt9b15uYfbadymkQJXZy2w1OaqVsl82zRDzjpdQ2x6qFbK8g==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /git-cliff-windows-arm64@1.1.2:
-    resolution: {integrity: sha512-wl1S3IU5ewZ6UYzPFZbTZjeyf6/3VIAjDQ0hFWN+LQeo6ttj5RtVzifMRadoCmb2Jgi9RT8qR4plwyL+/NtHlQ==}
+  /git-cliff-windows-arm64@1.2.0:
+    resolution: {integrity: sha512-peEdb0MRhLb5bcpLGdDcITAk42Tp0oWvPApAr/PVZbcuz441VppIrEoXsJeZYqKM6cuD/x0N2uC96sRrrV5Gig==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /git-cliff-windows-x64@1.1.2:
-    resolution: {integrity: sha512-KszFq4Pre+TdJiPuGP+4t1DtXHcVaF9/dBSmwldxWvyAomzeX2wHalquh2iv6YgcFUQ4oe/DP1qiNhLa5xw5/Q==}
+  /git-cliff-windows-x64@1.2.0:
+    resolution: {integrity: sha512-PZ3QwZOGEaRQ02c8F4khYRQC2VHAJDmYn9ZVEdSBYArPJr8xFe3QLib/T33kz4rs7P1050pr1Ze9dnOAbdMaJQ==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /git-cliff@1.1.2:
-    resolution: {integrity: sha512-sjIhRW8BZSKkr0e9XcEFdxz2SF7lcOOJJuEEc+b07H7zM7WdhLh5dzZM2Et57adC5jUVO6mLpxuWRJSinGl4nQ==}
+  /git-cliff@1.2.0:
+    resolution: {integrity: sha512-nuruES3361gZPi0p9C+vNRW8o/e7W6Y2iuriiQnukWhy9zjlZ4Qx2uCLV8iTTKfms9EoG54x6FCP4cnSAXL9Kg==}
     hasBin: true
     optionalDependencies:
-      git-cliff-darwin-arm64: 1.1.2
-      git-cliff-darwin-x64: 1.1.2
-      git-cliff-linux-arm64: 1.1.2
-      git-cliff-linux-x64: 1.1.2
-      git-cliff-windows-arm64: 1.1.2
-      git-cliff-windows-x64: 1.1.2
+      git-cliff-darwin-arm64: 1.2.0
+      git-cliff-darwin-x64: 1.2.0
+      git-cliff-linux-arm64: 1.2.0
+      git-cliff-linux-x64: 1.2.0
+      git-cliff-windows-arm64: 1.2.0
+      git-cliff-windows-x64: 1.2.0
     dev: true
 
   /glob-parent@5.1.2:
@@ -1585,6 +1586,7 @@ packages:
 
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
+    requiresBuild: true
     dev: true
 
   /hard-rejection@2.1.0:
@@ -1808,6 +1810,10 @@ packages:
     hasBin: true
     dev: true
 
+  /json-buffer@3.0.1:
+    resolution: {integrity: sha512-4bV5BfR2mqfQTJm+V5tPPdf+ZpuhiIvTuAB5g8kcrXOZpTT/QwwVRWBywX1ozr6lEuPdbHxwaJlm9G6mI2sfSQ==}
+    dev: true
+
   /json-parse-even-better-errors@2.3.1:
     resolution: {integrity: sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==}
     dev: true
@@ -1830,13 +1836,19 @@ packages:
       graceful-fs: 4.2.11
     dev: true
 
+  /keyv@4.5.3:
+    resolution: {integrity: sha512-QCiSav9WaX1PgETJ+SpNnx2PRRapJ/oRSXM4VO5OGYGSjrxbKPVFVhB3l2OCbLCk329N8qyAtsJjSjvVBWzEug==}
+    dependencies:
+      json-buffer: 3.0.1
+    dev: true
+
   /kind-of@6.0.3:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /known-css-properties@0.27.0:
-    resolution: {integrity: sha512-uMCj6+hZYDoffuvAJjFAPz56E9uoowFHmTkqRtRq5WyC5Q6Cu/fTZKNQpX/RbzChBYLLl3lo8CjFZBAZXq9qFg==}
+  /known-css-properties@0.28.0:
+    resolution: {integrity: sha512-9pSL5XB4J+ifHP0e0jmmC98OGC1nL8/JjS+fi6mnTlIf//yt/MfVLtKg7S6nCtj/8KTcWX7nRlY0XywoYY1ISQ==}
     dev: true
 
   /lilconfig@2.1.0:
@@ -1896,8 +1908,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /lucide-react@0.268.0(react@18.2.0):
-    resolution: {integrity: sha512-XP/xY3ASJAViqNqVnDRcEfdxfRB7uNST8sqTLwZhL983ikmHMQ7qQak7ZxrnXOVhB3QDBawdr3ANq0P+iWHP/g==}
+  /lucide-react@0.269.0(react@18.2.0):
+    resolution: {integrity: sha512-+ViEb/2eJJt43/CtxpTfvqu/8gzK49cSUdeuqRuFYiZmX9AvwfumtETM4plhXHymfHb6/mVbHg9uIlc13y+uew==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
@@ -2172,7 +2184,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /pkgroll@1.11.0(typescript@5.1.6):
+  /pkgroll@1.11.0(typescript@5.2.2):
     resolution: {integrity: sha512-E+RJuiqun1QbsGzkxwRV1xmdwsmDQ6uGOoLagLwS4b1YPFNAPESDqz5QQx/MxkZCinl07Tt3GXzMJQT+helsww==}
     hasBin: true
     peerDependencies:
@@ -2191,7 +2203,7 @@ packages:
       esbuild: 0.18.20
       magic-string: 0.30.3
       rollup: 2.79.1
-      typescript: 5.1.6
+      typescript: 5.2.2
     dev: true
 
   /postcss-cli@10.1.0(postcss@8.4.28):
@@ -2541,8 +2553,8 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /sass@1.64.2:
-    resolution: {integrity: sha512-TnDlfc+CRnUAgLO9D8cQLFu/GIjJIzJCGkE7o4ekIGQOH7T3GetiRR/PsTWJUHhkzcSPrARkPI+gNWn5alCzDg==}
+  /sass@1.66.1:
+    resolution: {integrity: sha512-50c+zTsZOJVgFfTgwwEzkjA3/QACgdNsKueWPyAR0mRINIvLAStVQBbPg14iuqEQ74NPDbXzJARJ/O4SI1zftA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -2639,15 +2651,15 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /sparkee@1.3.3:
-    resolution: {integrity: sha512-n1G/ikl5XtjMYGzPt7KWKnYaU++d9mI5PlOg+Hdn0CTi816lyFMzet1Vs0ZWGGrKpYfTd6+pwHE92NbWE5pj0g==}
+  /sparkee@1.3.4:
+    resolution: {integrity: sha512-HhQhwXqiON/1w1PwqOmzTVesmBYdITInQH/xMg8khHB/7xVfFmBtdw0az3AjdPRz8r+Rb8ES2UpqjngHeZoEog==}
     engines: {node: '>=16.14.0', npm: use `pnpm` instead, pnpm: '>=8.0.0', yarn: use `pnpm` instead}
     hasBin: true
     dependencies:
       chalk: 4.1.2
       consola: 2.15.3
       dayjs: 1.11.9
-      git-cliff: 1.1.2
+      git-cliff: 1.2.0
       glob: 8.1.0
       inquirer: 8.2.6
       jsonfile: 6.1.0
@@ -2658,12 +2670,12 @@ packages:
       shelljs-live: 0.0.5(shelljs@0.8.5)
       yargs: 17.7.2
     optionalDependencies:
-      git-cliff-darwin-arm64: 1.1.2
-      git-cliff-darwin-x64: 1.1.2
-      git-cliff-linux-arm64: 1.1.2
-      git-cliff-linux-x64: 1.1.2
-      git-cliff-windows-arm64: 1.1.2
-      git-cliff-windows-x64: 1.1.2
+      git-cliff-darwin-arm64: 1.2.0
+      git-cliff-darwin-x64: 1.2.0
+      git-cliff-linux-arm64: 1.2.0
+      git-cliff-linux-x64: 1.2.0
+      git-cliff-windows-arm64: 1.2.0
+      git-cliff-windows-x64: 1.2.0
     dev: true
 
   /spdx-correct@3.2.0:
@@ -2726,17 +2738,17 @@ packages:
     resolution: {integrity: sha512-Dj1Okke1C3uKKwQcetra4jSuk0DqbzbYtXipzFlFMZtowbF1x7BKJwB9AayVMyFARvU8EDrZdcax4At/452cAg==}
     dev: true
 
-  /stylelint-config-property-sort-order-smacss@9.1.0(stylelint@15.10.2):
+  /stylelint-config-property-sort-order-smacss@9.1.0(stylelint@15.10.3):
     resolution: {integrity: sha512-TijYeDoDgHAFjpn9NnziQrmUCGrm2AM4e1HzsdI2mCWBRkQRuewc343YqDwdFgQ5eHoMZ3JRL02i72W3vktuDA==}
     peerDependencies:
       stylelint: ^14.0.0 || ^15.0.0
     dependencies:
       css-property-sort-order-smacss: 2.2.0
-      stylelint: 15.10.2
-      stylelint-order: 6.0.3(stylelint@15.10.2)
+      stylelint: 15.10.3
+      stylelint-order: 6.0.3(stylelint@15.10.3)
     dev: true
 
-  /stylelint-config-recommended-scss@12.0.0(postcss@8.4.28)(stylelint@15.10.2):
+  /stylelint-config-recommended-scss@12.0.0(postcss@8.4.28)(stylelint@15.10.3):
     resolution: {integrity: sha512-5Bb2mlGy6WLa30oNeKpZvavv2lowJUsUJO25+OA68GFTemlwd1zbFsL7q0bReKipOSU3sG47hKneZ6Nd+ctrFA==}
     peerDependencies:
       postcss: ^8.3.3
@@ -2747,20 +2759,20 @@ packages:
     dependencies:
       postcss: 8.4.28
       postcss-scss: 4.0.7(postcss@8.4.28)
-      stylelint: 15.10.2
-      stylelint-config-recommended: 12.0.0(stylelint@15.10.2)
-      stylelint-scss: 5.1.0(stylelint@15.10.2)
+      stylelint: 15.10.3
+      stylelint-config-recommended: 12.0.0(stylelint@15.10.3)
+      stylelint-scss: 5.1.0(stylelint@15.10.3)
     dev: true
 
-  /stylelint-config-recommended@12.0.0(stylelint@15.10.2):
+  /stylelint-config-recommended@12.0.0(stylelint@15.10.3):
     resolution: {integrity: sha512-x6x8QNARrGO2sG6iURkzqL+Dp+4bJorPMMRNPScdvaUK8PsynriOcMW7AFDKqkWAS5wbue/u8fUT/4ynzcmqdQ==}
     peerDependencies:
       stylelint: ^15.5.0
     dependencies:
-      stylelint: 15.10.2
+      stylelint: 15.10.3
     dev: true
 
-  /stylelint-config-standard-scss@10.0.0(postcss@8.4.28)(stylelint@15.10.2):
+  /stylelint-config-standard-scss@10.0.0(postcss@8.4.28)(stylelint@15.10.3):
     resolution: {integrity: sha512-bChBEo1p3xUVWh/wenJI+josoMk21f2yuLDGzGjmKYcALfl2u3DFltY+n4UHswYiXghqXaA8mRh+bFy/q1hQlg==}
     peerDependencies:
       postcss: ^8.3.3
@@ -2770,31 +2782,31 @@ packages:
         optional: true
     dependencies:
       postcss: 8.4.28
-      stylelint: 15.10.2
-      stylelint-config-recommended-scss: 12.0.0(postcss@8.4.28)(stylelint@15.10.2)
-      stylelint-config-standard: 33.0.0(stylelint@15.10.2)
+      stylelint: 15.10.3
+      stylelint-config-recommended-scss: 12.0.0(postcss@8.4.28)(stylelint@15.10.3)
+      stylelint-config-standard: 33.0.0(stylelint@15.10.3)
     dev: true
 
-  /stylelint-config-standard@33.0.0(stylelint@15.10.2):
+  /stylelint-config-standard@33.0.0(stylelint@15.10.3):
     resolution: {integrity: sha512-eyxnLWoXImUn77+ODIuW9qXBDNM+ALN68L3wT1lN2oNspZ7D9NVGlNHb2QCUn4xDug6VZLsh0tF8NyoYzkgTzg==}
     peerDependencies:
       stylelint: ^15.5.0
     dependencies:
-      stylelint: 15.10.2
-      stylelint-config-recommended: 12.0.0(stylelint@15.10.2)
+      stylelint: 15.10.3
+      stylelint-config-recommended: 12.0.0(stylelint@15.10.3)
     dev: true
 
-  /stylelint-order@6.0.3(stylelint@15.10.2):
+  /stylelint-order@6.0.3(stylelint@15.10.3):
     resolution: {integrity: sha512-1j1lOb4EU/6w49qZeT2SQVJXm0Ht+Qnq9GMfUa3pMwoyojIWfuA+JUDmoR97Bht1RLn4ei0xtLGy87M7d29B1w==}
     peerDependencies:
       stylelint: ^14.0.0 || ^15.0.0
     dependencies:
       postcss: 8.4.28
       postcss-sorting: 8.0.2(postcss@8.4.28)
-      stylelint: 15.10.2
+      stylelint: 15.10.3
     dev: true
 
-  /stylelint-scss@5.1.0(stylelint@15.10.2):
+  /stylelint-scss@5.1.0(stylelint@15.10.3):
     resolution: {integrity: sha512-E+KlQFXv1Euha43qw3q+wKBSli557wxbbo6/39DWhRNXlUa9Cz+FYrcgz+PT6ag0l6UisCYjAGCNhoSl4FcwlA==}
     peerDependencies:
       stylelint: ^14.5.1 || ^15.0.0
@@ -2803,11 +2815,11 @@ packages:
       postcss-resolve-nested-selector: 0.1.1
       postcss-selector-parser: 6.0.13
       postcss-value-parser: 4.2.0
-      stylelint: 15.10.2
+      stylelint: 15.10.3
     dev: true
 
-  /stylelint@15.10.2:
-    resolution: {integrity: sha512-UxqSb3hB74g4DTO45QhUHkJMjKKU//lNUAOWyvPBVPZbCknJ5HjOWWZo+UDuhHa9FLeVdHBZXxu43eXkjyIPWg==}
+  /stylelint@15.10.3:
+    resolution: {integrity: sha512-aBQMMxYvFzJJwkmg+BUUg3YfPyeuCuKo2f+LOw7yYbU8AZMblibwzp9OV4srHVeQldxvSFdz0/Xu8blq2AesiA==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -2832,7 +2844,7 @@ packages:
       import-lazy: 4.0.0
       imurmurhash: 0.1.4
       is-plain-object: 5.0.0
-      known-css-properties: 0.27.0
+      known-css-properties: 0.28.0
       mathml-tag-names: 2.1.3
       meow: 10.1.5
       micromatch: 4.0.5
@@ -2943,12 +2955,6 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /typescript@5.1.6:
-    resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
-    engines: {node: '>=14.17'}
-    hasBin: true
-    dev: true
-
   /typescript@5.2.2:
     resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
     engines: {node: '>=14.17'}
@@ -2988,7 +2994,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite@4.4.9(@types/node@20.4.8)(sass@1.64.2):
+  /vite@4.4.9(@types/node@20.5.6)(sass@1.66.1):
     resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3016,11 +3022,11 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.4.8
+      '@types/node': 20.5.6
       esbuild: 0.18.20
       postcss: 8.4.28
       rollup: 3.28.1
-      sass: 1.64.2
+      sass: 1.66.1
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
