@@ -6,24 +6,6 @@
 @include shrtcss.generate-modules;
 
 /* https://github.com/sass/sass/issues/2842 */
-
-/** Display styles for stories */
-:root {
-  /** Overwrite default bg to prevent flashing */
-  --ladle-bg-color-primary: var(--shrt-color-surface);
-  --ladle-bg-color-secondary: var(--shrt-color-bg);
-  --ladle-color-primary: var(--shrt-color-text-weak);
-}
-
-body {
-  background-color: var(--ladle-bg-color-primary);
-}
-
-.ladle-aside {
-  background-color: var(--ladle-bg-color-secondary);
-  border-inline-start: 1px solid var(--shrt-color-border);
-}
-
 .story-wrapper {
   display: flex;
   flex-direction: column;
