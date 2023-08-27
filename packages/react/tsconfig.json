@@ -22,7 +22,12 @@
       "react-dom",
       "@storylite/storylite",
       "@storylite/vite-plugin/virtual"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@shrtcss/core": ["../core/scss/shrtcss.scss"],
+      "@shrtcss/react-hooks": ["../react-hooks/src/index.ts"]
+    }
   },
   "include": ["src", "storylite.tsx", "vite.config.ts"]
 }
