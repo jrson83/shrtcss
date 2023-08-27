@@ -11,11 +11,19 @@ export const DividerScreen: StoryComponent = () => {
       <h1>Divider</h1>
       <h2>Horizontal</h2>
       <p>
-        Display a simple but usefull horizontal divider{' '}
-        <code>&#x3C;hr&#x3E;</code> with <small>100%</small> of parent width.
+        Display a horizontal divider <code>&#x3C;hr&#x3E;</code> with{' '}
+        <small>100%</small> of its parent width.
       </p>
       <div className='example-wrapper column'>
         <Divider />
+      </div>
+      <h2>Vertical</h2>
+      <p>
+        Display a vertical divider <code>&#x3C;hr&#x3E;</code> which scales its
+        height in flex layouts.
+      </p>
+      <div className='example-wrapper'>
+        Text <Divider direction={'vertical'} /> Text
       </div>
       <h2>Horizontal with Text</h2>
       <p>

@@ -4,11 +4,22 @@
 @mixin generate-divider() {
   hr {
     box-sizing: content-box;
-    width: 100%;
-    max-width: 100%;
     overflow: visible;
     border: 0;
-    border-block-start: 1px solid color('border-strong');
+    
+    &.vertical {
+      flex-shrink: 0;
+      align-self: stretch;
+      width: 1px;
+      min-height: 1em;
+      border-inline-end: 1px solid color('border-strong');
+    }
+
+    &:not(.vertical) {
+      width: 100%;
+      max-width: 100%;
+      border-block-start: 1px solid color('border-strong');
+    }
   }
   
   // https://melvingeorge.me/blog/add-text-in-center-on-divider-hr-html-css
