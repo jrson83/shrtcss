@@ -1,8 +1,8 @@
 import type {
   ListItemType,
+  ListProps,
   ListType,
   PolymorphicRef,
-  TextProps,
 } from './list.types'
 import { cx } from 'classix'
 import { forwardRef } from 'react'
@@ -25,10 +25,11 @@ const List: ListType = forwardRef(
       as,
       children,
       className,
+      header,
       items,
       itemRenderer,
       ...props
-    }: TextProps<Item, C>,
+    }: ListProps<Item, C>,
     ref?: PolymorphicRef<C>
   ) => {
     const Component = as || 'ul'
@@ -44,6 +45,9 @@ const List: ListType = forwardRef(
         ref={ref}
         {...props}
       >
+        {header && items && items.length > 0 && (
+          <ListItem className='list-group__header'>{header}</ListItem>
+        )}
         {items && itemRenderer ? items.map(itemRenderer) : children}
       </Component>
     )

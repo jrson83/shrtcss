@@ -2,6 +2,7 @@ import Button from '../button'
 import Divider from '../divider'
 import Icon from '../icon'
 import List, { ListItem } from '../list'
+import Link from '../router/link'
 import { DropdownType } from './dropdown.types'
 import { useOnClickOutside } from '@shrtcss/react-hooks'
 import { cx } from 'classix'
@@ -39,20 +40,21 @@ const Dropdown: DropdownType = ({ icon, label, position }) => {
           ref={ref}
           aria-expanded={true}
         >
+          <ListItem className='menu__item menu__item-header'>
+            Test Header
+          </ListItem>
           <ListItem className='menu__item'>
-            {/* rome-ignore lint/a11y/useValidAnchor: <explanation> */}
-            <a href='/' onClick={toggleDropdown}>
+            <Link href='/' onClick={toggleDropdown}>
               <Icon title='Games' icon={'ps4'} size={16} />
               <span>Games</span>
-            </a>
+            </Link>
           </ListItem>
           <Divider />
           <ListItem className='menu__item'>
-            {/* rome-ignore lint/a11y/useValidAnchor: <explanation> */}
-            <a href='/settings' onClick={toggleDropdown}>
+            <Link href='/settings' onClick={toggleDropdown}>
               <Icon title='Settings' icon={'settings'} size={16} />
               <span>Settings</span>
-            </a>
+            </Link>
           </ListItem>
         </List>
       )}

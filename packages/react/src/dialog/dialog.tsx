@@ -15,6 +15,7 @@ const Dialog: DialogType = ({
   isDialogVisible,
   useFocusTrap = true,
   fullScreen = false,
+  position,
   showCloseButton = false,
   showDialogFooter = true,
   submitButton = {
@@ -78,7 +79,11 @@ const Dialog: DialogType = ({
         ref={dialogRef}
         onCancel={closeDialog}
         onClick={closeDialog}
-        className={cx('dialog', fullScreen && 'dialog-fullscreen')}
+        className={cx(
+          'dialog',
+          fullScreen && 'dialog-fullscreen',
+          position && `dialog-${position}`
+        )}
         id={name}
         aria-labelledby='dialog_title'
       >

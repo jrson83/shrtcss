@@ -5,6 +5,7 @@ export interface DialogProps {
   isDialogVisible: boolean
   useFocusTrap?: boolean
   fullScreen?: boolean
+  position?: 'bottom'
   showCloseButton?: boolean
   showDialogFooter?: boolean
   submitButton?: {

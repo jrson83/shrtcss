@@ -26,12 +26,13 @@ export type PolymorphicRef<C extends React.ElementType> =
 /**
  * This is the updated component props using PolymorphicComponentPropWithRef
  */
-export type TextProps<
+export type ListProps<
   Item,
   C extends React.ElementType
 > = PolymorphicComponentPropWithRef<
   C,
   {
+    header?: string
     items?: Item[]
     itemRenderer?: (item: Item) => React.ReactNode
   }
@@ -41,5 +42,5 @@ export type TextProps<
  * This is the type used in the type annotation for the component
  */
 export type ListType = <Item, C extends React.ElementType = 'ul'>(
-  props: TextProps<Item, C>
+  props: ListProps<Item, C>
 ) => React.ReactNode
