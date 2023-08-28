@@ -8,6 +8,7 @@ import { HeadingScreen } from './heading/heading.stories'
 import { IconScreen } from './icon/icon.stories'
 import { ListScreen } from './list/list.stories'
 import { TabsScreen } from './tabs/tabs.stories'
+import { TimelineScreen } from './timeline/timeline.stories'
 import { StoryMeta } from '@storylite/storylite'
 
 export default {
@@ -25,4 +26,5 @@ export {
   IconScreen,
   ListScreen,
   TabsScreen,
+  TimelineScreen,
 }

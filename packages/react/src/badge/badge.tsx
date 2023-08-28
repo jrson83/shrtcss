@@ -3,13 +3,23 @@ import { cx } from 'classix'
 
 const Badge: BadgeType = ({
   children,
-  className = 'badge ',
+  className = 'bdg',
   color,
-  size = 'xs',
+  disabled,
+  fullWidth,
+  size,
+  uppercase,
 }) => {
   return (
     <div
-      className={cx(className, size && `btn-${size}`, color && `bg-${color}`)}
+      className={cx(
+        className,
+        size && `bdg-${size}`,
+        color && `bg-${color}`,
+        disabled && `bdg-disabled`,
+        fullWidth && `bdg-fw`,
+        uppercase && `uppercase`
+      )}
     >
       {children}
     </div>

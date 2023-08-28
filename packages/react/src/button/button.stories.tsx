@@ -13,7 +13,8 @@ const ButtonScreen: StoryComponent = () => {
       <h2>Basic</h2>
       <p>
         Displays a <code>&lt;button&gt;</code> and use the utility class{' '}
-        <code>.bg-*</code> to change the button background- and font-color.
+        <code>.bg-*</code> to change the button <code>background-color</code> &{' '}
+        <code>font-color</code>.
       </p>
       <div className='example-wrapper'>
         <Button className='btn'>Button</Button>
@@ -96,8 +97,7 @@ const ButtonScreen: StoryComponent = () => {
       </div>
       <h2>Full-Width</h2>
       <p>
-        Use the modifier classes <code>.btn-blk</code> to change the button
-        width.
+        Use the modifier class <code>.btn-fw</code> to change the button width.
       </p>
       <div className='example-wrapper'>
         <Button fullWidth>Button</Button>

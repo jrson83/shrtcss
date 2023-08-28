@@ -1,19 +1,72 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../config' as *;
 @use '../function' as *;
 
 @mixin generate-badge {
-  .badge {
+  .bdg {
+    --bdg-scale: 1;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.75em;
     margin: 0;
     padding: 0.25em 0.625em;
     border: none;
     border-radius: 0.25rem;
-    font-size: type-var('xs');
+    font-size: calc(var(--bdg-scale, 1) * 0.85rem);
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
     white-space: nowrap;
 
+    svg:not(:only-child) {
+      margin-inline-end: 0.5em;
+    }
+
+    &-sm {
+      --bdg-scale: 0.8;
+
+      font-weight: 300;
+    }
+  
+    &-lg {
+      --bdg-scale: 1.2;
+    }
+  
+    &-fw {
+      width: 100%;
+      font-weight: 600;
+    }
+
+    &-icon {
+      width: 2.75em;
+      min-width: unset;
+      padding: 0.325em;
+    }
+
+    &-disabled {
+      opacity: 0.6;
+      cursor: default;
+      pointer-events: none;
+    }
+
     &:empty {
       display: none;
+    }
+
+    &:not([class*='bg-']) {
+      border-color: color('border');
+      background: color('surface');
+
+      @media (prefers-color-scheme: 'light') {
+        color: color-contrast(map-deep-get($colors, 'light', 'surface'));
+      }
+
+      @media (prefers-color-scheme: 'dark') {
+        color: color-contrast(map-deep-get($colors, 'dark', 'surface'));
+      }
     }
 
     &--tag {

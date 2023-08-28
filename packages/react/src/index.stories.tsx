@@ -7,7 +7,16 @@ export default {
 } satisfies StoryMeta
 
 export const Main: StoryComponent = () => (
-  <div style={{ color: 'green', fontSize: '28px' }}>React Demo Index Page</div>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+    <img
+      src='/public/images/shrtcss-logo.png'
+      alt='shrtcss Logo'
+      style={{ maxWidth: '350px' }}
+    />
+    <p>A lightweight SCSS/CSS library.</p>
+    <h2>Documentation</h2>
+    <p>shrtcss is currently in development.</p>
+  </div>
 )
 
 // Main.storyTitle = 'Main Component'

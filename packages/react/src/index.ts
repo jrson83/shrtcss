@@ -70,3 +70,8 @@ export {
   type TabType,
   type TabsType,
 } from './tabs'
+export {
+  default as Timeline,
+  type TimelineItemProps,
+  type TimelineItemType,
+} from './timeline'

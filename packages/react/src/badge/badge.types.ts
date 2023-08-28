@@ -1,6 +1,9 @@
 export interface BadgeProps extends React.ComponentPropsWithoutRef<'div'> {
   color?: 'info' | 'success' | 'warning' | 'danger'
-  size?: 'xs' | 'sm' | 'md' | 'lg'
+  disabled?: boolean
+  fullWidth?: boolean
+  size?: 'sm' | 'lg'
+  uppercase?: boolean
 }
 
 export type BadgeType = React.FC<BadgeProps>
