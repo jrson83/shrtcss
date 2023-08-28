@@ -67,8 +67,8 @@ const ButtonScreen: StoryComponent = () => {
       </div>
       <h2>Size Variants</h2>
       <p>
-        Use the modifier classes <code>.btn-sm .btn-lg</code> to change the
-        button size (scale).
+        Use the modifier classes <code>.btn-sm</code> & <code>.btn-lg</code> to
+        change the button size (scale).
       </p>
       <div className='example-wrapper'>
         <Button size={'lg'}>Large</Button>

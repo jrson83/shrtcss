@@ -9,7 +9,7 @@ export default {
 export const Main: StoryComponent = () => (
   <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
     <img
-      src='/public/images/shrtcss-logo.png'
+      src='/images/shrtcss-logo.png'
       alt='shrtcss Logo'
       style={{ maxWidth: '350px' }}
     />

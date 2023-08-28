@@ -1,0 +1,28 @@
+@use "sass:map";
+@use '../function' as *;
+
+@mixin generate-blockquote {
+  blockquote {
+    padding: 1rem 1.5rem;
+    border-width: 0.3125rem;
+    border-left-style: solid;
+    border-radius: var(--shrt-border-radius);
+    border-color: color('border');
+    background-color: color('surface');
+    color: inherit;
+
+    > q,
+    p {
+      display: inline;
+      font-family: "Times New Roman", sans-serif,;
+      font-size: type-var('base');
+      font-style: italic;
+    }
+
+    > footer {
+      display: block;
+      padding-block-start: 1rem;
+      font-size: type-var('xs');
+    }
+  }
+}

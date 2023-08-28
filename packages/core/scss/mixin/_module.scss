@@ -36,6 +36,10 @@
     @include generate-badge;
   }
 
+  @if map-deep-get($settings, 'modules', 'blockquote') {
+    @include generate-blockquote;
+  }
+
   @if map-deep-get($settings, 'modules', 'button') {
     @include generate-button;
   }

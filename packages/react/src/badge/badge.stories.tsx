@@ -47,7 +47,7 @@ const BadgeScreen: StoryComponent = () => {
       </div>
       <h2>Icon & Label</h2>
       <p>
-        Place an <code>Icon</code> (SVG) inside a buttons content and wrap the
+        Place an <code>Icon</code> (SVG) inside a badges content and wrap the
         label with <code>&lt;span&gt;</code> element.
       </p>
       <div className='example-wrapper'>
@@ -58,8 +58,8 @@ const BadgeScreen: StoryComponent = () => {
       </div>
       <h2>Size Variants</h2>
       <p>
-        Use the modifier classes <code>.bdg-sm .bdg-lg</code> to change the
-        badge size (scale).
+        Use the modifier classes <code>.bdg-sm</code> & <code>.bdg-lg</code> to
+        change the badge size (scale).
       </p>
       <div className='example-wrapper'>
         <Badge size={'lg'}>Large</Badge>
