@@ -1,3 +1,4 @@
+import { AlertScreen } from './alert/alert.stories'
 import { BadgeScreen } from './badge/badge.stories'
 import { BlockquoteScreen } from './blockquote/blockquote.stories'
 import { ButtonScreen } from './button/button.stories'
@@ -10,7 +11,6 @@ import { IconScreen } from './icon/icon.stories'
 import { ListScreen } from './list/list.stories'
 import { TabsScreen } from './tabs/tabs.stories'
 import { TimelineScreen } from './timeline/timeline.stories'
-
 import { StoryMeta } from '@storylite/storylite'
 
 export default {
@@ -18,6 +18,7 @@ export default {
 } satisfies StoryMeta
 
 export {
+  AlertScreen,
   BadgeScreen,
   BlockquoteScreen,
   ButtonScreen,

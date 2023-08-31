@@ -1,11 +1,11 @@
-import { icons } from '../icon/icon.data'
+import type { IconData } from '../icon'
 
 export interface TimelineItemProps {
   id: number
   date: string
   label: string
   color?: string
-  icon?: keyof typeof icons
+  icon?: IconData
   completed?: boolean
 }
 

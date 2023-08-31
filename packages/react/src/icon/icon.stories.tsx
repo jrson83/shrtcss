@@ -22,13 +22,14 @@ const IconScreen: StoryComponent = () => {
         <Icon title='Test' icon={'checkmark'} />
         <Icon title='Test' icon={'close'} />
         <Icon title='Test' icon={'ellipsis'} />
-        <Icon title='Test' icon={'error'} />
+        <Icon title='Test' icon={'danger'} />
         <Icon title='Test' icon={'exit'} />
         <Icon title='Test' icon={'expand'} />
         <Icon title='Test' icon={'file'} />
         <Icon title='Test' icon={'focus'} />
         <Icon title='Test' icon={'gamepad'} />
         <Icon title='Test' icon={'info'} />
+        <Icon title='Test' icon={'warning'} />
         <Icon title='Test' icon={'ps4'} />
         <Icon title='Test' icon={'question'} />
         <Icon title='Test' icon={'settings'} />

@@ -32,6 +32,10 @@
     @include generate-utilities;
   }
 
+  @if map-deep-get($settings, 'modules', 'alert') {
+    @include generate-alert;
+  }
+
   @if map-deep-get($settings, 'modules', 'badge') {
     @include generate-badge;
   }

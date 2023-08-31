@@ -42,7 +42,7 @@ const BadgeScreen: StoryComponent = () => {
           <Icon title='test' icon={'question'} size={20} />
         </Badge>
         <Badge className='bdg bdg-icon bg-danger' aria-label='Icon-only Badge'>
-          <Icon title='test' icon={'error'} size={20} />
+          <Icon title='test' icon={'danger'} size={20} />
         </Badge>
       </div>
       <h2>Icon & Label</h2>

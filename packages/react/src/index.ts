@@ -1,3 +1,4 @@
+export { default as Alert, type AlertProps, type AlertType } from './alert'
 export { default as Badge, type BadgeProps, type BadgeType } from './badge'
 export { default as Button, type ButtonProps, type ButtonType } from './button'
 export { default as Dialog, type DialogProps, type DialogType } from './dialog'

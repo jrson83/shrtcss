@@ -51,7 +51,7 @@ const ButtonScreen: StoryComponent = () => {
           className='btn btn-icon bg-danger'
           aria-label='Icon-only Button'
         >
-          <Icon title='test' icon={'error'} size={26} />
+          <Icon title='test' icon={'danger'} size={26} />
         </Button>
       </div>
       <h2>Icon & Label</h2>
