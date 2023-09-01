@@ -17,6 +17,8 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
     "types": [
+      "vite/client",
+      "vitest",
       "node",
       "react",
       "react-dom",

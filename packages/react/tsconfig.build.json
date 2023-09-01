@@ -6,6 +6,7 @@
     "node_modules",
     "public",
     "storylite.tsx",
-    "src/**/*.stories.tsx"
+    "src/**/*.stories.tsx",
+    "src/**/*.spec.tsx"
   ]
 }
