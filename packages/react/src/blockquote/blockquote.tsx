@@ -1,14 +1,20 @@
-import type { BlockquoteType } from './blockquote.types'
+import type { ComponentPropsWithoutRef } from 'react'
 
-const Blockquote: BlockquoteType = ({ children, cite }) => {
+export interface BlockquoteProps
+  extends ComponentPropsWithoutRef<'blockquote'> {
+  /** Blockquote footer cite */
+  cite?: string
+}
+
+export default function Blockquote({
+  children,
+  cite,
+  ...rest
+}: BlockquoteProps) {
   return (
-    <blockquote>
+    <blockquote role='blockquote' {...rest}>
       <p>{children}</p>
       {cite && <footer>{cite}</footer>}
     </blockquote>
   )
 }
-
-Blockquote.displayName = 'Blockquote'
-
-export default Blockquote

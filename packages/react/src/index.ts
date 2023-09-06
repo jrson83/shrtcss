@@ -1,17 +1,10 @@
-export { default as Alert, type AlertProps, type AlertType } from './alert'
-export { default as Badge, type BadgeProps, type BadgeType } from './badge'
-export { default as Button, type ButtonProps, type ButtonType } from './button'
-export { default as Dialog, type DialogProps, type DialogType } from './dialog'
-export {
-  default as Divider,
-  type DividerProps,
-  type DividerType,
-} from './divider'
-export {
-  default as Dropdown,
-  type DropdownProps,
-  type DropdownType,
-} from './dropdown'
+export * from './alert'
+export * from './badge'
+export * from './blockquote'
+export * from './button'
+export * from './dialog'
+export * from './divider'
+export * from './dropdown'
 export {
   default as Form,
   type FormType,
@@ -40,7 +33,7 @@ export {
   type HeadingProps,
   type HeadingType,
 } from './heading'
-export { default as Icon, type IconProps, type IconType } from './icon'
+export * from './icon'
 export {
   default as List,
   ListItem,
@@ -71,8 +64,4 @@ export {
   type TabType,
   type TabsType,
 } from './tabs'
-export {
-  default as Timeline,
-  type TimelineItemProps,
-  type TimelineItemType,
-} from './timeline'
+export * from './timeline'

@@ -1,31 +1,35 @@
-import Dropdown from '../dropdown'
 import Icon from '../icon'
-import { StoryComponent, StoryMeta } from '@storylite/storylite'
+import Dropdown from './dropdown'
+import { Story } from '@storylite/storylite'
+
+type StoryType = Story<typeof Dropdown>
 
 export default {
-  title: 'Components',
-} satisfies StoryMeta
+  title: 'Dropdown',
+  component: Dropdown,
+  args: {
+    label: 'Testing',
+    icon: undefined,
+    position: undefined,
+  },
+  decorators: [
+    (Story, context) => {
+      return (
+        <div className='example-wrapper'>
+          <Story {...context?.args} />
+        </div>
+      )
+    },
+  ],
+} satisfies StoryType
 
-const DropdownScreen: StoryComponent = () => {
-  return (
-    <div className='story-wrapper'>
-      <h1>Dropdown</h1>
-      <p>
-        Displays a <code>&lt;button&gt;</code> or a component that looks like a
-        button.
-      </p>
-      <h2>Basic</h2>
-      <div className='example-wrapper'>
-        <Dropdown label='Dropdown' />
-        <Dropdown
-          position={'bottom-right'}
-          icon={<Icon title='Settings' icon={'ellipsis'} size={26} />}
-        />
-      </div>
-    </div>
-  )
+export const Main: StoryType = {
+  name: 'Default',
 }
 
-DropdownScreen.storyTitle = 'Dropdown'
-
-export { DropdownScreen }
+export const WithIconButton: StoryType = {
+  args: {
+    label: 'Testing',
+    icon: <Icon title='Settings' icon={'ellipsis'} size={26} />,
+  },
+}

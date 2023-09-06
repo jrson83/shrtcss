@@ -9,7 +9,7 @@ describe('Badge component test', () => {
   test('Should render default badge', () => {
     render(<Badge>Testing</Badge>)
 
-    const badge = screen.getByText(/Testing/i) /* screen.getByRole('span') */
+    const badge = screen.getByText(/Testing/i)
     expect(badge).toBeInTheDocument()
     expect(badge).toHaveClass('bdg')
   })

@@ -1,27 +1,36 @@
 import Blockquote from './blockquote'
-import { StoryComponent, StoryMeta } from '@storylite/storylite'
+import { Story } from '@storylite/storylite'
+
+type StoryType = Story<typeof Blockquote>
 
 export default {
-  title: 'Components',
-} satisfies StoryMeta
+  title: 'Blockquote',
+  component: Blockquote,
+  args: {
+    cite: undefined,
+    children: 'First, solve the problem. Then, write the code.',
+  },
+  decorators: [
+    (Story, context) => {
+      return (
+        <div className='example-wrapper'>
+          <Story {...context?.args} />
+        </div>
+      )
+    },
+  ],
+} satisfies StoryType
 
-const BlockquoteScreen: StoryComponent = () => {
-  return (
-    <div className='story-wrapper wrap'>
-      <h1>Blockquote</h1>
-      <p>
-        Display a <code>&lt;blockquote&gt;</code>. Use <code>&lt;p&gt;</code> or{' '}
-        <code>&lt;q&gt;</code> for inline quotations.
-      </p>
-      <div className='example-wrapper column'>
-        <Blockquote cite='— John Johnson'>
-          First, solve the problem. Then, write the code.
-        </Blockquote>
-      </div>
-    </div>
-  )
+export const Main: StoryType = {
+  name: 'Default',
+  navigation: {
+    order: 0,
+  },
 }
 
-BlockquoteScreen.storyTitle = 'Blockquote'
-
-export { BlockquoteScreen }
+export const WithCite: StoryType = {
+  args: {
+    children: 'First, solve the problem. Then, write the code.',
+    cite: '— John Johnson',
+  },
+}

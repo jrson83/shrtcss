@@ -1,13 +1,33 @@
 import Button from '../button'
 import Icon from '../icon'
-import type { DialogType } from './dialog.types'
 import { FocusTrap } from '@shrtcss/react-hooks'
 import { cx } from 'classix'
-import { useEffect, useRef } from 'react'
+import { type ComponentPropsWithoutRef, useEffect, useRef } from 'react'
 
 export const browserSupportsHas = CSS.supports('selector(html:has(body))')
 
-const Dialog: DialogType = ({
+export interface DialogProps extends ComponentPropsWithoutRef<'dialog'> {
+  name: string
+  type?: 'error' | 'warning' | 'info' | 'success'
+  title: string
+  isDialogVisible: boolean
+  useFocusTrap?: boolean
+  fullScreen?: boolean
+  position?: 'bottom'
+  showCloseButton?: boolean
+  showDialogFooter?: boolean
+  submitButton?: {
+    label?: 'Submit' | 'Save' | 'Update' | 'Delete'
+    action?: (data: unknown) => void
+  }
+  cancelButton?: {
+    label?: 'Cancel' | 'Reset'
+    action?: (data: unknown) => void
+  }
+  closeDialog: () => void
+}
+
+export default function Dialog({
   children,
   name,
   type = 'info',
@@ -25,7 +45,7 @@ const Dialog: DialogType = ({
     label: 'Cancel',
   },
   closeDialog,
-}) => {
+}: DialogProps) {
   const dialogRef = useRef<HTMLDialogElement | null>(null)
   const shown = useRef<boolean>(false)
 
@@ -123,5 +143,3 @@ const Dialog: DialogType = ({
     </FocusTrap>
   )
 }
-
-export default Dialog

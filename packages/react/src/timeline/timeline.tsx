@@ -1,22 +1,34 @@
-import Icon from '../icon'
-import type { TimelineItemType } from './timeline.types'
+import Icon, { type IconData } from '../icon'
+import { cx } from 'classix'
+import type { ComponentPropsWithoutRef } from 'react'
 
-export const TimelineItem: TimelineItemType = ({
+export interface TimelineItemProps
+  extends Omit<ComponentPropsWithoutRef<'li'>, 'id'> {
+  id: number
+  completed?: boolean
+  date: string
+  label: string
+  color?: string
+  icon?: IconData
+}
+
+export function TimelineItem({
   completed = true,
   date,
   label,
   icon = 'checkmark',
   color = 'success',
-}) => {
+}: TimelineItemProps) {
   return (
     <li className='timeline__item'>
       {completed ? (
         <Icon
           title='test'
           icon={icon}
-          className={`timeline__icon timeline__icon-completed ${
+          className={cx(
+            'timeline__icon timeline__icon-completed',
             color && `bg-color-${color}`
-          }`}
+          )}
         />
       ) : (
         <span className='timeline__icon'></span>
@@ -60,7 +72,7 @@ const lines = [
   },
 ]
 
-const Timeline: React.FC = () => {
+export default function Timeline() {
   return (
     <ol className='timeline' role='list'>
       {lines.map((item) => (
@@ -69,5 +81,3 @@ const Timeline: React.FC = () => {
     </ol>
   )
 }
-
-export default Timeline

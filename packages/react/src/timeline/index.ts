@@ -1,2 +1,1 @@
-export { default, TimelineItem } from './timeline'
-export * from './timeline.types'
+export { default, TimelineItem, type TimelineItemProps } from './timeline'

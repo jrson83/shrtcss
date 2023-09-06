@@ -29,7 +29,14 @@
   },
   "license": "MIT",
   "type": "module",
+  "types": "types/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": ["types/index.d.ts"]
+    }
+  },
   "style": "dist/shrt.min.css",
+  "files": ["dist", "scss", "types"],
   "scripts": {
     "style:check": "stylelint \"./scss/*.scss\" -f verbose --color",
     "style": "stylelint \"./scss/*.scss\" --fix -f verbose —color",

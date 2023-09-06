@@ -1,18 +1,41 @@
-import type { ButtonType } from './button.types'
+import type { SHRTColor, SHRTSize, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
-import { forwardRef } from 'react'
+import { type ComponentPropsWithRef /* , forwardRef */ } from 'react'
 
-const Button: ButtonType = forwardRef(
+export type ButtonProps = Omit<ComponentPropsWithRef<'button'>, 'onClick'> & {
+  /** Button color from theme */
+  color?: SHRTColor
+
+  /** Controls appearance */
+  variant?: SHRTVariant
+
+  /** Predefined button size */
+  size?: SHRTSize
+
+  /** Disabled state */
+  disabled?: boolean
+
+  /** Sets button width to 100% of parent element*/
+  fullWidth?: boolean
+
+  /** Set text-transform to uppercase */
+  uppercase?: boolean
+
+  /** Set text-transform to uppercase */
+  onClick?: (data: unknown) => void
+}
+
+/* export default forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       children,
       className = 'btn',
       color,
-      fullWidth,
       size,
+      fullWidth,
       uppercase,
       type = 'button',
-      ...props
+      ...rest
     },
     ref
   ) => {
@@ -27,14 +50,38 @@ const Button: ButtonType = forwardRef(
         )}
         type={type}
         ref={ref}
-        {...props}
+        {...rest}
       >
         {children}
       </button>
     )
   }
 )
+ */
 
-Button.displayName = 'Button'
-
-export default Button
+export default function Button({
+  children,
+  className = 'btn',
+  color,
+  size,
+  fullWidth,
+  uppercase,
+  type = 'button',
+  ...rest
+}: ButtonProps) {
+  return (
+    <button
+      className={cx(
+        className,
+        size && `btn-${size}`,
+        color && `bg-${color}`,
+        fullWidth && `btn-fw`,
+        uppercase && `uppercase`
+      )}
+      type={type}
+      {...rest}
+    >
+      {children}
+    </button>
+  )
+}

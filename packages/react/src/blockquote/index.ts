@@ -1,2 +1,1 @@
-export { default } from './blockquote'
-export * from './blockquote.types'
+export { default, type BlockquoteProps } from './blockquote'

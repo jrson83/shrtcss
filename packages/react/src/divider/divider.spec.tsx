@@ -14,7 +14,7 @@ describe('Divider component test', () => {
   })
 
   test('Should render vertical divider', () => {
-    render(<Divider direction={'vertical'} />)
+    render(<Divider orientation={'vertical'} />)
 
     const divider = screen.getByRole('separator')
     expect(divider).toBeInTheDocument()

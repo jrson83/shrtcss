@@ -1,13 +1,27 @@
-import type { DividerType } from './divider.types'
 import { cx } from 'classix'
+import type { ComponentPropsWithoutRef } from 'react'
 
-const Divider: DividerType = ({ label, direction = 'horizontal' }) => {
-  if (label) {
-    return <div className='divider'>{label}</div>
-  }
-  return <hr className={cx(direction === 'vertical' && 'vertical')} />
+export interface DividerProps extends ComponentPropsWithoutRef<'hr'> {
+  /** Divider label */
+  label?: string
+
+  /** Divider orientation */
+  orientation?: 'vertical' | 'horizontal'
 }
 
-Divider.displayName = 'Divider'
-
-export default Divider
+export default function Divider({
+  label,
+  orientation = 'horizontal',
+  ...rest
+}: DividerProps) {
+  if (label) {
+    return (
+      <div className='divider' {...rest}>
+        {label}
+      </div>
+    )
+  }
+  return (
+    <hr className={cx(orientation === 'vertical' && 'vertical')} {...rest} />
+  )
+}

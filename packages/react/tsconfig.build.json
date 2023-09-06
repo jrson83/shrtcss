@@ -1,11 +1,11 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["src"],
+  "include": ["src/index.ts"],
   "exclude": [
     "dist",
     "node_modules",
     "public",
-    "storylite.tsx",
+    ".storylite",
     "src/**/*.stories.tsx",
     "src/**/*.spec.tsx"
   ]

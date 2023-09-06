@@ -17,13 +17,12 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
     "types": [
-      "vite/client",
-      "vitest",
+      "@storylite/vite-plugin/virtual",
       "node",
       "react",
       "react-dom",
-      "@storylite/storylite",
-      "@storylite/vite-plugin/virtual"
+      "vite/client",
+      "vitest"
     ],
     "baseUrl": ".",
     "paths": {
@@ -31,5 +30,5 @@
       "@shrtcss/react-hooks": ["../react-hooks/src/index.ts"]
     }
   },
-  "include": ["src", "storylite.tsx", "vite.config.ts"]
+  "include": ["*.ts", "*.tsx", "src/**/*", ".storylite/**/*"]
 }
