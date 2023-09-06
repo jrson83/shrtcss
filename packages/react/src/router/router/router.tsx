@@ -1,9 +1,27 @@
-import type { RouterContextProviderType, TRouterContext } from './router.types'
-import { createContext, useLayoutEffect, useState } from 'react'
+import { createContext, useContext, useLayoutEffect, useState } from 'react'
 
-const RouterContext = createContext<TRouterContext | null>(null)
+interface RouterProviderProps {
+  children?: React.ReactNode
+}
 
-const Router: RouterContextProviderType = ({ children }) => {
+export type TRouterContext = {
+  location: string
+  setLocation: any
+}
+
+export const RouterContext = createContext<TRouterContext | null>(null)
+
+export function useRouter() {
+  const location = useContext(RouterContext)
+
+  if (location === null) {
+    throw new Error('useRouter must be used within Router')
+  }
+
+  return location
+}
+
+export default function Router({ children }: RouterProviderProps) {
   const [location, setLocation] = useState(window.location.pathname)
 
   const handleRouteChange = (e: PopStateEvent) => {
@@ -30,5 +48,3 @@ const Router: RouterContextProviderType = ({ children }) => {
     </RouterContext.Provider>
   )
 }
-
-export { Router as default, RouterContext }

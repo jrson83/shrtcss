@@ -1,8 +1,12 @@
 import { useRouter } from '../router'
-import type { LinkType } from './link.types'
 import { matchRoutes, useHistory } from '@shrtcss/react-hooks'
+import type { ComponentPropsWithoutRef } from 'react'
 
-const Link: LinkType = ({ children, ...props }) => {
+export interface LinkProps extends ComponentPropsWithoutRef<'a'> {
+  isActive?: string
+}
+
+export default function Link({ children, ...props }: LinkProps) {
   const { location } = useRouter()
   const history = useHistory()
 
@@ -34,7 +38,7 @@ const Link: LinkType = ({ children, ...props }) => {
       {...props}
       className={[
         props.className && props.className,
-        isActive && props.activeClassName,
+        isActive && props.isActive,
       ]
         .filter((e) => !!e)
         .join(' ')}
@@ -45,7 +49,3 @@ const Link: LinkType = ({ children, ...props }) => {
     </a>
   )
 }
-
-Link.displayName = 'Link'
-
-export default Link

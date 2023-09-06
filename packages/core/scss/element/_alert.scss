@@ -79,41 +79,4 @@
       font-weight: 300;
     }
   }
-
-  .toast {
-    display: flex;
-    position: fixed;
-    z-index: 50;
-    flex-direction: column-reverse;
-    width: 100%;
-    max-width: 380px;
-    margin: auto;
-    row-gap: 1rem;
-
-    /* @include breakpoint(sm) {
-      padding-inline: 1rem;
-    } */
-
-    &-top {
-      top: 5rem;
-    }
-
-    &-bottom {
-      bottom: 5rem;
-      flex-direction: column;
-    }
-
-    &-left {
-      left: 1rem;
-    }
-
-    &-right {
-      right: 1rem;
-    }
-
-    &-center {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
 }

@@ -20,6 +20,8 @@ export interface AlertProps
 
   /** Adds close button  */
   closeBtn?: boolean
+
+  isToast?: boolean
 }
 
 export default function Alert({
@@ -29,16 +31,22 @@ export default function Alert({
   title,
   hasIcon = true,
   closeBtn = false,
+  isToast = false,
   ...rest
 }: AlertProps) {
   const handleDismiss = () => {
     console.log('dismiss')
   }
 
+  const alertOrToast = isToast ? 'toast' : 'alert'
+
   return (
     <output
       role='status'
-      className={cx(className, color && `alert-${color}`)}
+      className={cx(
+        isToast ? 'toast' : className ? className : 'toast',
+        color && `${alertOrToast}-${color}`
+      )}
       {...rest}
     >
       {hasIcon && (
@@ -46,17 +54,17 @@ export default function Alert({
           icon={color as IconData}
           title='Status'
           size={26}
-          className={`alert__icon alert__icon-${color}`}
+          className={`${alertOrToast}__icon ${alertOrToast}__icon-${color}`}
         />
       )}
-      <div className='alert__content'>
-        {title && <span className='alert__title'>{title}</span>}
-        <div className='alert__message'>{children}</div>
+      <div className={`${alertOrToast}__content`}>
+        {title && <span className={`${alertOrToast}__title`}>{title}</span>}
+        <div className={`${alertOrToast}__message`}>{children}</div>
       </div>
       {closeBtn && (
         <Button
           aria-label='Close'
-          className='alert__btn-dismiss'
+          className={`${alertOrToast}__btn-dismiss`}
           type='button'
           onClick={handleDismiss}
         >

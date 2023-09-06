@@ -1,15 +1,19 @@
-import type { HeadingType } from './heading.types'
-import { createElement } from 'react'
+import { type HTMLAttributes, createElement } from 'react'
 
-const Heading: HeadingType = ({ children, className, level = 'h2' }) => {
-  const HeadingComponent = ({
-    ...props
-  }: React.HTMLAttributes<HTMLHeadingElement>) =>
-    createElement(level, props, children)
-
-  return <HeadingComponent className={className}>{children}</HeadingComponent>
+export interface HeadingProps extends HTMLAttributes<HTMLHeadElement> {
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
+export default function Heading({
+  children,
+  className,
+  as = 'h2',
+  ...rest
+}: HeadingProps) {
+  const HeadingComponent = ({ ...props }) => createElement(as, props, children)
 
-Heading.displayName = 'Heading'
-
-export default Heading
+  return (
+    <HeadingComponent className={className} {...rest}>
+      {children}
+    </HeadingComponent>
+  )
+}

@@ -1,2 +1,1 @@
-export { default } from './heading'
-export * from './heading.types'
+export { default as Heading, type HeadingProps } from './heading'

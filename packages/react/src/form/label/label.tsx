@@ -1,7 +1,15 @@
-import type { LabelType } from './label.types'
 import { cx } from 'classix'
 
-const Label: LabelType = ({ children, className, error, htmlFor }) => {
+export interface LabelProps extends React.ComponentPropsWithoutRef<'label'> {
+  error?: string
+}
+
+export default function Label({
+  children,
+  className,
+  error,
+  htmlFor,
+}: LabelProps) {
   return (
     <label
       htmlFor={htmlFor}
@@ -11,7 +19,3 @@ const Label: LabelType = ({ children, className, error, htmlFor }) => {
     </label>
   )
 }
-
-Label.displayName = 'Label'
-
-export default Label

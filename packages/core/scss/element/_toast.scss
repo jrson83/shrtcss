@@ -1,0 +1,162 @@
+@use '../function' as *;
+@use "../mixin" as *;
+
+@mixin generate-toast {
+  .toast {
+    display: flex;
+    position: fixed;
+    z-index: 50;
+    flex-direction: column-reverse;
+    width: 100%;
+    max-width: 380px;
+    margin: auto;
+    row-gap: 1rem;
+
+    /* @include breakpoint(sm) {
+      padding-inline: 1rem;
+    } */
+
+    &-top {
+      top: 5rem;
+    }
+
+    &-bottom {
+      bottom: 5rem;
+      flex-direction: column;
+    }
+
+    &-left {
+      left: 1rem;
+    }
+
+    &-right {
+      right: 1rem;
+    }
+
+    &-center {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__item {
+      display: flex;
+      position: relative;
+      z-index: 50;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 1rem 0.25rem;
+      border-left: 6px solid transparent;
+      border-radius: var(--shrt-border-radius);
+      background-color: color('surface');
+      box-shadow: 0 8px 8px -12px rgb(0 0 0 / 10%);
+      pointer-events: none;
+      gap: 0.25rem;
+      will-change: opacity;
+
+      &:not(.open) {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      &.open {
+        animation: fade-in 0.15s;
+      }
+
+      &.close {
+        animation: fade-out 0.15s;
+      }
+
+      &-info {
+        border: 1px solid color('info');
+        border-left-width: 6px;
+      }
+
+      &-success {
+        border: 1px solid color('success');
+        border-left-width: 6px;
+      }
+
+      &-warn {
+        border: 1px solid color('warning');
+        border-left-width: 6px;
+      }
+
+      &-error {
+        border: 1px solid color('danger');
+        border-left-width: 6px;
+      }
+    }
+
+    &__icon {
+      align-self: stretch;
+      justify-content: center;
+      width: auto;
+      padding-inline: 0.85rem;
+      color: color('accent');
+
+      &-info {
+        color: color('info');
+      }
+
+      &-success {
+        color: color('success');
+      }
+
+      &-warn {
+        color: color('warning');
+      }
+
+      &-error {
+        color: color('danger');
+      }
+    }
+
+    &__meta {
+      flex: 1 1 0%;
+    }
+
+    &__title {
+      color: color('text-base');;
+      font-weight: 600;
+    }
+
+    &__desc {
+      color: color('text-weak');;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    &__btn {
+      &-dismiss {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0
+    }
+
+    100% {
+      opacity: 1
+    }
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1
+    }
+
+    100% {
+      opacity: 0
+    }
+  }
+}

@@ -1,8 +1,36 @@
 import { useRouter } from '../router'
-import type { RouteType } from './route.types'
 import { useHistory, useMatch } from '@shrtcss/react-hooks'
 
-const Route: RouteType = ({ exact = false, component: Component, path }) => {
+export interface History {
+  length: number
+  back(): void
+  forward(): void
+  push: (path: string) => void
+  replace: (path: string) => void
+}
+
+export interface RouteComponentProps {
+  history: History
+  location: {
+    params?: Record<string, string>
+    pattern: RegExp
+    pathname: string
+  }
+}
+
+export type RouteComponent = React.FC<RouteComponentProps>
+
+export interface RouteProps {
+  component: RouteComponent
+  path: string
+  exact?: boolean
+}
+
+export default function Route({
+  exact = false,
+  component: Component,
+  path,
+}: RouteProps) {
   const { location } = useRouter()
 
   const history = useHistory()
@@ -14,5 +42,3 @@ const Route: RouteType = ({ exact = false, component: Component, path }) => {
 
   return <Component history={history} location={match} />
 }
-
-export default Route

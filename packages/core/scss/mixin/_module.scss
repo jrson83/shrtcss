@@ -71,4 +71,8 @@
   @if map-deep-get($settings, 'modules', 'tabs') {
     @include generate-tabs;
   }
+
+  @if map-deep-get($settings, 'modules', 'toast') {
+    @include generate-toast;
+  }
 }

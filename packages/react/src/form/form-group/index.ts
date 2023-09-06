@@ -1,2 +1,1 @@
-export { default } from './form-group'
-export * from './form-group.types'
+export { default, type FormGroupProps } from './form-group'
