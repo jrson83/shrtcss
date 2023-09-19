@@ -1,7 +1,7 @@
-import Alert from './alert'
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, test } from 'vitest'
+import Alert from './alert'
 
 describe('Alert component test', () => {
   afterEach(cleanup)
@@ -27,7 +27,7 @@ describe('Alert component test', () => {
 
   test('Should render alert with title', () => {
     render(
-      <Alert color={'info'} title='Test Title'>
+      <Alert color={'info'} title="Test Title">
         Testing
       </Alert>
     )

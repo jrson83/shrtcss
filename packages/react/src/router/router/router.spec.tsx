@@ -1,6 +1,3 @@
-import { Link } from '../link'
-import { Route } from '../route'
-import Router from './router'
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
@@ -13,6 +10,9 @@ import {
   test,
   vi,
 } from 'vitest'
+import { Link } from '../link'
+import { Route } from '../route'
+import Router from './router'
 
 const HomePage = () => (
   <div>
@@ -44,14 +44,14 @@ describe('Router component test', () => {
     const wrapper = ({ children }: { children: React.ReactNode }) => (
       <Router>
         {children}
-        <Route path='/' component={HomePage} />
-        <Route path='/about' component={AboutPage} />
+        <Route path="/" component={HomePage} />
+        <Route path="/about" component={AboutPage} />
       </Router>
     )
 
     render(
       <nav>
-        <Link href='/about'>Test</Link>
+        <Link href="/about">Test</Link>
       </nav>,
       { wrapper }
     )

@@ -1,5 +1,5 @@
-import Icon from './icon'
 import { Story } from '@storylite/storylite'
+import Icon from './icon'
 
 type StoryType = Story<typeof Icon>
 
@@ -16,7 +16,7 @@ export default {
   decorators: [
     (Story, context) => {
       return (
-        <div className='example-wrapper'>
+        <div className="example-wrapper">
           <Story {...context?.args} />
         </div>
       )

@@ -13,8 +13,8 @@
     "style": "pnpm lint && pnpm fmt && pnpm stylelint",
     "stylelint:check": "stylelint \"./packages/**/*.scss\" -f verbose --color",
     "stylelint": "stylelint \"./packages/**/*.scss\" --fix",
-    "lint": "rome check --apply-unsafe .",
-    "fmt": "rome format . --write",
+    "lint": "biome check --apply-unsafe .",
+    "fmt": "biome format . --write",
     "============= CLEAN =================": "",
     "clean:workspace": "node ./scripts/cleanWorkspace.mjs",
     "clean": "pnpm --stream -r clean",
@@ -40,11 +40,11 @@
     "@types/node": "^20.5.6",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
+    "@biomejs/biome": "^1.2.2",
     "husky": "^8.0.3",
     "jsdom": "^22.1.0",
     "nano-staged": "^0.8.0",
     "pkgroll": "^1.11.0",
-    "rome": "^12.1.3",
     "sass": "^1.66.1",
     "sparkee": "^1.3.4",
     "stylelint": "^15.10.3",
@@ -61,8 +61,8 @@
     "yarn": "use `pnpm` instead"
   },
   "nano-staged": {
-    "*.{ts,tsx}": "rome check --apply-unsafe .",
-    "*.{ts,tsx,json}": "rome format --write .",
+    "*.{ts,tsx}": "biome check --apply-unsafe .",
+    "*.{ts,tsx,json}": "biome format --write .",
     "*.scss": "stylelint \"./packages/**/*.scss\" --fix"
   },
   "packageManager": "pnpm@8.7.6"

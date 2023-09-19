@@ -1,6 +1,6 @@
+import { URL, fileURLToPath } from 'node:url'
 import storylitePlugin from '@storylite/vite-plugin'
 import react from '@vitejs/plugin-react'
-import { URL, fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/

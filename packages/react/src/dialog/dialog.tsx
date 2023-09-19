@@ -1,8 +1,8 @@
-import Button from '../button'
-import Icon from '../icon'
 import { FocusTrap } from '@shrtcss/react-hooks'
 import { cx } from 'classix'
 import { type ComponentPropsWithoutRef, useEffect, useRef } from 'react'
+import Button from '../button'
+import Icon from '../icon'
 
 export const browserSupportsHas = CSS.supports('selector(html:has(body))')
 
@@ -105,32 +105,32 @@ export default function Dialog({
           position && `dialog-${position}`
         )}
         id={name}
-        aria-labelledby='dialog_title'
+        aria-labelledby="dialog_title"
       >
         <div onClick={preventAutoClose}>
-          <header className='dialog__header'>
-            <p id='dialog_title' className='dialog__title'>
+          <header className="dialog__header">
+            <p id="dialog_title" className="dialog__title">
               {title}
             </p>
             {showCloseButton && (
-              <Button onClick={closeDialog} aria-label='Close Dialog'>
-                <Icon title='Close Dialog' icon={'close'} />
+              <Button onClick={closeDialog} aria-label="Close Dialog">
+                <Icon title="Close Dialog" icon={'close'} />
               </Button>
             )}
           </header>
-          <main className='dialog__body'>{children}</main>
+          <main className="dialog__body">{children}</main>
           {showDialogFooter && (
-            <footer className='dialog__footer'>
+            <footer className="dialog__footer">
               <span></span>
               <Button
-                className='btn btn-outline'
+                className="btn btn-outline"
                 onClick={cancelButton.action || closeDialog}
-                value='cancel'
+                value="cancel"
               >
                 {cancelButton.label}
               </Button>
               <Button
-                type='submit'
+                type="submit"
                 className={`btn btn-${type}`}
                 onClick={submitButton.action}
               >

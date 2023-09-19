@@ -1,5 +1,5 @@
-import Blockquote from './blockquote'
 import { Story } from '@storylite/storylite'
+import Blockquote from './blockquote'
 
 type StoryType = Story<typeof Blockquote>
 
@@ -13,7 +13,7 @@ export default {
   decorators: [
     (Story, context) => {
       return (
-        <div className='example-wrapper'>
+        <div className="example-wrapper">
           <Story {...context?.args} />
         </div>
       )

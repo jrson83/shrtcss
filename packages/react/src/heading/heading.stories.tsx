@@ -1,5 +1,5 @@
-import Heading from './heading'
 import { Story } from '@storylite/storylite'
+import Heading from './heading'
 
 type StoryType = Story<typeof Heading>
 
@@ -13,7 +13,7 @@ export default {
   decorators: [
     (Story, context) => {
       return (
-        <div className='story-wrapper'>
+        <div className="story-wrapper">
           <Story {...context?.args} />
         </div>
       )
@@ -24,7 +24,7 @@ export default {
 export const Main: StoryType = {
   name: 'Default',
   component: () => (
-    <div className='example-wrapper column'>
+    <div className="example-wrapper column">
       <Heading as={'h1'}>
         Heading #1 <code>&lt;h1&gt;</code>
       </Heading>

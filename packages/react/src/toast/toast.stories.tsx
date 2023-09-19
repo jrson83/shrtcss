@@ -1,8 +1,8 @@
+import { Story } from '@storylite/storylite'
 import Button from '../button'
 import { Toast } from './toast'
 import { ToastProvider } from './toast.context'
 import { useToasts } from './toast.context'
-import { Story } from '@storylite/storylite'
 
 type StoryType = Story<typeof Toast>
 
@@ -16,7 +16,7 @@ export default {
   decorators: [
     (Story, context) => {
       return (
-        <div className='story-wrapper wrap'>
+        <div className="story-wrapper wrap">
           <ToastProvider>
             <Story {...context?.args} />
           </ToastProvider>
@@ -38,8 +38,8 @@ const ToastStoryScreen = () => {
   }
 
   return (
-    <div className='example-wrapper column'>
-      <Button type='button' onClick={clickAddToast}>
+    <div className="example-wrapper column">
+      <Button type="button" onClick={clickAddToast}>
         Toast
       </Button>
     </div>

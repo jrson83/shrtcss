@@ -1,6 +1,6 @@
-import type { TabProps, TabType, TabsType } from './tabs.types'
 import { cx } from 'classix'
 import { Children, isValidElement, useState } from 'react'
+import type { TabProps, TabType, TabsType } from './tabs.types'
 
 const Tab: TabType = ({ children }) => {
   return <>{children}</>
@@ -19,16 +19,16 @@ const Tabs: TabsType = ({ ariaLabel, children }) => {
 
   return (
     <>
-      <div role='tablist' aria-label={ariaLabel} className='tabs'>
+      <div role="tablist" aria-label={ariaLabel} className="tabs">
         {TabChildren?.map((child, idx) => (
           <button
             key={idx}
-            type='button'
+            type="button"
             className={cx(
               'tab',
               idx === currentIdx && 'is-active'
             )} /* {`tab ${idx === currentIdx ? 'is-active' : ''}`} */
-            role='tab'
+            role="tab"
             aria-selected={idx === currentIdx}
             aria-controls={`panel-${idx}`}
             id={`tab-${idx}`}
@@ -39,9 +39,9 @@ const Tabs: TabsType = ({ ariaLabel, children }) => {
         ))}
       </div>
       <div
-        className='tab__panel'
+        className="tab__panel"
         id={`panel-${currentIdx}`}
-        role='tabpanel'
+        role="tabpanel"
         aria-labelledby={`tab-${currentIdx}`}
       >
         {TabChildren[currentIdx]}

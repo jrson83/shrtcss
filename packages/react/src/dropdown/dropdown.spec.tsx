@@ -1,5 +1,3 @@
-import Icon from '../icon'
-import Dropdown from './dropdown'
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
@@ -12,6 +10,8 @@ import {
   test,
   vi,
 } from 'vitest'
+import Icon from '../icon'
+import Dropdown from './dropdown'
 
 describe('Dropdown component test', () => {
   let dropdownEvent: ReturnType<typeof userEvent['setup']>

@@ -1,7 +1,7 @@
+import { useEffect, useRef, useState } from 'react'
 import Alert from '../alert'
 import { useToasts } from './toast.context'
 import type { ToastType } from './toast.types'
-import { useEffect, useRef, useState } from 'react'
 
 export interface ToastAlertProps extends ToastType {
   autoDismiss?: boolean
@@ -74,7 +74,7 @@ export function Toast({ position = 'bottom-center' }: ToastProps) {
   return (
     <section
       className={`toast toast-${pos[0]} toast-${pos[1]}`}
-      aria-label='Toast Container'
+      aria-label="Toast Container"
     >
       {toasts.map((toast) => (
         <ToastAlert key={toast.id} {...toast} />

@@ -12,7 +12,7 @@ export default function Blockquote({
   ...rest
 }: BlockquoteProps) {
   return (
-    <blockquote role='blockquote' {...rest}>
+    <blockquote role="blockquote" {...rest}>
       <p>{children}</p>
       {cite && <footer>{cite}</footer>}
     </blockquote>

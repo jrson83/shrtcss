@@ -1,5 +1,5 @@
-import Button from './button'
 import { Story } from '@storylite/storylite'
+import Button from './button'
 
 type StoryType = Story<typeof Button>
 
@@ -18,7 +18,7 @@ export default {
   decorators: [
     (Story, context) => {
       return (
-        <div className='example-wrapper'>
+        <div className="example-wrapper">
           <Story {...context?.args} />
         </div>
       )

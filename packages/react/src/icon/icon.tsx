@@ -1,5 +1,5 @@
-import { icons } from './icon.data'
 import type { ComponentPropsWithoutRef } from 'react'
+import { icons } from './icon.data'
 
 export type IconData = keyof typeof icons
 
@@ -29,8 +29,8 @@ export default function Icon({
 
   return (
     <svg
-      aria-hidden='true'
-      role='img'
+      aria-hidden="true"
+      role="img"
       fill={
         color
           ? color.startsWith('#')
@@ -38,13 +38,13 @@ export default function Icon({
             : `var(--${color})`
           : 'currentColor'
       }
-      fillRule='evenodd'
+      fillRule="evenodd"
       className={className}
-      focusable='false'
+      focusable="false"
       width={`${size}px`}
       height={`${size}px`}
-      preserveAspectRatio='xMidYMid meet'
-      viewBox='0 0 512 512'
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 512 512"
       {...props}
     >
       <title>{title}</title>

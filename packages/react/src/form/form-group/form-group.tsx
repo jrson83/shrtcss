@@ -1,5 +1,5 @@
-import Label from '../label'
 import { cx } from 'classix'
+import Label from '../label'
 
 export interface FormGroupProps extends React.ComponentPropsWithoutRef<'div'> {
   label?: string
@@ -24,7 +24,7 @@ export default function FormGroup({
         </Label>
       )}
       {children}
-      {helper && <span className='form__helper'>{helper}</span>}
+      {helper && <span className="form__helper">{helper}</span>}
     </div>
   )
 }

@@ -1,5 +1,5 @@
-import Divider from './divider'
 import { Story } from '@storylite/storylite'
+import Divider from './divider'
 
 type StoryType = Story<typeof Divider>
 
@@ -17,7 +17,7 @@ export const Main: StoryType = {
   decorators: [
     (Story, context) => {
       return (
-        <div className='example-wrapper'>
+        <div className="example-wrapper">
           <Story {...context?.args} />
         </div>
       )
@@ -33,7 +33,7 @@ export const Vertical: StoryType = {
   decorators: [
     (Story, context) => {
       return (
-        <div className='example-wrapper'>
+        <div className="example-wrapper">
           Text <Story {...context?.args} /> Text
         </div>
       )
@@ -48,7 +48,7 @@ export const WithLabel: StoryType = {
   decorators: [
     (Story, context) => {
       return (
-        <div className='example-wrapper column'>
+        <div className="example-wrapper column">
           <Story {...context?.args} />
         </div>
       )

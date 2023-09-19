@@ -1,5 +1,5 @@
-import './styles/storylite-ui.css'
 import '@storylite/storylite/styles.css'
+import './styles/storylite-ui.css'
 
 // import other StoryLite UI styles here
 

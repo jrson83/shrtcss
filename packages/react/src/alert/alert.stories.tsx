@@ -1,5 +1,5 @@
-import Alert from './alert'
 import { Story } from '@storylite/storylite'
+import Alert from './alert'
 
 type StoryType = Story<typeof Alert>
 
@@ -17,7 +17,7 @@ export default {
   decorators: [
     (Story, context) => {
       return (
-        <div className='story-wrapper'>
+        <div className="story-wrapper">
           <Story {...context?.args} />
         </div>
       )

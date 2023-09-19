@@ -1,5 +1,5 @@
-import Badge from './badge'
 import { Story } from '@storylite/storylite'
+import Badge from './badge'
 
 type StoryType = Story<typeof Badge>
 
@@ -18,7 +18,7 @@ export default {
   decorators: [
     (Story, context) => {
       return (
-        <div className='example-wrapper'>
+        <div className="example-wrapper">
           <Story {...context?.args} />
         </div>
       )

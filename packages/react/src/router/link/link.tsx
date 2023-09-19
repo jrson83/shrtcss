@@ -1,6 +1,6 @@
-import { useRouter } from '../router'
 import { matchRoutes, useHistory } from '@shrtcss/react-hooks'
 import type { ComponentPropsWithoutRef } from 'react'
+import { useRouter } from '../router'
 
 export interface LinkProps extends ComponentPropsWithoutRef<'a'> {
   isActive?: string
@@ -42,7 +42,7 @@ export default function Link({ children, ...props }: LinkProps) {
       ]
         .filter((e) => !!e)
         .join(' ')}
-      // rome-ignore lint/a11y/useValidAnchor: <explanation>
+      // biome-ignore lint/a11y/useValidAnchor: <explanation>
       onClick={handleOnNavigate}
     >
       {children}

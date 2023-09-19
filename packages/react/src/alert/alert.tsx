@@ -1,8 +1,8 @@
-import Button from '../button'
-import Icon, { type IconData } from '../icon'
 import type { SHRTColor, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
 import type { ComponentPropsWithoutRef } from 'react'
+import Button from '../button'
+import Icon, { type IconData } from '../icon'
 
 export interface AlertProps
   extends Omit<ComponentPropsWithoutRef<'output'>, 'id'> {
@@ -42,7 +42,7 @@ export default function Alert({
 
   return (
     <output
-      role='status'
+      role="status"
       className={cx(
         isToast ? 'toast' : className ? className : 'toast',
         color && `${alertOrToast}-${color}`
@@ -52,7 +52,7 @@ export default function Alert({
       {hasIcon && (
         <Icon
           icon={color as IconData}
-          title='Status'
+          title="Status"
           size={26}
           className={`${alertOrToast}__icon ${alertOrToast}__icon-${color}`}
         />
@@ -63,12 +63,12 @@ export default function Alert({
       </div>
       {closeBtn && (
         <Button
-          aria-label='Close'
+          aria-label="Close"
           className={`${alertOrToast}__btn-dismiss`}
-          type='button'
+          type="button"
           onClick={handleDismiss}
         >
-          <Icon icon={'close'} title='Close' />
+          <Icon icon={'close'} title="Close" />
         </Button>
       )}
     </output>

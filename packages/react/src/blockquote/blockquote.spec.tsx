@@ -1,7 +1,7 @@
-import Blockquote from './blockquote'
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, test } from 'vitest'
+import Blockquote from './blockquote'
 
 describe('Blockquote component test', () => {
   afterEach(cleanup)

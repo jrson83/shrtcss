@@ -11,8 +11,8 @@ export default {
   component: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
       <img
-        src='/images/shrtcss-logo.png'
-        alt='shrtcss Logo'
+        src="/images/shrtcss-logo.png"
+        alt="shrtcss Logo"
         style={{ maxWidth: '350px' }}
       />
       <p>A lightweight SCSS/CSS library.</p>

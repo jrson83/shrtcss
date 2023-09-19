@@ -1,11 +1,11 @@
+import { cx } from 'classix'
+import { forwardRef } from 'react'
 import type {
   ListItemType,
   ListProps,
   ListType,
   PolymorphicRef,
 } from './list.types'
-import { cx } from 'classix'
-import { forwardRef } from 'react'
 
 const ListItem: ListItemType = ({ children, className, role, ...props }) => {
   return (
@@ -40,13 +40,13 @@ const List: ListType = forwardRef(
 
     return (
       <Component
-        role='list'
+        role="list"
         className={cx(className ? className : 'list-group')}
         ref={ref}
         {...props}
       >
         {header && items && items.length > 0 && (
-          <ListItem className='list-group__header'>{header}</ListItem>
+          <ListItem className="list-group__header">{header}</ListItem>
         )}
         {items && itemRenderer ? items.map(itemRenderer) : children}
       </Component>

@@ -1,6 +1,6 @@
+import { Story } from '@storylite/storylite'
 import Icon from '../icon'
 import Dropdown from './dropdown'
-import { Story } from '@storylite/storylite'
 
 type StoryType = Story<typeof Dropdown>
 
@@ -15,7 +15,7 @@ export default {
   decorators: [
     (Story, context) => {
       return (
-        <div className='example-wrapper'>
+        <div className="example-wrapper">
           <Story {...context?.args} />
         </div>
       )
@@ -30,6 +30,6 @@ export const Main: StoryType = {
 export const WithIconButton: StoryType = {
   args: {
     label: 'Testing',
-    icon: <Icon title='Settings' icon={'ellipsis'} size={26} />,
+    icon: <Icon title="Settings" icon={'ellipsis'} size={26} />,
   },
 }

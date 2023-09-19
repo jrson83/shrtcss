@@ -1,6 +1,6 @@
-import Icon, { type IconData } from '../icon'
 import { cx } from 'classix'
 import type { ComponentPropsWithoutRef } from 'react'
+import Icon, { type IconData } from '../icon'
 
 export interface TimelineItemProps
   extends Omit<ComponentPropsWithoutRef<'li'>, 'id'> {
@@ -20,10 +20,10 @@ export function TimelineItem({
   color = 'success',
 }: TimelineItemProps) {
   return (
-    <li className='timeline__item'>
+    <li className="timeline__item">
       {completed ? (
         <Icon
-          title='test'
+          title="test"
           icon={icon}
           className={cx(
             'timeline__icon timeline__icon-completed',
@@ -31,11 +31,11 @@ export function TimelineItem({
           )}
         />
       ) : (
-        <span className='timeline__icon'></span>
+        <span className="timeline__icon"></span>
       )}
-      <div className='timeline__item-meta'>
-        <time className='timeline__date'>{date}</time>
-        <span className='timeline__label'>{label}</span>
+      <div className="timeline__item-meta">
+        <time className="timeline__date">{date}</time>
+        <span className="timeline__label">{label}</span>
       </div>
     </li>
   )
@@ -74,7 +74,7 @@ const lines = [
 
 export default function Timeline() {
   return (
-    <ol className='timeline' role='list'>
+    <ol className="timeline">
       {lines.map((item) => (
         <TimelineItem key={item.id} {...item} />
       ))}

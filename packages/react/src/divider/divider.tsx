@@ -16,7 +16,7 @@ export default function Divider({
 }: DividerProps) {
   if (label) {
     return (
-      <div className='divider' {...rest}>
+      <div className="divider" {...rest}>
         {label}
       </div>
     )

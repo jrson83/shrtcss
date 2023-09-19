@@ -1,5 +1,5 @@
-import { useRouter } from '../router'
 import { useHistory, useMatch } from '@shrtcss/react-hooks'
+import { useRouter } from '../router'
 
 export interface History {
   length: number

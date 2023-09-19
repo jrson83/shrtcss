@@ -1,5 +1,3 @@
-import Button from '../button'
-import { ToastProvider, useToasts } from './toast.context'
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
@@ -12,6 +10,8 @@ import {
   test,
   vi,
 } from 'vitest'
+import Button from '../button'
+import { ToastProvider, useToasts } from './toast.context'
 
 function RenderButton() {
   const { add } = useToasts()
