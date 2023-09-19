@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import Alert from '../alert'
-import { useToasts } from './toast.context'
+import { useToasts } from './toast.hook'
 import type { ToastType } from './toast.types'
 
 export interface ToastAlertProps extends ToastType {

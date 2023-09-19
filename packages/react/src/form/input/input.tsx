@@ -1,9 +1,12 @@
-import type { InputType } from './input.types'
+import { cx } from 'classix'
 
-const Input: InputType = (props) => {
-  return <input className="form__field" {...props} />
+export interface InputProps extends React.ComponentPropsWithoutRef<'input'> {
+  className?: string
 }
 
-Input.displayName = 'Input'
-
-export default Input
+export default function Input({
+  className = 'form__field',
+  ...rest
+}: InputProps) {
+  return <input className={cx(className)} {...rest} />
+}

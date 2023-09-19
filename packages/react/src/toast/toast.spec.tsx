@@ -11,7 +11,8 @@ import {
   vi,
 } from 'vitest'
 import Button from '../button'
-import { ToastProvider, useToasts } from './toast.context'
+import { useToasts } from './toast.hook'
+import { ToastProvider } from './toast.provider'
 
 function RenderButton() {
   const { add } = useToasts()

@@ -6,15 +6,12 @@ export interface LabelProps extends React.ComponentPropsWithoutRef<'label'> {
 
 export default function Label({
   children,
-  className,
+  className = 'form__label',
   error,
   htmlFor,
 }: LabelProps) {
   return (
-    <label
-      htmlFor={htmlFor}
-      className={cx(className ? className : 'form__label')}
-    >
+    <label htmlFor={htmlFor} className={cx(className)}>
       {error ? error : children}
     </label>
   )

@@ -1,7 +1,7 @@
 import { SLAppComponentProps } from '@storylite/storylite'
 
 const config: SLAppComponentProps = {
-  title: ' ⚡️ StoryLite',
+  title: ' ⚡️ StoryLite shrtcss',
   defaultStory: 'index-default',
   useIframeStyles: false,
   iframeProps: {
