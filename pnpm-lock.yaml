@@ -97,8 +97,8 @@ importers:
         specifier: ^0.11.0
         version: 0.11.0(@types/node@20.5.8)(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
       '@storylite/vite-plugin':
-        specifier: ^0.11.0
-        version: 0.11.0(@types/node@20.5.8)(sass@1.66.1)
+        specifier: ^0.12.0
+        version: 0.12.1(@types/node@20.5.8)(sass@1.66.1)
       '@types/node':
         specifier: ^20.5.8
         version: 20.5.8
@@ -855,8 +855,8 @@ packages:
       - immer
     dev: true
 
-  /@storylite/vite-plugin@0.11.0(@types/node@20.5.8)(sass@1.66.1):
-    resolution: {integrity: sha512-TO6dXIcYo3/wcvfCom3siCTNMF5yDjv/WqLgm+XMCoKygAsfaUllgmm7XF14j0w7ic51StJjmtcKEfZaGylrZA==}
+  /@storylite/vite-plugin@0.12.1(@types/node@20.5.8)(sass@1.66.1):
+    resolution: {integrity: sha512-ecF4pe1x6fcDw1nESAuYgBduEzVy47CebkTtfH6Z75SbhQXJLjgVVo/94gMS6vY94iYspGER6jw72HDRVs8iQA==}
     dependencies:
       vite: 4.4.9(@types/node@20.5.8)(sass@1.66.1)
     transitivePeerDependencies:
