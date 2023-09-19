@@ -5,21 +5,7 @@ export * from './button'
 export * from './dialog'
 export * from './divider'
 export * from './dropdown'
-export {
-  default as Form,
-  type FormType,
-} from './form'
-export * from './form/form-group'
-export {
-  default as Input,
-  type InputType,
-} from './form/input'
-export * from './form/label'
-export {
-  default as SelectInput,
-  type SelectInputProps,
-  type SelectInputType,
-} from './form/select-input'
+export * from './form'
 export * from './heading'
 export * from './icon'
 export {

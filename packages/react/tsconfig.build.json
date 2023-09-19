@@ -1,12 +1,17 @@
 {
   "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true
+  },
   "include": ["src/index.ts"],
   "exclude": [
     "dist",
     "node_modules",
     "public",
     ".storylite",
+    "src/*.stories.tsx",
     "src/**/*.stories.tsx",
+    "src/*.spec.tsx",
     "src/**/*.spec.tsx"
   ]
 }

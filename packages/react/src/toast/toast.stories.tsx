@@ -1,8 +1,8 @@
 import { Story } from '@storylite/storylite'
 import Button from '../button'
 import { Toast } from './toast'
-import { ToastProvider } from './toast.context'
-import { useToasts } from './toast.context'
+import { useToasts } from './toast.hook'
+import { ToastProvider } from './toast.provider'
 
 type StoryType = Story<typeof Toast>
 

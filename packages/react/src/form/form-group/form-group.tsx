@@ -1,5 +1,5 @@
 import { cx } from 'classix'
-import Label from '../label'
+import { Label } from '../label'
 
 export interface FormGroupProps extends React.ComponentPropsWithoutRef<'div'> {
   label?: string

@@ -1,4 +1,4 @@
-import { Story } from '@storylite/storylite'
+import type { Story } from '@storylite/storylite'
 import Button from './button'
 
 type StoryType = Story<typeof Button>
