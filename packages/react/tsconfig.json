@@ -30,5 +30,5 @@
       "@shrtcss/react-hooks": ["../react-hooks/src/index.ts"]
     }
   },
-  "include": ["*.ts", "*.tsx", "src/**/*", ".storylite/**/*"]
+  "include": ["*.ts", "*.tsx", "types/**/*", "src/**/*", ".storylite/**/*"]
 }

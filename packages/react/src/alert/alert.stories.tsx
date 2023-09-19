@@ -1,7 +1,9 @@
 import { Story } from '@storylite/storylite'
 import Alert from './alert'
+import Docs from './alert.docs.mdx'
 
 type StoryType = Story<typeof Alert>
+type StoryDocsType = Story<typeof Docs>
 
 export default {
   title: 'Alert',
@@ -25,11 +27,17 @@ export default {
   ],
 } satisfies StoryType
 
-export const Main: StoryType = {
-  name: 'Default',
+export const Main: StoryDocsType = {
+  name: 'Docs',
+  component: Docs,
   navigation: {
+    icon: <span>📄</span>,
     order: 0,
   },
+}
+
+export const DefaultStory: StoryType = {
+  name: 'Default',
 }
 
 export const Danger: StoryType = {
@@ -73,54 +81,3 @@ export const WithoutIcon: StoryType = {
     children: 'This is an info alert message.',
   },
 }
-
-/* export const Main: StoryType = {
-  name: 'Docs',
-  component: () => (
-    <>
-      <h1>Alert</h1>
-      <p>Display an alert component.</p>
-      <h2>Basic</h2>
-      <div className="example-wrapper column">
-        <Alert>This is an info alert message.</Alert>
-        <Alert color="success">This is a success alert message.</Alert>
-        <Alert color="warning">This is a warning alert message.</Alert>
-        <Alert color="danger">This is an error alert message.</Alert>
-      </div>
-      <h2>Title</h2>
-      <p>Display an alert.</p>
-      <div className="example-wrapper column">
-        <Alert title="Info">This is an info alert message.</Alert>
-        <Alert title="Success" color="success">
-          This is a success alert message.
-        </Alert>
-        <Alert title="Warning" color="warning">
-          This is a warning alert message.
-        </Alert>
-        <Alert title="Error" color="danger">
-          This is an error alert message.
-        </Alert>
-      </div>
-      <h2>Icon</h2>
-      <p>Display an alert.</p>
-      <div className="example-wrapper column">
-        <Alert title="Info" hasIcon={false}>
-          This is an info alert message.
-        </Alert>
-        <Alert title="Success" color="success" hasIcon={false}>
-          This is a success alert message.
-        </Alert>
-        <Alert title="Warning" color="warning" hasIcon={false}>
-          This is a warning alert message.
-        </Alert>
-        <Alert title="Error" color="danger" hasIcon={false}>
-          This is an error alert message.
-        </Alert>
-      </div>
-    </>
-  ),
-  navigation: {
-    order: 0,
-  },
-}
- */

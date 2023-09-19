@@ -1,8 +1,10 @@
 import { Story } from '@storylite/storylite'
 import Icon from '../icon'
 import Dropdown from './dropdown'
+import Docs from './dropdown.docs.mdx'
 
 type StoryType = Story<typeof Dropdown>
+type StoryDocsType = Story<typeof Docs>
 
 export default {
   title: 'Dropdown',
@@ -23,7 +25,16 @@ export default {
   ],
 } satisfies StoryType
 
-export const Main: StoryType = {
+export const Main: StoryDocsType = {
+  name: 'Docs',
+  component: Docs,
+  navigation: {
+    icon: <span>📄</span>,
+    order: 0,
+  },
+}
+
+export const DefaultStory: StoryType = {
   name: 'Default',
 }
 

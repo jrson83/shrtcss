@@ -1,7 +1,9 @@
 import { Story } from '@storylite/storylite'
 import Divider from './divider'
+import Docs from './divider.docs.mdx'
 
 type StoryType = Story<typeof Divider>
+type StoryDocsType = Story<typeof Docs>
 
 export default {
   title: 'Divider',
@@ -12,7 +14,25 @@ export default {
   },
 } satisfies StoryType
 
-export const Main: StoryType = {
+export const Main: StoryDocsType = {
+  name: 'Docs',
+  component: Docs,
+  decorators: [
+    (Story, context) => {
+      return (
+        <div className="example-wrapper">
+          <Story {...context?.args} />
+        </div>
+      )
+    },
+  ],
+  navigation: {
+    icon: <span>📄</span>,
+    order: 0,
+  },
+}
+
+export const DefaultStory: StoryType = {
   name: 'Default',
   decorators: [
     (Story, context) => {

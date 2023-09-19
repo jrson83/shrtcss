@@ -1,7 +1,9 @@
 import { Story } from '@storylite/storylite'
 import Blockquote from './blockquote'
+import Docs from './blockquote.docs.mdx'
 
 type StoryType = Story<typeof Blockquote>
+type StoryDocsType = Story<typeof Docs>
 
 export default {
   title: 'Blockquote',
@@ -21,11 +23,17 @@ export default {
   ],
 } satisfies StoryType
 
-export const Main: StoryType = {
-  name: 'Default',
+export const Main: StoryDocsType = {
+  name: 'Docs',
+  component: Docs,
   navigation: {
+    icon: <span>📄</span>,
     order: 0,
   },
+}
+
+export const DefaultStory: StoryType = {
+  name: 'Default',
 }
 
 export const WithCite: StoryType = {

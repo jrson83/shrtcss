@@ -1,7 +1,9 @@
 import { Story } from '@storylite/storylite'
 import Heading from './heading'
+import Docs from './heading.docs.mdx'
 
 type StoryType = Story<typeof Heading>
+type StoryDocsType = Story<typeof Docs>
 
 export default {
   title: 'Heading',
@@ -21,7 +23,16 @@ export default {
   ],
 } satisfies StoryType
 
-export const Main: StoryType = {
+export const Main: StoryDocsType = {
+  name: 'Docs',
+  component: Docs,
+  navigation: {
+    icon: <span>📄</span>,
+    order: 0,
+  },
+}
+
+export const DefaultStory: StoryType = {
   name: 'Default',
   component: () => (
     <div className="example-wrapper column">
@@ -46,5 +57,3 @@ export const Main: StoryType = {
     </div>
   ),
 }
-
-export const EmptyFix: StoryType = {}

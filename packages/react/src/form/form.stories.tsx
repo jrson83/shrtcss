@@ -1,7 +1,9 @@
 import type { Story } from '@storylite/storylite'
 import Form from './form'
+import Docs from './form.docs.mdx'
 
 type StoryType = Story<typeof Form>
+type StoryDocsType = Story<typeof Docs>
 
 export default {
   title: 'Form',
@@ -18,8 +20,15 @@ export default {
   ],
 } satisfies StoryType
 
-export const Main: StoryType = {
-  name: 'Default',
+export const Main: StoryDocsType = {
+  name: 'Docs',
+  component: Docs,
+  navigation: {
+    icon: <span>📄</span>,
+    order: 0,
+  },
 }
 
-export const EmptyFix: StoryType = {}
+export const DefaultStory: StoryType = {
+  name: 'Default',
+}

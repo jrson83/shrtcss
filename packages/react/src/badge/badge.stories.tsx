@@ -1,7 +1,9 @@
 import { Story } from '@storylite/storylite'
 import Badge from './badge'
+import Docs from './badge.docs.mdx'
 
 type StoryType = Story<typeof Badge>
+type StoryDocsType = Story<typeof Docs>
 
 export default {
   title: 'Badge',
@@ -26,10 +28,19 @@ export default {
   ],
 } satisfies StoryType
 
-export const Main: StoryType = {
+export const Main: StoryDocsType = {
+  name: 'Docs',
+  component: Docs,
+  navigation: {
+    icon: <span>📄</span>,
+    order: 0,
+  },
+}
+
+export const DefaultStory: StoryType = {
   name: 'Default',
   navigation: {
-    order: 0,
+    order: 1,
   },
 }
 
@@ -39,7 +50,7 @@ export const Danger: StoryType = {
     children: 'Danger',
   },
   navigation: {
-    order: 1,
+    order: 2,
   },
 }
 
@@ -49,7 +60,7 @@ export const Success: StoryType = {
     children: 'Success',
   },
   navigation: {
-    order: 2,
+    order: 3,
   },
 }
 
@@ -59,7 +70,7 @@ export const Warning: StoryType = {
     children: 'Warning',
   },
   navigation: {
-    order: 3,
+    order: 4,
   },
 }
 
@@ -69,7 +80,7 @@ export const Disabled: StoryType = {
     children: 'Disabled',
   },
   navigation: {
-    order: 4,
+    order: 5,
   },
 }
 
@@ -79,7 +90,7 @@ export const FullWidth: StoryType = {
     children: 'FullWidth',
   },
   navigation: {
-    order: 5,
+    order: 6,
   },
 }
 
@@ -89,6 +100,6 @@ export const Uppercase: StoryType = {
     children: 'Uppercase',
   },
   navigation: {
-    order: 6,
+    order: 7,
   },
 }

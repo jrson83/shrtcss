@@ -1,10 +1,12 @@
 import { Story } from '@storylite/storylite'
 import Button from '../button'
 import { Toast } from './toast'
+import Docs from './toast.docs.mdx'
 import { useToasts } from './toast.hook'
 import { ToastProvider } from './toast.provider'
 
 type StoryType = Story<typeof Toast>
+type StoryDocsType = Story<typeof Docs>
 
 export default {
   title: 'Toast',
@@ -46,9 +48,16 @@ const ToastStoryScreen = () => {
   )
 }
 
-export const Main: StoryType = {
+export const Main: StoryDocsType = {
+  name: 'Docs',
+  component: Docs,
+  navigation: {
+    icon: <span>📄</span>,
+    order: 0,
+  },
+}
+
+export const DefaultStory: StoryType = {
   name: 'Default',
   component: () => <ToastStoryScreen />,
 }
-
-export const EmptyFix: StoryType = {}
