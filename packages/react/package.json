@@ -49,7 +49,7 @@
     "classix": "^2.1.34"
   },
   "devDependencies": {
-    "@storylite/storylite": "^0.11.0",
+    "@storylite/storylite": "^0.12.0",
     "@storylite/vite-plugin": "^0.11.0",
     "@types/node": "^20.5.8",
     "@vitejs/plugin-react": "^4.0.4",

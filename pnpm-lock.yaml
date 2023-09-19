@@ -94,8 +94,8 @@ importers:
         version: 2.1.34
     devDependencies:
       '@storylite/storylite':
-        specifier: ^0.11.0
-        version: 0.11.0(@types/node@20.5.8)(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
+        specifier: ^0.12.0
+        version: 0.12.1(@types/node@20.5.8)(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
       '@storylite/vite-plugin':
         specifier: ^0.11.0
         version: 0.11.0(@types/node@20.5.8)(sass@1.66.1)
@@ -833,8 +833,8 @@ packages:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
 
-  /@storylite/storylite@0.11.0(@types/node@20.5.8)(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-NJUh1jHOZNbFIrUZvRGxfyWv6x/dEEtaUiD0MdmCzr8YnysZYPeGYaLgWBtkNd+k8E6KJSBB0FArflABQDkpug==}
+  /@storylite/storylite@0.12.1(@types/node@20.5.8)(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-kMTYia3uaxRYtsjBmK2pUFDQTGLxgDabqiDhvQQBJvsMroYWO0TKOtP0O4hmKoQF4f9fBDCDg/eY3OOENVpEmw==}
     peerDependencies:
       '@types/node': ^20.4.9
       '@types/react': ^18.2.19
