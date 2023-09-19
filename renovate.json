@@ -32,14 +32,17 @@
       "description": "Automatically merge devDependencies updates",
       "matchDepTypes": ["devDependencies"],
       "matchPackagePatterns": [
+        "@biomejs/biome",
         "husky",
         "nano-staged",
-        "rome",
+        "pkgroll",
         "sass",
+        "sparkee",
         "stylelint",
         "stylelint-config-property-sort-order-smacss",
         "stylelint-config-standard-scss",
-        "vite"
+        "vite",
+        "vitest"
       ],
       "automerge": true
     }
