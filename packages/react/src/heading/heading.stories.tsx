@@ -15,7 +15,7 @@ export default {
   decorators: [
     (Story, context) => {
       return (
-        <div className="story-wrapper">
+        <div className="story-wrapper story-wrapper-doc">
           <Story {...context?.args} />
         </div>
       )
@@ -35,7 +35,7 @@ export const Main: StoryDocsType = {
 export const DefaultStory: StoryType = {
   name: 'Default',
   component: () => (
-    <div className="example-wrapper column">
+    <>
       <Heading as={'h1'}>
         Heading #1 <code>&lt;h1&gt;</code>
       </Heading>
@@ -54,6 +54,6 @@ export const DefaultStory: StoryType = {
       <Heading as={'h6'}>
         Heading #6 <code>&lt;h6&gt;</code>
       </Heading>
-    </div>
+    </>
   ),
 }

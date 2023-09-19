@@ -12,7 +12,7 @@ export default {
   decorators: [
     (Story, context) => {
       return (
-        <div className="example-wrapper">
+        <div className="story-wrapper">
           <Story {...context?.args} />
         </div>
       )

@@ -38,6 +38,9 @@ export const Main: StoryDocsType = {
 
 export const DefaultStory: StoryType = {
   name: 'Default',
+  navigation: {
+    order: 1,
+  },
 }
 
 export const Danger: StoryType = {

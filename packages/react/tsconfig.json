@@ -27,6 +27,7 @@
     "baseUrl": ".",
     "paths": {
       "@shrtcss/core": ["../core/scss/shrtcss.scss"],
+      "@/src": ["./src/index.ts"],
       "@shrtcss/react-hooks": ["../react-hooks/src/index.ts"]
     }
   },

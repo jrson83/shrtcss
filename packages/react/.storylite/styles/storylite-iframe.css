@@ -32,15 +32,6 @@ body,
   background: transparent;
 }
 
-html,
-body {
-  color: #111;
-}
-
-[data-theme='dark'] {
-  color: #eee;
-}
-
 .storylite-iframe,
 .storylite-story {
   position: relative;
@@ -55,14 +46,6 @@ body {
 
 .storylite-story {
   padding: 1rem;
-}
-
-.storylite-story--standalone {
-  background: #eee;
-}
-
-[data-theme='dark'] .storylite-story--standalone {
-  background: #111;
 }
 
 svg {

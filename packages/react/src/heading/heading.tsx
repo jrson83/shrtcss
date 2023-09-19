@@ -12,7 +12,7 @@ export default function Heading({
   const HeadingComponent = ({ ...props }) => createElement(as, props, children)
 
   return (
-    <HeadingComponent className={className} {...rest}>
+    <HeadingComponent className={className} as={as} {...rest}>
       {children}
     </HeadingComponent>
   )

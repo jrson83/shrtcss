@@ -18,7 +18,7 @@ export default {
   decorators: [
     (Story, context) => {
       return (
-        <div className="story-wrapper wrap">
+        <div className="story-wrapper">
           <ToastProvider>
             <Story {...context?.args} />
           </ToastProvider>
@@ -40,11 +40,9 @@ const ToastStoryScreen = () => {
   }
 
   return (
-    <div className="example-wrapper column">
-      <Button type="button" onClick={clickAddToast}>
-        Toast
-      </Button>
-    </div>
+    <Button type="button" onClick={clickAddToast}>
+      Toast
+    </Button>
   )
 }
 

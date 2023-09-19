@@ -3,9 +3,11 @@
 @mixin generate-reset {
   :root {
     --shrt-border-radius: 0.25rem;
+    --shrt-doc-height: 100%;
     
-    height: var(--doc-height);
-    background-color: color('bg');
+    height: var(--shrt-doc-height);
+
+    // background-color: color('bg');
     color: color('text-weak');
   }
 

@@ -1,13 +1,13 @@
-export * from './alert'
-export * from './badge'
-export * from './blockquote'
-export * from './button'
-export * from './dialog'
-export * from './divider'
-export * from './dropdown'
-export * from './form'
-export * from './heading'
-export * from './icon'
+export { default as Alert } from './alert'
+export { default as Badge } from './badge'
+export { default as Blockquote } from './blockquote'
+export { default as Button } from './button'
+export { default as Dialog } from './dialog'
+export { default as Divider } from './divider'
+export { default as Dropdown } from './dropdown'
+export { default as Form } from './form'
+export { default as Heading } from './heading'
+export { default as Icon } from './icon'
 export {
   default as List,
   ListItem,
