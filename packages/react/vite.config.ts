@@ -21,6 +21,7 @@ export default defineConfig({
     react(),
   ],
   build: {
+    outDir: fileURLToPath(new URL('../../docs', import.meta.url)),
     rollupOptions: {
       input: {
         main: fileURLToPath(new URL('index.html', import.meta.url)),

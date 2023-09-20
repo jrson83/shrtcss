@@ -79,8 +79,8 @@
 }
 :root {
   --shrt-border-radius: 0.25rem;
-  height: var(--doc-height);
-  background-color: var(--shrt-color-bg);
+  --shrt-doc-height: 100%;
+  height: var(--shrt-doc-height);
   color: var(--shrt-color-text-weak);
 }
 

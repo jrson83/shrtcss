@@ -12,3 +12,5 @@ yarn-error.log*
 # Ignore build cache directories
 dist/
 !packages/core/dist/
+docs/*
+!docs/.gitkeep

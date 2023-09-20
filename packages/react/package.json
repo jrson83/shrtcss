@@ -40,6 +40,7 @@
     "clean": "rm -rf ./dist",
     "type:check": "tsc --noEmit",
     "dev": "vite",
+    "build:docs": "vite build --emptyOutDir",
     "build": "pnpm run type:check && pkgroll --minify -p tsconfig.build.json",
     "watch": "pkgroll --watch"
   },

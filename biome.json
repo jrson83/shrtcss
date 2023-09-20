@@ -6,7 +6,7 @@
     "indentSize": 2,
     "indentStyle": "space",
     "lineWidth": 80,
-    "ignore": ["dist", "public", "**/node_modules/**"]
+    "ignore": ["docs", "dist", "public", "**/node_modules/**"]
   },
   "javascript": {
     "formatter": {
@@ -18,7 +18,7 @@
   },
   "linter": {
     "enabled": true,
-    "ignore": ["dist", "public", "**/node_modules/**"],
+    "ignore": ["docs", "dist", "public", "**/node_modules/**"],
     "rules": {
       "recommended": true,
       "a11y": {
