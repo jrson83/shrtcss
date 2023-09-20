@@ -15,12 +15,6 @@ export {
   type ListItemType,
 } from './list'
 export * from './router'
-export {
-  default as Tabs,
-  Tab,
-  type TabProps,
-  type TabType,
-  type TabsType,
-} from './tabs'
+export * from './tabs'
 export * from './timeline'
 export * from './toast'

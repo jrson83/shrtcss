@@ -1,2 +1,1 @@
-export { default, Tab } from './tabs'
-export * from './tabs.types'
+export { default as Tabs, Tab, type TabProps, type TabsProps } from './tabs'

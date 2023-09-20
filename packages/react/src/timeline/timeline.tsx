@@ -1,16 +1,10 @@
+import type { SHRTColor } from '@shrtcss/core'
 import { cx } from 'classix'
 import type { ComponentPropsWithoutRef } from 'react'
 import Icon, { type IconData } from '../icon'
 
-export interface TimelineItemProps
-  extends Omit<ComponentPropsWithoutRef<'li'>, 'id'> {
-  id: number
-  completed?: boolean
-  date: string
-  label: string
-  color?: string
-  icon?: IconData
-}
+export type TimelineItemProps = Omit<TimeItem, 'id'> &
+  Omit<ComponentPropsWithoutRef<'li'>, 'id'>
 
 export function TimelineItem({
   completed = true,
@@ -41,41 +35,31 @@ export function TimelineItem({
   )
 }
 
-const lines = [
-  {
-    id: 1,
-    completed: false,
-    date: '17:00 PM',
-    label: 'Test',
-    type: 'success',
-  },
-  {
-    id: 2,
-    completed: true,
-    date: '13:00 PM',
-    label: 'Test',
-    type: 'success',
-  },
-  {
-    id: 3,
-    completed: true,
-    date: '12:00 PM',
-    label: 'Test',
-    type: 'success',
-  },
-  {
-    id: 4,
-    completed: true,
-    date: '11:00 PM',
-    label: 'Test',
-    type: 'success',
-  },
-]
+export interface TimeItem {
+  id?: number
+  completed?: boolean
+  date?: string
+  label?: string
+  color?: SHRTColor
+  icon?: IconData
+}
 
-export default function Timeline() {
+export interface TimelineProps {
+  /** The time array of items */
+  items?: TimeItem[]
+
+  /** Labels the timeline root element */
+  ariaLabel?: string
+}
+
+export default function Timeline({
+  ariaLabel = 'timeline',
+  items,
+  ...props
+}: TimelineProps) {
   return (
-    <ol className="timeline">
-      {lines.map((item) => (
+    <ol className="timeline" aria-label={ariaLabel} {...props}>
+      {items?.map((item) => (
         <TimelineItem key={item.id} {...item} />
       ))}
     </ol>
