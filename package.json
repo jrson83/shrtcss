@@ -31,12 +31,14 @@
     "build:react": "pnpm --filter @shrtcss/react build",
     "build:react-hooks": "pnpm --filter @shrtcss/react-hooks build",
     "============= MISC ==================": "",
+    "commit": "mcz",
     "test": "vitest --run --environment jsdom",
     "quality-check": "pnpm run style && pnpm run test",
     "prepare": "husky install"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.2.2",
+    "@mini-cz/config-default": "^0.8.4",
     "@testing-library/jest-dom": "^6.1.3",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.5.1",
@@ -45,6 +47,7 @@
     "@types/react-dom": "^18.2.7",
     "husky": "^8.0.3",
     "jsdom": "^22.1.0",
+    "mini-cz": "^0.8.4",
     "nano-staged": "^0.8.0",
     "pkgroll": "^1.11.0",
     "sass": "^1.67.0",
