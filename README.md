@@ -25,6 +25,10 @@
 - [ ] Tabs
 - [ ] Timeline
 
+## Contributing
+
+Please read our [CONTRIBUTING](https://github.com/jrson83/shrtcss/blob/main/CONTRIBUTING.md) guide and [CODE OF CONDUCT](https://github.com/jrson83/shrtcss/blob/main/CODE_OF_CONDUCT.md) for more information.
+
 ## License
 
 Licensed under the [MIT license](https://github.com/jrson83/shrtcss/blob/main/LICENSE).

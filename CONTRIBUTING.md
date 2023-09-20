@@ -38,7 +38,7 @@ Your contributions are welcome. Here's our suggested workflow:
 3. Create a new branch for each feature, fix or improvement
 4. Send a pull request from each feature branch to the **master** branch
    - We use [Husky](https://typicode.github.io/husky) to auto format and lint code on `pre-commit` hook
-   - We use [Interactive Commitizen CLI](https://cz-git.qbb.sh/) (czg) to generate standardized commit messages. See [Commit message format](#commit-message-format)
+   - We use [mini-cz](https://github.com/CreateWheel/mini-cz) to generate standardized commit messages. See [Commit message format](#commit-message-format)
 5. Continue reading [Develop the docs](#develop-the-docs) or [Develop packages](#develop-packages)
 
 > It is very important to separate new features or improvements into separate feature branches, and to send a
@@ -66,7 +66,7 @@ Continue reading [Submit a Pull Request](#submit-a-pull-request).
 
 If you're making changes to one of the packages that requires a build step (e.g., `core` or `react`), you can setup a watcher in a separate terminal to automatically run the build step whenever files are changed.
 
-```bash
+```sh
 # start the watcher for `core`, `react` & `react-hooks` package
 pnpm run dev:react
 ```
@@ -77,13 +77,15 @@ Once you're done making the changes, you can now open a pull request (PR). Go to
 
 While naming your Pull Request, make sure to read the following [commit message guidelines](#commit-message-format).
 
-As usual after staging your changes in git, run the following command at the workspace `root` to start czg:
+After staging your changes in git, run the following command at the workspace `root` to start `mini-cz`:
 
-```bash
-git commit
+```sh
+~~git commit~~
+
+pnpm commit
 ```
 
-> Do not use `-m <message> / --message=<msg>` flag, instead use the [czg-cli](https://cz-git.qbb.sh/cli/).
+> Do not use ` git commit -m <message> / --message=<msg>` flag, instead use the [mini-cz](https://github.com/CreateWheel/mini-cz).
 
 ## Commit message format
 
