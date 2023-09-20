@@ -1,0 +1,64 @@
+name: Deploy Docs
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches: [main]
+    paths: ['docs/**']
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy Docs
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
+      
+      - name: Setup Node environment
+        uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d # v3.8.1
+        with:
+          node-version: '16'
+
+      - uses: pnpm/action-setup@d882d12c64e032187b2edb46d3a0d003b7a43598 # v2.4.0
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 8
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84 # v3.3.2
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run build
+        run: pnpm run build:docs
+
+      - name: Deploy to Server
+        uses: burnett01/rsync-deployments@45d84ad5f6c174f3e0ffc50e9060a9666d09c16e # 6.0.0
+        with:
+          switches: -avzr --delete
+          path: "./docs/*"
+          remote_path: ${{ secrets.REMOTE_PATH }}
+          remote_host: ${{ secrets.FTP_SERVER }}
+          remote_user: ${{ secrets.FTP_USERNAME }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
