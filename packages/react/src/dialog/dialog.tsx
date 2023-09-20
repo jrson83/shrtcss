@@ -4,13 +4,13 @@ import { type ComponentPropsWithoutRef, useEffect, useRef } from 'react'
 import Button from '../button'
 import Icon from '../icon'
 
-export const browserSupportsHas = CSS.supports('selector(html:has(body))')
+export const browserSupportsHas = CSS.supports?.('selector(html:has(body))')
 
 export interface DialogProps extends ComponentPropsWithoutRef<'dialog'> {
-  name: string
+  name?: string
   type?: 'error' | 'warning' | 'info' | 'success'
-  title: string
-  isDialogVisible: boolean
+  title?: string
+  isDialogVisible?: boolean
   useFocusTrap?: boolean
   fullScreen?: boolean
   position?: 'bottom'
@@ -24,7 +24,7 @@ export interface DialogProps extends ComponentPropsWithoutRef<'dialog'> {
     label?: 'Cancel' | 'Reset'
     action?: (data: unknown) => void
   }
-  closeDialog: () => void
+  closeDialog?: () => void
 }
 
 export default function Dialog({
@@ -45,6 +45,7 @@ export default function Dialog({
     label: 'Cancel',
   },
   closeDialog,
+  ...rest
 }: DialogProps) {
   const dialogRef = useRef<HTMLDialogElement | null>(null)
   const shown = useRef<boolean>(false)
@@ -106,6 +107,7 @@ export default function Dialog({
         )}
         id={name}
         aria-labelledby="dialog_title"
+        {...rest}
       >
         <div onClick={preventAutoClose}>
           <header className="dialog__header">
