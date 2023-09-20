@@ -51,6 +51,9 @@ jobs:
         run: pnpm install
 
       - name: Run build
+        run: pnpm run build
+
+      - name: Run build docs
         run: pnpm run build:docs
 
       - name: Deploy to Server
