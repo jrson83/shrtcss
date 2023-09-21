@@ -3,30 +3,29 @@ import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, test } from 'vitest'
 import Timeline, { type TimeItem } from './timeline'
 
-const testTimeline: TimeItem[] = [
+const timelineTestItems: TimeItem[] = [
   {
     id: 1,
-    completed: false,
-    date: '17:00 PM',
-    label: 'Test #1',
+    date: '11:00 PM',
+    label: 'Signed up',
     color: 'success',
   },
   {
     id: 2,
-    date: '13:00 PM',
-    label: 'Test #2',
+    date: '11:01 PM',
+    label: 'Signed in',
     color: 'success',
   },
   {
     id: 3,
-    date: '12:00 PM',
-    label: 'Test #3',
+    date: '11:05 PM',
+    label: 'Activated account',
     color: 'success',
   },
   {
     id: 4,
-    date: '11:00 PM',
-    label: 'Test #4',
+    date: '11:30 PM',
+    label: 'Signed out',
     color: 'success',
   },
 ]
@@ -37,7 +36,7 @@ describe('Timeline component test', () => {
   })
 
   test('Should render default timeline', async () => {
-    render(<Timeline items={testTimeline} />)
+    render(<Timeline items={timelineTestItems} />)
 
     const timeline = screen.getByRole('list')
     expect(timeline).toBeInTheDocument()
@@ -46,7 +45,7 @@ describe('Timeline component test', () => {
     expect(timelineItems).toHaveLength(4)
 
     timelineItems.forEach((item, idx) => {
-      const result = testTimeline.find((item) => item.id === idx + 1)
+      const result = timelineTestItems.find((item) => item.id === idx + 1)
 
       expect(item).toBeInTheDocument()
       expect(item).toHaveTextContent(`${result?.date}${result?.label}`)
