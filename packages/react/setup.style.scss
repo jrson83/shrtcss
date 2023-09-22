@@ -22,11 +22,12 @@
 
 .example-wrapper {
   display: flex;
-  gap: 0.85rem;
+  margin-block-end: 1rem;
   padding-block: 1rem;
   padding-inline: 1rem;
   border: 1px solid shrtcss.color('border');
   border-radius: var(--shrt-border-radius);
+  gap: 0.85rem;
 
   &-column {
     flex-direction: column;
@@ -92,7 +93,7 @@ code:not([class^="language-"]) {
 }
 
 /* stylelint-disable-next-line selector-class-pattern */
-/* .storylite-top-frame,  */.storylite-story--standalone {
+.storylite-top-frame, .storylite-story--standalone {
   background: shrtcss.color('bg');
 }
 

@@ -14,7 +14,8 @@ export {
   type ListType,
   type ListItemType,
 } from './list'
+export { default as Pagination } from './pagination'
 export * from './router'
 export * from './tabs'
-export * from './timeline'
+export { default as Timeline } from './timeline'
 export * from './toast'

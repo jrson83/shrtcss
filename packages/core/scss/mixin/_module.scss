@@ -68,6 +68,10 @@
     @include generate-list;
   }
 
+  @if map-deep-get($settings, 'modules', 'pagination') {
+    @include generate-pagination;
+  }
+
   @if map-deep-get($settings, 'modules', 'tabs') {
     @include generate-tabs;
   }
