@@ -16,6 +16,7 @@ export {
 } from './list'
 export { default as Pagination } from './pagination'
 export * from './router'
+export { default as Table } from './table'
 export * from './tabs'
 export { default as Timeline } from './timeline'
 export * from './toast'

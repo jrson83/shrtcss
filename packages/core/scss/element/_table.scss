@@ -1,0 +1,65 @@
+@use '../config' as *;
+@use '../function' as *;
+@use '../mixin' as *;
+
+@mixin generate-table {
+  .table {
+    @include margin('bottom');
+
+    width: 100%;
+    max-width: 100%;
+
+    caption {
+      @include margin('bottom');
+
+      font-weight: 600;
+      text-align: center;
+    }
+
+    th,
+    td {
+      @include padding('all', 'sm');
+
+      text-align: left;
+    }
+
+    &-bordered {
+      th,
+      td {
+        border: 1px solid color('border');
+      }
+    }
+
+    &-div {
+      thead {
+        border-bottom: 2px solid color('border');
+      }
+    
+      :not(tfoot) td {
+        border-bottom: 1px solid color('border');
+      }
+    }
+
+    &-striped {
+      tbody tr:nth-child(odd) {
+        background-color: color('surface');
+      }
+    }
+
+    &-hover {
+      tbody tr:hover {
+        background-color: color('surface-raised');
+      }
+    }
+
+    &-responsive {
+      overflow-x: auto;
+    }
+
+    thead {
+      th {
+        font-weight: 600;
+      }
+    }
+  }
+}

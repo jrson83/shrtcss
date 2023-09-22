@@ -12,6 +12,7 @@
 
 ## Components
 
+- [ ] Alert
 - [ ] Badge
 - [ ] Button
 - [ ] Dialog
@@ -22,6 +23,8 @@
 - [ ] Icon
 - [ ] List
 - [ ] Router
+- [ ] Pagination
+- [ ] Table
 - [ ] Tabs
 - [ ] Timeline
 

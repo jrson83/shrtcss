@@ -72,6 +72,10 @@
     @include generate-pagination;
   }
 
+  @if map-deep-get($settings, 'modules', 'table') {
+    @include generate-table;
+  }
+
   @if map-deep-get($settings, 'modules', 'tabs') {
     @include generate-tabs;
   }
