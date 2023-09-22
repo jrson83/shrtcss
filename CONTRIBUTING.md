@@ -89,7 +89,7 @@ pnpm commit
 
 ## Commit message format
 
-We use [Interactive Commitizen CLI](https://cz-git.qbb.sh/) (czg) to generate standardized commit messages following the [Conventional Commits](https://www.conventionalcommits.org) specification.
+We use [mini-cz](https://github.com/CreateWheel/mini-cz) to generate standardized commit messages following the [Conventional Commits](https://www.conventionalcommits.org) specification.
 
 ### Commit message header
 
