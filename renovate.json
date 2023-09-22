@@ -34,6 +34,7 @@
       "matchPackagePatterns": [
         "@biomejs/biome",
         "husky",
+        "mini-cz",
         "nano-staged",
         "pkgroll",
         "sass",
