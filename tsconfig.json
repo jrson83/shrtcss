@@ -17,9 +17,10 @@
     }
   },
   "exclude": [
-    "**/dist/**",
-    "**/node_modules/**",
-    "**/public/**",
-    "**/__tests__/**"
+    "**/dist",
+    "**/node_modules",
+    "**/public",
+    "**/__tests__",
+    "**/.*/"
   ]
 }

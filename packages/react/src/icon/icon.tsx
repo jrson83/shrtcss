@@ -1,9 +1,9 @@
-import type { ComponentPropsWithoutRef } from 'react'
+import type { SHRTComponentProps } from '../../types'
 import { icons } from './icon.data'
 
 export type IconData = keyof typeof icons
 
-export interface IconProps extends ComponentPropsWithoutRef<'svg'> {
+export interface IconProps extends SHRTComponentProps<'svg'> {
   /** Available icons  */
   icon?: IconData
 

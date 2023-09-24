@@ -1,6 +1,7 @@
 import { cx } from 'classix'
+import type { SHRTComponentProps } from '../../../types'
 
-export interface LabelProps extends React.ComponentPropsWithoutRef<'label'> {
+export interface LabelProps extends SHRTComponentProps<'label'> {
   error?: string
 }
 

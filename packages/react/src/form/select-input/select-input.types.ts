@@ -1,3 +1,5 @@
+import type { SHRTComponentProps } from '../../../types'
+
 export interface SelectInputProps<Item> {
   items: Item[]
   value: string
@@ -8,7 +10,7 @@ export interface SelectInputProps<Item> {
 
 export type SelectInputPropsx<Item> =
   /* Omit< */
-  React.ComponentPropsWithoutRef<'select'> /* ,
+  SHRTComponentProps<'select'> /* ,
   'onChange'
 > */ &
     SelectInputProps<Item>

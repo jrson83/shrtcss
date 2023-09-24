@@ -1,5 +1,6 @@
 import { cx } from 'classix'
-import type { ComponentPropsWithoutRef, ReactNode } from 'react'
+import type { ReactNode } from 'react'
+import type { SHRTComponentProps } from '../../types'
 
 export type ColumnType<T, K extends keyof T> = {
   key: K
@@ -7,7 +8,7 @@ export type ColumnType<T, K extends keyof T> = {
 }
 
 export interface TableProps<T, K extends keyof T>
-  extends ComponentPropsWithoutRef<'table'> {
+  extends SHRTComponentProps<'table'> {
   items?: T[]
   columns?: ColumnType<T, K>[]
   caption?: string
@@ -60,8 +61,8 @@ export default function Table<T, K extends keyof T>({
       {caption && <caption>{caption}</caption>}
       {columns && <TableHeader columns={columns} />}
       <tbody>
-        {items?.map((item) => (
-          <tr>
+        {items?.map((item, idx) => (
+          <tr key={idx}>
             {columns?.map((column) => (
               <td key={String(column.key)}>{item[column.key] as ReactNode}</td>
             ))}

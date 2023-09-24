@@ -1,7 +1,7 @@
 import { cx } from 'classix'
-import type { ComponentPropsWithoutRef } from 'react'
+import type { SHRTComponentProps } from '../../types'
 
-export interface DividerProps extends ComponentPropsWithoutRef<'hr'> {
+export interface DividerProps extends SHRTComponentProps<'hr'> {
   /** Divider label */
   label?: string
 

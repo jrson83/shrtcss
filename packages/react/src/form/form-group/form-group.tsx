@@ -1,7 +1,8 @@
 import { cx } from 'classix'
+import type { SHRTComponentProps } from '../../../types'
 import { Label } from '../label'
 
-export interface FormGroupProps extends React.ComponentPropsWithoutRef<'div'> {
+export interface FormGroupProps extends SHRTComponentProps<'div'> {
   label?: string
   ifta?: boolean
   helper?: string

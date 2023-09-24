@@ -1,8 +1,8 @@
 import type { SHRTColor, SHRTSize, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
-import type { ComponentPropsWithoutRef } from 'react'
+import type { SHRTComponentProps } from '../../types'
 
-export interface BadgeProps extends ComponentPropsWithoutRef<'div'> {
+export interface BadgeProps extends SHRTComponentProps<'div'> {
   /** Badge color from theme */
   color?: SHRTColor
 

@@ -26,10 +26,11 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@/src": ["src/index.ts"],
       "@shrtcss/core": ["../core/scss/shrtcss.scss"],
-      "@/src": ["./src/index.ts"],
+      "@shrtcss/react/types": ["types/index.d.ts"],
       "@shrtcss/react-hooks": ["../react-hooks/src/index.ts"]
     }
   },
-  "include": ["*.ts", "*.tsx", "types/**/*", "src/**/*", ".storylite/**/*"]
+  "include": ["*.ts", "*.tsx", ".storylite/**/*", "src/**/*", "types/**/*"]
 }

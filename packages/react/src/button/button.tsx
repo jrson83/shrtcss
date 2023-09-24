@@ -1,8 +1,9 @@
 import type { SHRTColor, SHRTSize, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
-import type { ComponentPropsWithRef } from 'react'
+import type { SHRTComponentProps } from '../../types'
+/* import { forwardRef } from 'react' */
 
-export type ButtonProps = Omit<ComponentPropsWithRef<'button'>, 'onClick'> & {
+export type ButtonProps = Omit<SHRTComponentProps<'button'>, 'onClick'> & {
   /** Button color from theme */
   color?: SHRTColor
 

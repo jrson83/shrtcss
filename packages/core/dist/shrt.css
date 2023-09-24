@@ -196,6 +196,16 @@ svg {
   pointer-events: none;
 }
 
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+}
+
 [hidden] {
   display: none;
 }
@@ -1259,6 +1269,44 @@ select:not([multiple], [size]):active, select:not([multiple], [size]):focus {
   opacity: 0.6;
   cursor: default;
   pointer-events: none;
+}
+
+.table {
+  margin-block-end: 1rem;
+  width: 100%;
+  max-width: 100%;
+}
+.table caption {
+  margin-block-end: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+.table th,
+.table td {
+  padding: 0.5rem;
+  text-align: left;
+}
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid var(--shrt-color-border);
+}
+.table-div thead {
+  border-bottom: 2px solid var(--shrt-color-border);
+}
+.table-div :not(tfoot) td {
+  border-bottom: 1px solid var(--shrt-color-border);
+}
+.table-striped tbody tr:nth-child(odd) {
+  background-color: var(--shrt-color-surface);
+}
+.table-hover tbody tr:hover {
+  background-color: var(--shrt-color-surface-raised);
+}
+.table-responsive {
+  overflow-x: auto;
+}
+.table thead th {
+  font-weight: 600;
 }
 
 .tabs {

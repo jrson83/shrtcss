@@ -1,7 +1,6 @@
-import type { ComponentPropsWithoutRef } from 'react'
+import type { SHRTComponentProps } from '../../types'
 
-export interface BlockquoteProps
-  extends ComponentPropsWithoutRef<'blockquote'> {
+export interface BlockquoteProps extends SHRTComponentProps<'blockquote'> {
   /** Blockquote footer cite */
   cite?: string
 }

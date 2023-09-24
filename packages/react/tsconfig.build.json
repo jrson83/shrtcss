@@ -3,11 +3,11 @@
   "compilerOptions": {
     "emitDeclarationOnly": true
   },
-  "include": ["src/index.ts"],
+  "include": ["src/index.ts", "types/index.d.ts"],
   "exclude": [
-    "dist",
-    "node_modules",
-    "public",
+    "**/dist",
+    "**/node_modules",
+    "**/public",
     ".storylite",
     "src/*.stories.tsx",
     "src/**/*.stories.tsx",

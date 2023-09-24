@@ -1,11 +1,11 @@
 import { useForm } from '@shrtcss/react-hooks'
-import type { ComponentPropsWithoutRef } from 'react'
+import type { SHRTComponentProps } from '../../types'
 import Button from '../button'
 import { FormGroup } from './form-group'
 import { Input } from './input'
 import { Label } from './label'
 
-export type FormProps = ComponentPropsWithoutRef<'form'>
+export type FormProps = SHRTComponentProps<'form'>
 
 export interface TestForm {
   id: number
@@ -50,7 +50,7 @@ export default function Form() {
           id="input-ip"
           type="text"
           placeholder="192.168.178.69"
-          value={data.ip}
+          value={data.ip || ''}
           pattern="^(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
           onChange={handleChange('ip')}
           autoComplete="off"
@@ -65,7 +65,7 @@ export default function Form() {
           id="input-port"
           placeholder="2121"
           type="number"
-          value={data.port}
+          value={data.port || ''}
           min="1"
           onChange={handleChange<number>('port', (value) =>
             parseInt(value, 10)
@@ -82,7 +82,7 @@ export default function Form() {
           id="input-user"
           placeholder="User"
           type="text"
-          value={data.user}
+          value={data.user || ''}
           onChange={handleChange('user')}
           autoComplete="off"
           required
@@ -96,7 +96,7 @@ export default function Form() {
           id="input-password"
           placeholder="********"
           type="password"
-          value={data.password}
+          value={data.password || ''}
           onChange={handleChange('password')}
           autoComplete="off"
         />

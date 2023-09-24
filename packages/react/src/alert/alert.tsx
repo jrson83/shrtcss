@@ -1,15 +1,17 @@
 import type { SHRTColor, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
-import type { ComponentPropsWithoutRef } from 'react'
+import type { SHRTComponentProps } from '../../types'
 import Button from '../button'
 import Icon, { type IconData } from '../icon'
 
-export interface AlertProps
-  extends Omit<ComponentPropsWithoutRef<'output'>, 'id'> {
+/**
+ * The props type for {@link Alert}.
+ */
+export interface AlertProps extends Omit<SHRTComponentProps<'output'>, 'id'> {
   /** Alert color from theme */
   color?: SHRTColor
 
-  /** Controls appearance */
+  /** The theme-variant. Defaults to `primary`. */
   variant?: SHRTVariant
 
   /** Alert title */
@@ -24,6 +26,11 @@ export interface AlertProps
   isToast?: boolean
 }
 
+/**
+ * Renders a card around some content.
+ *
+ * * @category Component
+ */
 export default function Alert({
   children,
   className = 'alert',

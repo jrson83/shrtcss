@@ -1,3 +1,4 @@
+export * from './use-animate'
 export * from './use-on-click-outside'
 export * from './use-event-listener'
 export * from './use-focus-trap'

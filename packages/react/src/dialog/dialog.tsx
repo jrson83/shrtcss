@@ -1,12 +1,13 @@
 import { FocusTrap } from '@shrtcss/react-hooks'
 import { cx } from 'classix'
-import { type ComponentPropsWithoutRef, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
+import type { SHRTComponentProps } from '../../types'
 import Button from '../button'
 import Icon from '../icon'
 
 export const browserSupportsHas = CSS.supports?.('selector(html:has(body))')
 
-export interface DialogProps extends ComponentPropsWithoutRef<'dialog'> {
+export interface DialogProps extends SHRTComponentProps<'dialog'> {
   name?: string
   type?: 'error' | 'warning' | 'info' | 'success'
   title?: string
