@@ -25,7 +25,7 @@ export default function Icon({
   title,
   ...props
 }: IconProps) {
-  if (!icon) return null
+  if (!icon) throw new TypeError('Error')
 
   return (
     <svg

@@ -1,3 +1,4 @@
+import { decoratorsTemplate } from '@/storylite/decorators'
 import { Story } from '@storylite/storylite'
 import { useState } from 'react'
 import Pagination from './pagination'
@@ -53,20 +54,12 @@ export default {
     size: undefined,
     onPageChange: undefined,
   },
+  decorators: decoratorsTemplate(true),
 } satisfies StoryType
 
 export const Main: StoryDocsType = {
   name: 'Docs',
   component: Docs,
-  decorators: [
-    (Story, context) => {
-      return (
-        <div className="story-wrapper story-wrapper-doc">
-          <Story {...context?.args} />
-        </div>
-      )
-    },
-  ],
   navigation: {
     icon: <span>📄</span>,
     order: 0,

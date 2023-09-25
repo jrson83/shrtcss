@@ -1,3 +1,4 @@
+import { decoratorsTemplate } from '@/storylite/decorators'
 import { Story } from '@storylite/storylite'
 import Badge from './badge'
 import Docs from './badge.docs.mdx'
@@ -17,20 +18,12 @@ export default {
     uppercase: false,
     children: 'Default',
   },
-  decorators: [
-    (Story, context) => {
-      return (
-        <div className="story-wrapper">
-          <Story {...context?.args} />
-        </div>
-      )
-    },
-  ],
 } satisfies StoryType
 
 export const Main: StoryDocsType = {
   name: 'Docs',
   component: Docs,
+  decorators: decoratorsTemplate(true),
   navigation: {
     icon: <span>📄</span>,
     order: 0,
@@ -39,6 +32,7 @@ export const Main: StoryDocsType = {
 
 export const DefaultStory: StoryType = {
   name: 'Default',
+  decorators: decoratorsTemplate(),
   navigation: {
     order: 1,
   },
@@ -49,6 +43,7 @@ export const Danger: StoryType = {
     color: 'danger',
     children: 'Danger',
   },
+  decorators: decoratorsTemplate(),
   navigation: {
     order: 2,
   },
@@ -59,6 +54,7 @@ export const Success: StoryType = {
     color: 'success',
     children: 'Success',
   },
+  decorators: decoratorsTemplate(),
   navigation: {
     order: 3,
   },
@@ -69,6 +65,7 @@ export const Warning: StoryType = {
     color: 'warning',
     children: 'Warning',
   },
+  decorators: decoratorsTemplate(),
   navigation: {
     order: 4,
   },
@@ -79,6 +76,7 @@ export const Disabled: StoryType = {
     disabled: true,
     children: 'Disabled',
   },
+  decorators: decoratorsTemplate(),
   navigation: {
     order: 5,
   },
@@ -89,6 +87,7 @@ export const FullWidth: StoryType = {
     fullWidth: true,
     children: 'FullWidth',
   },
+  decorators: decoratorsTemplate(),
   navigation: {
     order: 6,
   },
@@ -99,6 +98,7 @@ export const Uppercase: StoryType = {
     uppercase: true,
     children: 'Uppercase',
   },
+  decorators: decoratorsTemplate(),
   navigation: {
     order: 7,
   },

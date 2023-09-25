@@ -1,3 +1,4 @@
+import { decoratorsTemplate } from '@/storylite/decorators'
 import type { Story } from '@storylite/storylite'
 import Form from './form'
 import Docs from './form.docs.mdx'
@@ -9,15 +10,7 @@ export default {
   title: 'Form',
   component: Form,
   args: {},
-  decorators: [
-    (Story, context) => {
-      return (
-        <div className="story-wrapper">
-          <Story {...context?.args} />
-        </div>
-      )
-    },
-  ],
+  decorators: decoratorsTemplate(true),
 } satisfies StoryType
 
 export const Main: StoryDocsType = {

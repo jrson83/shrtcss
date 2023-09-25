@@ -1,9 +1,12 @@
+import { decoratorsTemplate } from '@/storylite/decorators'
 import { Story } from '@storylite/storylite'
 import Heading from './heading'
 import Docs from './heading.docs.mdx'
 
 type StoryType = Story<typeof Heading>
 type StoryDocsType = Story<typeof Docs>
+
+const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const
 
 export default {
   title: 'Heading',
@@ -12,15 +15,7 @@ export default {
     as: 'h2',
     children: 'Heading #2',
   },
-  decorators: [
-    (Story, context) => {
-      return (
-        <div className="story-wrapper story-wrapper-doc">
-          <Story {...context?.args} />
-        </div>
-      )
-    },
-  ],
+  decorators: decoratorsTemplate(true),
 } satisfies StoryType
 
 export const Main: StoryDocsType = {
@@ -36,24 +31,11 @@ export const DefaultStory: StoryType = {
   name: 'Default',
   component: () => (
     <>
-      <Heading as={'h1'}>
-        Heading #1 <code>&lt;h1&gt;</code>
-      </Heading>
-      <Heading>
-        Heading #2 <code>&lt;h2&gt;</code>
-      </Heading>
-      <Heading as={'h3'}>
-        Heading #3 <code>&lt;h3&gt;</code>
-      </Heading>
-      <Heading as={'h4'}>
-        Heading #4 <code>&lt;h4&gt;</code>
-      </Heading>
-      <Heading as={'h5'}>
-        Heading #5 <code>&lt;h5&gt;</code>
-      </Heading>
-      <Heading as={'h6'}>
-        Heading #6 <code>&lt;h6&gt;</code>
-      </Heading>
+      {headings.map((heading, idx) => (
+        <Heading as={heading} key={heading}>
+          Heading #{idx + 1} <code>&lt;{heading}&gt;</code>
+        </Heading>
+      ))}
     </>
   ),
 }

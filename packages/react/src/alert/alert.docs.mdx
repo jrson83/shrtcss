@@ -4,44 +4,47 @@ title: Docs
 
 import Alert from './alert'
 
-<div className="story-wrapper story-wrapper-doc">
-  <h1>Alert</h1>
-  <h2>Basic</h2>
-  <p>Display an alert.</p>
-  <div className="example-wrapper wrap">
-    <Alert showCloseBtn>This is an info alert message.</Alert>
-    <Alert color="success">This is a success alert message.</Alert>
-    <Alert color="warning">This is a warning alert message.</Alert>
-    <Alert color="danger">This is an error alert message.</Alert>
-  </div>
-  <h2>Title</h2>
-  <p>Display an alert.</p>
-  <div className="example-wrapper wrap">
-    <Alert title="Info">This is an info alert message.</Alert>
-    <Alert title="Success" color="success">
-      This is a success alert message.
-    </Alert>
-    <Alert title="Warning" color="warning">
-      This is a warning alert message.
-    </Alert>
-    <Alert title="Error" color="danger">
-      This is an error alert message.
-    </Alert>
-  </div>
-  <h2>Icon</h2>
-  <p>Display an alert.</p>
-  <div className="example-wrapper wrap">
-    <Alert title="Info" hasIcon={false}>
-      This is an info alert message.
-    </Alert>
-    <Alert title="Success" color="success" hasIcon={false}>
-      This is a success alert message.
-    </Alert>
-    <Alert title="Warning" color="warning" hasIcon={false}>
-      This is a warning alert message.
-    </Alert>
-    <Alert title="Error" color="danger" hasIcon={false}>
-      This is an error alert message.
-    </Alert>
-  </div>
+# Alert
+
+[Alert](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) displays a brief message in a way that attracts the user’s attention without interrupting their task.
+
+## Basic
+
+<div className="example-wrapper wrap">
+  <Alert>This is an info alert message.</Alert>
+  <Alert color="success">This is a success alert message.</Alert>
+  <Alert color="warning">This is a warning alert message.</Alert>
+  <Alert color="danger">This is an error alert message.</Alert>
+</div>
+
+## Title
+
+<div className="example-wrapper wrap">
+  <Alert title="Info">This is an info alert message.</Alert>
+  <Alert title="Success" color="success">
+    This is a success alert message.
+  </Alert>
+  <Alert title="Warning" color="warning">
+    This is a warning alert message.
+  </Alert>
+  <Alert title="Error" color="danger">
+    This is an error alert message.
+  </Alert>
+</div>
+
+## Icon
+
+<div className="example-wrapper wrap">
+  <Alert title="Info" hasIcon={false}>
+    This is an info alert message.
+  </Alert>
+  <Alert title="Success" color="success" hasIcon={false}>
+    This is a success alert message.
+  </Alert>
+  <Alert title="Warning" color="warning" hasIcon={false}>
+    This is a warning alert message.
+  </Alert>
+  <Alert title="Error" color="danger" hasIcon={false}>
+    This is an error alert message.
+  </Alert>
 </div>

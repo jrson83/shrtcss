@@ -1,3 +1,4 @@
+import { decoratorsTemplate } from '@/storylite/decorators'
 import { Story } from '@storylite/storylite'
 import Tabs, { Tab } from './tabs'
 import Docs from './tabs.docs.mdx'
@@ -8,24 +9,18 @@ type StoryDocsType = Story<typeof Docs>
 export default {
   title: 'Tabs',
   component: Tabs,
+  decorators: decoratorsTemplate(true),
   args: {
     color: 'accent',
     ariaLabel: undefined,
+    children: undefined,
   },
 } satisfies StoryType
 
 export const Main: StoryDocsType = {
   name: 'Docs',
   component: Docs,
-  decorators: [
-    (Story, context) => {
-      return (
-        <div className="story-wrapper story-wrapper-doc">
-          <Story {...context?.args} />
-        </div>
-      )
-    },
-  ],
+
   navigation: {
     icon: <span>📄</span>,
     order: 0,
@@ -34,10 +29,14 @@ export const Main: StoryDocsType = {
 
 export const DefaultStory: StoryType = {
   name: 'Default',
+  args: {
+    color: 'accent',
+    ariaLabel: 'Example Tabs',
+  },
   decorators: [
     (_Story, context) => {
       return (
-        <div className="story-wrapper story-wrapper-doc">
+        <div className="story-wrapper story-wrapper-column">
           <Tabs ariaLabel="Example Tabs" color={'accent'} {...context?.args}>
             <Tab title="Tab #1">
               <p>Example Text #1</p>

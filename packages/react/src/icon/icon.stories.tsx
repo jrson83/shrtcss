@@ -1,3 +1,4 @@
+import { decoratorsTemplate } from '@/storylite/decorators'
 import { Story } from '@storylite/storylite'
 import Icon from './icon'
 import Docs from './icon.docs.mdx'
@@ -15,20 +16,12 @@ export default {
     size: 32,
     title: 'Icon',
   },
-  decorators: [
-    (Story, context) => {
-      return (
-        <div className="story-wrapper">
-          <Story {...context?.args} />
-        </div>
-      )
-    },
-  ],
 } satisfies StoryType
 
 export const Main: StoryDocsType = {
   name: 'Docs',
   component: Docs,
+  decorators: decoratorsTemplate(true),
   navigation: {
     icon: <span>📄</span>,
     order: 0,
@@ -37,14 +30,5 @@ export const Main: StoryDocsType = {
 
 export const DefaultStory: StoryType = {
   name: 'Default',
-}
-
-export const IconList: StoryType = {
-  args: {
-    className: undefined,
-    color: 'var(--shrt-color-info)',
-    icon: 'ps4',
-    size: 32,
-    title: 'Icon',
-  },
+  decorators: decoratorsTemplate(),
 }

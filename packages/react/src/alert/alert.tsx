@@ -4,9 +4,6 @@ import type { SHRTComponentProps } from '../../types'
 import Button from '../button'
 import Icon, { type IconData } from '../icon'
 
-/**
- * The props type for {@link Alert}.
- */
 export interface AlertProps extends Omit<SHRTComponentProps<'output'>, 'id'> {
   /** Alert color from theme */
   color?: SHRTColor
@@ -26,11 +23,6 @@ export interface AlertProps extends Omit<SHRTComponentProps<'output'>, 'id'> {
   isToast?: boolean
 }
 
-/**
- * Renders a card around some content.
- *
- * * @category Component
- */
 export default function Alert({
   children,
   className = 'alert',

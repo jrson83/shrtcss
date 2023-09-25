@@ -45,10 +45,14 @@
   small {
     font-size: type-var('sm');
   }
-  
+
   a {
-    color: inherit;
-    text-decoration: inherit;
+    color: color('info');
+    text-decoration: underline;
+
+    &:hover {
+      color: color('info-weaker');
+    }
   }
 }
 

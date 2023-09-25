@@ -27,6 +27,7 @@
     "baseUrl": ".",
     "paths": {
       "@/src": ["src/index.ts"],
+      "@/storylite/*": [".storylite/*.tsx"],
       "@shrtcss/core": ["../core/scss/shrtcss.scss"],
       "@shrtcss/react/types": ["types/index.d.ts"],
       "@shrtcss/react-hooks": ["../react-hooks/src/index.ts"]

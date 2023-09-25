@@ -1,3 +1,4 @@
+import { decoratorsTemplate } from '@/storylite/decorators'
 import { Story } from '@storylite/storylite'
 import Blockquote from './blockquote'
 import Docs from './blockquote.docs.mdx'
@@ -12,20 +13,12 @@ export default {
     cite: undefined,
     children: 'First, solve the problem. Then, write the code.',
   },
-  decorators: [
-    (Story, context) => {
-      return (
-        <div className="story-wrapper">
-          <Story {...context?.args} />
-        </div>
-      )
-    },
-  ],
 } satisfies StoryType
 
 export const Main: StoryDocsType = {
   name: 'Docs',
   component: Docs,
+  decorators: decoratorsTemplate(true),
   navigation: {
     icon: <span>📄</span>,
     order: 0,
@@ -34,6 +27,7 @@ export const Main: StoryDocsType = {
 
 export const DefaultStory: StoryType = {
   name: 'Default',
+  decorators: decoratorsTemplate(),
 }
 
 export const WithCite: StoryType = {
@@ -41,4 +35,5 @@ export const WithCite: StoryType = {
     children: 'First, solve the problem. Then, write the code.',
     cite: '— John Johnson',
   },
+  decorators: decoratorsTemplate(),
 }

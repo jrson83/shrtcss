@@ -1,3 +1,4 @@
+import { decoratorsTemplate } from '@/storylite/decorators'
 import { Story } from '@storylite/storylite'
 import Alert from './alert'
 import Docs from './alert.docs.mdx'
@@ -16,15 +17,7 @@ export default {
     closeBtn: false,
     children: 'This is an info alert message.',
   },
-  decorators: [
-    (Story, context) => {
-      return (
-        <div className="story-wrapper">
-          <Story {...context?.args} />
-        </div>
-      )
-    },
-  ],
+  decorators: decoratorsTemplate(true),
 } satisfies StoryType
 
 export const Main: StoryDocsType = {

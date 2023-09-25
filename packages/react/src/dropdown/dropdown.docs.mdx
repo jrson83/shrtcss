@@ -5,18 +5,19 @@ title: Docs
 import Icon from '../icon'
 import Dropdown from './dropdown'
 
-<div className='story-wrapper story-wrapper-doc'>
-  <h1>Dropdown</h1>
-  <p>
-    Displays a <code>&lt;button&gt;</code> or a component that looks like a
-    button.
-  </p>
-  <h2>Basic</h2>
-  <div className='example-wrapper'>
-    <Dropdown label='Dropdown' />
-    <Dropdown
-      position={'bottom-right'}
-      icon={<Icon title='Settings' icon={'ellipsis'} size={26} />}
-    />
-  </div>
+# Dropdown
+
+## Basic
+
+<div className='example-wrapper'>
+  <Dropdown label='Dropdown' />
+</div>
+
+  ## With Icon Button
+
+<div className='example-wrapper'>
+  <Dropdown
+    position={'bottom-right'}
+    icon={<Icon title='Settings' icon={'ellipsis'} size={26} />}
+  />
 </div>

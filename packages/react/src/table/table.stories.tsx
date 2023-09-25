@@ -1,3 +1,4 @@
+import { decoratorsTemplate } from '@/storylite/decorators'
 import type { Story } from '@storylite/storylite'
 import { type User, users } from './setup.data'
 import Table from './table'
@@ -19,20 +20,12 @@ export default {
     responsive: false,
     striped: false,
   },
+  decorators: decoratorsTemplate(true),
 } satisfies StoryType
 
 export const Main: StoryDocsType = {
   name: 'Docs',
   component: Docs,
-  decorators: [
-    (Story, context) => {
-      return (
-        <div className="story-wrapper">
-          <Story {...context?.args} />
-        </div>
-      )
-    },
-  ],
   navigation: {
     icon: <span>📄</span>,
     order: 0,
@@ -41,21 +34,17 @@ export const Main: StoryDocsType = {
 
 export const DefaultStory: StoryType = {
   name: 'Default',
-  decorators: [
-    (_Story, _context) => {
-      return (
-        <div className="story-wrapper story-wrapper-doc">
-          <Table<User, keyof User>
-            items={users}
-            columns={[
-              { key: 'username', header: 'Username' },
-              { key: 'address', header: 'Address' },
-              { key: 'role', header: 'Role' },
-            ]}
-            caption="Userlist"
-          />
-        </div>
-      )
-    },
-  ],
+  component: () => {
+    return (
+      <Table<User, keyof User>
+        items={users}
+        columns={[
+          { key: 'username', header: 'Username' },
+          { key: 'address', header: 'Address' },
+          { key: 'role', header: 'Role' },
+        ]}
+        caption="Userlist"
+      />
+    )
+  },
 }

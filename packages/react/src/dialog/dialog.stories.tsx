@@ -1,3 +1,4 @@
+import { decoratorsTemplate } from '@/storylite/decorators'
 import { Story } from '@storylite/storylite'
 import { useState } from 'react'
 import Button from '../button'
@@ -33,6 +34,7 @@ export default {
 export const Main: StoryDocsType = {
   name: 'Docs',
   component: Docs,
+  decorators: decoratorsTemplate(true),
   navigation: {
     icon: <span>📄</span>,
     order: 0,

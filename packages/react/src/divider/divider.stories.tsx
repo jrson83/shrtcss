@@ -1,3 +1,4 @@
+import { decoratorsTemplate } from '@/storylite/decorators'
 import { Story } from '@storylite/storylite'
 import Divider from './divider'
 import Docs from './divider.docs.mdx'
@@ -17,15 +18,7 @@ export default {
 export const Main: StoryDocsType = {
   name: 'Docs',
   component: Docs,
-  decorators: [
-    (Story, context) => {
-      return (
-        <div className="story-wrapper">
-          <Story {...context?.args} />
-        </div>
-      )
-    },
-  ],
+  decorators: decoratorsTemplate(true),
   navigation: {
     icon: <span>📄</span>,
     order: 0,
@@ -34,15 +27,6 @@ export const Main: StoryDocsType = {
 
 export const DefaultStory: StoryType = {
   name: 'Default',
-  decorators: [
-    (Story, context) => {
-      return (
-        <div className="example-wrapper">
-          <Story {...context?.args} />
-        </div>
-      )
-    },
-  ],
 }
 
 export const Vertical: StoryType = {
@@ -53,7 +37,7 @@ export const Vertical: StoryType = {
   decorators: [
     (Story, context) => {
       return (
-        <div className="example-wrapper">
+        <div className="story-wrapper">
           Text <Story {...context?.args} /> Text
         </div>
       )
@@ -65,13 +49,5 @@ export const WithLabel: StoryType = {
   args: {
     label: 'Label',
   },
-  decorators: [
-    (Story, context) => {
-      return (
-        <div className="example-wrapper column">
-          <Story {...context?.args} />
-        </div>
-      )
-    },
-  ],
+  decorators: decoratorsTemplate(true),
 }

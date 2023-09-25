@@ -36,7 +36,7 @@ export default function Pagination({
 
   const pageCount = Math.ceil(totalItems / itemsPerPage)
 
-  if (pageCount === 1) return null
+  if (pageCount === 1) throw new Error('Pagination component `pageCount` 1')
 
   const pages = Array.from({ length: pageCount }, (_, i) => i + 1)
 

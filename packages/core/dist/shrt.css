@@ -210,6 +210,10 @@ th {
   display: none;
 }
 
+/* a {
+  color: inherit;
+  text-decoration: inherit;
+} */
 @media (prefers-color-scheme: light) {
   :root {
     color-scheme: light;
@@ -330,8 +334,11 @@ small {
 }
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+  color: var(--shrt-color-info);
+  text-decoration: underline;
+}
+a:hover {
+  color: var(--shrt-color-info-weaker);
 }
 
 .bg-bg {
