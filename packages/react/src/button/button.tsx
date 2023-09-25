@@ -22,7 +22,7 @@ export type ButtonProps = Omit<SHRTComponentProps<'button'>, 'onClick'> & {
   /** Set text-transform to uppercase */
   uppercase?: boolean
 
-  /** Set text-transform to uppercase */
+  /** Button onClick event */
   onClick?: (data: unknown) => void
 }
 

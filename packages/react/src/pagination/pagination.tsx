@@ -6,19 +6,19 @@ import Button from '../button'
 import Icon from '../icon'
 
 export interface PaginationProps extends SHRTComponentProps<'nav'> {
-  /** */
+  /** The current page item */
   currentPage?: number
 
-  /** */
+  /** Number of items to display per page - Defaults to `10` */
   itemsPerPage?: number
 
-  /** */
+  /** Total number of items */
   totalItems?: number
 
-  /** */
+  /** Predefined pagination size */
   size?: SHRTSize
 
-  /** */
+  /** Event occurs on page change */
   onPageChange?: (page: number) => void
 }
 

@@ -5,21 +5,22 @@ import Button from '../button'
 import Icon, { type IconData } from '../icon'
 
 export interface AlertProps extends Omit<SHRTComponentProps<'output'>, 'id'> {
-  /** Alert color from theme */
+  /** Alert color from theme - Defaults to `info` */
   color?: SHRTColor
 
-  /** The theme-variant. Defaults to `primary`. */
+  /** Controls appearance */
   variant?: SHRTVariant
 
   /** Alert title */
   title?: string
 
-  /** Disable icon before content */
+  /** Disables icon - Defaults to `true` */
   hasIcon?: boolean
 
-  /** Adds close button  */
+  /** Adds close button - Defaults to `false` */
   closeBtn?: boolean
 
+  /** Used by toast component - Defaults to `false` */
   isToast?: boolean
 }
 

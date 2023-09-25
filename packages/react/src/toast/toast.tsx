@@ -4,11 +4,15 @@ import { useToasts } from './toast.hook'
 import type { ToastType } from './toast.types'
 
 export interface ToastAlertProps extends ToastType {
+  /** Auto dismiss after `dismissDelay` - Defaults to `true` */
   autoDismiss?: boolean
+
+  /** Number of milliseconds to wait when closing - Defaults to `3150` */
   dismissDelay?: number
 }
 
 export interface ToastProps {
+  /** ToastProvider position on screen */
   position?:
     | 'top-left'
     | 'top-right'

@@ -9,13 +9,32 @@ export type ColumnType<T, K extends keyof T> = {
 
 export interface TableProps<T, K extends keyof T>
   extends SHRTComponentProps<'table'> {
+  /** Array of data */
   items?: T[]
+
+  /**
+   * Table header column array of objects
+   *
+   * `[{ key: 'example', header: 'Example' }]`
+   */
   columns?: ColumnType<T, K>[]
+
+  /** Defines a table caption */
   caption?: string
+
+  /** Enable table footer columns - Defaults to `false` */
   tfoot?: boolean
+
+  /** Enable predefined style - Defaults to `true` */
   bordered?: boolean
+
+  /** Enable predefined style - Defaults to `false` */
   hover?: boolean
+
+  /** Enable predefined style - Defaults to `false` */
   responsive?: boolean
+
+  /** Enable predefined style - Defaults to `false` */
   striped?: boolean
 }
 
