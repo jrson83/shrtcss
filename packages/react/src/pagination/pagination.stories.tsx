@@ -47,7 +47,6 @@ export default {
   title: 'Pagination',
   component: Pagination,
   args: {
-    initialPage: 1,
     currentPage: 1,
     itemsPerPage: 10,
     totalItems: 0,

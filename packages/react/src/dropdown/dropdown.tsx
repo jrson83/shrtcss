@@ -1,6 +1,6 @@
 import { useOnClickOutside } from '@shrtcss/react-hooks'
 import { cx } from 'classix'
-import { /*  useRef, */ useState } from 'react'
+import { useRef, useState } from 'react'
 import type { SHRTComponentProps } from '../../types'
 import Button from '../button'
 import Divider from '../divider'
@@ -24,7 +24,7 @@ export default function Dropdown({
   position,
   ...rest
 }: DropdownProps) {
-  /* const buttonRef = useRef<HTMLButtonElement | null>(null) */
+  const buttonRef = useRef<HTMLButtonElement | null>(null)
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleDropdown = () => setIsOpen(!isOpen)
@@ -42,7 +42,7 @@ export default function Dropdown({
           'btn btn-dropdown',
           typeof icon !== 'undefined' && 'btn-icon'
         )}
-        /* ref={buttonRef} */
+        ref={buttonRef}
         onClick={toggleDropdown}
         aria-haspopup={true}
       >

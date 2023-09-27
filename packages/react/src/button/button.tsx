@@ -1,7 +1,7 @@
 import type { SHRTColor, SHRTSize, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
+import { forwardRef } from 'react'
 import type { SHRTComponentProps } from '../../types'
-/* import { forwardRef } from 'react' */
 
 export type ButtonProps = Omit<SHRTComponentProps<'button'>, 'onClick'> & {
   /** Button color from theme */
@@ -26,7 +26,7 @@ export type ButtonProps = Omit<SHRTComponentProps<'button'>, 'onClick'> & {
   onClick?: (data: unknown) => void
 }
 
-/* export default forwardRef<HTMLButtonElement, ButtonProps>(
+export default forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       children,
@@ -57,9 +57,9 @@ export type ButtonProps = Omit<SHRTComponentProps<'button'>, 'onClick'> & {
       </button>
     )
   }
-) */
+)
 
-export default function Button({
+/* export default function Button({
   children,
   className = 'btn',
   color,
@@ -84,4 +84,4 @@ export default function Button({
       {children}
     </button>
   )
-}
+} */

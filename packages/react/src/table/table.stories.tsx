@@ -13,7 +13,7 @@ export default {
   args: {
     items: undefined,
     columns: undefined,
-    caption: false,
+    caption: undefined,
     tfoot: false,
     bordered: false,
     hover: false,

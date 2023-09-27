@@ -13,7 +13,6 @@ export default {
   component: Toast,
   args: {
     position: 'bottom-center',
-    children: 'This is an info alert message.',
   },
   decorators: [
     (Story, context) => {
