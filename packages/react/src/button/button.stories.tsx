@@ -1,4 +1,3 @@
-import { decoratorsTemplate } from '@/storylite/decorators'
 import type { Story } from '@storylite/storylite'
 import Button from './button'
 import Docs from './button.docs.mdx'
@@ -18,7 +17,15 @@ export default {
     uppercase: false,
     children: 'Default',
   },
-  decorators: decoratorsTemplate(true),
+  decorators: [
+    (Story, context) => {
+      return (
+        <div className="story-wrapper story-wrapper-column">
+          <Story {...context?.args} />
+        </div>
+      )
+    },
+  ],
 } satisfies StoryType
 
 export const Main: StoryDocsType = {
