@@ -6,6 +6,7 @@ $settings: map.merge(
     'themes': ['light', 'dark'],
     'property-prefix': 'shrt',
     'custom-properties': true,
+    'color-variants': ['filled', 'light', 'outline'],
     'modules': (
       'font': true,
       'reset': true,
@@ -24,6 +25,7 @@ $settings: map.merge(
       'pagination': true,
       'table': true,
       'tabs': true,
+      'timeline': true,
       'toast': true,
       'utilities': true,
       'typography': true

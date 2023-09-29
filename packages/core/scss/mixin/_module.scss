@@ -1,4 +1,3 @@
-@use 'sass:map';
 @use 'button' as *;
 @use 'color' as *;
 @use 'typography' as *;
@@ -16,7 +15,7 @@
     @include generate-reset;
   }
 
-  @if map.get($settings, 'custom-properties') {
+  @if config($settings, 'custom-properties') {
     @include generate-color-properties;
   }
 
@@ -78,6 +77,10 @@
 
   @if map-deep-get($settings, 'modules', 'tabs') {
     @include generate-tabs;
+  }
+
+  @if map-deep-get($settings, 'modules', 'timeline') {
+    @include generate-timeline;
   }
 
   @if map-deep-get($settings, 'modules', 'toast') {
