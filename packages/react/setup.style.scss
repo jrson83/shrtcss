@@ -26,7 +26,7 @@
   padding-block: 1rem;
   padding-inline: 1rem;
   border: 1px solid shrtcss.color('border');
-  border-radius: var(--shrt-border-radius);
+  border-radius: shrtcss.config(shrtcss.$border, 'radius');
   gap: 0.85rem;
 
   &-column {

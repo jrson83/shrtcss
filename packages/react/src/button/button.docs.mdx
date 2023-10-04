@@ -12,46 +12,58 @@ import Icon from '../icon'
 ## Basic
 
 <div className='example-wrapper wrap'>
-  <Button className='btn'>Button</Button>
-  <Button color={'info'}>Button</Button>
-  <Button color={'success'}>Button</Button>
-  <Button color={'warning'}>Button</Button>
-  <Button color={'danger'}>Button</Button>
+  <Button>Button</Button>
+  <Button variant={'filled'} color={'info'}>Button</Button>
+  <Button variant={'filled'} color={'success'}>Button</Button>
+  <Button variant={'filled'} color={'warning'}>Button</Button>
+  <Button variant={'filled'} color={'danger'}>Button</Button>
+  <span style={{flexBasis: '100%', height: '0'}} />
+  <Button variant={'outline'}>Button</Button>
+  <Button variant={'outline'} color={'info'}>Button</Button>
+  <Button variant={'outline'} color={'success'}>Button</Button>
+  <Button variant={'outline'} color={'warning'}>Button</Button>
+  <Button variant={'outline'} color={'danger'}>Button</Button>
+  <span style={{flexBasis: '100%', height: '0'}} />
+  <Button variant={'light'}>Button</Button>
+  <Button variant={'light'} color={'info'}>Button</Button>
+  <Button variant={'light'} color={'success'}>Button</Button>
+  <Button variant={'light'} color={'warning'}>Button</Button>
+  <Button variant={'light'} color={'danger'}>Button</Button>
 </div>
 
 ## Icon
 
 <div className='example-wrapper wrap'>
-  <Button className='btn btn-icon' aria-label='Icon-only Button'>
+  <Button aria-label='Icon-only Button'>
     <Icon title='test' icon={'ps4'} size={26} />
   </Button>
-  <Button className='btn btn-icon bg-info' aria-label='Icon-only Button'>
+  <Button variant={'filled'} color={'info'} aria-label='Icon-only Button'>
     <Icon title='test' icon={'info'} size={26} />
   </Button>
   <Button
-    className='btn btn-icon bg-success'
+    variant={'filled'} color={'success'}
     aria-label='Icon-only Button'
   >
     <Icon title='test' icon={'success'} size={26} />
   </Button>
   <Button
-    className='btn btn-icon bg-warning'
+    variant={'filled'} color={'warning'}
     aria-label='Icon-only Button'
   >
     <Icon title='test' icon={'question'} size={26} />
   </Button>
   <Button
-    className='btn btn-icon bg-danger'
+    variant={'filled'} color={'danger'}
     aria-label='Icon-only Button'
   >
-    <Icon title='test' icon={'error'} size={26} />
+    <Icon title='test' icon={'danger'} size={26} />
   </Button>
 </div>
 
 ## Icon & Label
 
 <div className='example-wrapper wrap'>
-  <Button className='btn' aria-label='Icon-only Button'>
+  <Button aria-label='Icon-only Button'>
     <Icon title='test' icon={'time'} size={20} />
     <span>Label</span>
   </Button>
@@ -60,27 +72,21 @@ import Icon from '../icon'
 ## Size Variants
 
 <div className='example-wrapper wrap'>
+  <Button size={'xl'}>X-Large</Button>
   <Button size={'lg'}>Large</Button>
-  <Button>Normal</Button>
+  <Button>Medium</Button>
   <Button size={'sm'}>Small</Button>
+  <Button size={'xs'}>X-Small</Button>
 </div>
 
 ## Disabled
 
 <div className='example-wrapper wrap'>
-  <Button disabled>Disabled</Button>
-  <Button color={'info'} disabled>
-    Disabled
-  </Button>
-  <Button color={'success'} disabled>
-    Disabled
-  </Button>
-  <Button color={'warning'} disabled>
-    Disabled
-  </Button>
-  <Button color={'danger'} disabled>
-    Disabled
-  </Button>
+  <Button disabled>Button</Button>
+  <Button variant={'filled'} color={'info'} disabled>Button</Button>
+  <Button variant={'filled'} color={'success'} disabled>Button</Button>
+  <Button variant={'filled'} color={'warning'} disabled>Button</Button>
+  <Button variant={'filled'} color={'danger'} disabled>Button</Button>
 </div>
 
 ## Full-Width

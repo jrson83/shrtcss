@@ -1,4 +1,4 @@
-@use "sass:map";
+@use '../config' as *;
 @use '../function' as *;
 
 @mixin generate-blockquote {
@@ -6,7 +6,7 @@
     padding: 1rem 1.5rem;
     border-width: 0.3125rem;
     border-left-style: solid;
-    border-radius: var(--shrt-border-radius);
+    border-radius: config($border, 'radius');
     border-color: color('border');
     background-color: color('surface');
     color: inherit;

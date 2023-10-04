@@ -15,12 +15,5 @@
   $themes: config($settings, 'themes');
   $prefix: '#{config($settings, 'property-prefix')}-';
 
-  /* $c: map-deep-get($map, $theme, string.quote($key)); */
-
-  /* : #{map-deep-get($colors, $theme, $key)} */
-
-  $c: string.unquote('var(--#{$prefix}color-#{$key})');
-
-  @return $c;
+  @return string.unquote('var(--#{$prefix}color-#{$key})');
 }
-

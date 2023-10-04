@@ -1,4 +1,5 @@
 @use 'spacer' as *;
+@use '../function' as *;
 
 @mixin visually-hidden {
   position: absolute;

@@ -11,7 +11,8 @@ export default {
   component: Badge,
   args: {
     className: 'bdg',
-    color: undefined,
+    color: 'info',
+    variant: 'default',
     size: undefined,
     disabled: false,
     fullWidth: false,
@@ -40,6 +41,7 @@ export const DefaultStory: StoryType = {
 
 export const Danger: StoryType = {
   args: {
+    variant: 'filled',
     color: 'danger',
     children: 'Danger',
   },
@@ -51,6 +53,7 @@ export const Danger: StoryType = {
 
 export const Success: StoryType = {
   args: {
+    variant: 'filled',
     color: 'success',
     children: 'Success',
   },
@@ -62,6 +65,7 @@ export const Success: StoryType = {
 
 export const Warning: StoryType = {
   args: {
+    variant: 'filled',
     color: 'warning',
     children: 'Warning',
   },

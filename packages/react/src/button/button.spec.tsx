@@ -14,12 +14,16 @@ describe('Button component test', () => {
     expect(button).toHaveClass('btn')
   })
 
-  test('Should render info button', () => {
-    render(<Button color={'info'}>Testing</Button>)
+  test('Should render filled-info button', () => {
+    render(
+      <Button variant={'filled'} color={'info'}>
+        Testing
+      </Button>
+    )
 
     const button = screen.getByRole('button')
     expect(button).toBeInTheDocument()
-    expect(button).toHaveClass('btn bg-info')
+    expect(button).toHaveClass('btn filled-info')
   })
 
   test('Should render disabled button', () => {

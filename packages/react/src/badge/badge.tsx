@@ -1,6 +1,8 @@
 import type { SHRTColor, SHRTSize, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
+import { Children, type ReactElement, isValidElement } from 'react'
 import type { SHRTComponentProps } from '../../types'
+import Icon, { type IconProps } from '../icon'
 
 export interface BadgeProps extends SHRTComponentProps<'div'> {
   /** Badge color from theme */
@@ -26,18 +28,30 @@ export default function Badge({
   children,
   className = 'bdg',
   color,
+  variant = 'default',
   size,
   disabled,
   fullWidth,
   uppercase,
   ...rest
 }: BadgeProps) {
+  const IconChildren = Children.toArray(children)
+    .filter(isValidElement)
+    .filter((child) => child.type === Icon) as ReactElement<IconProps>[]
+
+  const isIcon =
+    Array.isArray(IconChildren) &&
+    IconChildren.length > 0 &&
+    Children.toArray(children).length < 2
+
   return (
     <div
       className={cx(
         className,
-        color && `bg-${color}`,
-        size && `bdg-${size}`,
+        isIcon && 'bdg-icon',
+        variant !== 'default' && variant,
+        color && variant !== 'default' && `${variant}-${color}`,
+        size && `scale-${size}`,
         disabled && `bdg-disabled`,
         fullWidth && `bdg-fw`,
         uppercase && `uppercase`

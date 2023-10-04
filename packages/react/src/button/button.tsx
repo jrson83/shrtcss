@@ -1,7 +1,9 @@
 import type { SHRTColor, SHRTSize, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
 import { forwardRef } from 'react'
+import { Children, type ReactElement, isValidElement } from 'react'
 import type { SHRTComponentProps } from '../../types'
+import Icon, { type IconProps } from '../icon'
 
 export type ButtonProps = Omit<SHRTComponentProps<'button'>, 'onClick'> & {
   /** Button color from theme */
@@ -32,6 +34,7 @@ export default forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       className = 'btn',
       color,
+      variant = 'default',
       size,
       fullWidth,
       uppercase,
@@ -40,12 +43,23 @@ export default forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
+    const IconChildren = Children.toArray(children)
+      .filter(isValidElement)
+      .filter((child) => child.type === Icon) as ReactElement<IconProps>[]
+
+    const isIcon =
+      Array.isArray(IconChildren) &&
+      IconChildren.length > 0 &&
+      Children.toArray(children).length < 2
+
     return (
       <button
         className={cx(
           className,
-          size && `btn-${size}`,
-          color && `bg-${color}`,
+          isIcon && 'btn-icon',
+          variant !== 'default' && variant,
+          color && variant !== 'default' && `${variant}-${color}`,
+          size && `scale-${size}`,
           fullWidth && `btn-fw`,
           uppercase && `uppercase`
         )}

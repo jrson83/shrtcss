@@ -1,6 +1,8 @@
 @use 'button' as *;
 @use 'color' as *;
+@use 'scale' as *;
 @use 'typography' as *;
+@use 'variant' as *;
 @use '../element' as *;
 @use '../config' as *;
 @use '../function' as *;
@@ -19,71 +21,96 @@
     @include generate-color-properties;
   }
 
+  %component-properties {
+    --_scale: var(--scale, 1);
+    --_color: var(--color, #{color('text-base')});
+    --_bg-color: var(--bg-color, #{color('surface')});
+    --_border-color: var(--border-color, #{color('border')});
+    --_bg-hover-color: var(--bg-hover-color, #{map-deep-get($colors, 'dark', 'surface')});
+    --_border-hover-color: var(--border-hover-color, var(--_bg-hover-color));
+    --_border-width: var(--border-width, #{config($border, 'width')});
+    --_box-shadow: var(--box-shadow, #{box-shadow()});
+    --_align-self: var(--align-self, 'flex-start');
+  
+    align-self: var(--_align-self);
+    border-width: var(--_border-width);
+    border-color: var(--_border-color);
+    background-color: var(--_bg-color);
+    color: var(--_color);
+  
+    &:focus {
+      box-shadow: var(--_box-shadow);
+    }
+  }
+  
+
   @if map-deep-get($settings, 'modules', 'typography') {
     @include generate-typography;
   }
-
-  @if map-deep-get($settings, 'modules', 'background-color') {
-    @include generate-background-color;
-  }
-
+  
   @if map-deep-get($settings, 'modules', 'utilities') {
     @include generate-utilities;
   }
 
-  @if map-deep-get($settings, 'modules', 'alert') {
+  @if map-deep-get($settings, 'modules', 'scale') {
+    @include generate-scales;
+  }
+
+  @if map-deep-get($settings, 'components', 'alert') {
     @include generate-alert;
   }
 
-  @if map-deep-get($settings, 'modules', 'badge') {
+  @if map-deep-get($settings, 'components', 'badge') {
     @include generate-badge;
   }
 
-  @if map-deep-get($settings, 'modules', 'blockquote') {
+  @if map-deep-get($settings, 'components', 'blockquote') {
     @include generate-blockquote;
   }
 
-  @if map-deep-get($settings, 'modules', 'button') {
+  @if map-deep-get($settings, 'components', 'button') {
     @include generate-button;
   }
 
-  @if map-deep-get($settings, 'modules', 'dialog') {
+  @if map-deep-get($settings, 'components', 'dialog') {
     @include generate-dialog;
   }
 
-  @if map-deep-get($settings, 'modules', 'divider') {
+  @if map-deep-get($settings, 'components', 'divider') {
     @include generate-divider;
   }
 
-  @if map-deep-get($settings, 'modules', 'dropdown') {
+  @if map-deep-get($settings, 'components', 'dropdown') {
     @include generate-dropdown;
   }
 
-  @if map-deep-get($settings, 'modules', 'form') {
+  @if map-deep-get($settings, 'components', 'form') {
     @include generate-form;
   }
 
-  @if map-deep-get($settings, 'modules', 'list') {
+  @if map-deep-get($settings, 'components', 'list') {
     @include generate-list;
   }
 
-  @if map-deep-get($settings, 'modules', 'pagination') {
+  @if map-deep-get($settings, 'components', 'pagination') {
     @include generate-pagination;
   }
 
-  @if map-deep-get($settings, 'modules', 'table') {
+  @if map-deep-get($settings, 'components', 'table') {
     @include generate-table;
   }
 
-  @if map-deep-get($settings, 'modules', 'tabs') {
+  @if map-deep-get($settings, 'components', 'tabs') {
     @include generate-tabs;
   }
 
-  @if map-deep-get($settings, 'modules', 'timeline') {
+  @if map-deep-get($settings, 'components', 'timeline') {
     @include generate-timeline;
   }
 
-  @if map-deep-get($settings, 'modules', 'toast') {
+  @if map-deep-get($settings, 'components', 'toast') {
     @include generate-toast;
   }
+
+  @include generate-color-variants;
 }

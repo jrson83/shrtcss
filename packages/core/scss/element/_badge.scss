@@ -1,21 +1,21 @@
 @use 'sass:color';
-@use 'sass:map';
 @use '../config' as *;
 @use '../function' as *;
 
 @mixin generate-badge {
   .bdg {
-    --bdg-scale: 1;
+    @extend %component-properties;
 
     display: inline-flex;
     align-items: center;
+    align-self: flex-start;
     justify-content: center;
     min-width: 2.75em;
     margin: 0;
     padding: 0.25em 0.625em;
-    border: none;
-    border-radius: 0.25rem;
-    font-size: calc(var(--bdg-scale, 1) * 0.85rem);
+    border-style: config($border, 'style');
+    border-radius: config($border, 'radius');
+    font-size: calc(var(--_scale, 1) * config($type-sizes, 'font-size-min'));
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -25,16 +25,6 @@
       margin-inline-end: 0.5em;
     }
 
-    &-sm {
-      --bdg-scale: 0.8;
-
-      font-weight: 300;
-    }
-  
-    &-lg {
-      --bdg-scale: 1.2;
-    }
-  
     &-fw {
       width: 100%;
       font-weight: 600;
@@ -56,7 +46,7 @@
       display: none;
     }
 
-    &:not([class*='bg-']) {
+    /* &:not([class*='bg-']) {
       border-color: color('border');
       background: color('surface');
 
@@ -67,7 +57,7 @@
       @media (prefers-color-scheme: 'dark') {
         color: color-contrast(map-deep-get($colors, 'dark', 'surface'));
       }
-    }
+    } */
 
     &--tag {
       position: relative;

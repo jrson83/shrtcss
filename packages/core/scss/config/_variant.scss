@@ -3,7 +3,6 @@
 $variant: () !default;
 $variant: map.merge(
   (
-    'accent': true,
     'info': true,
     'danger': true,
     'success': true,

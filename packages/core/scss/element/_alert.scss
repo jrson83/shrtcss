@@ -14,7 +14,7 @@
     width: 100%;
     padding: 1rem 0.25rem;
     border-left: 6px solid transparent;
-    border-radius: var(--shrt-border-radius);
+    border-radius: config($border, 'radius');
     background-color: color('surface');
     box-shadow: 0 8px 8px -12px rgb(0 0 0 / 10%);
     pointer-events: none;

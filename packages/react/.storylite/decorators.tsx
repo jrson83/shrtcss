@@ -1,4 +1,5 @@
 import type { SLDecoratorContext } from '@storylite/storylite'
+import { cx } from 'classix'
 
 export const decoratorsTemplate = (column = false) => {
   return [
@@ -9,7 +10,7 @@ export const decoratorsTemplate = (column = false) => {
         | undefined
     ) => {
       return (
-        <div className={`story-wrapper ${column && 'story-wrapper-column'}`}>
+        <div className={cx('story-wrapper', column && 'story-wrapper-column')}>
           <Story {...context?.args} />
         </div>
       )

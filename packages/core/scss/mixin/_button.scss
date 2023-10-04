@@ -1,5 +1,4 @@
 @use 'sass:color';
-@use 'sass:map';
 @use '../config' as *;
 @use '../function' as *;
 
@@ -26,18 +25,15 @@
   @include generate-button-reset;
 
   .btn {
-    --btn-scale: 1;
-
-    @each $key, $value in $button {
-      #{$key}: $value;
-    }
+    @extend %component-properties;
 
     min-width: 2.75em;
     height: 2.75em;
     padding: 0 1em;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: map.get($border, 'radius');
+    border-style: config($border, 'style');
+    border-radius: config($border, 'radius');
+    font-size: calc(var(--_scale, 1) * config($type-sizes, 'font-size-base'));
+    font-weight: 600;
 
     svg:not(:only-child) {
       margin-inline-end: 0.5em;
@@ -46,12 +42,23 @@
     &:focus {
       outline-color: transparent; /* Change outline color to transparent so it's invisible but still appears in Windows High Contrast Mode */
       outline-style: solid; /* Necessary to hide the default outline style in Edge since it has 2 tones. */
-      box-shadow: 0 0 0 3px color('bg'), 0 0 0 5px color('accent');
     }
 
     &:active {
       transform: translateY(1px);
       transition: none;
+    }
+
+    &:hover {
+      @media (hover: hover) {
+        @media (prefers-color-scheme: 'light') {
+          filter: brightness(110%);
+        }
+
+        @media (prefers-color-scheme: 'dark') {
+          filter: brightness(90%);
+        }
+      }
     }
 
     &[disabled],
@@ -62,7 +69,7 @@
       pointer-events: none;
     }
 
-    &:not([class*='bg-']) {
+    /* &:not([class*='bg-']) {
       border-color: color('border');
       background: color('surface');
 
@@ -85,17 +92,7 @@
           }
         }
       }
-    }
-
-    &-sm {
-      --btn-scale: 0.8;
-
-      font-weight: 300;
-    }
-  
-    &-lg {
-      --btn-scale: 1.2;
-    }
+    } */
   
     &-fw {
       width: 100%;

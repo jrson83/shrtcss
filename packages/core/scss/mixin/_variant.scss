@@ -1,0 +1,78 @@
+@use 'sass:list';
+@use 'sass:string';
+@use '../function' as *;
+@use '../config' as *;
+
+@mixin generate-color-variants($colors: $colors) {
+  $valid-color-variants: 'filled', 'outline', 'light';
+  $color-variants: config($settings, 'color-variants');
+  $prefix: '#{config($settings, 'property-prefix')}-';
+
+  @if not (type-of($color-variants) == list) {
+    @error "#{$color-variants} is not a valid list. Expected type list.";
+  }
+
+  @if not (length($color-variants) == 0) {
+    @each $color-variant in $color-variants {
+      @if not index($valid-color-variants, $color-variant) {
+        @error "#{$color-variant} is not a valid color-variant. Expected one of #{$valid-color-variants}.";
+      }
+
+      $is-first: true;
+
+      .#{$color-variant} {
+        @each $key, $enabled in $variant {
+          @if $enabled {
+            @if $color-variant == 'filled' {
+              &-#{$key} {
+                @media (prefers-color-scheme: 'light') {
+                  --color: #{color-contrast(map-deep-get($colors, 'light', $key))};
+                }
+
+                @media (prefers-color-scheme: 'dark') {
+                  --color: #{color-contrast(map-deep-get($colors, 'dark', $key))};
+                }
+
+                --bg-color: #{color($key)};
+                --border-color: #{color($key)};
+                --box-shadow: 0 0 0 3px #{color('bg')}, 0 0 0 5px #{color($key)};
+              }
+            } @else if $color-variant == 'outline' {
+              @if $is-first {
+                --bg-color: transparent;
+              }
+
+              &-#{$key} {
+                --color: #{color('#{$key}')};
+                --border-color: #{color('#{$key}')};
+                --box-shadow: 0 0 0 3px #{color('bg')}, 0 0 0 5px #{color($key)};
+
+                &:hover {
+                  @media (hover: hover) {
+                    --bg-color: #{color('#{$key}-weaker')};
+                  }
+                }
+              }
+            } @else if $color-variant == 'light' {
+              @if $is-first {
+                --border-color: #{color('default-weaker')};
+                --bg-color:  #{color('default-weaker')};
+              }
+              
+              &-#{$key} {
+                --border-color: #{color('#{$key}-weaker')};
+                --bg-color: #{color('#{$key}-weaker')};
+                --color: #{color($key)};
+                --box-shadow: 0 0 0 3px #{color('bg')}, 0 0 0 5px #{color($key)};
+              }
+            }
+
+            @if $is-first {
+              $is-first: false;
+            }
+          }
+        }
+      }
+    }
+  }
+}

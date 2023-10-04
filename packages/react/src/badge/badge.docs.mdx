@@ -11,10 +11,22 @@ import Icon from '../icon'
 
 <div className='example-wrapper wrap'>
   <Badge>Test</Badge>
-  <Badge color={'info'}>Test</Badge>
-  <Badge color={'success'}>Test</Badge>
-  <Badge color={'warning'}>Test</Badge>
-  <Badge color={'danger'}>Test</Badge>
+  <Badge variant={'filled'} color={'info'}>Test</Badge>
+  <Badge variant={'filled'} color={'success'}>Test</Badge>
+  <Badge variant={'filled'} color={'warning'}>Test</Badge>
+  <Badge variant={'filled'} color={'danger'}>Test</Badge>
+  <span style={{flexBasis: '100%', height: '0'}} />
+  <Badge variant={'outline'}>Test</Badge>
+  <Badge variant={'outline'} color={'info'}>Test</Badge>
+  <Badge variant={'outline'} color={'success'}>Test</Badge>
+  <Badge variant={'outline'} color={'warning'}>Test</Badge>
+  <Badge variant={'outline'} color={'danger'}>Test</Badge>
+  <span style={{flexBasis: '100%', height: '0'}} />
+  <Badge variant={'light'}>Test</Badge>
+  <Badge variant={'light'} color={'info'}>Test</Badge>
+  <Badge variant={'light'} color={'success'}>Test</Badge>
+  <Badge variant={'light'} color={'warning'}>Test</Badge>
+  <Badge variant={'light'} color={'danger'}>Test</Badge>
 </div>
 
 ## Icon
@@ -23,24 +35,24 @@ import Icon from '../icon'
   <Badge>
     <Icon title='test' icon={'ps4'} size={20} />
   </Badge>
-  <Badge className='bdg bdg-icon bg-info' aria-label='Icon-only Badge'>
+  <Badge variant={'filled'} color={'info'} aria-label='Icon-only Badge'>
     <Icon title='test' icon={'info'} size={20} />
   </Badge>
-  <Badge className='bdg bdg-icon bg-success' aria-label='Icon-only Badge'>
+  <Badge variant={'filled'} color={'success'} aria-label='Icon-only Badge'>
     <Icon title='test' icon={'success'} size={20} />
   </Badge>
-  <Badge className='bdg bdg-icon bg-warning' aria-label='Icon-only Badge'>
+  <Badge variant={'filled'} color={'warning'} aria-label='Icon-only Badge'>
     <Icon title='test' icon={'question'} size={20} />
   </Badge>
-  <Badge className='bdg bdg-icon bg-danger' aria-label='Icon-only Badge'>
-    <Icon title='test' icon={'error'} size={20} />
+  <Badge variant={'filled'} color={'danger'} aria-label='Icon-only Badge'>
+    <Icon title='test' icon={'danger'} size={20} />
   </Badge>
 </div>
 
 ## Icon & Label
 
 <div className='example-wrapper wrap'>
-  <Badge className='bdg' aria-label='Icon-only Badge'>
+  <Badge aria-label='Icon-only Badge'>
     <Icon title='test' icon={'time'} size={16} />
     <span>Label</span>
   </Badge>
@@ -49,27 +61,21 @@ import Icon from '../icon'
 ## Size Variants
 
 <div className='example-wrapper wrap'>
+  <Badge size={'xl'}>X-Large</Badge>
   <Badge size={'lg'}>Large</Badge>
-  <Badge>Normal</Badge>
+  <Badge>Medium</Badge>
   <Badge size={'sm'}>Small</Badge>
+  <Badge size={'xs'}>X-Small</Badge>
 </div>
 
 ## Disabled
 
 <div className='example-wrapper wrap'>
   <Badge disabled>Disabled</Badge>
-  <Badge color={'info'} disabled>
-    Disabled
-  </Badge>
-  <Badge color={'success'} disabled>
-    Disabled
-  </Badge>
-  <Badge color={'warning'} disabled>
-    Disabled
-  </Badge>
-  <Badge color={'danger'} disabled>
-    Disabled
-  </Badge>
+  <Badge variant={'filled'} color={'info'} disabled>Disabled</Badge>
+  <Badge variant={'filled'} color={'success'} disabled>Disabled</Badge>
+  <Badge variant={'filled'} color={'warning'} disabled>Disabled</Badge>
+  <Badge variant={'filled'} color={'danger'} disabled>Disabled</Badge>
 </div>
 
 ## Full-Width

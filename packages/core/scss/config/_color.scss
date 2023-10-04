@@ -20,14 +20,26 @@ $colors: map.merge(
       'text-weakest': hsl(230deg 2% 49%),
       'text-light': hsl(180deg 11% 98%),
       'text-dark': hsl(227deg 8% 22%),
+
       'info': hsl(221deg 99% 63%),
       'info-weak': hsl(221deg 95% 63%),
       'info-weaker': hsl(221deg 99% 67%),
+
       'danger': hsl(9deg 76% 52%),
       'danger-weak': hsl(9deg 70% 52%),
       'danger-weaker': hsl(9deg 70% 48%),
+
       'success': hsl(135deg 76% 36%),
+      'success-weak': hsl(135deg 72% 36%),
+      'success-weaker': hsl(135deg 76% 40%),
+      
       'warning': hsl(40deg 99% 55%),
+      'warning-weak': hsl(40deg 95% 55%),
+      'warning-weaker': hsl(40deg 99% 59%),
+
+      'default': hsl(230deg 14% 17%),
+      'default-weak': hsl(230deg 14% 17%),
+      'default-weaker': hsl(230deg 21% 16%),
     ),
     'dark': (
       'bg': hsl(228deg 14% 14%),
@@ -46,14 +58,26 @@ $colors: map.merge(
       'text-weakest': hsl(228deg 14% 57%),
       'text-light': hsl(220deg 18% 97%),
       'text-dark': hsl(228deg 14% 57%),
+
       'info': hsl(221deg 95% 63%),
       'info-weak': hsl(221deg 99% 63%),
-      'info-weaker': hsl(221deg 99% 59%),
+      'info-weaker': hsl(221deg 21% 16%),
+
       'danger': hsl(9deg 66% 52%),
       'danger-weak': hsl(9deg 70% 52%),
-      'danger-weaker': hsl(9deg 70% 48%),
+      'danger-weaker': hsl(10deg 21% 16%),
+
       'success': hsl(135deg 66% 36%),
+      'success-weak': hsl(135deg 70% 36%),
+      'success-weaker': hsl(135deg 21% 16%),
+
       'warning': hsl(40deg 90% 55%),
+      'warning-weak': hsl(40deg 94% 55%),
+      'warning-weaker': hsl(40deg 21% 16%),
+
+      'default': hsl(230deg 14% 17%),
+      'default-weak': hsl(230deg 14% 17%),
+      'default-weaker': hsl(230deg 21% 16%),
     ),
   ),
   $colors

@@ -1,3 +1,4 @@
+@use '../config' as *;
 @use '../function' as *;
 @use '../mixin' as *;
 
@@ -52,7 +53,7 @@
 
       @include padding('all');
 
-      border-radius: var(--shrt-border-radius);
+      border-radius: config($border, 'radius');
       text-align: start;
       cursor: pointer;
 

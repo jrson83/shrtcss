@@ -14,12 +14,16 @@ describe('Badge component test', () => {
     expect(badge).toHaveClass('bdg')
   })
 
-  test('Should render info badge', () => {
-    render(<Badge color={'info'}>Testing</Badge>)
+  test('Should render filled-info badge', () => {
+    render(
+      <Badge variant={'filled'} color={'info'}>
+        Testing
+      </Badge>
+    )
 
     const badge = screen.getByText(/Testing/i)
     expect(badge).toBeInTheDocument()
-    expect(badge).toHaveClass('bdg bg-info')
+    expect(badge).toHaveClass('bdg filled-info')
   })
 
   test('Should render disabled badge', () => {

@@ -11,12 +11,18 @@ export default {
   args: {
     className: 'btn',
     color: undefined,
+    variant: 'default',
     size: undefined,
     disabled: false,
     fullWidth: false,
     uppercase: false,
     children: 'Default',
   },
+} satisfies StoryType
+
+export const Main: StoryDocsType = {
+  name: 'Docs',
+  component: Docs,
   decorators: [
     (Story, context) => {
       return (
@@ -26,11 +32,6 @@ export default {
       )
     },
   ],
-} satisfies StoryType
-
-export const Main: StoryDocsType = {
-  name: 'Docs',
-  component: Docs,
   navigation: {
     icon: <span>📄</span>,
     order: 0,
@@ -39,6 +40,15 @@ export const Main: StoryDocsType = {
 
 export const DefaultStory: StoryType = {
   name: 'Default',
+  decorators: [
+    (Story, context) => {
+      return (
+        <div className="story-wrapper">
+          <Story {...context?.args} />
+        </div>
+      )
+    },
+  ],
   navigation: {
     order: 1,
   },
@@ -46,9 +56,19 @@ export const DefaultStory: StoryType = {
 
 export const Danger: StoryType = {
   args: {
+    variant: 'filled',
     color: 'danger',
     children: 'Danger',
   },
+  decorators: [
+    (Story, context) => {
+      return (
+        <div className="story-wrapper">
+          <Story {...context?.args} />
+        </div>
+      )
+    },
+  ],
   navigation: {
     order: 2,
   },
@@ -56,9 +76,19 @@ export const Danger: StoryType = {
 
 export const Success: StoryType = {
   args: {
+    variant: 'filled',
     color: 'success',
     children: 'Success',
   },
+  decorators: [
+    (Story, context) => {
+      return (
+        <div className="story-wrapper">
+          <Story {...context?.args} />
+        </div>
+      )
+    },
+  ],
   navigation: {
     order: 3,
   },
@@ -66,9 +96,19 @@ export const Success: StoryType = {
 
 export const Warning: StoryType = {
   args: {
+    variant: 'filled',
     color: 'warning',
     children: 'Warning',
   },
+  decorators: [
+    (Story, context) => {
+      return (
+        <div className="story-wrapper">
+          <Story {...context?.args} />
+        </div>
+      )
+    },
+  ],
   navigation: {
     order: 4,
   },
@@ -79,6 +119,15 @@ export const Disabled: StoryType = {
     disabled: true,
     children: 'Disabled',
   },
+  decorators: [
+    (Story, context) => {
+      return (
+        <div className="story-wrapper">
+          <Story {...context?.args} />
+        </div>
+      )
+    },
+  ],
   navigation: {
     order: 5,
   },
@@ -89,6 +138,15 @@ export const FullWidth: StoryType = {
     fullWidth: true,
     children: 'FullWidth',
   },
+  decorators: [
+    (Story, context) => {
+      return (
+        <div className="story-wrapper">
+          <Story {...context?.args} />
+        </div>
+      )
+    },
+  ],
   navigation: {
     order: 6,
   },
@@ -99,6 +157,15 @@ export const Uppercase: StoryType = {
     uppercase: true,
     children: 'Uppercase',
   },
+  decorators: [
+    (Story, context) => {
+      return (
+        <div className="story-wrapper">
+          <Story {...context?.args} />
+        </div>
+      )
+    },
+  ],
   navigation: {
     order: 7,
   },

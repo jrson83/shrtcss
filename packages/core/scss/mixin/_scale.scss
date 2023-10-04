@@ -1,0 +1,11 @@
+@use 'sass:color';
+@use '../config' as *;
+@use '../function' as *;
+
+@mixin generate-scales {
+  @each $label, $scale in $scales {
+    .scale-#{$label} {
+      --scale: #{$scale};
+    }
+  }
+}
