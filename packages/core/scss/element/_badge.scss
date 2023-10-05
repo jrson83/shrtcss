@@ -11,6 +11,7 @@
     align-self: flex-start;
     justify-content: center;
     min-width: 2.75em;
+    height: 2.25em;
     margin: 0;
     padding: 0.25em 0.625em;
     border-style: config($border, 'style');
@@ -21,8 +22,18 @@
     vertical-align: middle;
     white-space: nowrap;
 
-    svg:not(:only-child) {
-      margin-inline-end: 0.5em;
+    > :where(svg, .spinner):not(:only-child) {
+      display: inherit;
+    }
+
+    > :where(svg, .spinner):first-child:not(:only-child) {
+      margin-right: 8px;
+      margin-left: -4px;
+    }
+
+    > :where(svg, .spinner):last-child:not(:only-child) {
+      margin-right: -4px;
+      margin-left: 8px;
     }
 
     &-fw {

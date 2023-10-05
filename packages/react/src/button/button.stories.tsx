@@ -1,4 +1,5 @@
 import type { Story } from '@storylite/storylite'
+import Spinner from '../spinner'
 import Button from './button'
 import Docs from './button.docs.mdx'
 
@@ -11,7 +12,7 @@ export default {
   args: {
     className: 'btn',
     color: undefined,
-    variant: 'default',
+    variant: undefined,
     size: undefined,
     disabled: false,
     fullWidth: false,
@@ -168,5 +169,24 @@ export const Uppercase: StoryType = {
   ],
   navigation: {
     order: 7,
+  },
+}
+
+export const LoadingSpinner: StoryType = {
+  args: {
+    uppercase: true,
+    children: <Spinner size={'sm'} />,
+  },
+  decorators: [
+    (Story, context) => {
+      return (
+        <div className="story-wrapper">
+          <Story {...context?.args} />
+        </div>
+      )
+    },
+  ],
+  navigation: {
+    order: 8,
   },
 }

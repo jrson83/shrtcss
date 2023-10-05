@@ -1,19 +1,18 @@
 import { decoratorsTemplate } from '@/storylite/decorators'
 import { Story } from '@storylite/storylite'
-import Icon from '../icon'
-import Dropdown from './dropdown'
-import Docs from './dropdown.docs.mdx'
+import Spinner from './spinner'
+import Docs from './spinner.docs.mdx'
 
-type StoryType = Story<typeof Dropdown>
+type StoryType = Story<typeof Spinner>
 type StoryDocsType = Story<typeof Docs>
 
 export default {
-  title: 'Dropdown',
-  component: Dropdown,
+  title: 'Spinner',
+  component: Spinner,
   args: {
-    label: 'Dropdown',
-    icon: undefined,
-    position: undefined,
+    color: undefined,
+    size: undefined,
+    label: undefined,
   },
 } satisfies StoryType
 
@@ -29,13 +28,18 @@ export const Main: StoryDocsType = {
 
 export const DefaultStory: StoryType = {
   name: 'Default',
-  decorators: decoratorsTemplate(),
 }
 
-export const WithIconButton: StoryType = {
+export const WithLabel: StoryType = {
   args: {
-    label: 'Dropdown',
-    icon: <Icon title="Settings" icon={'ellipsis'} size={26} />,
+    label: 'Loading, please wait',
   },
-  decorators: decoratorsTemplate(),
+  decorators: decoratorsTemplate(true),
+}
+
+export const Size: StoryType = {
+  args: {
+    size: 'xl',
+  },
+  decorators: decoratorsTemplate(true),
 }

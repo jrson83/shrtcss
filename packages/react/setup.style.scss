@@ -87,15 +87,17 @@ code:not([class^="language-"]) {
 
 
 /* stylelint-disable-next-line selector-class-pattern */
-[data-sl-theme='dark'] .storylite-iframe--standalone {
+
+/* [data-sl-theme='dark'] .storylite-iframe--standalone {
   background-color: var(--storylite-bg-color);
   color: var(--storylite-font-color);
-}
+} */
 
 /* stylelint-disable-next-line selector-class-pattern */
-.storylite-top-frame, .storylite-story--standalone {
+
+/* .storylite-top-frame, .storylite-story--standalone {
   background: shrtcss.color('bg');
-}
+} */
 
 /* .storylite-main {
   background: shrtcss.color('bg');

@@ -22,11 +22,12 @@
 - [ ] Heading
 - [ ] Icon
 - [ ] List
-- [ ] Router
 - [ ] Pagination
+- [ ] Router
 - [ ] Table
 - [ ] Tabs
 - [ ] Timeline
+- [ ] Toast
 
 ## Contributing
 

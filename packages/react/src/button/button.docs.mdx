@@ -4,19 +4,20 @@ title: Docs
 
 import Button from './button'
 import Icon from '../icon'
+import Spinner from '../spinner'
 
 # Button
 
 [Button](https://www.w3.org/WAI/ARIA/apg/patterns/button/) allows users to perform actions.
 
-## Basic
+## Color Variants
 
 <div className='example-wrapper wrap'>
   <Button>Button</Button>
-  <Button variant={'filled'} color={'info'}>Button</Button>
-  <Button variant={'filled'} color={'success'}>Button</Button>
-  <Button variant={'filled'} color={'warning'}>Button</Button>
-  <Button variant={'filled'} color={'danger'}>Button</Button>
+  <Button color={'info'}>Button</Button>
+  <Button color={'success'}>Button</Button>
+  <Button color={'warning'}>Button</Button>
+  <Button color={'danger'}>Button</Button>
   <span style={{flexBasis: '100%', height: '0'}} />
   <Button variant={'outline'}>Button</Button>
   <Button variant={'outline'} color={'info'}>Button</Button>
@@ -34,38 +35,34 @@ import Icon from '../icon'
 ## Icon
 
 <div className='example-wrapper wrap'>
-  <Button aria-label='Icon-only Button'>
-    <Icon title='test' icon={'ps4'} size={26} />
-  </Button>
-  <Button variant={'filled'} color={'info'} aria-label='Icon-only Button'>
-    <Icon title='test' icon={'info'} size={26} />
-  </Button>
-  <Button
-    variant={'filled'} color={'success'}
-    aria-label='Icon-only Button'
-  >
-    <Icon title='test' icon={'success'} size={26} />
-  </Button>
-  <Button
-    variant={'filled'} color={'warning'}
-    aria-label='Icon-only Button'
-  >
-    <Icon title='test' icon={'question'} size={26} />
-  </Button>
-  <Button
-    variant={'filled'} color={'danger'}
-    aria-label='Icon-only Button'
-  >
-    <Icon title='test' icon={'danger'} size={26} />
-  </Button>
+  <Button leftIcon={'ps4'} aria-label='Icon-only Button' />
+  <Button leftIcon={'info'} variant={'filled'} color={'info'} aria-label='Icon-only Button' />
+  <Button leftIcon={'success'} variant={'filled'} color={'success'} aria-label='Icon-only Button' />
+  <Button leftIcon={'question'} variant={'filled'} color={'warning'} aria-label='Icon-only Button' />
+  <Button leftIcon={'danger'} variant={'filled'} color={'danger'} aria-label='Icon-only Button' />
 </div>
 
 ## Icon & Label
 
 <div className='example-wrapper wrap'>
-  <Button aria-label='Icon-only Button'>
-    <Icon title='test' icon={'time'} size={20} />
-    <span>Label</span>
+  <Button leftIcon={'expand'}>
+    <span>Expand</span>
+  </Button>
+  <Button rightIcon={'settings'}>
+    <span>Settings</span>
+  </Button>
+  <Button leftIcon={'flash'} rightIcon={'arrowRight'}>
+    <span>Open Stackblitz</span>
+  </Button>
+</div>
+
+## Loading Spinner
+
+<div className='example-wrapper wrap'>
+  <Button><Spinner size={'xs'} /></Button>
+  <Button disabled>
+    <Spinner size={'xs'} />
+    <span>Loading</span>
   </Button>
 </div>
 

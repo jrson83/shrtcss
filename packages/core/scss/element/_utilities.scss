@@ -1,3 +1,6 @@
+@use '../config' as *;
+@use '../function' as *;
+
 @mixin generate-utilities() {
   .prevent-select {
     user-select: none;
@@ -15,4 +18,50 @@
   .uppercase {
     text-transform: uppercase;
   }
+
+  .spinner {
+    --_scale: var(--scale, 1);
+    --_color: var(--color, #{color('text-light')});
+    --_bg-color: var(--bg-color, #{color('text-dark')});
+
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    transform-origin: center;
+    animation: rotation 1s linear infinite;
+    border: 0.3em solid var(--_bg-color);
+    border-radius: 50%;
+    border-bottom-color: var(--_color);
+    font-size: calc(var(--_scale, 1) * config($type-sizes, 'font-size-min'));
+
+    &-info {
+      --_color: #{color('info')};
+      --bg-color: #{color('info-weaker')};
+    }
+
+    &-danger {
+      --_color: #{color('danger')};
+      --bg-color: #{color('danger-weaker')};
+    }
+
+    &-success {
+      --_color: #{color('success')};
+      --bg-color: #{color('success-weaker')};
+    }
+
+    &-warning {
+      --_color: #{color('warning')};
+      --bg-color: #{color('warning-weaker')};
+    }
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
 }

@@ -1,10 +1,9 @@
 import type { SHRTColor, SHRTSize, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
-import { Children, type ReactElement, isValidElement } from 'react'
 import type { SHRTComponentProps } from '../../types'
-import Icon, { type IconProps } from '../icon'
+import Icon, { IconData } from '../icon'
 
-export interface BadgeProps extends SHRTComponentProps<'div'> {
+export interface BadgeProps extends SHRTComponentProps<'span'> {
   /** Badge color from theme */
   color?: SHRTColor
 
@@ -13,6 +12,12 @@ export interface BadgeProps extends SHRTComponentProps<'div'> {
 
   /** Predefined badge size */
   size?: SHRTSize
+
+  /** Add icon to left side */
+  leftIcon?: IconData
+
+  /** Add icon to right side */
+  rightIcon?: IconData
 
   /** Disabled state */
   disabled?: boolean
@@ -28,29 +33,24 @@ export default function Badge({
   children,
   className = 'bdg',
   color,
-  variant = 'default',
+  variant,
   size,
+  leftIcon,
+  rightIcon,
   disabled,
   fullWidth,
   uppercase,
   ...rest
 }: BadgeProps) {
-  const IconChildren = Children.toArray(children)
-    .filter(isValidElement)
-    .filter((child) => child.type === Icon) as ReactElement<IconProps>[]
-
-  const isIcon =
-    Array.isArray(IconChildren) &&
-    IconChildren.length > 0 &&
-    Children.toArray(children).length < 2
-
   return (
-    <div
+    <span
       className={cx(
         className,
-        isIcon && 'bdg-icon',
-        variant !== 'default' && variant,
-        color && variant !== 'default' && `${variant}-${color}`,
+        leftIcon && !children && 'bdg-icon',
+        variant && variant,
+        color && variant
+          ? `${variant}-${color}`
+          : color && !variant && `filled filled-${color}`,
         size && `scale-${size}`,
         disabled && `bdg-disabled`,
         fullWidth && `bdg-fw`,
@@ -58,7 +58,9 @@ export default function Badge({
       )}
       {...rest}
     >
+      {leftIcon && <Icon title="Test" icon={leftIcon} size={20} />}
       {children}
-    </div>
+      {rightIcon && <Icon title="Test" icon={rightIcon} size={20} />}
+    </span>
   )
 }

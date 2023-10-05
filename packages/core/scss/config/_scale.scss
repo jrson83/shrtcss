@@ -4,11 +4,13 @@ $scale: 1 !default;
 $scales: () !default;
 $scales: map.merge(
   (
+    'xxs': ($scale * 0.4),
     'xs': ($scale * 0.6),
     'sm': ($scale * 0.8),
     'md': $scale,
     'lg': ($scale * 1.2),
     'xl': ($scale * 1.4),
+    'xxl': ($scale * 1.6),
   ),
   $scales,
 );

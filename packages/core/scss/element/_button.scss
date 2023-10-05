@@ -2,28 +2,7 @@
 @use '../config' as *;
 @use '../function' as *;
 
-@mixin generate-button-reset() {
-  button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-color: transparent;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    cursor: pointer;
-    user-select: none;
-    appearance: none;
-  }
-}
-
 @mixin generate-button() {
-  @include generate-button-reset;
-
   .btn {
     @extend %component-properties;
 
@@ -35,13 +14,23 @@
     font-size: calc(var(--_scale, 1) * config($type-sizes, 'font-size-base'));
     font-weight: 600;
 
-    svg:not(:only-child) {
-      margin-inline-end: 0.5em;
+    > :where(svg, .spinner):not(:only-child) {
+      display: inherit;
+    }
+
+    > :where(svg, .spinner):first-child:not(:only-child) {
+      margin-right: 8px;
+      margin-left: -4px;
+    }
+
+    > :where(svg, .spinner):last-child:not(:only-child) {
+      margin-right: -4px;
+      margin-left: 8px;
     }
 
     &:focus {
-      outline-color: transparent; /* Change outline color to transparent so it's invisible but still appears in Windows High Contrast Mode */
-      outline-style: solid; /* Necessary to hide the default outline style in Edge since it has 2 tones. */
+      outline-color: transparent;
+      outline-style: solid;
     }
 
     &:active {

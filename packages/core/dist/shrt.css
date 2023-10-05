@@ -133,6 +133,27 @@ th {
   display: none;
 }
 
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-color: transparent;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 /* a {
   color: inherit;
   text-decoration: inherit;
@@ -317,6 +338,49 @@ pre, code {
   text-transform: uppercase;
 }
 
+.spinner {
+  --_scale: var(--scale, 1);
+  --_color: var(--color, var(--shrt-color-text-light));
+  --_bg-color: var(--bg-color, var(--shrt-color-text-dark));
+  display: inline-block;
+  width: 2.5em;
+  height: 2.5em;
+  transform-origin: center;
+  animation: rotation 1s linear infinite;
+  border: 0.3em solid var(--_bg-color);
+  border-radius: 50%;
+  border-bottom-color: var(--_color);
+  font-size: calc(var(--_scale, 1) * 0.875rem);
+}
+.spinner-info {
+  --_color: var(--shrt-color-info);
+  --bg-color: var(--shrt-color-info-weaker);
+}
+.spinner-danger {
+  --_color: var(--shrt-color-danger);
+  --bg-color: var(--shrt-color-danger-weaker);
+}
+.spinner-success {
+  --_color: var(--shrt-color-success);
+  --bg-color: var(--shrt-color-success-weaker);
+}
+.spinner-warning {
+  --_color: var(--shrt-color-warning);
+  --bg-color: var(--shrt-color-warning-weaker);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.scale-xxs {
+  --scale: 0.4;
+}
+
 .scale-xs {
   --scale: 0.6;
 }
@@ -335,6 +399,10 @@ pre, code {
 
 .scale-xl {
   --scale: 1.4;
+}
+
+.scale-xxl {
+  --scale: 1.6;
 }
 
 .alert {
@@ -407,6 +475,7 @@ pre, code {
   align-self: flex-start;
   justify-content: center;
   min-width: 2.75em;
+  height: 2.25em;
   margin: 0;
   padding: 0.25em 0.625em;
   border-style: solid;
@@ -429,8 +498,16 @@ pre, code {
     }
   } */
 }
-.bdg svg:not(:only-child) {
-  margin-inline-end: 0.5em;
+.bdg > :where(svg, .spinner):not(:only-child) {
+  display: inherit;
+}
+.bdg > :where(svg, .spinner):first-child:not(:only-child) {
+  margin-right: 8px;
+  margin-left: -4px;
+}
+.bdg > :where(svg, .spinner):last-child:not(:only-child) {
+  margin-right: -4px;
+  margin-left: 8px;
 }
 .bdg-fw {
   width: 100%;
@@ -483,27 +560,6 @@ blockquote > footer {
   font-size: var(--font-size-xs);
 }
 
-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-color: transparent;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
 .btn {
   min-width: 2.75em;
   height: 2.75em;
@@ -537,12 +593,20 @@ button {
     }
   } */
 }
-.btn svg:not(:only-child) {
-  margin-inline-end: 0.5em;
+.btn > :where(svg, .spinner):not(:only-child) {
+  display: inherit;
+}
+.btn > :where(svg, .spinner):first-child:not(:only-child) {
+  margin-right: 8px;
+  margin-left: -4px;
+}
+.btn > :where(svg, .spinner):last-child:not(:only-child) {
+  margin-right: -4px;
+  margin-left: 8px;
 }
 .btn:focus {
-  outline-color: transparent; /* Change outline color to transparent so it's invisible but still appears in Windows High Contrast Mode */
-  outline-style: solid; /* Necessary to hide the default outline style in Edge since it has 2 tones. */
+  outline-color: transparent;
+  outline-style: solid;
 }
 .btn:active {
   transform: translateY(1px);

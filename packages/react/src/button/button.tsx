@@ -1,9 +1,8 @@
 import type { SHRTColor, SHRTSize, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
 import { forwardRef } from 'react'
-import { Children, type ReactElement, isValidElement } from 'react'
 import type { SHRTComponentProps } from '../../types'
-import Icon, { type IconProps } from '../icon'
+import Icon, { IconData } from '../icon'
 
 export type ButtonProps = Omit<SHRTComponentProps<'button'>, 'onClick'> & {
   /** Button color from theme */
@@ -14,6 +13,12 @@ export type ButtonProps = Omit<SHRTComponentProps<'button'>, 'onClick'> & {
 
   /** Predefined button size */
   size?: SHRTSize
+
+  /** Add icon to left side */
+  leftIcon?: IconData
+
+  /** Add icon to right side */
+  rightIcon?: IconData
 
   /** Disabled state */
   disabled?: boolean
@@ -34,8 +39,10 @@ export default forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       className = 'btn',
       color,
-      variant = 'default',
+      variant,
       size,
+      leftIcon,
+      rightIcon,
       fullWidth,
       uppercase,
       type = 'button',
@@ -43,22 +50,15 @@ export default forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
-    const IconChildren = Children.toArray(children)
-      .filter(isValidElement)
-      .filter((child) => child.type === Icon) as ReactElement<IconProps>[]
-
-    const isIcon =
-      Array.isArray(IconChildren) &&
-      IconChildren.length > 0 &&
-      Children.toArray(children).length < 2
-
     return (
       <button
         className={cx(
           className,
-          isIcon && 'btn-icon',
-          variant !== 'default' && variant,
-          color && variant !== 'default' && `${variant}-${color}`,
+          leftIcon && !children && 'btn-icon',
+          variant && variant,
+          color && variant
+            ? `${variant}-${color}`
+            : color && !variant && `filled filled-${color}`,
           size && `scale-${size}`,
           fullWidth && `btn-fw`,
           uppercase && `uppercase`
@@ -67,35 +67,22 @@ export default forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...rest}
       >
+        {leftIcon && (
+          <Icon
+            title="Test"
+            icon={leftIcon}
+            size={leftIcon && !children ? 26 : 20}
+          />
+        )}
         {children}
+        {rightIcon && (
+          <Icon
+            title="Test"
+            icon={rightIcon}
+            size={leftIcon && !children ? 26 : 20}
+          />
+        )}
       </button>
     )
   }
 )
-
-/* export default function Button({
-  children,
-  className = 'btn',
-  color,
-  size,
-  fullWidth,
-  uppercase,
-  type = 'button',
-  ...rest
-}: ButtonProps) {
-  return (
-    <button
-      className={cx(
-        className,
-        size && `btn-${size}`,
-        color && `bg-${color}`,
-        fullWidth && `btn-fw`,
-        uppercase && `uppercase`
-      )}
-      type={type}
-      {...rest}
-    >
-      {children}
-    </button>
-  )
-} */
