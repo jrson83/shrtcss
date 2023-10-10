@@ -116,6 +116,10 @@
     cursor: pointer;
     user-select: none;
     appearance: none;
+
+    & > svg {
+      will-change: filter;
+    }
   }
 
   /* a {

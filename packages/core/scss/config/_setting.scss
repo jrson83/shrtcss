@@ -6,7 +6,7 @@ $settings: map.merge(
     'themes': ['light', 'dark'],
     'property-prefix': 'shrt',
     'custom-properties': true,
-    'color-variants': ['filled', 'light', 'outline'],
+    'color-variants': ['filled', 'light', 'outline', 'transparent'],
     'modules': (
       'accessibility': true,
       'font': true,
@@ -23,6 +23,7 @@ $settings: map.merge(
       'button': true,
       'dialog': true,
       'divider': true,
+      'drawer': true,
       'dropdown': true,
       'form': true,
       'list': true,

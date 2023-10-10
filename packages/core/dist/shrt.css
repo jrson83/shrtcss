@@ -153,6 +153,9 @@ button {
      -moz-appearance: none;
           appearance: none;
 }
+button > svg {
+  will-change: filter;
+}
 
 /* a {
   color: inherit;
@@ -238,7 +241,7 @@ button {
   --_bg-hover-color: var(--bg-hover-color, hsl(230, 14%, 17%));
   --_border-hover-color: var(--border-hover-color, var(--_bg-hover-color));
   --_border-width: var(--border-width, 1px);
-  --_box-shadow: var(--box-shadow, 0 0 0 3px var(--shrt-color-bg), 0 0 0 5px var(--shrt-color-accent));
+  --_box-shadow: var(--box-shadow, 0 0 0 3px var(--shrt-color-bg), 0 0 0 5px var(--shrt-color-border));
   --_align-self: var(--align-self, "flex-start");
   align-self: var(--_align-self);
   border-width: var(--_border-width);
@@ -785,6 +788,62 @@ hr:not(.vertical) {
 }
 .divider:not(:empty)::after {
   margin-inline-start: 1rem;
+}
+
+.drawer {
+  display: block;
+  visibility: hidden;
+  position: fixed;
+  z-index: 40;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20rem;
+  height: 100%;
+  block-size: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+  overflow-y: auto;
+  transform: translateX(100%);
+  border-left: 1px solid var(--shrt-color-border);
+  background-color: var(--shrt-color-surface);
+  text-align: start;
+  will-change: transform, visibility;
+}
+.drawer__content {
+  display: flex;
+  flex-direction: column;
+  block-size: 100%;
+  text-align: start;
+}
+.drawer__header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+  border-bottom: 1px solid var(--shrt-color-border);
+}
+.drawer__title {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.drawer__main {
+  flex: 1 1 0%;
+  padding: 1rem;
+  overflow-y: auto;
+}
+.drawer__footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+  gap: 1rem;
+  border-top: 1px solid var(--shrt-color-border);
 }
 
 .dropdown {
@@ -1519,6 +1578,47 @@ select:not([multiple], [size]):active, select:not([multiple], [size]):focus {
 }
 @media (hover: hover) {
   .outline-warning:hover {
+    --bg-color: var(--shrt-color-warning-weaker);
+  }
+}
+
+.transparent {
+  --border-color: transparent;
+  --bg-color: inherit;
+}
+.transparent-info {
+  --color: var(--shrt-color-info);
+  --box-shadow: 0 0 0 3px var(--shrt-color-bg), 0 0 0 5px var(--shrt-color-info);
+}
+@media (hover: hover) {
+  .transparent-info:hover {
+    --bg-color: var(--shrt-color-info-weaker);
+  }
+}
+.transparent-danger {
+  --color: var(--shrt-color-danger);
+  --box-shadow: 0 0 0 3px var(--shrt-color-bg), 0 0 0 5px var(--shrt-color-danger);
+}
+@media (hover: hover) {
+  .transparent-danger:hover {
+    --bg-color: var(--shrt-color-danger-weaker);
+  }
+}
+.transparent-success {
+  --color: var(--shrt-color-success);
+  --box-shadow: 0 0 0 3px var(--shrt-color-bg), 0 0 0 5px var(--shrt-color-success);
+}
+@media (hover: hover) {
+  .transparent-success:hover {
+    --bg-color: var(--shrt-color-success-weaker);
+  }
+}
+.transparent-warning {
+  --color: var(--shrt-color-warning);
+  --box-shadow: 0 0 0 3px var(--shrt-color-bg), 0 0 0 5px var(--shrt-color-warning);
+}
+@media (hover: hover) {
+  .transparent-warning:hover {
     --bg-color: var(--shrt-color-warning-weaker);
   }
 }

@@ -5,7 +5,7 @@
 /// @return {string} - The desired box-shadow.
 @function box-shadow($shadow: null) {
   @if not $shadow {
-    $shadow: 0 0 0 3px #{color('bg')}, 0 0 0 5px #{color('accent')};
+    $shadow: 0 0 0 3px #{color('bg')}, 0 0 0 5px #{color('border')};
   }
 
   @return $shadow;

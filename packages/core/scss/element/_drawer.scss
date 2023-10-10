@@ -1,0 +1,65 @@
+@use '../function' as *;
+@use '../mixin' as *;
+
+@mixin generate-drawer {
+  .drawer {
+    display: block;
+    visibility: hidden;
+    position: fixed;
+    z-index: 40;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 20rem;
+    height: 100%;
+    block-size: 100%;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-y: auto;
+    transform: translateX(100%);
+    border-left: 1px solid color('border');
+    background-color: color('surface');
+    text-align: start;
+    will-change: transform, visibility;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      block-size: 100%;
+      text-align: start;
+    }
+
+    &__header {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      gap: 1rem;
+      border-bottom: 1px solid color('border');
+    }
+
+    &__title {
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__main {
+      flex: 1 1 0%;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    &__footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 1rem;
+      gap: 1rem;
+      border-top: 1px solid color('border');
+    }
+  }
+}

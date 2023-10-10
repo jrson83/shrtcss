@@ -4,7 +4,7 @@
 @use '../config' as *;
 
 @mixin generate-color-variants($colors: $colors) {
-  $valid-color-variants: 'filled', 'outline', 'light';
+  $valid-color-variants: 'filled', 'outline', 'light', 'transparent';
   $color-variants: config($settings, 'color-variants');
   $prefix: '#{config($settings, 'property-prefix')}-';
 
@@ -56,7 +56,7 @@
             } @else if $color-variant == 'light' {
               @if $is-first {
                 --border-color: #{color('default-weaker')};
-                --bg-color:  #{color('default-weaker')};
+                --bg-color: #{color('default-weaker')};
               }
               
               &-#{$key} {
@@ -64,6 +64,22 @@
                 --bg-color: #{color('#{$key}-weaker')};
                 --color: #{color($key)};
                 --box-shadow: 0 0 0 3px #{color('bg')}, 0 0 0 5px #{color($key)};
+              }
+            } @else if $color-variant == 'transparent' {
+              @if $is-first {
+                --border-color: transparent;
+                --bg-color: inherit;
+              }
+              
+              &-#{$key} {
+                --color: #{color($key)};
+                --box-shadow: 0 0 0 3px #{color('bg')}, 0 0 0 5px #{color($key)};
+
+                &:hover {
+                  @media (hover: hover) {
+                    --bg-color: #{color('#{$key}-weaker')};
+                  }
+                }
               }
             }
 

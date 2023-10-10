@@ -79,6 +79,10 @@
     @include generate-divider;
   }
 
+  @if map-deep-get($settings, 'components', 'drawer') {
+    @include generate-drawer;
+  }
+
   @if map-deep-get($settings, 'components', 'dropdown') {
     @include generate-dropdown;
   }
