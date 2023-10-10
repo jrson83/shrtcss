@@ -135,6 +135,7 @@ th {
 
 button {
   display: inline-flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   border-color: transparent;
@@ -152,9 +153,6 @@ button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-}
-button > svg {
-  will-change: filter;
 }
 
 /* a {
@@ -571,30 +569,6 @@ blockquote > footer {
   border-radius: 0.25rem;
   font-size: calc(var(--_scale, 1) * 1rem);
   font-weight: 600;
-  /* &:not([class*='bg-']) {
-    border-color: color('border');
-    background: color('surface');
-
-    @media (prefers-color-scheme: 'light') {
-      color: color-contrast(map-deep-get($colors, 'light', 'surface'));
-    }
-
-    @media (prefers-color-scheme: 'dark') {
-      color: color-contrast(map-deep-get($colors, 'dark', 'surface'));
-    }
-
-    &:hover {
-      @media (hover: hover) {
-        @media (prefers-color-scheme: 'light') {
-          background: map-deep-get($colors, 'light', 'bg');
-        }
-
-        @media (prefers-color-scheme: 'dark') {
-          background: map-deep-get($colors, 'dark', 'bg');
-        }
-      }
-    }
-  } */
 }
 .btn > :where(svg, .spinner):not(:only-child) {
   display: inherit;
@@ -632,7 +606,6 @@ blockquote > footer {
 }
 .btn-fw {
   width: 100%;
-  font-weight: 600;
 }
 .btn-icon {
   width: 2.75em;

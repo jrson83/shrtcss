@@ -103,6 +103,7 @@
 
   button {
     display: inline-flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     border-color: transparent;
@@ -116,10 +117,6 @@
     cursor: pointer;
     user-select: none;
     appearance: none;
-
-    & > svg {
-      will-change: filter;
-    }
   }
 
   /* a {
