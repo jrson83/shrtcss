@@ -34,6 +34,7 @@
     "test": "vitest --run --environment jsdom",
     "quality-check": "pnpm run style && pnpm run test",
     "============= MISC ==================": "",
+    "spritemap": "node ./scripts/buildSpritemap.mjs",
     "commit": "mcz",
     "pub": "node ./scripts/prepublishOnly.mjs && npx sparkee publish",
     "prepare": "husky install"

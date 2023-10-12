@@ -19,7 +19,7 @@ const config: SLAppComponentProps = {
       {
         defaultContent: (
           <span className="ext-link ext-link-github">
-            <Icon title="Github" icon={'github'} />
+            <Icon title="Github" iconId={'logo-github'} />
           </span>
         ),
         tooltip: 'Github Repository',
@@ -36,7 +36,7 @@ const config: SLAppComponentProps = {
       {
         defaultContent: (
           <span className="ext-link ext-link-stackblitz">
-            <Icon title="Stackblitz" icon={'flash'} />
+            <Icon title="Stackblitz" iconId={'flash'} />
           </span>
         ),
         tooltip: 'View story in Stackblitz',

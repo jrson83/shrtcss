@@ -35,7 +35,7 @@ export const DefaultStory: StoryType = {
 export const WithIconButton: StoryType = {
   args: {
     label: 'Dropdown',
-    icon: <Icon title="Settings" icon={'ellipsis'} size={26} />,
+    icon: <Icon title="Settings" iconId={'ellipsis-vertical'} size={26} />,
   },
   decorators: decoratorsTemplate(),
 }

@@ -63,7 +63,7 @@ export default function Pagination({
             onClick={() => handleOnPageChange(currentPage - 1)}
             aria-label="Previous page"
           >
-            <Icon title="Next" icon={'arrowLeft'} size={20} />
+            <Icon title="Next" iconId={'ios-arrow-back'} size={20} />
           </Button>
         </li>
         {pages.map((p, idx) => (
@@ -92,7 +92,7 @@ export default function Pagination({
             onClick={() => handleOnPageChange(currentPage + 1)}
             aria-label="Next page"
           >
-            <Icon title="Next" icon={'arrowRight'} size={20} />
+            <Icon title="Next" iconId={'ios-arrow-forward'} size={20} />
           </Button>
         </li>
       </ul>

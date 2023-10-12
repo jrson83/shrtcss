@@ -8,8 +8,8 @@ import { icons } from './icon.data'
 # Icon
 
 <div className='example-wrapper wrap'>
-  {Object.keys(icons).map((icon, idx) => (
-    <Icon title='Test' icon={icon} />
+  {icons.map((icon) => (
+    <Icon key={icon} iconId={icon} title={icon} />
   ))}
 </div>
 

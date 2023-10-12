@@ -69,7 +69,7 @@ let timelineStoryWithoutDateItems = updateArrayOfObjects(
 )
 
 let timelineStoryWithIconItems = updateArrayOfObjects(timelineStoryItems, 1, {
-  icon: 'warning',
+  icon: 'ios-warning',
 })
 
 export default {
@@ -137,7 +137,7 @@ export const WithoutDate: StoryType = {
 export const WithIcon: StoryType = {
   args: {
     items: updateArrayOfObjects(timelineStoryWithIconItems, 2, {
-      icon: 'calendar',
+      icon: 'ios-calendar',
       color: 'danger',
     }),
   },

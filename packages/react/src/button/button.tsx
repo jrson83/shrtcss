@@ -70,7 +70,7 @@ export default forwardRef<HTMLButtonElement, ButtonProps>(
         {leftIcon && (
           <Icon
             title="Test"
-            icon={leftIcon}
+            iconId={leftIcon}
             size={leftIcon && !children ? 26 : 20}
           />
         )}
@@ -78,7 +78,7 @@ export default forwardRef<HTMLButtonElement, ButtonProps>(
         {rightIcon && (
           <Icon
             title="Test"
-            icon={rightIcon}
+            iconId={rightIcon}
             size={leftIcon && !children ? 26 : 20}
           />
         )}

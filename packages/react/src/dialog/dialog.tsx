@@ -117,7 +117,7 @@ export default function Dialog({
             </p>
             {showCloseButton && (
               <Button onClick={closeDialog} aria-label="Close Dialog">
-                <Icon title="Close Dialog" icon={'close'} />
+                <Icon title="Close Dialog" iconId={'ios-close'} />
               </Button>
             )}
           </header>

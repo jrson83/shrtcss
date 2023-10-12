@@ -61,7 +61,7 @@ export default function Dropdown({
           <ListItem className="menu__item">
             {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
             <a href="#" onClick={toggleDropdown}>
-              <Icon title="Games" icon={'ps4'} size={16} />
+              <Icon title="Games" iconId={'playstation'} size={16} />
               <span>Games</span>
             </a>
           </ListItem>
@@ -69,7 +69,7 @@ export default function Dropdown({
           <ListItem className="menu__item">
             {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
             <a href="#" onClick={toggleDropdown}>
-              <Icon title="Settings" icon={'settings'} size={16} />
+              <Icon title="Settings" iconId={'ios-settings'} size={16} />
               <span>Settings</span>
             </a>
           </ListItem>

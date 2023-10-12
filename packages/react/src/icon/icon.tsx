@@ -1,36 +1,39 @@
 import type { SHRTComponentProps } from '../../types'
 import { icons } from './icon.data'
 
-export type IconData = keyof typeof icons
+export type IconData = typeof icons[number]
 
-export interface IconProps extends SHRTComponentProps<'svg'> {
+export interface IconProps extends Omit<SHRTComponentProps<'svg'>, 'title'> {
   /** Available icons  */
-  icon?: IconData
+  iconId?: IconData
 
   /** Color-var from theme or any color  */
   color?: string
 
-  /** Predefined icon size */
-  size?: number
-
   /** SVGElement title content */
   title?: string
+
+  /** Predefined icon size */
+  size?: number
 }
 
 export default function Icon({
   className,
+  iconId,
   color,
-  icon,
-  size = 32,
   title,
+  size = 32,
   ...props
 }: IconProps) {
-  if (!icon) throw new TypeError('Error')
-
   return (
+    // biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
     <svg
-      aria-hidden="true"
+      aria-hidden={true}
       role="img"
+      focusable="false"
+      width={size}
+      height={size}
+      className={className}
       fill={
         color
           ? color.startsWith('#')
@@ -38,17 +41,10 @@ export default function Icon({
             : `var(--${color})`
           : 'currentColor'
       }
-      fillRule="evenodd"
-      className={className}
-      focusable="false"
-      width={`${size}px`}
-      height={`${size}px`}
-      preserveAspectRatio="xMidYMid meet"
-      viewBox="0 0 512 512"
       {...props}
     >
-      <title>{title}</title>
-      <path d={icons[icon]}></path>
+      {title && <title>{title}</title>}
+      <use href={`/assets/ion-spritemap.svg#${iconId}`} />
     </svg>
   )
 }

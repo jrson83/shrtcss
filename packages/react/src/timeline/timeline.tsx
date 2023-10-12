@@ -10,7 +10,7 @@ export function TimelineItem({
   completed = true,
   date,
   label,
-  icon = 'checkmark',
+  icon = 'ios-checkmark',
   color = 'success',
 }: TimelineItemProps) {
   return (
@@ -24,9 +24,9 @@ export function TimelineItem({
       >
         {completed ? (
           <Icon
-            size={icon !== 'checkmark' ? 24 : 32}
+            size={icon !== 'ios-checkmark' ? 24 : 32}
             title="test"
-            icon={icon}
+            iconId={icon}
             className={cx(
               'timeline__icon timeline__icon-completed'
               /* color && `timeline__icon-completed-${color}` */

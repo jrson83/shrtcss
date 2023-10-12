@@ -51,7 +51,7 @@ export default function Alert({
     >
       {hasIcon && (
         <Icon
-          icon={color as IconData}
+          iconId={color as IconData}
           title="Status"
           size={26}
           className={`${alertOrToast}__icon ${alertOrToast}__icon-${color}`}
@@ -68,7 +68,7 @@ export default function Alert({
           type="button"
           onClick={handleDismiss}
         >
-          <Icon icon={'close'} title="Close" />
+          <Icon iconId={'ios-close'} title="Close" />
         </Button>
       )}
     </output>

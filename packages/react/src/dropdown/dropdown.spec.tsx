@@ -50,7 +50,7 @@ describe('Dropdown component test', () => {
     render(
       <Dropdown
         label={'Click me'}
-        icon={<Icon icon={'ellipsis'} size={26} />}
+        icon={<Icon iconId={'ellipsis-vertical'} size={26} />}
       />
     )
 

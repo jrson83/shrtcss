@@ -58,7 +58,7 @@ export default function Drawer({
             {headerTitle}
           </h3>
           <Button
-            leftIcon={'close'}
+            leftIcon={'ios-close'}
             variant={'transparent'}
             aria-label="Close Drawer"
             onClick={closeDrawer}

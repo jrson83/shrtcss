@@ -58,9 +58,9 @@ export default function Badge({
       )}
       {...rest}
     >
-      {leftIcon && <Icon title="Test" icon={leftIcon} size={20} />}
+      {leftIcon && <Icon title="Test" iconId={leftIcon} size={20} />}
       {children}
-      {rightIcon && <Icon title="Test" icon={rightIcon} size={20} />}
+      {rightIcon && <Icon title="Test" iconId={rightIcon} size={20} />}
     </span>
   )
 }
