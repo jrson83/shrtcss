@@ -23,7 +23,7 @@ export default function Icon({
   color,
   title,
   size = 32,
-  ...props
+  ...rest
 }: IconProps) {
   return (
     // biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
@@ -41,7 +41,7 @@ export default function Icon({
             : `var(--${color})`
           : 'currentColor'
       }
-      {...props}
+      {...rest}
     >
       {title && <title>{title}</title>}
       <use href={`/assets/ion-spritemap.svg#${iconId}`} />
