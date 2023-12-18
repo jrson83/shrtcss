@@ -54,7 +54,7 @@
     "nano-staged": "^0.8.0",
     "pkgroll": "^2.0.1",
     "sass": "^1.69.5",
-    "stylelint": "^15.11.0",
+    "stylelint": "^16.0.0",
     "stylelint-config-property-sort-order-smacss": "^9.1.0",
     "stylelint-config-standard-scss": "^11.1.0",
     "typescript": "^5.2.2",
