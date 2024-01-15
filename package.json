@@ -72,7 +72,7 @@
     "*.{ts,tsx,json}": "biome format --write .",
     "*.scss": "stylelint \"./packages/**/*.scss\" --fix"
   },
-  "packageManager": "pnpm@8.14.0",
+  "packageManager": "pnpm@8.14.1",
   "pnpm": {
     "overrides": {
       "rollup": "3.29.4"
