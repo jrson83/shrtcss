@@ -48,7 +48,7 @@
     "@types/node": "^20.9.0",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
-    "husky": "^8.0.3",
+    "husky": "^9.0.0",
     "jsdom": "^24.0.0",
     "mini-cz": "^0.8.4",
     "nano-staged": "^0.8.0",
