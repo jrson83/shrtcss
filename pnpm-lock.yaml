@@ -31,7 +31,7 @@ importers:
         version: 20.11.20
       '@types/react':
         specifier: ^18.2.37
-        version: 18.2.56
+        version: 18.2.58
       '@types/react-dom':
         specifier: ^18.2.15
         version: 18.2.19
@@ -91,7 +91,7 @@ importers:
         version: link:../react-hooks
       '@types/react':
         specifier: ^18.2.21
-        version: 18.2.56
+        version: 18.2.58
       '@types/react-dom':
         specifier: ^18.2.7
         version: 18.2.19
@@ -104,7 +104,7 @@ importers:
         version: 3.0.1(rollup@3.29.4)
       '@storylite/storylite':
         specifier: ^0.14.0
-        version: 0.14.0(@types/node@20.11.20)(@types/react-dom@18.2.19)(@types/react@18.2.56)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
+        version: 0.14.0(@types/node@20.11.20)(@types/react-dom@18.2.19)(@types/react@18.2.58)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
       '@storylite/vite-plugin':
         specifier: ^0.13.0
         version: 0.13.0(@types/node@20.11.20)(sass@1.71.0)
@@ -940,7 +940,7 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
-  /@storylite/storylite@0.14.0(@types/node@20.11.20)(@types/react-dom@18.2.19)(@types/react@18.2.56)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3):
+  /@storylite/storylite@0.14.0(@types/node@20.11.20)(@types/react-dom@18.2.19)(@types/react@18.2.58)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3):
     resolution: {integrity: sha512-rugasnv0LYpZDlTYHL2Btg7hp77YYkpXbvcDLTZWxh+40ke9JjzyPSuXO0gdTM/pUAVwf4ooaf6pNn2D2Z++Lg==}
     peerDependencies:
       '@types/node': ^20.4.9
@@ -951,13 +951,13 @@ packages:
       typescript: ^5.1.6
     dependencies:
       '@types/node': 20.11.20
-      '@types/react': 18.2.56
+      '@types/react': 18.2.58
       '@types/react-dom': 18.2.19
       clsx: 2.1.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       typescript: 5.3.3
-      zustand: 4.5.1(@types/react@18.2.56)(react@18.2.0)
+      zustand: 4.5.1(@types/react@18.2.58)(react@18.2.0)
     transitivePeerDependencies:
       - immer
     dev: true
@@ -1149,10 +1149,10 @@ packages:
   /@types/react-dom@18.2.19:
     resolution: {integrity: sha512-aZvQL6uUbIJpjZk4U8JZGbau9KDeAwMfmhyWorxgBkqDIEf6ROjRozcmPIicqsUwPUjbkDfHKgGee1Lq65APcA==}
     dependencies:
-      '@types/react': 18.2.56
+      '@types/react': 18.2.58
 
-  /@types/react@18.2.56:
-    resolution: {integrity: sha512-NpwHDMkS/EFZF2dONFQHgkPRwhvgq/OAvIaGQzxGSBmaeR++kTg6njr15Vatz0/2VcCEwJQFi6Jf4Q0qBu0rLA==}
+  /@types/react@18.2.58:
+    resolution: {integrity: sha512-TaGvMNhxvG2Q0K0aYxiKfNDS5m5ZsoIBBbtfUorxdH4NGSXIlYvZxLJI+9Dd3KjeB3780bciLyAb7ylO8pLhPw==}
     dependencies:
       '@types/prop-types': 15.7.11
       '@types/scheduler': 0.16.8
@@ -4951,7 +4951,7 @@ packages:
       '@types/yoga-layout': 1.9.2
     dev: true
 
-  /zustand@4.5.1(@types/react@18.2.56)(react@18.2.0):
+  /zustand@4.5.1(@types/react@18.2.58)(react@18.2.0):
     resolution: {integrity: sha512-XlauQmH64xXSC1qGYNv00ODaQ3B+tNPoy22jv2diYiP4eoDKr9LA+Bh5Bc3gplTrFdb6JVI+N4kc1DZ/tbtfPg==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
@@ -4966,7 +4966,7 @@ packages:
       react:
         optional: true
     dependencies:
-      '@types/react': 18.2.56
+      '@types/react': 18.2.58
       react: 18.2.0
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: true
