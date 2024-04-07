@@ -97,14 +97,14 @@ importers:
         version: 18.2.22
       classix:
         specifier: ^2.1.35
-        version: 2.1.36
+        version: 2.1.37
     devDependencies:
       '@mdx-js/rollup':
         specifier: ^3.0.0
         version: 3.0.1(rollup@3.29.4)
       '@storylite/storylite':
         specifier: ^0.14.0
-        version: 0.14.0(@types/node@20.11.25)(@types/react-dom@18.2.22)(@types/react@18.2.58)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.3)
+        version: 0.14.0(@types/node@20.11.25)(@types/react-dom@18.2.22)(@types/react@18.2.58)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.4)
       '@storylite/vite-plugin':
         specifier: ^0.13.0
         version: 0.13.0(@types/node@20.11.25)(sass@1.71.0)
@@ -1163,7 +1163,7 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
-  /@storylite/storylite@0.14.0(@types/node@20.11.25)(@types/react-dom@18.2.22)(@types/react@18.2.58)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.3):
+  /@storylite/storylite@0.14.0(@types/node@20.11.25)(@types/react-dom@18.2.22)(@types/react@18.2.58)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.4):
     resolution: {integrity: sha512-rugasnv0LYpZDlTYHL2Btg7hp77YYkpXbvcDLTZWxh+40ke9JjzyPSuXO0gdTM/pUAVwf4ooaf6pNn2D2Z++Lg==}
     peerDependencies:
       '@types/node': ^20.4.9
@@ -1179,7 +1179,7 @@ packages:
       clsx: 2.1.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      typescript: 5.4.3
+      typescript: 5.4.4
       zustand: 4.5.1(@types/react@18.2.58)(react@18.2.0)
     transitivePeerDependencies:
       - immer
@@ -1774,8 +1774,8 @@ packages:
       consola: 3.2.3
     dev: true
 
-  /classix@2.1.36:
-    resolution: {integrity: sha512-1glwI9Ho7s/Z5vqCNLj3eYU+17A9KHjLREcmzJUmZS+GnXBgS1/or5fzqhB5b59jsPxazONrajM5d9hgJgnnlA==}
+  /classix@2.1.37:
+    resolution: {integrity: sha512-mTlsDSW/AHxHNggs+dNpI2kYGyK0tawAupR0B6vQYU9i8WTAoaa6bFGKIwwiHfmfCZdrsrtlCULic7p/9ZPuVQ==}
     dev: false
 
   /clerc@0.40.0:
@@ -4786,8 +4786,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.4.3:
-    resolution: {integrity: sha512-KrPd3PKaCLr78MalgiwJnA25Nm8HAmdwN3mYUYZgG/wizIo9EainNVQI9/yDavtVFRN2h3k8uf3GLHuhDMgEHg==}
+  /typescript@5.4.4:
+    resolution: {integrity: sha512-dGE2Vv8cpVvw28v8HCPqyb08EzbBURxDpuhJvTrusShUfGnhHBafDsLdS1EhhxyL6BJQE+2cT3dDPAv+MQ6oLw==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
