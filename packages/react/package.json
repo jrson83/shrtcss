@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@mdx-js/rollup": "^3.0.0",
-    "@storylite/storylite": "^0.14.0",
+    "@storylite/storylite": "^0.15.0",
     "@storylite/vite-plugin": "^0.13.0",
     "@types/node": "^20.9.0",
     "@vitejs/plugin-react": "^4.1.1",

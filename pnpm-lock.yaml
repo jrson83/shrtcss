@@ -103,8 +103,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.1(rollup@3.29.4)
       '@storylite/storylite':
-        specifier: ^0.14.0
-        version: 0.14.0(@types/node@20.11.25)(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.5)
+        specifier: ^0.15.0
+        version: 0.15.1(@types/node@20.11.25)(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.5)
       '@storylite/vite-plugin':
         specifier: ^0.13.0
         version: 0.13.0(@types/node@20.11.25)(sass@1.71.0)
@@ -1170,8 +1170,8 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
-  /@storylite/storylite@0.14.0(@types/node@20.11.25)(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-rugasnv0LYpZDlTYHL2Btg7hp77YYkpXbvcDLTZWxh+40ke9JjzyPSuXO0gdTM/pUAVwf4ooaf6pNn2D2Z++Lg==}
+  /@storylite/storylite@0.15.1(@types/node@20.11.25)(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-CXd8godLno/pqNkR9/ZRAHTvpAu4Zj1jy1dIIOyJRqh8W1a3ejSqMYi+hX9HcjI0mlpyk3TuEBBtkKevJpOUAA==}
     peerDependencies:
       '@types/node': ^20.4.9
       '@types/react': ^18.2.19
@@ -1187,7 +1187,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       typescript: 5.4.5
-      zustand: 4.5.1(@types/react@18.2.79)(react@18.2.0)
+      zustand: 4.5.2(@types/react@18.2.79)(react@18.2.0)
     transitivePeerDependencies:
       - immer
     dev: true
@@ -5263,8 +5263,8 @@ packages:
       '@types/yoga-layout': 1.9.2
     dev: true
 
-  /zustand@4.5.1(@types/react@18.2.79)(react@18.2.0):
-    resolution: {integrity: sha512-XlauQmH64xXSC1qGYNv00ODaQ3B+tNPoy22jv2diYiP4eoDKr9LA+Bh5Bc3gplTrFdb6JVI+N4kc1DZ/tbtfPg==}
+  /zustand@4.5.2(@types/react@18.2.79)(react@18.2.0):
+    resolution: {integrity: sha512-2cN1tPkDVkwCy5ickKrI7vijSjPksFRfqS6237NzT0vqSsztTNnQdHw9mmN7uBdk3gceVXU0a+21jFzFzAc9+g==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
       '@types/react': '>=16.8'
