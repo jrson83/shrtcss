@@ -10,26 +10,29 @@
 > **Note**  
 > shrtcss is currently in development.
 
+This aims to be the featherweight champion of SCSS/CSS component libraries in the entire universe!
+
 ## Components
 
-- [ ] Alert
-- [ ] Badge
-- [ ] Button
+- [x] Alert
+- [x] Badge
+- [x] Blockquote
+- [x] Button
 - [ ] Dialog
-- [ ] Divider
+- [x] Divider
 - [ ] Drawer
 - [ ] Dropdown
 - [ ] Form
-- [ ] Heading
-- [ ] Icon
+- [x] Heading
+- [x] Icon
 - [ ] List
-- [ ] Pagination
-- [ ] Router
-- [ ] Spinner
+- [x] Pagination
+- [x] Router
+- [x] Spinner
 - [ ] Table
-- [ ] Tabs
-- [ ] Timeline
-- [ ] Toast
+- [x] Tabs
+- [x] Timeline
+- [x] Toast
 
 ## Contributing
 

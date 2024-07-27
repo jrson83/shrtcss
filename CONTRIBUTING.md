@@ -38,7 +38,7 @@ Your contributions are welcome. Here's our suggested workflow:
 3. Create a new branch for each feature, fix or improvement
 4. Send a pull request from each feature branch to the **master** branch
    - We use [Husky](https://typicode.github.io/husky) to auto format and lint code on `pre-commit` hook
-   - We use [mini-cz](https://github.com/CreateWheel/mini-cz) to generate standardized commit messages. See [Commit message format](#commit-message-format)
+   - We use standardized commit messages following the [Conventional commit](https://www.conventionalcommits.org) specification. See [Commit message format](#commit-message-format).
 5. Continue reading [Develop the docs](#develop-the-docs) or [Develop packages](#develop-packages)
 
 > It is very important to separate new features or improvements into separate feature branches, and to send a
@@ -85,7 +85,7 @@ After staging your changes in git, run the following command at the workspace `r
 pnpm commit
 ```
 
-> Do not use ` git commit -m <message> / --message=<msg>` flag, instead use the [mini-cz](https://github.com/CreateWheel/mini-cz).
+> Do not use `git commit -m <message> / --message=<msg>` flag, instead use the [mini-cz](https://github.com/CreateWheel/mini-cz).
 
 ## Commit message format
 
@@ -93,7 +93,7 @@ We use [mini-cz](https://github.com/CreateWheel/mini-cz) to generate standardize
 
 ### Commit message header
 
-```
+```shell
 <type>(<scope>): <short summary>
   │       │             │
   │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
