@@ -3,7 +3,7 @@ import { cleanup, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { useState } from 'react'
 import {
-  type SpyInstance,
+  type MockInstance,
   afterEach,
   beforeAll,
   beforeEach,
@@ -16,8 +16,8 @@ import Button from '../button'
 import Dialog from './dialog'
 
 describe('Dialog component test', () => {
-  let dialogEvent: ReturnType<typeof userEvent['setup']>
-  let spyButton: SpyInstance
+  let dialogEvent: ReturnType<(typeof userEvent)['setup']>
+  let spyButton: MockInstance
 
   beforeAll(() => {
     /** https://github.com/jsdom/jsdom/issues/3294#issuecomment-1196577616 */

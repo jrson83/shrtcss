@@ -2,7 +2,7 @@ import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import {
-  type SpyInstance,
+  type MockInstance,
   afterEach,
   beforeEach,
   describe,
@@ -14,8 +14,8 @@ import Icon from '../icon'
 import Dropdown from './dropdown'
 
 describe('Dropdown component test', () => {
-  let dropdownEvent: ReturnType<typeof userEvent['setup']>
-  let spyButton: SpyInstance
+  let dropdownEvent: ReturnType<(typeof userEvent)['setup']>
+  let spyButton: MockInstance
 
   beforeEach(() => {
     dropdownEvent = userEvent.setup()

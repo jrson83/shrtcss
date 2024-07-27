@@ -2,7 +2,7 @@ import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import {
-  type SpyInstance,
+  type MockInstance,
   afterEach,
   beforeEach,
   describe,
@@ -27,8 +27,8 @@ const AboutPage = () => (
 )
 
 describe('Router component test', () => {
-  let linkEvent: ReturnType<typeof userEvent['setup']>
-  let spyLink: SpyInstance
+  let linkEvent: ReturnType<(typeof userEvent)['setup']>
+  let spyLink: MockInstance
 
   beforeEach(() => {
     linkEvent = userEvent.setup()

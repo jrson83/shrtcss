@@ -3,9 +3,9 @@
 @use '../config' as *;
 
 @function px-to-rem($size) {
-  @if unit($size) == 'rem' {
+  @if math.unit($size) == 'rem' {
     @return $size;
-  } @else if unit($size) == 'px' {
+  } @else if math.unit($size) == 'px' {
     @return math.div($size, 16px) * 1rem; 
   }
 

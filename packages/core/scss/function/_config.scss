@@ -1,7 +1,7 @@
 @use 'sass:map';
 
 @function config($map, $key, $property: null) {
-  @if not map-has-key($map, $key) {
+  @if not map.has-key($map, $key) {
     @error 'The key `#{$key}` is not associated with map `#{$map}`.';
   }
 

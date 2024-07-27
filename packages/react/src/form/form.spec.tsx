@@ -2,7 +2,7 @@ import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import {
-  type SpyInstance,
+  type MockInstance,
   afterEach,
   beforeEach,
   describe,
@@ -13,8 +13,8 @@ import {
 import Form from './form'
 
 describe('Form component test', () => {
-  let submitEvent: ReturnType<typeof userEvent['setup']>
-  let spyButton: SpyInstance
+  let submitEvent: ReturnType<(typeof userEvent)['setup']>
+  let spyButton: MockInstance
 
   beforeEach(() => {
     submitEvent = userEvent.setup()

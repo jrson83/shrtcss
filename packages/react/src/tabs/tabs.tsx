@@ -37,8 +37,6 @@ export default function Tabs({ ariaLabel, children, ...rest }: TabsProps) {
     if (currentIdx !== idx) setCurrentIdx(idx)
   }
 
-  console.log(Children.toArray(children).filter(isValidElement))
-
   const TabChildren = Children.toArray(children)
     .filter(isValidElement)
     .filter((child) => child.type === Tab) as ReactElement<TabProps>[]

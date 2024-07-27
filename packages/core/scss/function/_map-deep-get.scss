@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use 'sass:meta';
 
 /// Map deep get.
 /// https://www.sitepoint.com/warnings-and-errors-in-sass/
@@ -10,7 +11,7 @@
     $map: map.get($map, $key);
 
     // If `$map` does not contain the next key, return `null`
-    @if type-of($map) == 'null' {
+    @if meta.type-of($map) == 'null' {
       @return $map;
     }
   }

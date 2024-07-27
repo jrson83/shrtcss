@@ -13,7 +13,7 @@
     "style": "pnpm lint && pnpm fmt && pnpm stylelint",
     "stylelint:check": "stylelint \"./packages/**/*.scss\" -f verbose --color",
     "stylelint": "stylelint \"./packages/**/*.scss\" --fix",
-    "lint": "biome check --apply-unsafe .",
+    "lint": "biome lint --write .",
     "fmt": "biome format . --write",
     "============= CLEAN =================": "",
     "clean:workspace": "node ./scripts/cleanWorkspace.mjs",
@@ -31,51 +31,44 @@
     "build:react": "pnpm --filter @shrtcss/react build",
     "build:react-hooks": "pnpm --filter @shrtcss/react-hooks build",
     "============= TEST ==================": "",
-    "test": "vitest --run --environment jsdom",
+    "test": "vitest --run --environment happy-dom",
     "quality-check": "pnpm run style && pnpm run test",
     "============= MISC ==================": "",
     "spritemap": "node ./scripts/buildSpritemap.mjs",
     "commit": "mcz",
     "pub": "node ./scripts/prepublishOnly.mjs",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.3.3",
+    "@biomejs/biome": "^1.8.3",
     "@mini-cz/config-default": "^0.8.4",
-    "@testing-library/jest-dom": "^6.1.4",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^14.5.1",
-    "@types/node": "^20.9.0",
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
-    "husky": "^9.0.0",
-    "jsdom": "^24.0.0",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^20.14.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "happy-dom": "^14.12.3",
+    "husky": "^9.1.3",
     "mini-cz": "^0.8.4",
     "nano-staged": "^0.8.0",
-    "pkgroll": "^2.0.1",
-    "sass": "^1.69.5",
-    "stylelint": "^16.0.0",
+    "pkgroll": "^2.4.1",
+    "sass": "^1.77.8",
+    "stylelint": "^16.7.0",
     "stylelint-config-property-sort-order-smacss": "^10.0.0",
-    "stylelint-config-standard-scss": "^13.0.0",
-    "typescript": "^5.2.2",
-    "vite": "^4.5.0",
-    "vitest": "^0.34.6"
+    "stylelint-config-standard-scss": "^13.1.0",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5",
+    "vitest": "^2.0.4"
   },
   "engines": {
-    "node": ">=16.14.0",
-    "npm": "use `pnpm` instead",
-    "pnpm": ">=8.7.0",
-    "yarn": "use `pnpm` instead"
+    "node": ">=21.7.2",
+    "pnpm": ">=9.6.0"
   },
   "nano-staged": {
-    "*.{ts,tsx}": "biome check --apply-unsafe .",
-    "*.{ts,tsx,json}": "biome format --write .",
+    "*.{ts,tsx}": "biome lint --write .",
+    "*.{ts,tsx,json}": "biome format . --write",
     "*.scss": "stylelint \"./packages/**/*.scss\" --fix"
   },
-  "packageManager": "pnpm@8.15.8",
-  "pnpm": {
-    "overrides": {
-      "rollup": "3.29.4"
-    }
-  }
+  "packageManager": "pnpm@9.6.0"
 }

@@ -2,7 +2,7 @@ import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import {
-  type SpyInstance,
+  type MockInstance,
   afterEach,
   beforeEach,
   describe,
@@ -29,8 +29,8 @@ function RenderButton() {
 }
 
 describe('Toast component test', () => {
-  let toastEvent: ReturnType<typeof userEvent['setup']>
-  let spyButton: SpyInstance
+  let toastEvent: ReturnType<(typeof userEvent)['setup']>
+  let spyButton: MockInstance
 
   beforeEach(() => {
     toastEvent = userEvent.setup()

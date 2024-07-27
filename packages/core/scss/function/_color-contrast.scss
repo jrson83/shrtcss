@@ -1,4 +1,5 @@
 @use 'sass:color';
+@use 'sass:meta';
 @use 'color' as *;
 
 /// Get text color based on background color.
@@ -6,7 +7,7 @@
 /// @param {color} $color - The color to get the contrast color.
 /// @return {color} - The contrast color.
 @function color-contrast($color) {
-  @if type-of($color) != color {
+  @if meta.type-of($color) != color {
     @error '`#{$color}` is not a valid color but a #{type-of($color)}.';
   }
 

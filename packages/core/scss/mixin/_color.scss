@@ -1,5 +1,6 @@
 @use 'sass:color';
 @use 'sass:list';
+@use 'sass:meta';
 @use 'sass:string';
 @use '../function' as *;
 @use '../config' as *;
@@ -16,7 +17,7 @@
   $prefix: '#{config($settings, 'property-prefix')}-';
 
   @each $theme, $color in $colors {
-    @if type-of($color) == 'map' {
+    @if meta.type-of($color) == 'map' {
       @if list.index($themes, $theme) {
         @media (prefers-color-scheme: #{$theme}) {
           #{$selector} {
@@ -30,7 +31,7 @@
           }
         }
       }
-    } @else if type-of($color) == 'color' {
+    } @else if meta.type-of($color) == 'color' {
       --#{$color-prefix}color-#{$name}: $color;
     }
   }
@@ -47,7 +48,7 @@
   $prefix: '#{config($settings, 'property-prefix')}-';
 
   @each $theme, $color in $colors {
-    @if type-of($color) == 'map' {
+    @if meta.type-of($color) == 'map' {
       @if $theme == light {
         @each $key, $subcolor in $color {
           @if $subcolor {

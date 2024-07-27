@@ -5,7 +5,7 @@ type ListenerElements = HTMLElement | Window | Document
 
 function useEventListener<
   E extends EventNames[keyof EventNames],
-  T extends ListenerElements
+  T extends ListenerElements,
 >(
   eventName: keyof Pick<
     EventNames,

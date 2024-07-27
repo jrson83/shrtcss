@@ -7,8 +7,8 @@ import './styles/storylite-ui.css'
 
 import '../setup.style.scss'
 
-import { renderStoryLiteApp } from '@storylite/storylite'
 import stories from '@storylite/vite-plugin:stories'
+import { renderStoryLiteApp } from '@storylite/storylite'
 
 import config from './config'
 

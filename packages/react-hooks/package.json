@@ -43,10 +43,9 @@
     "build": "pnpm run type:check && pkgroll --minify -p tsconfig.json",
     "watch": "pkgroll --watch"
   },
-  "dependencies": {},
   "devDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "peerDependencies": {
     "react": "^18.2.0",

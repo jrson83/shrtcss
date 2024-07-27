@@ -10,7 +10,7 @@
 /// @return {string} - The media query.
 /// @throws {warning} - If the breakpoint does not exist.
 @mixin breakpoint($breakpoint, $direction: 'min', $type: false) {
-  @if not map-has-key($breakpoints, $breakpoint) {
+  @if not map.has-key($breakpoints, $breakpoint) {
     @warn 'Warning: `#{$name}` is not a valid breakpoint name.';
   }
 

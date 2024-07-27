@@ -13,7 +13,6 @@ function useFullScreen<E extends HTMLElement>(
 
   useLayoutEffect(() => {
     const onFullscreenChange = () => {
-      console.log(isFullScreen)
       setFullScreen(Boolean(document.fullscreenElement))
     }
     document.addEventListener('fullscreenchange', onFullscreenChange)

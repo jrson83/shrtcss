@@ -2,7 +2,7 @@ import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import {
-  SpyInstance,
+  type MockInstance,
   afterEach,
   beforeEach,
   describe,
@@ -29,8 +29,8 @@ const Wrapper = () => {
 }
 
 describe('Tabs component test', () => {
-  let tabsEvent: ReturnType<typeof userEvent['setup']>
-  let spyButton: SpyInstance
+  let tabsEvent: ReturnType<(typeof userEvent)['setup']>
+  let spyButton: MockInstance
 
   beforeEach(() => {
     tabsEvent = userEvent.setup()

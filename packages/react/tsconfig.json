@@ -22,7 +22,7 @@
       "react",
       "react-dom",
       "vite/client",
-      "vitest"
+      "vitest/jsdom"
     ],
     "baseUrl": ".",
     "paths": {

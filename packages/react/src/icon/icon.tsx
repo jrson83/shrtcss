@@ -1,7 +1,7 @@
 import type { SHRTComponentProps } from '../../types'
 import { icons } from './icon.data'
 
-export type IconData = typeof icons[number]
+export type IconData = (typeof icons)[number]
 
 export interface IconProps extends Omit<SHRTComponentProps<'svg'>, 'title'> {
   /** Available icons  */
@@ -26,7 +26,6 @@ export default function Icon({
   ...rest
 }: IconProps) {
   return (
-    // biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
     <svg
       aria-hidden={true}
       role="img"

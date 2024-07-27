@@ -1,4 +1,5 @@
 @use 'sass:list';
+@use 'sass:meta';
 @use 'sass:string';
 @use '../function' as *;
 @use '../config' as *;
@@ -8,13 +9,13 @@
   $color-variants: config($settings, 'color-variants');
   $prefix: '#{config($settings, 'property-prefix')}-';
 
-  @if not (type-of($color-variants) == list) {
+  @if not (meta.type-of($color-variants) == list) {
     @error "#{$color-variants} is not a valid list. Expected type list.";
   }
 
-  @if not (length($color-variants) == 0) {
+  @if not (list.length($color-variants) == 0) {
     @each $color-variant in $color-variants {
-      @if not index($valid-color-variants, $color-variant) {
+      @if not list.index($valid-color-variants, $color-variant) {
         @error "#{$color-variant} is not a valid color-variant. Expected one of #{$valid-color-variants}.";
       }
 
@@ -25,6 +26,10 @@
           @if $enabled {
             @if $color-variant == 'filled' {
               &-#{$key} {
+                --bg-color: #{color($key)};
+                --border-color: #{color($key)};
+                --box-shadow: 0 0 0 3px #{color('bg')}, 0 0 0 5px #{color($key)};
+                
                 @media (prefers-color-scheme: 'light') {
                   --color: #{color-contrast(map-deep-get($colors, 'light', $key))};
                 }
@@ -32,10 +37,6 @@
                 @media (prefers-color-scheme: 'dark') {
                   --color: #{color-contrast(map-deep-get($colors, 'dark', $key))};
                 }
-
-                --bg-color: #{color($key)};
-                --border-color: #{color($key)};
-                --box-shadow: 0 0 0 3px #{color('bg')}, 0 0 0 5px #{color($key)};
               }
             } @else if $color-variant == 'outline' {
               @if $is-first {

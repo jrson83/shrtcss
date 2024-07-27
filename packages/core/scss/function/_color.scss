@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use 'sass:string';
 @use '../config' as *;
 @use 'map-deep-get' as *;
@@ -8,7 +9,7 @@
   $theme: 'light',
   $map: $colors,
 ) {
-  @if not map-has-key($map, $theme, $key) {
+  @if not map.has-key($map, $theme, $key) {
     @error 'The key `#{$key}` is not associated with map `#{$map}`.';
   }
 
