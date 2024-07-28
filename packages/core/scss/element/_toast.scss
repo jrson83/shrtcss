@@ -1,6 +1,6 @@
 @use '../config' as *;
 @use '../function' as *;
-@use "../mixin" as *;
+@use '../mixin' as *;
 
 @mixin generate-toast {
   .toast {
