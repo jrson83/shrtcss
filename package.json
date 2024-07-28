@@ -3,6 +3,7 @@
   "private": true,
   "keywords": ["multi-root ready"],
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "============= WORKSPACE =============": "",
     "preinstall": "npx only-allow pnpm",
@@ -16,7 +17,7 @@
     "lint": "biome lint --write .",
     "fmt": "biome format . --write",
     "============= CLEAN =================": "",
-    "clean:workspace": "node ./scripts/cleanWorkspace.mjs",
+    "clean:workspace": "node ./.scripts/cleanWorkspace.mjs",
     "clean": "pnpm --stream -r clean",
     "clean:core": "pnpm --filter @shrtcss/core clean",
     "clean:react": "pnpm --filter @shrtcss/react clean",
@@ -34,12 +35,14 @@
     "test": "vitest --run --environment happy-dom",
     "quality-check": "pnpm run style && pnpm run test",
     "============= MISC ==================": "",
-    "spritemap": "node ./scripts/buildSpritemap.mjs",
-    "pub": "node ./scripts/prepublishOnly.mjs",
+    "spritemap": "node ./.scripts/buildSpritemap.mjs",
+    "changelogs": "node ./.scripts/changelogs.mjs",
+    "pub": "node ./.scripts/prepublishOnly.mjs",
     "prepare": "husky"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
+    "@bscotch/workspaces": "^0.3.0",
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
