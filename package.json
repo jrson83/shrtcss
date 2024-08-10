@@ -58,8 +58,8 @@
     "stylelint-config-property-sort-order-smacss": "^10.0.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "typescript": "^5.5.4",
-    "vite": "^5.3.5",
-    "vitest": "^2.0.4"
+    "vite": "^5.4.0",
+    "vitest": "^2.0.5"
   },
   "engines": {
     "node": ">=21.7.2",
