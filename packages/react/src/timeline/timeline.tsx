@@ -90,7 +90,7 @@ export default function Timeline({
   if (reverse) items = [...items].reverse()
 
   return (
-    <ol role="list" className="timeline" aria-label={ariaLabel} {...props}>
+    <ol className="timeline" aria-label={ariaLabel} {...props}>
       {items?.map((item) => (
         <TimelineItem key={item.id} {...item} />
       ))}

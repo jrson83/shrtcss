@@ -39,12 +39,19 @@ const defaultIcons = [
   'ios-warning',
 ]
 
+/**
+ * @param {any[]} symbols
+ */
 function createSvgSprite(symbols) {
   return `<svg xmlns="http://www.w3.org/2000/svg"><defs>${symbols.join(
     ''
   )}</defs></svg>`
 }
 
+/**
+ * @param {string} svg
+ * @param {string} id
+ */
 function createSvgSymbol(svg, id) {
   return svg
     .replace(/<svg([^>]*)>/, `<symbol viewBox="0 0 512 512" id="${id}">`)
@@ -52,7 +59,13 @@ function createSvgSymbol(svg, id) {
 }
 
 function streamToString(pkg = 'ion', icon = 'ios-exit') {
+  /**
+   * @type {Uint8Array[]}
+   */
   const chunks = []
+  /**
+   * @type {any[]}
+   */
   const symbols = []
 
   return new Promise((resolve, reject) => {

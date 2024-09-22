@@ -42,7 +42,6 @@ export default function Alert({
 
   return (
     <output
-      role="status"
       className={cx(
         isToast ? 'toast' : className ? className : 'toast',
         color && `${alertOrToast}-${color}`

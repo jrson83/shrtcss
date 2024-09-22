@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
-    "ignore": ["docs", "dist", "public", "**/node_modules"]
+    "ignore": ["**/dist/**", "**/public/**", "**/node_modules/**"]
   },
   "formatter": {
     "enabled": true,
@@ -23,7 +23,9 @@
     "rules": {
       "recommended": true,
       "a11y": {
-        "useKeyWithClickEvents": "off"
+        "noAriaHiddenOnFocusable": "off",
+        "useKeyWithClickEvents": "off",
+        "useSemanticElements": "off"
       },
       "correctness": {
         "noVoidTypeReturn": "off",
