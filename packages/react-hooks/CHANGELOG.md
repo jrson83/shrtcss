@@ -1,5 +1,15 @@
 # Changelog - @shrtcss/react-hooks
 
+## 0.1.2 (2024-09-23)
+
+### Code Refactoring
+
+- fix exports, ts setup ([03ca4ad](https://github.com/jrson83/shrtcss/commit/03ca4ad))
+
+### Builds
+
+- update dependency @types/react to v18.3.8 ([8620f1f](https://github.com/jrson83/shrtcss/commit/8620f1f))
+
 ## 0.1.1 (2024-07-27)
 
 ### Features

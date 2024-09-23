@@ -1,5 +1,23 @@
 # Changelog - @shrtcss/core
 
+## 0.1.2 (2024-09-23)
+
+### Code Refactoring
+
+- fix exports, ts setup ([03ca4ad](https://github.com/jrson83/shrtcss/commit/03ca4ad))
+
+### Bug Fixes
+
+- replace deprecated lightness with channel ([47c1597](https://github.com/jrson83/shrtcss/commit/47c1597))
+
+### Builds
+
+- update dependency autoprefixer to ^10.4.20 ([6dccabb](https://github.com/jrson83/shrtcss/commit/6dccabb))
+
+### Styles
+
+- fix single quotes for @use ([e896031](https://github.com/jrson83/shrtcss/commit/e896031))
+
 ## 0.1.1 (2024-07-27)
 
 ### Features

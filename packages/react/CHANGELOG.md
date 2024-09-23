@@ -1,5 +1,32 @@
 # Changelog - @shrtcss/react
 
+## 0.1.2 (2024-09-23)
+
+### Code Refactoring
+
+- improve component types ([4ce578a](https://github.com/jrson83/shrtcss/commit/4ce578a))
+- fix exports, ts setup ([03ca4ad](https://github.com/jrson83/shrtcss/commit/03ca4ad))
+
+### Bug Fixes
+
+- remove paths from build tsconfig ([5207a90](https://github.com/jrson83/shrtcss/commit/5207a90))
+
+### Builds
+
+- update dependency vite to ^5.4.7 ([e80b4d7](https://github.com/jrson83/shrtcss/commit/e80b4d7))
+- update dependency @types/react to v18.3.8 ([8620f1f](https://github.com/jrson83/shrtcss/commit/8620f1f))
+- update dependency vite to ^5.4.5 ([94acbb6](https://github.com/jrson83/shrtcss/commit/94acbb6))
+- update dependency @types/node to ^22.5.5 ([802a24e](https://github.com/jrson83/shrtcss/commit/802a24e))
+- update dependency vite to ^5.4.3 ([b887673](https://github.com/jrson83/shrtcss/commit/b887673))
+- update dependency @types/node to ^22.5.4 ([7025e42](https://github.com/jrson83/shrtcss/commit/7025e42))
+- update dependency @types/node to ^22.5.2 ([9cd7846](https://github.com/jrson83/shrtcss/commit/9cd7846))
+- update dependency vite to ^5.4.2 ([306d860](https://github.com/jrson83/shrtcss/commit/306d860))
+- update dependency vite to ^5.4.1 ([3fe6ed1](https://github.com/jrson83/shrtcss/commit/3fe6ed1))
+- update dependencies vite & vitest ([2872628](https://github.com/jrson83/shrtcss/commit/2872628))
+- update dependency @types/node to ^20.14.15 ([a406d0d](https://github.com/jrson83/shrtcss/commit/a406d0d))
+- update dependency @types/node to ^20.14.14 ([d86b002](https://github.com/jrson83/shrtcss/commit/d86b002))
+- update dependency @types/node to ^20.14.13 ([857f952](https://github.com/jrson83/shrtcss/commit/857f952))
+
 ## 0.1.1 (2024-07-27)
 
 ### Features
