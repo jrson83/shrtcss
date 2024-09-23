@@ -1,6 +1,6 @@
 import type { SHRTColor, SHRTSize, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
-import { forwardRef } from 'react'
+import { type MouseEvent, forwardRef } from 'react'
 import Icon, { type IconData } from '../icon/icon.js'
 import type { SHRTComponentPropsWithRef } from '../types.js'
 
@@ -33,7 +33,7 @@ export type ButtonProps = Omit<
   uppercase?: boolean
 
   /** Button onClick event */
-  onClick?: (data: unknown) => void
+  onClick?: (event: MouseEvent<Element>) => void
 }
 
 export default forwardRef<HTMLButtonElement, ButtonProps>(
@@ -49,6 +49,7 @@ export default forwardRef<HTMLButtonElement, ButtonProps>(
       fullWidth,
       uppercase,
       type = 'button',
+      onClick,
       ...rest
     },
     ref
@@ -68,6 +69,7 @@ export default forwardRef<HTMLButtonElement, ButtonProps>(
         )}
         type={type}
         ref={ref}
+        onClick={onClick}
         {...rest}
       >
         {leftIcon && (

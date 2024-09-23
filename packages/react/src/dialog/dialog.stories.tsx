@@ -1,4 +1,3 @@
-import { decoratorsTemplate } from '@/storylite/decorators'
 import type { Story } from '@storylite/storylite'
 import { useState } from 'react'
 import Button from '../button/button.js'
@@ -31,10 +30,44 @@ export default {
   },
 } satisfies StoryType
 
+const DialogStoryScreen = () => {
+  const [isDialogVisible, setIsDialogVisible] = useState(false)
+  const showDialog = () => setIsDialogVisible(true)
+  const closeDialog = () => setIsDialogVisible(false)
+
+  return (
+    <div className="story-wrapper">
+      <Button className="btn" onClick={showDialog}>
+        Open Dialog
+      </Button>
+
+      <Dialog
+        isDialogVisible={isDialogVisible}
+        closeDialog={closeDialog}
+        name={'Example Dialog'}
+        type={'info'}
+        title={'Hello, Im a Title'}
+        useFocusTrap={true}
+        fullScreen={false}
+        submitButton={{
+          label: 'Submit',
+          action: () => {
+            console.log('action')
+            closeDialog()
+          },
+        }}
+        cancelButton={{
+          label: 'Cancel',
+        }}
+      >
+        <p>I'm a placeholder.</p>
+      </Dialog>
+    </div>
+  )
+}
 export const Main: StoryDocsType = {
   name: 'Docs',
   component: Docs,
-  decorators: decoratorsTemplate(true),
   navigation: {
     icon: <span>📄</span>,
     order: 0,
@@ -43,45 +76,5 @@ export const Main: StoryDocsType = {
 
 export const DefaultStory: StoryType = {
   name: 'Default',
-  args: {
-    children: undefined,
-    name: 'Example Dialog',
-    type: 'info',
-    title: 'Hello, Im a Heading',
-    useFocusTrap: true,
-    fullScreen: false,
-    position: undefined,
-    showCloseButton: false,
-    showDialogFooter: true,
-    submitButton: {
-      label: 'Submit',
-      action: () => console.log('action'),
-    },
-    cancelButton: {
-      label: 'Cancel',
-    },
-  },
-  decorators: [
-    (Story, context) => {
-      const [isDialogVisible, setIsDialogVisible] = useState(true)
-      const showDialog = () => setIsDialogVisible(true)
-      const closeDialog = () => setIsDialogVisible(false)
-
-      return (
-        <div className="story-wrapper">
-          <Button className="btn" onClick={showDialog}>
-            Open Dialog
-          </Button>
-
-          <Story
-            isDialogVisible={isDialogVisible}
-            closeDialog={closeDialog}
-            {...context?.args}
-          >
-            <p>I'm a placeholder.</p>
-          </Story>
-        </div>
-      )
-    },
-  ],
+  component: () => <DialogStoryScreen />,
 }

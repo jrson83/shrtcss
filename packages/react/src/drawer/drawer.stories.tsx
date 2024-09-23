@@ -18,6 +18,28 @@ export default {
   },
 } satisfies StoryType
 
+const DrawerStoryScreen = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+  const showDrawer = () => setIsDrawerOpen(true)
+  const closeDrawer = () => setIsDrawerOpen(false)
+
+  return (
+    <div className="story-wrapper">
+      <Button className="btn" onClick={showDrawer}>
+        Open Drawer
+      </Button>
+
+      <Drawer
+        isOpen={isDrawerOpen}
+        closeDrawer={closeDrawer}
+        headerTitle={'Header Title'}
+      >
+        <p>I'm a placeholder.</p>
+      </Drawer>
+    </div>
+  )
+}
+
 export const Main: StoryDocsType = {
   name: 'Docs',
   component: Docs,
@@ -30,30 +52,5 @@ export const Main: StoryDocsType = {
 
 export const DefaultStory: StoryType = {
   name: 'Default',
-  decorators: [
-    (Story, context) => {
-      const [isDrawerOpen, setIsDrawerOpen] = useState(false)
-      const showDrawer = () => setIsDrawerOpen(true)
-      const closeDrawer = () => setIsDrawerOpen(false)
-
-      return (
-        <div className="story-wrapper">
-          <Button className="btn" onClick={showDrawer}>
-            Open Dialog
-          </Button>
-
-          <Story
-            isOpen={isDrawerOpen}
-            closeDrawer={closeDrawer}
-            {...context?.args}
-          >
-            <p>I'm a placeholder.</p>
-          </Story>
-        </div>
-      )
-    },
-  ],
-  args: {
-    headerTitle: 'Header Title',
-  },
+  component: () => <DrawerStoryScreen />,
 }
