@@ -1,7 +1,13 @@
-import { createContext, useContext, useLayoutEffect, useState } from 'react'
+import {
+  type ReactNode,
+  createContext,
+  useContext,
+  useLayoutEffect,
+  useState,
+} from 'react'
 
 interface RouterProviderProps {
-  children?: React.ReactNode
+  children?: ReactNode
 }
 
 export type TRouterContext = {

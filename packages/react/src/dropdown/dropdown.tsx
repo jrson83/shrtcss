@@ -1,6 +1,6 @@
 import { useOnClickOutside } from '@shrtcss/react-hooks'
 import { cx } from 'classix'
-import { useRef, useState } from 'react'
+import { type ReactNode, useRef, useState } from 'react'
 import Button from '../button/button.js'
 import Divider from '../divider/divider.js'
 import Icon from '../icon/icon.js'
@@ -12,7 +12,7 @@ export interface DropdownProps extends SHRTComponentPropsWithoutRef<'div'> {
   label?: string
 
   /** Available icons  */
-  icon?: React.ReactNode
+  icon?: ReactNode
 
   /** Dropdown position **/
   position?: 'bottom-right' | 'top-left' | 'top-right'

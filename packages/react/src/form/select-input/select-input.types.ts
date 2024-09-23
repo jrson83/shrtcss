@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import type { SHRTComponentPropsWithoutRef } from '../../types.js'
 
 export interface SelectInputProps<Item> {
@@ -17,4 +18,4 @@ export type SelectInputPropsx<Item> =
 
 export type SelectInputType = <Item>(
   props: SelectInputPropsx<Item>
-) => React.ReactNode
+) => ReactNode

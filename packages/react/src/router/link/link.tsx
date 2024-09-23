@@ -1,5 +1,5 @@
 import { matchRoutes, useHistory } from '@shrtcss/react-hooks'
-import type { ComponentPropsWithoutRef } from 'react'
+import type { ComponentPropsWithoutRef, MouseEvent } from 'react'
 import { useRouter } from '../router/router.js'
 
 export interface LinkProps extends ComponentPropsWithoutRef<'a'> {
@@ -10,7 +10,7 @@ export default function Link({ children, ...props }: LinkProps) {
   const { location } = useRouter()
   const history = useHistory()
 
-  const handleOnNavigate = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleOnNavigate = (event: MouseEvent<HTMLAnchorElement>) => {
     if (
       props.target === '_blank' ||
       event.ctrlKey ||

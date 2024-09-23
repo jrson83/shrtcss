@@ -1,4 +1,5 @@
 import { useHistory, useMatch } from '@shrtcss/react-hooks'
+import type { FC } from 'react'
 import { useRouter } from '../router/router.js'
 
 export interface History {
@@ -18,7 +19,7 @@ export interface RouteComponentProps {
   }
 }
 
-export type RouteComponent = React.FC<RouteComponentProps>
+export type RouteComponent = FC<RouteComponentProps>
 
 export interface RouteProps {
   component: RouteComponent

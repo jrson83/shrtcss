@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import type { ReactNode } from 'react'
 import {
   type MockInstance,
   afterEach,
@@ -43,7 +44,7 @@ describe('Toast component test', () => {
   })
 
   test('Should render default toast', async () => {
-    const wrapper = ({ children }: { children: React.ReactNode }) => (
+    const wrapper = ({ children }: { children: ReactNode }) => (
       <ToastProvider>{children}</ToastProvider>
     )
 

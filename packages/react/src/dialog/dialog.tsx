@@ -1,6 +1,6 @@
 import { FocusTrap } from '@shrtcss/react-hooks'
 import { cx } from 'classix'
-import { useEffect, useRef } from 'react'
+import { type MouseEvent, useEffect, useRef } from 'react'
 import Button from '../button/button.js'
 import Icon from '../icon/icon.js'
 import type { SHRTComponentPropsWithoutRef } from '../types.js'
@@ -94,7 +94,7 @@ export default function Dialog({
     }
   }, [isDialogVisible])
 
-  const preventAutoClose = (e: React.MouseEvent<HTMLDivElement>) =>
+  const preventAutoClose = (e: MouseEvent<HTMLDivElement>) =>
     e.stopPropagation()
 
   return (

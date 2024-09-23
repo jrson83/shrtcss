@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import type { ReactNode } from 'react'
 import {
   type MockInstance,
   afterEach,
@@ -41,7 +42,7 @@ describe('Router component test', () => {
   })
 
   test('Should render default route', async () => {
-    const wrapper = ({ children }: { children: React.ReactNode }) => (
+    const wrapper = ({ children }: { children: ReactNode }) => (
       <Router>
         {children}
         <Route path="/" component={HomePage} />
