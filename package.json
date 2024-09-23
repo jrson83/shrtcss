@@ -38,7 +38,7 @@
     "happy-dom": "^14.12.3",
     "husky": "^9.1.6",
     "nano-staged": "^0.8.0",
-    "pkgroll": "^2.4.2",
+    "pkgroll": "^2.5.0",
     "sass": "^1.79.3",
     "stylelint": "^16.9.0",
     "stylelint-config-property-sort-order-smacss": "^10.0.0",
