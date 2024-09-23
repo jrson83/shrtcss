@@ -1,7 +1,7 @@
 import { decoratorsTemplate } from '@/storylite/decorators'
-import { Story } from '@storylite/storylite'
-import Badge from './badge'
+import type { Story } from '@storylite/storylite'
 import Docs from './badge.docs.mdx'
+import Badge from './badge.js'
 
 type StoryType = Story<typeof Badge>
 type StoryDocsType = Story<typeof Docs>

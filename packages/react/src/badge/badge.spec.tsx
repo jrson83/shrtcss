@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, test } from 'vitest'
-import Badge from './badge'
+import Badge from './badge.js'
 
 describe('Badge component test', () => {
   afterEach(cleanup)
