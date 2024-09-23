@@ -11,7 +11,7 @@
     @error '`#{$color}` is not a valid color but a #{type-of($color)}.';
   }
 
-  @if color.lightness($color) > 70 { // Lightness function returns the "lightness" value of the calculated HSL (Hue, Saturation, Lightness) Color
+  @if color.channel($color, "lightness", $space: hsl) > 70 { // Lightness function returns the "lightness" value of the calculated HSL (Hue, Saturation, Lightness) Color
     @return color('text-dark');
   } @else {
     @return color('text-light');
