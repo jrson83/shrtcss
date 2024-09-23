@@ -27,8 +27,8 @@ importers:
         specifier: ^22.5.5
         version: 22.5.5
       happy-dom:
-        specifier: ^14.12.3
-        version: 14.12.3
+        specifier: ^15.7.4
+        version: 15.7.4
       husky:
         specifier: ^9.1.6
         version: 9.1.6
@@ -58,7 +58,7 @@ importers:
         version: 5.4.7(@types/node@22.5.5)(sass@1.79.3)
       vitest:
         specifier: ^2.1.1
-        version: 2.1.1(@types/node@22.5.5)(happy-dom@14.12.3)(sass@1.79.3)
+        version: 2.1.1(@types/node@22.5.5)(happy-dom@15.7.4)(sass@1.79.3)
 
   packages/core:
     devDependencies:
@@ -1388,9 +1388,9 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
-  happy-dom@14.12.3:
-    resolution: {integrity: sha512-vsYlEs3E9gLwA1Hp+w3qzu+RUDFf4VTT8cyKqVICoZ2k7WM++Qyd2LwzyTi5bqMJFiIC/vNpTDYuxdreENRK/g==}
-    engines: {node: '>=16.0.0'}
+  happy-dom@15.7.4:
+    resolution: {integrity: sha512-r1vadDYGMtsHAAsqhDuk4IpPvr6N8MGKy5ntBo7tSdim+pWDxus2PNqOcOt8LuDZ4t3KJHE+gCuzupcx/GKnyQ==}
+    engines: {node: '>=18.0.0'}
 
   has-flag@3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
@@ -3563,7 +3563,7 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  happy-dom@14.12.3:
+  happy-dom@15.7.4:
     dependencies:
       entities: 4.5.0
       webidl-conversions: 7.0.0
@@ -4703,7 +4703,7 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.79.3
 
-  vitest@2.1.1(@types/node@22.5.5)(happy-dom@14.12.3)(sass@1.79.3):
+  vitest@2.1.1(@types/node@22.5.5)(happy-dom@15.7.4)(sass@1.79.3):
     dependencies:
       '@vitest/expect': 2.1.1
       '@vitest/mocker': 2.1.1(@vitest/spy@2.1.1)(vite@5.4.7(@types/node@22.5.5)(sass@1.79.3))
@@ -4726,7 +4726,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.5.5
-      happy-dom: 14.12.3
+      happy-dom: 15.7.4
     transitivePeerDependencies:
       - less
       - lightningcss
