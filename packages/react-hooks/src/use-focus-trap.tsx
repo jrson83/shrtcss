@@ -1,13 +1,20 @@
 // Based on https://hiddedevries.nl/en/blog/2017-01-29-using-javascript-to-trap-focus-in-an-element
-import { useEffect, useRef } from 'react'
+import {
+  type FC,
+  type PropsWithChildren,
+  type ReactElement,
+  type ReactNode,
+  useEffect,
+  useRef,
+} from 'react'
 
 interface ConditionalWrapperProps {
   wrap: boolean
-  wrapper: (children: React.ReactNode) => React.ReactElement
+  wrapper: (children: ReactNode) => ReactElement
 }
 
-export const ConditionalWrapper: React.FC<
-  React.PropsWithChildren & ConditionalWrapperProps
+export const ConditionalWrapper: FC<
+  PropsWithChildren & ConditionalWrapperProps
 > = ({ wrap, wrapper, children }) =>
   wrap ? wrapper(children) : <>{children}</>
 
@@ -54,8 +61,8 @@ function useFocusTrap() {
   return elRef
 }
 
-type FocusTrapType = React.FC<
-  React.PropsWithChildren & {
+type FocusTrapType = FC<
+  PropsWithChildren & {
     enabled?: boolean
   }
 >

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { type ChangeEvent, type FormEvent, useState } from 'react'
 
 interface Validation {
   required?: {
@@ -24,14 +24,14 @@ export const useForm = <
 >(options?: {
   validations?: Validations<T>
   initialValues?: Partial<T>
-  onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void
+  onSubmit?: (e: FormEvent<HTMLFormElement>) => void
 }) => {
   const [data, setData] = useState<T>((options?.initialValues || {}) as T)
   const [errors, setErrors] = useState<ErrorRecord<T>>({})
 
   const handleChange =
     <S>(key: keyof T, sanitizeFn?: (value: string) => S) =>
-    (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
       const value = sanitizeFn
         ? sanitizeFn(e.currentTarget.value)
         : e.currentTarget.value
@@ -41,7 +41,7 @@ export const useForm = <
       })
     }
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const validations = options?.validations
     if (validations) {
@@ -82,7 +82,7 @@ export const useForm = <
   }
 
   const reset = (
-    e: React.FormEvent<HTMLFormElement> & {
+    e: FormEvent<HTMLFormElement> & {
       target: HTMLFormElement
     }
   ) => {
