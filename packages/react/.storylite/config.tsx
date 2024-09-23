@@ -1,8 +1,9 @@
-import { Icon } from '@/src'
 import type {
   SLAddonPropsWithoutId,
   SLAppComponentProps,
 } from '@storylite/storylite'
+import React from 'react'
+import { Icon } from '../src/index.js'
 
 const config: SLAppComponentProps = {
   title: ' ⚡️ StoryLite shrtcss',

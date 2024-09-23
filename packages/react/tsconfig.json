@@ -4,16 +4,9 @@
   "compilerOptions": {
     "exactOptionalPropertyTypes": false,
     "useDefineForClassFields": true,
+    "skipLibCheck": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": [
-      "@storylite/vite-plugin/virtual",
-      "node",
-      "react",
-      "react-dom",
-      "vite/client",
-      "vitest/jsdom"
-    ],
     "baseUrl": ".",
     "paths": {
       "@/src": ["src/index.ts"],
