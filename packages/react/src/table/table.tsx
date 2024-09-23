@@ -1,6 +1,6 @@
 import { cx } from 'classix'
 import type { ReactNode } from 'react'
-import type { SHRTComponentProps } from '../../types'
+import type { SHRTComponentProps } from '../types.js'
 
 export type ColumnType<T, K extends keyof T> = {
   key: K

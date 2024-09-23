@@ -1,21 +1,11 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "ES2020",
+    "exactOptionalPropertyTypes": false,
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true,
     "types": [
       "@storylite/vite-plugin/virtual",
       "node",
@@ -27,10 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@/src": ["src/index.ts"],
-      "@/storylite/*": [".storylite/*.tsx"],
-      "@shrtcss/core": ["../core/scss/shrtcss.scss"],
-      "@shrtcss/react/types": ["types/index.d.ts"],
-      "@shrtcss/react-hooks": ["../react-hooks/src/index.ts"]
+      "@/storylite/*": [".storylite/*.tsx"]
     }
   },
   "include": ["*.ts", "*.tsx", ".storylite/**/*", "src/**/*", "types/**/*"]

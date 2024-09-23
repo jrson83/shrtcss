@@ -1,1 +1,1 @@
-export { default, type DividerProps } from './divider'
+export { default as Divider, type DividerProps } from './divider.js'

@@ -1,6 +1,6 @@
 import { cx } from 'classix'
-import type { SHRTComponentProps } from '../../../types'
-import Label from '../label'
+import type { SHRTComponentProps } from '../../types.js'
+import Label from '../label/label.js'
 
 export interface FormGroupProps extends SHRTComponentProps<'div'> {
   label?: string

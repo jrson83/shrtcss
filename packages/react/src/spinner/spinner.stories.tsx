@@ -1,7 +1,7 @@
 import { decoratorsTemplate } from '@/storylite/decorators'
-import { Story } from '@storylite/storylite'
-import Spinner from './spinner'
+import type { Story } from '@storylite/storylite'
 import Docs from './spinner.docs.mdx'
+import Spinner from './spinner.js'
 
 type StoryType = Story<typeof Spinner>
 type StoryDocsType = Story<typeof Docs>

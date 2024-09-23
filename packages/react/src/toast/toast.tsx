@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import Alert from '../alert'
-import { useToasts } from './toast.hook'
-import type { ToastType } from './toast.types'
+import Alert from '../alert/alert.js'
+import { useToasts } from './toast.hook.js'
+import type { ToastType } from './toast.types.js'
 
 export interface ToastAlertProps extends ToastType {
   /** Auto dismiss after `dismissDelay` - Defaults to `true` */
@@ -55,7 +55,10 @@ export function ToastAlert({
         clearTimeout(timerID.current)
       }
     }
-  }, [])
+
+    // Return a no-op function if the condition is not met
+    return () => {}
+  }, [willDismiss, autoDismiss, dismissDelay])
 
   return (
     <Alert
@@ -72,7 +75,7 @@ export function ToastAlert({
   )
 }
 
-export function Toast({ position = 'bottom-center' }: ToastProps) {
+export default function Toast({ position = 'bottom-center' }: ToastProps) {
   const pos = position.split('-')
   const { toasts } = useToasts()
   return (

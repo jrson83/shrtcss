@@ -35,8 +35,6 @@
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/node": "^22.5.5",
-    "@types/react": "^18.3.8",
-    "@types/react-dom": "^18.3.0",
     "happy-dom": "^14.12.3",
     "husky": "^9.1.6",
     "nano-staged": "^0.8.0",
@@ -51,12 +49,12 @@
   },
   "engines": {
     "node": ">=21.7.2",
-    "pnpm": ">=9.9.0"
+    "pnpm": ">=9.11.0"
   },
   "nano-staged": {
     "*.{ts,tsx}": "biome lint --write .",
     "*.{ts,tsx,json}": "biome format . --write",
     "*.scss": "stylelint \"./packages/**/*.scss\" --fix"
   },
-  "packageManager": "pnpm@9.9.0"
+  "packageManager": "pnpm@9.11.0"
 }

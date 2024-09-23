@@ -1,9 +1,9 @@
 import type { SHRTSize } from '@shrtcss/core'
 import { cx } from 'classix'
 import { useCallback } from 'react'
-import type { SHRTComponentProps } from '../../types'
-import Button from '../button'
-import Icon from '../icon'
+import Button from '../button/button.js'
+import Icon from '../icon/icon.js'
+import type { SHRTComponentProps } from '../types.js'
 
 export interface PaginationProps extends SHRTComponentProps<'nav'> {
   /** The current page item */

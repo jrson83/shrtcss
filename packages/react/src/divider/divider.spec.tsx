@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, test } from 'vitest'
-import Divider from './divider'
+import Divider from './divider.js'
 
 describe('Divider component test', () => {
   afterEach(cleanup)

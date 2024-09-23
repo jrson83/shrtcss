@@ -1,11 +1,6 @@
 import { cx } from 'classix'
 import { forwardRef } from 'react'
-import type {
-  ListItemType,
-  ListProps,
-  ListType,
-  PolymorphicRef,
-} from './list.types'
+import type { ListItemType, ListType } from './list.types.js'
 
 const ListItem: ListItemType = ({ children, className, role, ...props }) => {
   return (
@@ -20,17 +15,9 @@ const ListItem: ListItemType = ({ children, className, role, ...props }) => {
 }
 
 const List: ListType = forwardRef(
-  <Item, C extends React.ElementType = 'ul'>(
-    {
-      as,
-      children,
-      className,
-      header,
-      items,
-      itemRenderer,
-      ...props
-    }: ListProps<Item, C>,
-    ref?: PolymorphicRef<C>
+  (
+    { as, children, className, header, items, itemRenderer, ...props }: any,
+    ref?: any
   ) => {
     const Component = as || 'ul'
 

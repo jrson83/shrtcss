@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, test } from 'vitest'
-import Alert from './alert'
+import Alert from './alert.js'
 
 describe('Alert component test', () => {
   afterEach(cleanup)

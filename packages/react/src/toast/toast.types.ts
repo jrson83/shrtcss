@@ -1,4 +1,4 @@
-import type { AlertProps } from '../alert'
+import type { AlertProps } from '../alert/alert.js'
 
 export interface ToastType extends AlertProps {
   id: number

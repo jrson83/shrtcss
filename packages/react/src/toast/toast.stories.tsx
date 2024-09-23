@@ -1,9 +1,9 @@
-import { Story } from '@storylite/storylite'
-import Button from '../button'
-import { Toast } from './toast'
+import type { Story } from '@storylite/storylite'
+import Button from '../button/button.js'
 import Docs from './toast.docs.mdx'
-import { useToasts } from './toast.hook'
-import { ToastProvider } from './toast.provider'
+import { useToasts } from './toast.hook.js'
+import Toast from './toast.js'
+import { ToastProvider } from './toast.provider.js'
 
 type StoryType = Story<typeof Toast>
 type StoryDocsType = Story<typeof Docs>

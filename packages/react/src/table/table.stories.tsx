@@ -1,8 +1,8 @@
 import { decoratorsTemplate } from '@/storylite/decorators'
 import type { Story } from '@storylite/storylite'
-import { type User, users } from './setup.data'
-import Table from './table'
+import { type User, users } from './setup.data.js'
 import Docs from './table.docs.mdx'
+import Table from './table.js'
 
 type StoryType = Story<typeof Table>
 type StoryDocsType = Story<typeof Docs>

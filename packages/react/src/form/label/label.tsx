@@ -1,5 +1,5 @@
 import { cx } from 'classix'
-import type { SHRTComponentProps } from '../../../types'
+import type { SHRTComponentProps } from '../../types.js'
 
 export interface LabelProps extends SHRTComponentProps<'label'> {
   error?: string

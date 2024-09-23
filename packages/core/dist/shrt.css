@@ -628,7 +628,7 @@ blockquote > footer {
   cursor: pointer;
 }
 .btn-float:hover {
-  background-color: #395dd2;
+  background-color: rgb(57, 92.64, 210.45);
 }
 .btn-dropdown:focus {
   box-shadow: none;

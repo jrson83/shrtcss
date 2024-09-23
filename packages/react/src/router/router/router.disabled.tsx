@@ -10,9 +10,9 @@ import {
   test,
   vi,
 } from 'vitest'
-import { Link } from '../link'
-import { Route } from '../route'
-import Router from './router'
+import Link from '../link/link.js'
+import Route from '../route/route.js'
+import Router from './router.js'
 
 const HomePage = () => (
   <div>

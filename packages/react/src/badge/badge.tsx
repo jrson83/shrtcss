@@ -1,7 +1,7 @@
 import type { SHRTColor, SHRTSize, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
-import type { SHRTComponentProps } from '../../types'
-import Icon, { IconData } from '../icon'
+import Icon, { type IconData } from '../icon/icon.js'
+import type { SHRTComponentProps } from '../types.js'
 
 export interface BadgeProps extends SHRTComponentProps<'span'> {
   /** Badge color from theme */

@@ -1,7 +1,7 @@
 import type { Story } from '@storylite/storylite'
-import Spinner from '../spinner'
-import Button from './button'
+import Spinner from '../spinner/spinner.js'
 import Docs from './button.docs.mdx'
+import Button from './button.js'
 
 type StoryType = Story<typeof Button>
 type StoryDocsType = Story<typeof Docs>

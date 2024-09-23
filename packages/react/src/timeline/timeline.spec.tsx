@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, test } from 'vitest'
-import Timeline, { type TimeItem } from './timeline'
+import Timeline, { type TimeItem } from './timeline.js'
 
 const timelineTestItems: TimeItem[] = [
   {

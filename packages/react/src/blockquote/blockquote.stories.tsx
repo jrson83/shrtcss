@@ -1,7 +1,7 @@
 import { decoratorsTemplate } from '@/storylite/decorators'
-import { Story } from '@storylite/storylite'
-import Blockquote from './blockquote'
+import type { Story } from '@storylite/storylite'
 import Docs from './blockquote.docs.mdx'
+import Blockquote from './blockquote.js'
 
 type StoryType = Story<typeof Blockquote>
 type StoryDocsType = Story<typeof Docs>

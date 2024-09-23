@@ -1,9 +1,9 @@
 import { decoratorsTemplate } from '@/storylite/decorators'
-import { Story } from '@storylite/storylite'
+import type { Story } from '@storylite/storylite'
 import { useState } from 'react'
-import Pagination from './pagination'
 import Docs from './pagination.docs.mdx'
-import { usePagination } from './use-pagination'
+import Pagination from './pagination.js'
+import { usePagination } from './use-pagination.js'
 
 type StoryType = Story<typeof Pagination>
 type StoryDocsType = Story<typeof Docs>

@@ -1,1 +1,1 @@
-export { default, type HeadingProps } from './heading'
+export { default as Heading, type HeadingProps } from './heading.js'

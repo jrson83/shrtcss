@@ -1,5 +1,5 @@
-import type { SHRTComponentProps } from '../../types'
-import { icons } from './icon.data'
+import type { SHRTComponentProps } from '../types.js'
+import { icons } from './icon.data.js'
 
 export type IconData = (typeof icons)[number]
 

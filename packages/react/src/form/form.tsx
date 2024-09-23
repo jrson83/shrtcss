@@ -1,9 +1,9 @@
 import { useForm } from '@shrtcss/react-hooks'
-import type { SHRTComponentProps } from '../../types'
-import Button from '../button'
-import FormGroup from './form-group'
-import Input from './input'
-import Label from './label'
+import Button from '../button/button.js'
+import type { SHRTComponentProps } from '../types.js'
+import FormGroup from './form-group/form-group.js'
+import Input from './input/input.js'
+import Label from './label/label.js'
 
 export type FormProps = SHRTComponentProps<'form'>
 

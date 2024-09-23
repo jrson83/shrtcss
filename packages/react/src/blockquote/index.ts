@@ -1,1 +1,1 @@
-export { default, type BlockquoteProps } from './blockquote'
+export { default as Blockquote, type BlockquoteProps } from './blockquote.js'

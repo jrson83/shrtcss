@@ -1,4 +1,4 @@
-import type { ToastAction, ToastState, ToastType } from './toast.types'
+import type { ToastAction, ToastState, ToastType } from './toast.types.js'
 
 function nextToastId(toasts: ToastType[]): number {
   const maxId = toasts.reduce((maxId, toast) => Math.max(toast.id, maxId), -1)

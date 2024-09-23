@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, test } from 'vitest'
-import Icon from './icon'
+import Icon from './icon.js'
 
 describe('Icon component test', () => {
   afterEach(cleanup)

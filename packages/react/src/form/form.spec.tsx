@@ -10,7 +10,7 @@ import {
   test,
   vi,
 } from 'vitest'
-import Form from './form'
+import Form from './form.js'
 
 describe('Form component test', () => {
   let submitEvent: ReturnType<(typeof userEvent)['setup']>

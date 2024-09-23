@@ -1,1 +1,1 @@
-export { default, type InputProps } from './input'
+export { default as Input, type InputProps } from './input.js'

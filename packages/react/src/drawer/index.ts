@@ -1,1 +1,1 @@
-export { default, type DrawerProps } from './drawer'
+export { default as Drawer, type DrawerProps } from './drawer.js'

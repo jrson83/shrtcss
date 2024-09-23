@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, test } from 'vitest'
-import Spinner from './spinner'
+import Spinner from './spinner.js'
 
 describe('Spinner component test', () => {
   afterEach(cleanup)

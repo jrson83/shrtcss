@@ -1,6 +1,6 @@
 import { matchRoutes, useHistory } from '@shrtcss/react-hooks'
 import type { ComponentPropsWithoutRef } from 'react'
-import { useRouter } from '../router'
+import { useRouter } from '../router/router.js'
 
 export interface LinkProps extends ComponentPropsWithoutRef<'a'> {
   isActive?: string

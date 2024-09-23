@@ -3,4 +3,4 @@ export {
   type History,
   type RouteComponentProps,
   type RouteComponent,
-} from './route'
+} from './route.js'

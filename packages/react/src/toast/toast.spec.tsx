@@ -10,9 +10,9 @@ import {
   test,
   vi,
 } from 'vitest'
-import Button from '../button'
-import { useToasts } from './toast.hook'
-import { ToastProvider } from './toast.provider'
+import Button from '../button/button.js'
+import { useToasts } from './toast.hook.js'
+import { ToastProvider } from './toast.provider.js'
 
 function RenderButton() {
   const { add } = useToasts()

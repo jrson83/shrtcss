@@ -3,4 +3,4 @@ export {
   useRouter,
   RouterContext,
   type TRouterContext,
-} from './router'
+} from './router.js'

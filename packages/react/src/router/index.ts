@@ -1,3 +1,3 @@
-export * from './link'
-export * from './route'
-export * from './router'
+export * from './link/index.js'
+export * from './route/index.js'
+export * from './router/index.js'

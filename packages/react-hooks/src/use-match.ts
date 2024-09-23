@@ -1,4 +1,4 @@
-import { matchRoutes } from './utils'
+import { matchRoutes } from './utils/match-routes.js'
 
 const useMatch = (href: string, pathname: string) => {
   const match = matchRoutes(href, pathname)

@@ -10,7 +10,7 @@ import {
   test,
   vi,
 } from 'vitest'
-import Tabs, { Tab } from './tabs'
+import Tabs, { Tab } from './tabs.js'
 
 const Wrapper = () => {
   return (

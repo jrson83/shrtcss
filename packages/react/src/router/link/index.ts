@@ -1,1 +1,1 @@
-export { default as Link, type LinkProps } from './link'
+export { default as Link, type LinkProps } from './link.js'

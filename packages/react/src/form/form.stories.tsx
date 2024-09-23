@@ -1,7 +1,7 @@
 import { decoratorsTemplate } from '@/storylite/decorators'
 import type { Story } from '@storylite/storylite'
-import Form from './form'
 import Docs from './form.docs.mdx'
+import Form from './form.js'
 
 type StoryType = Story<typeof Form>
 type StoryDocsType = Story<typeof Docs>

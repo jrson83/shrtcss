@@ -1,6 +1,6 @@
 import type { SHRTColor, SHRTSize } from '@shrtcss/core'
 import { cx } from 'classix'
-import type { SHRTComponentProps } from '../../types'
+import type { SHRTComponentProps } from '../types.js'
 
 export interface SpinnerProps extends SHRTComponentProps<'span'> {
   /** Spinner color from theme */

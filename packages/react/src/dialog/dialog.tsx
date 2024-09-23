@@ -1,9 +1,9 @@
 import { FocusTrap } from '@shrtcss/react-hooks'
 import { cx } from 'classix'
 import { useEffect, useRef } from 'react'
-import type { SHRTComponentProps } from '../../types'
-import Button from '../button'
-import Icon from '../icon'
+import Button from '../button/button.js'
+import Icon from '../icon/icon.js'
+import type { SHRTComponentProps } from '../types.js'
 
 export const browserSupportsHas = CSS.supports?.('selector(html:has(body))')
 

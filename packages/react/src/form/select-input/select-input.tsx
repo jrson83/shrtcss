@@ -1,5 +1,8 @@
 /* import { useCallback } from 'react' */
-import type { SelectInputPropsx, SelectInputType } from './select-input.types'
+import type {
+  SelectInputPropsx,
+  SelectInputType,
+} from './select-input.types.js'
 
 const SelectInput: SelectInputType = <Item,>({
   value,

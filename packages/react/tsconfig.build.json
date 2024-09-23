@@ -1,9 +1,21 @@
 {
-  "extends": "./tsconfig.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "emitDeclarationOnly": true
+    "exactOptionalPropertyTypes": false,
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "outDir": "./dist",
+    "jsx": "react-jsx",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "isolatedModules": true,
+    "removeComments": true,
+    "moduleDetection": "force"
   },
-  "include": ["src/index.ts", "types/index.d.ts"],
+  "include": ["src/index.ts"],
   "exclude": [
     "**/dist",
     "**/node_modules",

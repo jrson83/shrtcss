@@ -1,7 +1,7 @@
 import type { SHRTColor } from '@shrtcss/core'
 import { cx } from 'classix'
 import { Children, type ReactElement, isValidElement, useState } from 'react'
-import type { SHRTComponentProps } from '../../types'
+import type { SHRTComponentProps } from '../types.js'
 
 export interface TabProps extends SHRTComponentProps<'div'> {
   /** Tab display title */

@@ -1,7 +1,7 @@
 import { decoratorsTemplate } from '@/storylite/decorators'
-import { Story } from '@storylite/storylite'
-import Alert from './alert'
+import type { Story } from '@storylite/storylite'
 import Docs from './alert.docs.mdx'
+import Alert from './alert.js'
 
 type StoryType = Story<typeof Alert>
 type StoryDocsType = Story<typeof Docs>

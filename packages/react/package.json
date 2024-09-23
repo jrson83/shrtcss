@@ -12,37 +12,41 @@
     "directory": "packages/react"
   },
   "license": "MIT",
-  "sideEffects": false,
   "type": "module",
   "exports": {
-    ".": {
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
-      },
-      "import": {
-        "types": "./dist/index.d.mts",
-        "default": "./dist/index.mjs"
-      }
-    },
+    ".": "./dist/index.js",
+    "./alert": "./dist/alert/index.js",
+    "./badge": "./dist/badge/index.js",
+    "./blockquote": "./dist/blockquote/index.js",
+    "./button": "./dist/button/index.js",
+    "./dialog": "./dist/dialog/index.js",
+    "./divider": "./dist/divider/index.js",
+    "./dropdown": "./dist/dropdown/index.js",
+    "./form": "./dist/form/index.js",
+    "./heading": "./dist/heading/index.js",
+    "./icon": "./dist/icon/index.js",
+    "./list": "./dist/list/index.js",
+    "./pagination": "./dist/pagination/index.js",
+    "./router": "./dist/router/index.js",
+    "./spinner": "./dist/spinner/index.js",
+    "./table": "./dist/table/index.js",
+    "./tabs": "./dist/tabs/index.js",
+    "./timeline": "./dist/timeline/index.js",
+    "./toast": "./dist/toast/index.js",
     "./package.json": "./package.json"
   },
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.cts",
   "typesVersions": {
     "*": {
-      "*": ["dist/index.d.mts"]
+      "*": ["./dist/index.d.ts", "./dist/*/index.d.ts"]
     }
   },
-  "files": ["dist"],
+  "files": ["dist/*"],
   "scripts": {
     "clean": "rm -rf ./dist",
     "type:check": "tsc --noEmit",
     "dev": "vite",
-    "build:docs": "vite build --emptyOutDir",
-    "build": "pnpm run type:check && pkgroll --minify -p tsconfig.build.json",
-    "watch": "pkgroll --watch"
+    "build": "pnpm clean && tsc --project tsconfig.build.json",
+    "build:docs": "vite build --emptyOutDir"
   },
   "dependencies": {
     "@shrtcss/core": "workspace:*",
@@ -54,6 +58,8 @@
     "@storylite/storylite": "^0.15.1",
     "@storylite/vite-plugin": "^0.15.0",
     "@types/node": "^22.5.5",
+    "@types/react": "^18.3.8",
+    "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -62,8 +68,16 @@
     "vite": "^5.4.5"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@types/react": ">=18.3.7",
+    "react": "=>18.3.1"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=18.12.0"
   },
   "publishConfig": {
     "access": "public"

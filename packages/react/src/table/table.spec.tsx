@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, test } from 'vitest'
-import { type User, users } from './setup.data'
-import Table from './table'
+import { type User, users } from './setup.data.js'
+import Table from './table.js'
 
 describe('Table component test', () => {
   afterEach(cleanup)

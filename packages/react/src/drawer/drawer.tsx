@@ -1,7 +1,7 @@
 import { useAnimate } from '@shrtcss/react-hooks'
 import { useEffect, useRef, useState } from 'react'
-import type { SHRTComponentProps } from '../../types'
-import Button from '../button'
+import Button from '../button/button.js'
+import type { SHRTComponentProps } from '../types.js'
 
 export interface DrawerProps extends SHRTComponentProps<'aside'> {
   headerTitle?: string

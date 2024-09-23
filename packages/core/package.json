@@ -9,14 +9,12 @@
     "framework",
     "library",
     "lightweight",
-    "micro",
     "sass",
     "sass-framework",
     "sass-library",
     "scss",
     "scss-framework",
-    "scss-library",
-    "tiny"
+    "scss-library"
   ],
   "homepage": "https://shrtcss.jrson.me",
   "bugs": {

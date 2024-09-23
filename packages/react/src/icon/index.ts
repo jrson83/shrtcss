@@ -1,1 +1,1 @@
-export { default, type IconData, type IconProps } from './icon'
+export { default as Icon, type IconData, type IconProps } from './icon.js'

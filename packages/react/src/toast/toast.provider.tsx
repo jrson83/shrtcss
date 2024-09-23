@@ -1,8 +1,8 @@
 import React, { useCallback, useMemo, useReducer } from 'react'
-import { Toast } from './toast'
-import { ToastContext, type ToastContextStore } from './toast.context'
-import { toastReducer } from './toast.reducer'
-import type { ToastType } from './toast.types'
+import { ToastContext, type ToastContextStore } from './toast.context.js'
+import Toast from './toast.js'
+import { toastReducer } from './toast.reducer.js'
+import type { ToastType } from './toast.types.js'
 
 export interface ToastProviderProps {
   children?: React.ReactNode

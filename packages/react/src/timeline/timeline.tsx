@@ -1,7 +1,7 @@
 import type { SHRTColor } from '@shrtcss/core'
 import { cx } from 'classix'
-import type { SHRTComponentProps } from '../../types'
-import Icon, { type IconData } from '../icon'
+import Icon, { type IconData } from '../icon/icon.js'
+import type { SHRTComponentProps } from '../types.js'
 
 export type TimelineItemProps = Omit<TimeItem, 'id'> &
   Omit<SHRTComponentProps<'li'>, 'id'>

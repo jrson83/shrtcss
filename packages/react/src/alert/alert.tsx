@@ -1,8 +1,8 @@
 import type { SHRTColor, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
-import type { SHRTComponentProps } from '../../types'
-import Button from '../button'
-import Icon, { type IconData } from '../icon'
+import Button from '../button/button.js'
+import Icon, { type IconData } from '../icon/icon.js'
+import type { SHRTComponentProps } from '../types.js'
 
 export interface AlertProps extends Omit<SHRTComponentProps<'output'>, 'id'> {
   /** Alert color from theme - Defaults to `info` */

@@ -1,1 +1,1 @@
-export { default, type LabelProps } from './label'
+export { default as Label, type LabelProps } from './label.js'

@@ -1,4 +1,4 @@
-import { pathToRegexp } from './path-to-regexp'
+import { pathToRegexp } from './path-to-regexp.js'
 
 function matchRoutes(href: string, pathname: string) {
   const pattern = pathToRegexp(href)
@@ -6,12 +6,6 @@ function matchRoutes(href: string, pathname: string) {
   const match = path.match(pattern)
 
   if (!match) return null
-
-  /*  match.reduce((paramObj: any, value: string, index: number) => {
-    const name = names[index]
-    paramObj[name] = value
-    return paramObj
-  }, {}) */
 
   const matchedPathname = match[0]
   const captureGroups = match.groups

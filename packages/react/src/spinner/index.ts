@@ -1,1 +1,1 @@
-export { default, type SpinnerProps } from './spinner'
+export { default as Spinner, type SpinnerProps } from './spinner.js'

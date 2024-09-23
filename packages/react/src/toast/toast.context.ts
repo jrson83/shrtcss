@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import type { ToastType } from './toast.types'
+import type { ToastType } from './toast.types.js'
 
 export interface ToastContextStore {
   add: (data: Omit<ToastType, 'id'>) => void

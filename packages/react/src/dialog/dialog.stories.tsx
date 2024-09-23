@@ -1,9 +1,9 @@
 import { decoratorsTemplate } from '@/storylite/decorators'
-import { Story } from '@storylite/storylite'
+import type { Story } from '@storylite/storylite'
 import { useState } from 'react'
-import Button from '../button'
-import Dialog from './dialog'
+import Button from '../button/button.js'
 import Docs from './dialog.docs.mdx'
+import Dialog from './dialog.js'
 
 type StoryType = Story<typeof Dialog>
 type StoryDocsType = Story<typeof Docs>

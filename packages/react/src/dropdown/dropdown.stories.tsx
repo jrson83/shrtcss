@@ -1,8 +1,8 @@
 import { decoratorsTemplate } from '@/storylite/decorators'
-import { Story } from '@storylite/storylite'
-import Icon from '../icon'
-import Dropdown from './dropdown'
+import type { Story } from '@storylite/storylite'
+import Icon from '../icon/icon.js'
 import Docs from './dropdown.docs.mdx'
+import Dropdown from './dropdown.js'
 
 type StoryType = Story<typeof Dropdown>
 type StoryDocsType = Story<typeof Docs>

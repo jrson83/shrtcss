@@ -12,8 +12,8 @@ import {
   test,
   vi,
 } from 'vitest'
-import Button from '../button'
-import Dialog from './dialog'
+import Button from '../button/button.js'
+import Dialog from './dialog.js'
 
 describe('Dialog component test', () => {
   let dialogEvent: ReturnType<(typeof userEvent)['setup']>

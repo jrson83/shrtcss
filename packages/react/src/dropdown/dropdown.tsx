@@ -1,11 +1,11 @@
 import { useOnClickOutside } from '@shrtcss/react-hooks'
 import { cx } from 'classix'
 import { useRef, useState } from 'react'
-import type { SHRTComponentProps } from '../../types'
-import Button from '../button'
-import Divider from '../divider'
-import Icon from '../icon'
-import List, { ListItem } from '../list'
+import Button from '../button/button.js'
+import Divider from '../divider/divider.js'
+import Icon from '../icon/icon.js'
+import List, { ListItem } from '../list/list.js'
+import type { SHRTComponentProps } from '../types.js'
 
 export interface DropdownProps extends SHRTComponentProps<'div'> {
   /** Dropdown label */

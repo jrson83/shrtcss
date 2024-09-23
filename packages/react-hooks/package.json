@@ -12,44 +12,54 @@
     "directory": "packages/react-hooks"
   },
   "license": "MIT",
-  "sideEffects": false,
   "type": "module",
   "exports": {
-    ".": {
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
-      },
-      "import": {
-        "types": "./dist/index.d.mts",
-        "default": "./dist/index.mjs"
-      }
-    },
+    ".": "./dist/index.js",
+    "./use-animate": "./dist/use-animate.js",
+    "./use-event-listener": "./dist/use-event-listener.js",
+    "./use-focus-trap": "./dist/use-focus-trap.js",
+    "./use-form": "./dist/use-form.js",
+    "./use-full-screen": "./dist/use-full-screen.js",
+    "./use-history": "./dist/use-history.js",
+    "./use-is-mounted": "./dist/use-is-mounted.js",
+    "./use-isomorphic-layout-effect": "./dist/use-isomorphic-layout-effect.js",
+    "./use-match": "./dist/use-match.js",
+    "./use-on-click-outside": "./dist/use-on-click-outside.js",
+    "./use-window-focus": "./dist/use-window-focus.js",
+    "./use-window-size": "./dist/use-window-size.js",
+    "./utils": "./dist/utils/index.js",
     "./package.json": "./package.json"
   },
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.cts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "typesVersions": {
     "*": {
-      "*": ["dist/index.d.mts"]
+      "*": ["./dist/index.d.ts", "./dist/*"]
     }
   },
-  "files": ["dist", "src"],
+  "files": ["dist/*"],
   "scripts": {
     "clean": "rm -rf ./dist",
     "type:check": "tsc --noEmit",
-    "dev": "pnpm run watch",
-    "build": "pnpm run type:check && pkgroll --minify -p tsconfig.json",
-    "watch": "pkgroll --watch"
+    "build": "pnpm clean && tsc"
   },
   "devDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@types/node": "^22.5.5",
+    "@types/react": "^18.3.7",
+    "react": "^18.3.1"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@types/react": ">=18.3.7",
+    "react": "=>18.3.1"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=18.12.0"
   },
   "publishConfig": {
     "access": "public"

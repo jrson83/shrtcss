@@ -10,8 +10,8 @@ import {
   test,
   vi,
 } from 'vitest'
-import Icon from '../icon'
-import Dropdown from './dropdown'
+import Icon from '../icon/icon.js'
+import Dropdown from './dropdown.js'
 
 describe('Dropdown component test', () => {
   let dropdownEvent: ReturnType<(typeof userEvent)['setup']>

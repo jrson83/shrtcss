@@ -1,4 +1,4 @@
-import type { SHRTComponentProps } from '../../types'
+import type { SHRTComponentProps } from '../types.js'
 
 export interface BlockquoteProps extends SHRTComponentProps<'blockquote'> {
   /** Blockquote footer cite */
