@@ -9,7 +9,7 @@ importers:
   .:
     devDependencies:
       '@biomejs/biome':
-        specifier: ^1.9.1
+        specifier: ^1.9.2
         version: 1.9.2
       '@bscotch/workspaces':
         specifier: ^0.3.0
