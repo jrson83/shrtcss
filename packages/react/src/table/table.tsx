@@ -1,6 +1,6 @@
 import { cx } from 'classix'
 import type { ReactNode } from 'react'
-import type { SHRTComponentProps } from '../types.js'
+import type { SHRTComponentPropsWithoutRef } from '../types.js'
 
 export type ColumnType<T, K extends keyof T> = {
   key: K
@@ -8,7 +8,7 @@ export type ColumnType<T, K extends keyof T> = {
 }
 
 export interface TableProps<T, K extends keyof T>
-  extends SHRTComponentProps<'table'> {
+  extends SHRTComponentPropsWithoutRef<'table'> {
   /** Array of data */
   items?: T[]
 

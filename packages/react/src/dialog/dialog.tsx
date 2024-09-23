@@ -3,11 +3,11 @@ import { cx } from 'classix'
 import { useEffect, useRef } from 'react'
 import Button from '../button/button.js'
 import Icon from '../icon/icon.js'
-import type { SHRTComponentProps } from '../types.js'
+import type { SHRTComponentPropsWithoutRef } from '../types.js'
 
 export const browserSupportsHas = CSS.supports?.('selector(html:has(body))')
 
-export interface DialogProps extends SHRTComponentProps<'dialog'> {
+export interface DialogProps extends SHRTComponentPropsWithoutRef<'dialog'> {
   name?: string
   type?: 'error' | 'warning' | 'info' | 'success'
   title?: string

@@ -1,7 +1,7 @@
 import { cx } from 'classix'
-import type { SHRTComponentProps } from '../../types.js'
+import type { SHRTComponentPropsWithoutRef } from '../../types.js'
 
-export interface InputProps extends SHRTComponentProps<'input'> {
+export interface InputProps extends SHRTComponentPropsWithoutRef<'input'> {
   className?: string
 }
 

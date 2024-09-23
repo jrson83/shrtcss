@@ -3,9 +3,9 @@ import { cx } from 'classix'
 import { useCallback } from 'react'
 import Button from '../button/button.js'
 import Icon from '../icon/icon.js'
-import type { SHRTComponentProps } from '../types.js'
+import type { SHRTComponentPropsWithoutRef } from '../types.js'
 
-export interface PaginationProps extends SHRTComponentProps<'nav'> {
+export interface PaginationProps extends SHRTComponentPropsWithoutRef<'nav'> {
   /** The current page item */
   currentPage?: number
 

@@ -2,9 +2,10 @@ import type { SHRTColor, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
 import Button from '../button/button.js'
 import Icon, { type IconData } from '../icon/icon.js'
-import type { SHRTComponentProps } from '../types.js'
+import type { SHRTComponentPropsWithoutRef } from '../types.js'
 
-export interface AlertProps extends Omit<SHRTComponentProps<'output'>, 'id'> {
+export interface AlertProps
+  extends Omit<SHRTComponentPropsWithoutRef<'output'>, 'id'> {
   /** Alert color from theme - Defaults to `info` */
   color?: SHRTColor
 
@@ -50,7 +51,7 @@ export default function Alert({
     >
       {hasIcon && (
         <Icon
-          iconId={color as IconData}
+          iconId={`ios-${color}` as IconData}
           title="Status"
           size={26}
           className={`${alertOrToast}__icon ${alertOrToast}__icon-${color}`}

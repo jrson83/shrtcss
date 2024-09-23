@@ -5,9 +5,9 @@ import Button from '../button/button.js'
 import Divider from '../divider/divider.js'
 import Icon from '../icon/icon.js'
 import List, { ListItem } from '../list/list.js'
-import type { SHRTComponentProps } from '../types.js'
+import type { SHRTComponentPropsWithoutRef } from '../types.js'
 
-export interface DropdownProps extends SHRTComponentProps<'div'> {
+export interface DropdownProps extends SHRTComponentPropsWithoutRef<'div'> {
   /** Dropdown label */
   label?: string
 

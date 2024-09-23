@@ -1,19 +1,24 @@
 import { cx } from 'classix'
-import type { SHRTComponentProps } from '../types.js'
+import type { SHRTComponentPropsWithoutRef } from '../types.js'
 
-export interface DividerProps extends SHRTComponentProps<'hr'> {
+export type DividerType<T extends string | undefined = undefined> =
+  T extends string
+    ? SHRTComponentPropsWithoutRef<'div'>
+    : SHRTComponentPropsWithoutRef<'hr'>
+
+export type DividerProps<T extends string | undefined = undefined> = {
   /** Divider label */
-  label?: string
+  label?: T
 
   /** Divider orientation */
   orientation?: 'vertical' | 'horizontal'
-}
+} & DividerType<T>
 
-export default function Divider({
+export default function Divider<T extends string | undefined = undefined>({
   label,
   orientation = 'horizontal',
   ...rest
-}: DividerProps) {
+}: DividerProps<T>) {
   if (label) {
     return (
       <div className="divider" {...rest}>

@@ -1,8 +1,8 @@
 import { cx } from 'classix'
-import type { SHRTComponentProps } from '../../types.js'
+import type { SHRTComponentPropsWithoutRef } from '../../types.js'
 import Label from '../label/label.js'
 
-export interface FormGroupProps extends SHRTComponentProps<'div'> {
+export interface FormGroupProps extends SHRTComponentPropsWithoutRef<'div'> {
   label?: string
   ifta?: boolean
   helper?: string

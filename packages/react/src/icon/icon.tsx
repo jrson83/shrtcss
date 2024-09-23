@@ -1,9 +1,10 @@
-import type { SHRTComponentProps } from '../types.js'
+import type { SHRTComponentPropsWithoutRef } from '../types.js'
 import { icons } from './icon.data.js'
 
 export type IconData = (typeof icons)[number]
 
-export interface IconProps extends Omit<SHRTComponentProps<'svg'>, 'title'> {
+export interface IconProps
+  extends Omit<SHRTComponentPropsWithoutRef<'svg'>, 'title'> {
   /** Available icons  */
   iconId?: IconData
 

@@ -1,4 +1,4 @@
-import type { SHRTComponentProps } from '../../types.js'
+import type { SHRTComponentPropsWithoutRef } from '../../types.js'
 
 export interface SelectInputProps<Item> {
   items: Item[]
@@ -10,7 +10,7 @@ export interface SelectInputProps<Item> {
 
 export type SelectInputPropsx<Item> =
   /* Omit< */
-  SHRTComponentProps<'select'> /* ,
+  SHRTComponentPropsWithoutRef<'select'> /* ,
   'onChange'
 > */ &
     SelectInputProps<Item>

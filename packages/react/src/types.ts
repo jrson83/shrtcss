@@ -1,3 +1,10 @@
-import type { ComponentProps, ElementType } from 'react'
+import type {
+  ComponentPropsWithRef,
+  ComponentPropsWithoutRef,
+  ElementType,
+} from 'react'
 
-export type SHRTComponentProps<E extends ElementType> = ComponentProps<E>
+export type SHRTComponentPropsWithRef<E extends ElementType> =
+  ComponentPropsWithRef<E>
+export type SHRTComponentPropsWithoutRef<E extends ElementType> =
+  ComponentPropsWithoutRef<E>

@@ -1,11 +1,11 @@
 import { useForm } from '@shrtcss/react-hooks'
 import Button from '../button/button.js'
-import type { SHRTComponentProps } from '../types.js'
+import type { SHRTComponentPropsWithoutRef } from '../types.js'
 import FormGroup from './form-group/form-group.js'
 import Input from './input/input.js'
 import Label from './label/label.js'
 
-export type FormProps = SHRTComponentProps<'form'>
+export type FormProps = SHRTComponentPropsWithoutRef<'form'>
 
 export interface TestForm {
   id: number
