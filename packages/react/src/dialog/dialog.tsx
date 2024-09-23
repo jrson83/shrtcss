@@ -5,8 +5,6 @@ import Button from '../button/button.js'
 import Icon from '../icon/icon.js'
 import type { SHRTComponentPropsWithoutRef } from '../types.js'
 
-export const browserSupportsHas = CSS.supports?.('selector(html:has(body))')
-
 export interface DialogProps extends SHRTComponentPropsWithoutRef<'dialog'> {
   name?: string
   type?: 'error' | 'warning' | 'info' | 'success'
@@ -48,6 +46,10 @@ export default function Dialog({
   closeDialog,
   ...rest
 }: DialogProps) {
+  const browserSupportsHas =
+    typeof CSS !== 'undefined' &&
+    typeof CSS.supports === 'function' &&
+    CSS.supports('selector(html:has(body))')
   const dialogRef = useRef<HTMLDialogElement | null>(null)
   const shown = useRef<boolean>(false)
 
