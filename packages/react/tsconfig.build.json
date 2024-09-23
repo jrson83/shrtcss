@@ -13,7 +13,8 @@
     "noImplicitReturns": true,
     "isolatedModules": true,
     "removeComments": true,
-    "moduleDetection": "force"
+    "moduleDetection": "force",
+    "paths": {}
   },
   "include": ["src/index.ts"],
   "exclude": [
