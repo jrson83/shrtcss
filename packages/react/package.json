@@ -40,7 +40,7 @@
       "*": ["./dist/index.d.ts", "./dist/*/index.d.ts"]
     }
   },
-  "files": ["dist/*"],
+  "files": ["dist/*", "public/assets", "public/fonts"],
   "scripts": {
     "clean": "rm -rf ./dist",
     "type:check": "tsc --noEmit",
