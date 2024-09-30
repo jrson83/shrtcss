@@ -1,13 +1,10 @@
 import type { SHRTColor, SHRTSize, SHRTVariant } from '@shrtcss/core'
 import { cx } from 'classix'
-import { type MouseEvent, forwardRef } from 'react'
+import { forwardRef } from 'react'
 import Icon, { type IconData } from '../icon/icon.js'
 import type { SHRTComponentPropsWithRef } from '../types.js'
 
-export type ButtonProps = Omit<
-  SHRTComponentPropsWithRef<'button'>,
-  'onClick'
-> & {
+export interface ButtonProps extends SHRTComponentPropsWithRef<'button'> {
   /** Button color from theme */
   color?: SHRTColor
 
@@ -31,9 +28,6 @@ export type ButtonProps = Omit<
 
   /** Set text-transform to uppercase */
   uppercase?: boolean
-
-  /** Button onClick event */
-  onClick?: (event: MouseEvent<Element>) => void
 }
 
 export default forwardRef<HTMLButtonElement, ButtonProps>(
