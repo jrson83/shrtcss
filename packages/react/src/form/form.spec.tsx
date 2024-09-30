@@ -13,10 +13,12 @@ import {
 import Form from './form.js'
 
 describe('Form component test', () => {
+  // @ts-expect-error
   let submitEvent: ReturnType<(typeof userEvent)['setup']>
   let spyButton: MockInstance
 
   beforeEach(() => {
+    // @ts-expect-error
     submitEvent = userEvent.setup()
     spyButton = vi.spyOn(submitEvent, 'click')
   })
