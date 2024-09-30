@@ -18,6 +18,7 @@ This aims to be the featherweight champion of SCSS/CSS component libraries in th
 - [x] Badge
 - [x] Blockquote
 - [x] Button
+- [x] ContentEditable
 - [ ] Dialog
 - [x] Divider
 - [ ] Drawer
