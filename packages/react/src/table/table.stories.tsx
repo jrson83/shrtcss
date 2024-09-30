@@ -1,5 +1,6 @@
 import { decoratorsTemplate } from '@/storylite/decorators'
 import type { Story } from '@storylite/storylite'
+import ContentEditable from '../content-editable/content-editable.js'
 import { type User, users } from './setup.data.js'
 import Docs from './table.docs.mdx'
 import Table from './table.js'
@@ -42,6 +43,35 @@ export const DefaultStory: StoryType = {
           { key: 'username', header: 'Username' },
           { key: 'address', header: 'Address' },
           { key: 'role', header: 'Role' },
+        ]}
+        caption="Userlist"
+      />
+    )
+  },
+}
+
+export const WithComponent: StoryType = {
+  component: () => {
+    return (
+      <Table<User, keyof User>
+        items={users}
+        columns={[
+          { key: 'username', header: 'Username' },
+          { key: 'address', header: 'Address' },
+          {
+            key: 'role',
+            header: 'Role',
+            render: (_, record) => {
+              return (
+                <ContentEditable
+                  content={record.role}
+                  data-id={record.id}
+                  onInput={() => console.log('onInput', record.id)}
+                  onBlur={() => console.log('onBlur', record.id)}
+                />
+              )
+            },
+          },
         ]}
         caption="Userlist"
       />

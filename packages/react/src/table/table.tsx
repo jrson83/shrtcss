@@ -1,10 +1,12 @@
+// https://medium.com/@thashwiniwattuhewa/generic-react-table-component-1407a6fc2179
 import { cx } from 'classix'
-import type { ReactNode } from 'react'
+import type { ReactElement } from 'react'
 import type { SHRTComponentPropsWithoutRef } from '../types.js'
 
-export type ColumnType<T, K extends keyof T> = {
+export type ColumnProps<T, K extends keyof T> = {
   key: K
   header: string
+  render?: (column: ColumnProps<T, K>, item: T) => ReactElement
 }
 
 export interface TableProps<T, K extends keyof T>
@@ -17,7 +19,7 @@ export interface TableProps<T, K extends keyof T>
    *
    * `[{ key: 'example', header: 'Example' }]`
    */
-  columns?: ColumnType<T, K>[]
+  columns?: ColumnProps<T, K>[]
 
   /** Defines a table caption */
   caption?: string
@@ -39,7 +41,7 @@ export interface TableProps<T, K extends keyof T>
 }
 
 export interface TableHeaderProps<T, K extends keyof T> {
-  columns: ColumnType<T, K>[]
+  columns: ColumnProps<T, K>[]
 }
 
 export function TableHeader<T, K extends keyof T>({
@@ -67,6 +69,24 @@ export default function Table<T, K extends keyof T>({
   responsive = false,
   striped = false,
 }: TableProps<T, K>) {
+  const rows = !items?.length ? (
+    <tr>
+      <td colSpan={columns?.length} className="text-center">
+        No data
+      </td>
+    </tr>
+  ) : (
+    items?.map((item, idx) => (
+      <tr key={idx}>
+        {columns?.map((column, idx) => {
+          const val = column.render
+            ? column.render(column, item)
+            : (item[column.key] as string)
+          return <td key={idx}>{val}</td>
+        })}
+      </tr>
+    ))
+  )
   return (
     <table
       className={cx(
@@ -79,15 +99,7 @@ export default function Table<T, K extends keyof T>({
     >
       {caption && <caption>{caption}</caption>}
       {columns && <TableHeader columns={columns} />}
-      <tbody>
-        {items?.map((item, idx) => (
-          <tr key={idx}>
-            {columns?.map((column) => (
-              <td key={String(column.key)}>{item[column.key] as ReactNode}</td>
-            ))}
-          </tr>
-        ))}
-      </tbody>
+      <tbody>{rows}</tbody>
       {tfoot && (
         <tfoot>
           <tr>
