@@ -20,6 +20,15 @@ export default defineConfig({
     }),
     react(),
   ],
+  css: {
+    preprocessorOptions: {
+      // https://github.com/sass/dart-sass/issues/2352
+      // https://vitejs.dev/config/shared-options.html#css-preprocessoroptions
+      scss: {
+        api: 'modern',
+      },
+    },
+  },
   build: {
     outDir: fileURLToPath(new URL('../../docs', import.meta.url)),
     rollupOptions: {
