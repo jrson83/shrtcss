@@ -19,6 +19,7 @@
     "./badge": "./dist/badge/index.js",
     "./blockquote": "./dist/blockquote/index.js",
     "./button": "./dist/button/index.js",
+    "./content-editable": "./dist/content-editable/index.js",
     "./dialog": "./dist/dialog/index.js",
     "./divider": "./dist/divider/index.js",
     "./dropdown": "./dist/dropdown/index.js",

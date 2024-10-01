@@ -5,6 +5,7 @@
     "exactOptionalPropertyTypes": false,
     "declaration": true,
     "emitDeclarationOnly": false,
+    "rootDir": "./src",
     "outDir": "./dist",
     "jsx": "react-jsx",
     "sourceMap": true,
