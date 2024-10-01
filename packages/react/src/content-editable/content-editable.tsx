@@ -23,6 +23,7 @@ export default function ContentEditable({
 }: ContentEditableProps) {
   return (
     <div
+      {...rest}
       className={cx(className)}
       data-id={rest['data-id']}
       // biome-ignore lint/security/noDangerouslySetInnerHtml: editable
