@@ -56,21 +56,24 @@ export const WithComponent: StoryType = {
       <Table<User, keyof User>
         items={users}
         columns={[
-          { key: 'username', header: 'Username' },
-          { key: 'address', header: 'Address' },
           {
-            key: 'role',
-            header: 'Role',
+            key: 'username',
+            header: 'Username',
             render: (_, record) => {
               return (
                 <ContentEditable
-                  content={record.role}
+                  content={record.username}
                   data-id={record.id}
                   onInput={() => console.log('onInput', record.id)}
                   onBlur={() => console.log('onBlur', record.id)}
                 />
               )
             },
+          },
+          { key: 'address', header: 'Address' },
+          {
+            key: 'role',
+            header: 'Role',
           },
         ]}
         caption="Userlist"

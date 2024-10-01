@@ -897,8 +897,6 @@ hr:not(.vertical) {
 }
 .form__field {
   width: 100%;
-  /* margin: 0 0 20px;
-  padding: 35px 20px 15px; */
   padding-top: 32px;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -908,7 +906,7 @@ hr:not(.vertical) {
   font-size: var(--font-size-sm);
 }
 
-select:not([multiple], [size]), input:not([type=hidden], [type=checkbox], [type=radio], [type=button], [type=submit], [type=reset], [type=color], [type=file], [type=image], [type=range]),
+[contenteditable=true], select:not([multiple], [size]), input:not([type=hidden], [type=checkbox], [type=radio], [type=button], [type=submit], [type=reset], [type=color], [type=file], [type=image], [type=range]),
 textarea {
   width: 100%;
   border: 1px solid var(--shrt-color-border);
@@ -987,6 +985,15 @@ select:not([multiple], [size]):active, select:not([multiple], [size]):focus {
   padding-top: 30px;
   padding-bottom: 10px;
   padding-left: 15px;
+}
+
+[contenteditable=true] {
+  padding: 0.25rem;
+}
+[contenteditable=true]:focus-visible {
+  border: 1px solid var(--shrt-color-accent);
+  outline: none;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
 }
 
 .list-group {
