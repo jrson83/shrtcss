@@ -1,6 +1,6 @@
 {
   "name": "@shrtcss/core",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A lightweight SCSS/CSS library.",
   "keywords": [
     "css",
