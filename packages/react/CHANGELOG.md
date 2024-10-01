@@ -1,5 +1,39 @@
 # Changelog - @shrtcss/react
 
+## 0.1.3 (2024-10-01)
+
+### Features
+
+- add content-editable styles ([96890d7](https://github.com/jrson83/shrtcss/commit/96890d7))
+- add trash icon ([51a719a](https://github.com/jrson83/shrtcss/commit/51a719a))
+- update table component to work with components ([816bb19](https://github.com/jrson83/shrtcss/commit/816bb19))
+- add content-editable component ([3c2db5c](https://github.com/jrson83/shrtcss/commit/3c2db5c))
+
+### Bug Fixes
+
+- fix peer-dependencies react ([9a3e10f](https://github.com/jrson83/shrtcss/commit/9a3e10f))
+- fix button on-change types ([c35eb7d](https://github.com/jrson83/shrtcss/commit/c35eb7d))
+- add missing assets to publish ([000b451](https://github.com/jrson83/shrtcss/commit/000b451))
+- fix dialog & drawer stories ([e3400ee](https://github.com/jrson83/shrtcss/commit/e3400ee))
+- fix global type imports ([2058bd2](https://github.com/jrson83/shrtcss/commit/2058bd2))
+- use ssr-safe feature detection ([eae4dd4](https://github.com/jrson83/shrtcss/commit/eae4dd4))
+
+### Builds
+
+- update dependency classix to ^2.2.0 ([337d12a](https://github.com/jrson83/shrtcss/commit/337d12a))
+- update dependency @vitejs/plugin-react to ^4.3.2 ([643355f](https://github.com/jrson83/shrtcss/commit/643355f))
+- update dependency @types/react to v18.3.10 ([d06ed7a](https://github.com/jrson83/shrtcss/commit/d06ed7a))
+- update dependency @types/node to ^22.7.4 ([e1bbc47](https://github.com/jrson83/shrtcss/commit/e1bbc47))
+- update dependency @types/react to v18.3.9 ([0832eab](https://github.com/jrson83/shrtcss/commit/0832eab))
+- update dependency vite to ^5.4.8 ([d704897](https://github.com/jrson83/shrtcss/commit/d704897))
+- update dependency @types/node to ^22.7.0 ([62c7227](https://github.com/jrson83/shrtcss/commit/62c7227))
+- update dependency @types/node to ^22.6.1 ([7c36def](https://github.com/jrson83/shrtcss/commit/7c36def))
+- update dependency classix to ^2.1.39 ([aa2a62f](https://github.com/jrson83/shrtcss/commit/aa2a62f))
+
+### Tests
+
+- fix test issue ([23d5ce6](https://github.com/jrson83/shrtcss/commit/23d5ce6))
+
 ## 0.1.2 (2024-09-23)
 
 ### Code Refactoring

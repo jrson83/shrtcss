@@ -1,5 +1,20 @@
 # Changelog - @shrtcss/react-hooks
 
+## 0.1.3 (2024-10-01)
+
+### Bug Fixes
+
+- fix peer-dependencies react ([1388489](https://github.com/jrson83/shrtcss/commit/1388489))
+- fix global type imports ([d5e973e](https://github.com/jrson83/shrtcss/commit/d5e973e))
+
+### Builds
+
+- update dependency @types/react to v18.3.10 ([d06ed7a](https://github.com/jrson83/shrtcss/commit/d06ed7a))
+- update dependency @types/node to ^22.7.4 ([e1bbc47](https://github.com/jrson83/shrtcss/commit/e1bbc47))
+- update dependency @types/react to v18.3.9 ([0832eab](https://github.com/jrson83/shrtcss/commit/0832eab))
+- update dependency @types/node to ^22.7.0 ([62c7227](https://github.com/jrson83/shrtcss/commit/62c7227))
+- update dependency @types/node to ^22.6.1 ([7c36def](https://github.com/jrson83/shrtcss/commit/7c36def))
+
 ## 0.1.2 (2024-09-23)
 
 ### Code Refactoring

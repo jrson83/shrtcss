@@ -1,5 +1,11 @@
 # Changelog - @shrtcss/core
 
+## 0.1.3 (2024-10-01)
+
+### Features
+
+- add content-editable styles ([96890d7](https://github.com/jrson83/shrtcss/commit/96890d7))
+
 ## 0.1.2 (2024-09-23)
 
 ### Code Refactoring
