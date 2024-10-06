@@ -51,7 +51,17 @@ export default function Alert({
     >
       {hasIcon && (
         <Icon
-          iconId={`ios-${color}` as IconData}
+          iconId={
+            `ios-${
+              color === 'info'
+                ? 'information-circle'
+                : color === 'success'
+                  ? 'checkmark-circle'
+                  : color === 'danger'
+                    ? 'close-circle'
+                    : 'warning'
+            }` as IconData
+          }
           title="Status"
           size={26}
           className={`${alertOrToast}__icon ${alertOrToast}__icon-${color}`}
