@@ -1,6 +1,6 @@
 import { decoratorsTemplate } from '@/storylite/decorators'
 import type { Story } from '@storylite/storylite'
-import Docs from './ic.docs.mdx'
+import Docs from './icon.docs.mdx'
 import Icon from './icon.js'
 
 type StoryType = Story<typeof Icon>

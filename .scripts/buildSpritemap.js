@@ -8,7 +8,10 @@ import { cwd } from 'node:process'
 
 // https://icones.netlify.app/collection/ion
 const defaultIcons = [
+  'caret-down',
+  'caret-up',
   'ellipsis-vertical',
+  'filter',
   'game-controller',
   'logo-github',
   'md-expand',

@@ -1,5 +1,8 @@
 export const icons = [
+  'caret-down',
+  'caret-up',
   'ellipsis-vertical',
+  'filter',
   'game-controller',
   'logo-github',
   'md-expand',
