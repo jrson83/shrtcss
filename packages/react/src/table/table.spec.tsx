@@ -12,9 +12,9 @@ describe('Table component test', () => {
       <Table<User, keyof User>
         items={users}
         columns={[
-          { key: 'username', header: 'Username' },
-          { key: 'address', header: 'Address' },
-          { key: 'role', header: 'Role' },
+          { key: 'username', label: 'Username' },
+          { key: 'address', label: 'Address' },
+          { key: 'role', label: 'Role' },
         ]}
         caption="Userlist"
       />

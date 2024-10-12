@@ -40,9 +40,9 @@ export const DefaultStory: StoryType = {
       <Table<User, keyof User>
         items={users}
         columns={[
-          { key: 'username', header: 'Username' },
-          { key: 'address', header: 'Address' },
-          { key: 'role', header: 'Role' },
+          { key: 'username', label: 'Username' },
+          { key: 'address', label: 'Address' },
+          { key: 'role', label: 'Role' },
         ]}
         caption="Userlist"
       />
@@ -58,7 +58,7 @@ export const WithComponent: StoryType = {
         columns={[
           {
             key: 'username',
-            header: 'Username',
+            label: 'Username',
             render: (_, record) => {
               return (
                 <ContentEditable
@@ -70,10 +70,10 @@ export const WithComponent: StoryType = {
               )
             },
           },
-          { key: 'address', header: 'Address' },
+          { key: 'address', label: 'Address' },
           {
             key: 'role',
-            header: 'Role',
+            label: 'Role',
           },
         ]}
         caption="Userlist"

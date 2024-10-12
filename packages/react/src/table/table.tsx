@@ -1,25 +1,28 @@
 // https://medium.com/@thashwiniwattuhewa/generic-react-table-component-1407a6fc2179
 import { cx } from 'classix'
 import type { ReactElement } from 'react'
+import Button from '../button/button.js'
+import Icon from '../icon/icon.js'
 import type { SHRTComponentPropsWithoutRef } from '../types.js'
 
 export type ColumnProps<T, K extends keyof T> = {
   key: K
-  header: string
+  label: string
+  sortable?: boolean
   render?: (column: ColumnProps<T, K>, item: T) => ReactElement
 }
 
 export interface TableProps<T, K extends keyof T>
   extends SHRTComponentPropsWithoutRef<'table'> {
-  /** Array of data */
-  items?: T[]
-
   /**
    * Table header column array of objects
    *
-   * `[{ key: 'example', header: 'Example' }]`
+   * `[{ key: 'example', label: 'Example' }]`
    */
   columns?: ColumnProps<T, K>[]
+
+  /** Array of data */
+  items?: T[]
 
   /** Defines a table caption */
   caption?: string
@@ -40,23 +43,23 @@ export interface TableProps<T, K extends keyof T>
   striped?: boolean
 }
 
-export interface TableHeaderProps<T, K extends keyof T> {
+/* export interface TableHeadProps<T, K extends keyof T> {
   columns: ColumnProps<T, K>[]
 }
 
-export function TableHeader<T, K extends keyof T>({
-  columns,
-}: TableHeaderProps<T, K>) {
+function TableHead<T, K extends keyof T>({ columns }: TableHeadProps<T, K>) {
   return (
     <thead>
       <tr>
-        {columns.map((column) => (
-          <th key={String(column.key)}>{column.header}</th>
+        {columns.map(({ key, label }) => (
+          <th key={String(key)} scope="col">
+            {label}
+          </th>
         ))}
       </tr>
     </thead>
   )
-}
+} */
 
 export default function Table<T, K extends keyof T>({
   className = 'table',
@@ -71,9 +74,7 @@ export default function Table<T, K extends keyof T>({
 }: TableProps<T, K>) {
   const rows = !items?.length ? (
     <tr>
-      <td colSpan={columns?.length} className="text-center">
-        No data
-      </td>
+      <td colSpan={columns?.length}>No data</td>
     </tr>
   ) : (
     items?.map((item, idx) => (
@@ -82,7 +83,23 @@ export default function Table<T, K extends keyof T>({
           const val = column.render
             ? column.render(column, item)
             : (item[column.key] as string)
-          return <td key={idx}>{val}</td>
+          if (idx !== 0) {
+            return (
+              <td
+                key={idx}
+                {...(column.key === 'action' && {
+                  id: `action-${idx}`,
+                })}
+              >
+                {val}
+              </td>
+            )
+          }
+          return (
+            <th key={idx} scope="row">
+              {val}
+            </th>
+          )
         })}
       </tr>
     ))
@@ -98,17 +115,60 @@ export default function Table<T, K extends keyof T>({
       )}
     >
       {caption && <caption>{caption}</caption>}
-      {columns && <TableHeader columns={columns} />}
+      {columns && (
+        <thead style={{ border: 'none' }}>
+          <tr style={{ border: 'none' }}>
+            {columns.map(({ key, label, sortable = false }) => (
+              <th key={String(key)} scope="col">
+                {!sortable ? (
+                  <>{label}</>
+                ) : (
+                  <Button
+                    className="btn btn-fw"
+                    style={{ justifyContent: 'space-between' }}
+                  >
+                    {label}
+                    <span style={{ display: 'grid' }}>
+                      <Icon iconId={'caret-up'} size={14} />
+                      <Icon iconId={'caret-down'} size={14} />
+                    </span>
+                  </Button>
+                )}
+              </th>
+            ))}
+          </tr>
+        </thead>
+      )}
       <tbody>{rows}</tbody>
       {tfoot && (
         <tfoot>
           <tr>
-            {columns?.map((column) => (
-              <th key={String(column.key)}>{column.header}</th>
-            ))}
+            {columns?.map((column, idx) => {
+              if (idx !== 0) {
+                return <td key={String(column.key)}>{column.label}</td>
+              }
+              return (
+                <th key={String(column.key)} scope="row">
+                  {column.label}
+                </th>
+              )
+            })}
           </tr>
         </tfoot>
       )}
     </table>
+  )
+}
+
+export function TableResult({
+  from,
+  to,
+  total,
+}: { from: number; to: number; total: number }) {
+  return (
+    <small>
+      Showing <strong>{from}</strong> to <strong>{to}</strong> of{' '}
+      <strong>{total}</strong> entries
+    </small>
   )
 }

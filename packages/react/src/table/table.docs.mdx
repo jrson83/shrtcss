@@ -2,4 +2,87 @@
 title: Docs
 ---
 
-Todo
+import Table from './table'
+
+export const users = [
+  {
+    id: 1,
+    username: 'cattrill0',
+    address: '710 Banding Junction',
+    role: 'Engineer',
+  },
+  {
+    id: 2,
+    username: 'mhunnam1',
+    address: '1715 Norway Maple Way',
+    role: 'Subcontractor',
+  },
+  {
+    id: 3,
+    username: 'brollo2',
+    address: '979 Canary Avenue',
+    role: 'Engineer',
+  },
+]
+
+# Table
+
+## Default
+
+<Table
+  bordered={false}
+  items={users}
+  columns={[
+    { key: 'username', label: 'Username' },
+    { key: 'address', label: 'Address' },
+    { key: 'role', label: 'Role' },
+  ]}
+/>
+
+## With Border
+
+<Table
+  items={users}
+  columns={[
+    { key: 'username', label: 'Username' },
+    { key: 'address', label: 'Address' },
+    { key: 'role', label: 'Role' },
+  ]}
+/>
+
+## Striped & Hover
+
+<Table
+  striped={true}
+  hover={true}
+  items={users}
+  columns={[
+    { key: 'username', label: 'Username' },
+    { key: 'address', label: 'Address' },
+    { key: 'role', label: 'Role' },
+  ]}
+/>
+
+## Responsive
+
+<Table
+  responsive={true}
+  items={users}
+  columns={[
+    { key: 'username', label: 'Username' },
+    { key: 'address', label: 'Address' },
+    { key: 'role', label: 'Role' },
+  ]}
+/>
+
+## With Caption
+
+<Table
+  items={users}
+  columns={[
+    { key: 'username', label: 'Username' },
+    { key: 'address', label: 'Address' },
+    { key: 'role', label: 'Role' },
+  ]}
+  caption="Userlist"
+/>

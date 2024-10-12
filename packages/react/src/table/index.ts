@@ -1,1 +1,1 @@
-export { default as Table, type TableProps } from './table.js'
+export { default as Table, TableResult, type TableProps } from './table.js'
