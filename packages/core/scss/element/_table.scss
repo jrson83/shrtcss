@@ -4,10 +4,9 @@
 
 @mixin generate-table {
   .table {
-    @include margin('bottom');
-
     width: 100%;
-    max-width: 100%;
+    height: 100%;
+    white-space: nowrap;
 
     caption {
       @include margin('bottom');
@@ -18,7 +17,8 @@
 
     th,
     td {
-      @include padding('all', 'sm');
+      @include padding('x', 'md');
+      @include padding('y', 'sm');
 
       text-align: left;
     }
@@ -32,11 +32,11 @@
 
     &-div {
       thead {
-        border-bottom: 2px solid color('border');
+        border-block-end: 2px solid color('border');
       }
     
       :not(tfoot) td {
-        border-bottom: 1px solid color('border');
+        border-block-end: 1px solid color('border');
       }
     }
 
@@ -48,7 +48,7 @@
 
     &-hover {
       tbody tr:hover {
-        background-color: color('surface-raised');
+        background-color: color('surface-lowered');
       }
     }
 
@@ -58,7 +58,31 @@
 
     thead {
       th {
+        background-color: color('surface');
+        border-block-end: 1px solid color('border');
+        color: color('text-weaker');
         font-weight: 600;
+      }
+
+      th[id^="action-"] {
+        width: 1px;
+        white-space: nowrap;
+      }
+    }
+
+    tbody {
+      th {
+        font-weight: normal;
+      }
+
+      td[id^="action-"] {
+        width: 1px;
+        white-space: nowrap;
+      }
+
+      :not(:last-of-type) td,
+      :not(:last-of-type) th {
+        border-block-end: 1px solid color('border');
       }
     }
   }
