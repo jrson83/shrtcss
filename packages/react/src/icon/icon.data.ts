@@ -3,6 +3,8 @@ export const icons = [
   'caret-up',
   'ellipsis-vertical',
   'filter',
+  'funnel',
+  'funnel-outline',
   'game-controller',
   'logo-github',
   'md-expand',
