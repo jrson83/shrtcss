@@ -1,0 +1,67 @@
+@use '../config' as *;
+@use '../function' as *;
+@use '../mixin' as *;
+
+@mixin generate-card {
+  .card {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    block-size: 100%;
+    border: 1px solid color('border');
+    border-radius: config($border, 'radius');
+
+    &__header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      background-color: color('bg');
+      gap: 0.5rem;
+      border-block-end: 1px solid color('border');
+      color: color('header');
+      font-weight: 400;
+
+      @include padding('x', 'md');
+      @include padding('y', 'sm');
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      inline-size: 100%;
+      max-inline-size: 100%;
+      overflow-x: auto;
+      background-color: color('bg');
+      gap: 0.5rem;
+    }
+
+    &__footer {
+      background-color: color('surface');
+      border-block-start: 1px solid color('border');
+
+      @include padding('x', 'md');
+      @include padding('y', 'sm');
+
+      &-pagination {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        & small {
+          color: color('text-weaker');
+        }
+
+        @include breakpoint('md', 'max') {
+          grid-template-columns: auto;
+          row-gap: 0.5rem;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}

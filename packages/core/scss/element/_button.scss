@@ -6,7 +6,7 @@
   .btn {
     @extend %component-properties;
 
-    min-width: 2.75em;
+    min-width: max-content;
     height: 2.75em;
     padding: 0 1em;
     border-style: config($border, 'style');

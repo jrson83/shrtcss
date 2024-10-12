@@ -51,6 +51,10 @@
     @include generate-utilities;
   }
 
+  @if map-deep-get($settings, 'modules', 'accessibility') {
+    @include generate-accessibility;
+  }
+
   @if map-deep-get($settings, 'modules', 'scale') {
     @include generate-scales;
   }
@@ -69,6 +73,10 @@
 
   @if map-deep-get($settings, 'components', 'button') {
     @include generate-button;
+  }
+
+  @if map-deep-get($settings, 'components', 'card') {
+    @include generate-card;
   }
 
   @if map-deep-get($settings, 'components', 'dialog') {
