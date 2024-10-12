@@ -18,6 +18,9 @@ export interface PaginationProps extends SHRTComponentPropsWithoutRef<'nav'> {
   /** Predefined pagination size */
   size?: SHRTSize
 
+  /** Align */
+  align?: 'start' | 'center' | 'end'
+
   /** Event occurs on page change */
   onPageChange?: (page: number) => void
 }
@@ -26,7 +29,8 @@ export default function Pagination({
   currentPage,
   itemsPerPage = 10,
   totalItems = 0,
-  size,
+  size = 'md',
+  align = 'center',
   onPageChange,
 }: PaginationProps) {
   if (!currentPage)
@@ -48,13 +52,11 @@ export default function Pagination({
   )
 
   return (
-    <nav id="pagination">
-      <ul
-        className={cx('pagination', size && `pagination-${size}`)}
-        aria-label="Pagination"
-        itemScope
-        itemType="http://schema.org/SiteNavigationElement/Pagination"
-      >
+    <nav
+      aria-label="pagination"
+      className={cx('pagination-wrapper', `pagination-wrapper-${align}`)}
+    >
+      <ul className={cx('pagination', size && `pagination-${size}`)}>
         <li className="prev">
           <Button
             type="button"

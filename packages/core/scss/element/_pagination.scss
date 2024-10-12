@@ -48,3 +48,24 @@
     }  
   }
 }
+
+
+.pagination-wrapper {
+  display: flex;
+
+  .pagination {
+    width: unset;
+  }
+
+  &-start {
+    justify-content: start;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-end {
+    justify-content: end;
+  }
+}
