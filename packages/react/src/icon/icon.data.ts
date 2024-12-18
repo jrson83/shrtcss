@@ -9,6 +9,7 @@ export const icons = [
   'logo-github',
   'md-expand',
   'playstation',
+  'thermometer',
   'warning-outline',
   'ios-add',
   'ios-add-circle',
