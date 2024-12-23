@@ -27,8 +27,8 @@ importers:
         specifier: ^22.10.2
         version: 22.10.2
       happy-dom:
-        specifier: ^15.7.4
-        version: 15.7.4
+        specifier: ^15.11.7
+        version: 15.11.7
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -55,7 +55,7 @@ importers:
         version: 5.4.11(@types/node@22.10.2)(sass@1.79.5)
       vitest:
         specifier: ^2.1.8
-        version: 2.1.8(@types/node@22.10.2)(happy-dom@15.7.4)(sass@1.79.5)
+        version: 2.1.8(@types/node@22.10.2)(happy-dom@15.11.7)(sass@1.79.5)
 
   packages/core:
     devDependencies:
@@ -1233,8 +1233,8 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
-  happy-dom@15.7.4:
-    resolution: {integrity: sha512-r1vadDYGMtsHAAsqhDuk4IpPvr6N8MGKy5ntBo7tSdim+pWDxus2PNqOcOt8LuDZ4t3KJHE+gCuzupcx/GKnyQ==}
+  happy-dom@15.11.7:
+    resolution: {integrity: sha512-KyrFvnl+J9US63TEzwoiJOQzZBJY7KgBushJA8X61DMbNsH+2ONkDuLDnCnwUiPTF42tLoEmrPyoqbenVA5zrg==}
     engines: {node: '>=18.0.0'}
 
   has-flag@3.0.0:
@@ -3209,7 +3209,7 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  happy-dom@15.7.4:
+  happy-dom@15.11.7:
     dependencies:
       entities: 4.5.0
       webidl-conversions: 7.0.0
@@ -4276,7 +4276,7 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.79.5
 
-  vitest@2.1.8(@types/node@22.10.2)(happy-dom@15.7.4)(sass@1.79.5):
+  vitest@2.1.8(@types/node@22.10.2)(happy-dom@15.11.7)(sass@1.79.5):
     dependencies:
       '@vitest/expect': 2.1.8
       '@vitest/mocker': 2.1.8(vite@5.4.11(@types/node@22.10.2)(sass@1.79.5))
@@ -4300,7 +4300,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.10.2
-      happy-dom: 15.7.4
+      happy-dom: 15.11.7
     transitivePeerDependencies:
       - less
       - lightningcss

@@ -35,7 +35,7 @@
     "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
     "@types/node": "^22.10.2",
-    "happy-dom": "^15.7.4",
+    "happy-dom": "^15.11.7",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "sass": "^1.79.5",
