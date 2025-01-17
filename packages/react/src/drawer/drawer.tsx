@@ -15,12 +15,12 @@ export default function Drawer({
   closeDrawer,
   children,
 }: DrawerProps) {
-  const drawerRef = useRef<HTMLElement>(null)
+  const drawerRef = useRef<HTMLElement | null>(null)
   const [animate, setAnimate] = useState<boolean>(isOpen)
 
   useAnimate({
     animate,
-    elementRef: drawerRef,
+    ref: drawerRef,
     animationOptions: {
       easing: 'ease-in-out',
       duration: 150,

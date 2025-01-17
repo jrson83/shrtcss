@@ -1,8 +1,8 @@
 import { type RefObject, useCallback, useEffect, useRef } from 'react'
 
-export interface UseAnimateOptions<T extends HTMLElement> {
+export interface UseAnimateOptions {
   animate: boolean
-  elementRef: RefObject<T>
+  ref: RefObject<HTMLElement | null>
   /** Options for configuring keyframe-based animations */
   animationOptions?: KeyframeAnimationOptions
   animations?: {
@@ -10,9 +10,9 @@ export interface UseAnimateOptions<T extends HTMLElement> {
     end: Keyframe[]
   }
 }
-const useAnimate = <T extends HTMLElement>({
+const useAnimate = ({
   animate,
-  elementRef,
+  ref,
   animationOptions = {
     easing: 'ease-in-out',
     duration: 1000,
@@ -22,15 +22,15 @@ const useAnimate = <T extends HTMLElement>({
     start: [{ opacity: '0' }, { opacity: '1' }],
     end: [{ opacity: '1' }, { opacity: '0' }],
   },
-}: UseAnimateOptions<T>) => {
+}: UseAnimateOptions) => {
   const shouldRender = useRef<boolean>(false)
 
   useEffect(() => {
-    if (animate) {
-      elementRef.current?.animate(animations.start, animationOptions)
+    if (animate && ref) {
+      ref.current?.animate(animations.start, animationOptions)
       shouldRender.current = true
-    } else if (!animate && shouldRender.current) {
-      elementRef.current?.animate(animations.end, animationOptions)
+    } else if (!animate && shouldRender.current && ref) {
+      ref.current?.animate(animations.end, animationOptions)
       shouldRender.current = false
     }
   }, [animate])

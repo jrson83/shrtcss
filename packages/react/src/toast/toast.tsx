@@ -35,7 +35,7 @@ export function ToastAlert({
   const { remove } = useToasts()
   const [willDismiss, setWillDismiss] = useState(false)
 
-  const timerID = useRef<NodeJS.Timeout>()
+  const timerID = useRef<NodeJS.Timeout>(undefined)
 
   const handleDismiss = () => {
     if (!willDismiss) setWillDismiss(true)
