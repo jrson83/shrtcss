@@ -41,6 +41,7 @@ const defaultIcons = [
   'ios-information',
   'ios-information-circle',
   'ios-information-circle-outline',
+  'ios-menu',
   'ios-settings',
   'ios-trash',
   'ios-trash-outline',
