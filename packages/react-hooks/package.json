@@ -45,7 +45,7 @@
     "build": "pnpm clean && tsc"
   },
   "devDependencies": {
-    "@types/node": "^22.10.7",
+    "@types/node": "^22.10.10",
     "@types/react": "^19.0.7",
     "react": "^19.0.0"
   },
