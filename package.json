@@ -33,7 +33,7 @@
     "@bscotch/workspaces": "^0.3.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
-    "@testing-library/user-event": "^14.6.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^22.10.7",
     "happy-dom": "^16.6.0",
     "husky": "^9.1.7",
