@@ -48,12 +48,12 @@
   },
   "engines": {
     "node": ">=21.7.2",
-    "pnpm": ">=9.15.3"
+    "pnpm": ">=9.15.5"
   },
   "nano-staged": {
     "*.{ts,tsx}": "biome lint --write .",
     "*.{ts,tsx,json}": "biome format . --write",
     "*.scss": "stylelint \"./packages/**/*.scss\" --fix"
   },
-  "packageManager": "pnpm@9.15.3"
+  "packageManager": "pnpm@9.15.5"
 }
