@@ -27,8 +27,8 @@ importers:
         specifier: ^22.14.1
         version: 22.14.1
       happy-dom:
-        specifier: ^16.6.0
-        version: 16.6.0
+        specifier: ^16.8.1
+        version: 16.8.1
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -55,7 +55,7 @@ importers:
         version: 6.0.7(@types/node@22.14.1)(sass@1.83.4)(yaml@2.7.0)
       vitest:
         specifier: ^3.0.9
-        version: 3.0.9(@types/debug@4.1.12)(@types/node@22.14.1)(happy-dom@16.6.0)(sass@1.83.4)(yaml@2.7.0)
+        version: 3.0.9(@types/debug@4.1.12)(@types/node@22.14.1)(happy-dom@16.8.1)(sass@1.83.4)(yaml@2.7.0)
 
   packages/core:
     devDependencies:
@@ -1374,8 +1374,8 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
-  happy-dom@16.6.0:
-    resolution: {integrity: sha512-Zz5S9sog8a3p8XYZbO+eI1QMOAvCNnIoyrH8A8MLX+X2mJrzADTy+kdETmc4q+uD9AGAvQYGn96qBAn2RAciKw==}
+  happy-dom@16.8.1:
+    resolution: {integrity: sha512-n0QrmT9lD81rbpKsyhnlz3DgnMZlaOkJPpgi746doA+HvaMC79bdWkwjrNnGJRvDrWTI8iOcJiVTJ5CdT/AZRw==}
     engines: {node: '>=18.0.0'}
 
   has-flag@4.0.0:
@@ -3479,7 +3479,7 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  happy-dom@16.6.0:
+  happy-dom@16.8.1:
     dependencies:
       webidl-conversions: 7.0.0
       whatwg-mimetype: 3.0.0
@@ -4574,7 +4574,7 @@ snapshots:
       sass: 1.83.4
       yaml: 2.7.0
 
-  vitest@3.0.9(@types/debug@4.1.12)(@types/node@22.14.1)(happy-dom@16.6.0)(sass@1.83.4)(yaml@2.7.0):
+  vitest@3.0.9(@types/debug@4.1.12)(@types/node@22.14.1)(happy-dom@16.8.1)(sass@1.83.4)(yaml@2.7.0):
     dependencies:
       '@vitest/expect': 3.0.9
       '@vitest/mocker': 3.0.9(vite@6.0.7(@types/node@22.14.1)(sass@1.83.4)(yaml@2.7.0))
@@ -4599,7 +4599,7 @@ snapshots:
     optionalDependencies:
       '@types/debug': 4.1.12
       '@types/node': 22.14.1
-      happy-dom: 16.6.0
+      happy-dom: 16.8.1
     transitivePeerDependencies:
       - jiti
       - less
