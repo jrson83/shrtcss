@@ -39,7 +39,7 @@
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "sass": "^1.87.0",
-    "stylelint": "^16.13.2",
+    "stylelint": "^16.19.1",
     "stylelint-config-property-sort-order-smacss": "^10.0.0",
     "stylelint-config-standard-scss": "^14.0.0",
     "typescript": "^5.7.3",
