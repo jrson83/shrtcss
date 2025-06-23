@@ -24,8 +24,8 @@ importers:
         specifier: ^14.6.1
         version: 14.6.1(@testing-library/dom@10.4.0)
       '@types/node':
-        specifier: ^22.15.29
-        version: 22.15.31
+        specifier: ^22.15.32
+        version: 22.15.32
       happy-dom:
         specifier: ^16.8.1
         version: 16.8.1
@@ -52,10 +52,10 @@ importers:
         version: 5.8.3
       vite:
         specifier: ^6.0.7
-        version: 6.3.5(@types/node@22.15.31)(sass@1.89.2)(yaml@2.8.0)
+        version: 6.3.5(@types/node@22.15.32)(sass@1.89.2)(yaml@2.8.0)
       vitest:
         specifier: ^3.0.9
-        version: 3.2.3(@types/debug@4.1.12)(@types/node@22.15.31)(happy-dom@16.8.1)(sass@1.89.2)(yaml@2.8.0)
+        version: 3.2.3(@types/debug@4.1.12)(@types/node@22.15.32)(happy-dom@16.8.1)(sass@1.89.2)(yaml@2.8.0)
 
   packages/core:
     devDependencies:
@@ -83,13 +83,13 @@ importers:
         version: 3.1.0(acorn@8.15.0)(rollup@4.43.0)
       '@storylite/storylite':
         specifier: ^0.15.1
-        version: 0.15.1(@types/node@22.15.31)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+        version: 0.15.1(@types/node@22.15.32)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
       '@storylite/vite-plugin':
         specifier: ^0.15.0
-        version: 0.15.0(@types/node@22.15.31)(sass@1.89.2)
+        version: 0.15.0(@types/node@22.15.32)(sass@1.89.2)
       '@types/node':
-        specifier: ^22.15.29
-        version: 22.15.31
+        specifier: ^22.15.32
+        version: 22.15.32
       '@types/react':
         specifier: ^19.0.12
         version: 19.1.8
@@ -98,7 +98,7 @@ importers:
         version: 19.1.6(@types/react@19.1.8)
       '@vitejs/plugin-react':
         specifier: ^4.5.0
-        version: 4.5.2(vite@6.3.5(@types/node@22.15.31)(sass@1.89.2)(yaml@2.8.0))
+        version: 4.5.2(vite@6.3.5(@types/node@22.15.32)(sass@1.89.2)(yaml@2.8.0))
       react:
         specifier: ^19.0.0
         version: 19.1.0
@@ -113,13 +113,13 @@ importers:
         version: 5.2.0
       vite:
         specifier: ^6.0.7
-        version: 6.3.5(@types/node@22.15.31)(sass@1.89.2)(yaml@2.8.0)
+        version: 6.3.5(@types/node@22.15.32)(sass@1.89.2)(yaml@2.8.0)
 
   packages/react-hooks:
     devDependencies:
       '@types/node':
-        specifier: ^22.15.29
-        version: 22.15.31
+        specifier: ^22.15.32
+        version: 22.15.32
       '@types/react':
         specifier: ^19.0.12
         version: 19.1.8
@@ -917,8 +917,8 @@ packages:
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
 
-  '@types/node@22.15.31':
-    resolution: {integrity: sha512-jnVe5ULKl6tijxUhvQeNbQG/84fHfg+yMak02cT8QVhBx/F05rAVxCGBYYTh2EKz22D6JF5ktXuNwdx7b9iEGw==}
+  '@types/node@22.15.32':
+    resolution: {integrity: sha512-3jigKqgSjsH6gYZv2nEsqdXfZqIFGAV36XYYjf9KGZ3PSG+IhLecqPnI310RvjutyMwifE2hhhNEklOUrvx/wA==}
 
   '@types/react-dom@19.1.6':
     resolution: {integrity: sha512-4hOiT/dwO8Ko0gV1m/TJZYk3y0KBnY9vzDh7W+DH17b2HFSOGgdj33dhihPeuy3l0q23+4e+hoXHV6hCC4dCXw==}
@@ -2891,9 +2891,9 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.43.0':
     optional: true
 
-  '@storylite/storylite@0.15.1(@types/node@22.15.31)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)':
+  '@storylite/storylite@0.15.1(@types/node@22.15.32)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)':
     dependencies:
-      '@types/node': 22.15.31
+      '@types/node': 22.15.32
       '@types/react': 19.1.8
       '@types/react-dom': 19.1.6(@types/react@19.1.8)
       clsx: 2.1.1
@@ -2904,9 +2904,9 @@ snapshots:
     transitivePeerDependencies:
       - immer
 
-  '@storylite/vite-plugin@0.15.0(@types/node@22.15.31)(sass@1.89.2)':
+  '@storylite/vite-plugin@0.15.0(@types/node@22.15.32)(sass@1.89.2)':
     dependencies:
-      vite: 5.4.19(@types/node@22.15.31)(sass@1.89.2)
+      vite: 5.4.19(@types/node@22.15.32)(sass@1.89.2)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -3005,7 +3005,7 @@ snapshots:
 
   '@types/ms@2.1.0': {}
 
-  '@types/node@22.15.31':
+  '@types/node@22.15.32':
     dependencies:
       undici-types: 6.21.0
 
@@ -3023,7 +3023,7 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@vitejs/plugin-react@4.5.2(vite@6.3.5(@types/node@22.15.31)(sass@1.89.2)(yaml@2.8.0))':
+  '@vitejs/plugin-react@4.5.2(vite@6.3.5(@types/node@22.15.32)(sass@1.89.2)(yaml@2.8.0))':
     dependencies:
       '@babel/core': 7.27.4
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.27.4)
@@ -3031,7 +3031,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.11
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
-      vite: 6.3.5(@types/node@22.15.31)(sass@1.89.2)(yaml@2.8.0)
+      vite: 6.3.5(@types/node@22.15.32)(sass@1.89.2)(yaml@2.8.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -3043,13 +3043,13 @@ snapshots:
       chai: 5.2.0
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@3.2.3(vite@6.3.5(@types/node@22.15.31)(sass@1.89.2)(yaml@2.8.0))':
+  '@vitest/mocker@3.2.3(vite@6.3.5(@types/node@22.15.32)(sass@1.89.2)(yaml@2.8.0))':
     dependencies:
       '@vitest/spy': 3.2.3
       estree-walker: 3.0.3
       magic-string: 0.30.17
     optionalDependencies:
-      vite: 6.3.5(@types/node@22.15.31)(sass@1.89.2)(yaml@2.8.0)
+      vite: 6.3.5(@types/node@22.15.32)(sass@1.89.2)(yaml@2.8.0)
 
   '@vitest/pretty-format@3.2.3':
     dependencies:
@@ -4582,13 +4582,13 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-node@3.2.3(@types/node@22.15.31)(sass@1.89.2)(yaml@2.8.0):
+  vite-node@3.2.3(@types/node@22.15.32)(sass@1.89.2)(yaml@2.8.0):
     dependencies:
       cac: 6.7.14
       debug: 4.4.1
       es-module-lexer: 1.7.0
       pathe: 2.0.3
-      vite: 6.3.5(@types/node@22.15.31)(sass@1.89.2)(yaml@2.8.0)
+      vite: 6.3.5(@types/node@22.15.32)(sass@1.89.2)(yaml@2.8.0)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -4603,17 +4603,17 @@ snapshots:
       - tsx
       - yaml
 
-  vite@5.4.19(@types/node@22.15.31)(sass@1.89.2):
+  vite@5.4.19(@types/node@22.15.32)(sass@1.89.2):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.5.5
       rollup: 4.43.0
     optionalDependencies:
-      '@types/node': 22.15.31
+      '@types/node': 22.15.32
       fsevents: 2.3.3
       sass: 1.89.2
 
-  vite@6.3.5(@types/node@22.15.31)(sass@1.89.2)(yaml@2.8.0):
+  vite@6.3.5(@types/node@22.15.32)(sass@1.89.2)(yaml@2.8.0):
     dependencies:
       esbuild: 0.25.5
       fdir: 6.4.6(picomatch@4.0.2)
@@ -4622,16 +4622,16 @@ snapshots:
       rollup: 4.43.0
       tinyglobby: 0.2.14
     optionalDependencies:
-      '@types/node': 22.15.31
+      '@types/node': 22.15.32
       fsevents: 2.3.3
       sass: 1.89.2
       yaml: 2.8.0
 
-  vitest@3.2.3(@types/debug@4.1.12)(@types/node@22.15.31)(happy-dom@16.8.1)(sass@1.89.2)(yaml@2.8.0):
+  vitest@3.2.3(@types/debug@4.1.12)(@types/node@22.15.32)(happy-dom@16.8.1)(sass@1.89.2)(yaml@2.8.0):
     dependencies:
       '@types/chai': 5.2.2
       '@vitest/expect': 3.2.3
-      '@vitest/mocker': 3.2.3(vite@6.3.5(@types/node@22.15.31)(sass@1.89.2)(yaml@2.8.0))
+      '@vitest/mocker': 3.2.3(vite@6.3.5(@types/node@22.15.32)(sass@1.89.2)(yaml@2.8.0))
       '@vitest/pretty-format': 3.2.3
       '@vitest/runner': 3.2.3
       '@vitest/snapshot': 3.2.3
@@ -4649,12 +4649,12 @@ snapshots:
       tinyglobby: 0.2.14
       tinypool: 1.1.0
       tinyrainbow: 2.0.0
-      vite: 6.3.5(@types/node@22.15.31)(sass@1.89.2)(yaml@2.8.0)
-      vite-node: 3.2.3(@types/node@22.15.31)(sass@1.89.2)(yaml@2.8.0)
+      vite: 6.3.5(@types/node@22.15.32)(sass@1.89.2)(yaml@2.8.0)
+      vite-node: 3.2.3(@types/node@22.15.32)(sass@1.89.2)(yaml@2.8.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/debug': 4.1.12
-      '@types/node': 22.15.31
+      '@types/node': 22.15.32
       happy-dom: 16.8.1
     transitivePeerDependencies:
       - jiti
