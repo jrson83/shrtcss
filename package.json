@@ -42,7 +42,7 @@
     "stylelint": "^16.19.1",
     "stylelint-config-property-sort-order-smacss": "^10.0.0",
     "stylelint-config-standard-scss": "^14.0.0",
-    "typescript": "^5.7.3",
+    "typescript": "^5.8.3",
     "vite": "^6.0.7",
     "vitest": "^3.0.9"
   },
