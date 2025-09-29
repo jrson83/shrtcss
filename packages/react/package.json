@@ -59,7 +59,7 @@
     "@mdx-js/rollup": "^3.1.1",
     "@storylite/storylite": "^0.15.1",
     "@storylite/vite-plugin": "^0.15.0",
-    "@types/node": "^22.18.4",
+    "@types/node": "^22.18.6",
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.7.0",
