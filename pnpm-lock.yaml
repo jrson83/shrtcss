@@ -40,16 +40,16 @@ importers:
         version: 1.93.2
       stylelint:
         specifier: ^16.25.0
-        version: 16.25.0(typescript@5.8.3)
+        version: 16.25.0(typescript@5.9.3)
       stylelint-config-property-sort-order-smacss:
         specifier: ^10.0.0
-        version: 10.0.0(stylelint@16.25.0(typescript@5.8.3))
+        version: 10.0.0(stylelint@16.25.0(typescript@5.9.3))
       stylelint-config-standard-scss:
         specifier: ^14.0.0
-        version: 14.0.0(postcss@8.5.5)(stylelint@16.25.0(typescript@5.8.3))
+        version: 14.0.0(postcss@8.5.5)(stylelint@16.25.0(typescript@5.9.3))
       typescript:
-        specifier: ^5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
       vite:
         specifier: ^6.3.6
         version: 6.3.6(@types/node@22.18.11)(sass@1.93.2)(yaml@2.8.0)
@@ -83,7 +83,7 @@ importers:
         version: 3.1.1(acorn@8.15.0)(rollup@4.43.0)
       '@storylite/storylite':
         specifier: ^0.15.1
-        version: 0.15.1(@types/node@22.18.11)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+        version: 0.15.1(@types/node@22.18.11)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.9.3)
       '@storylite/vite-plugin':
         specifier: ^0.15.0
         version: 0.15.0(@types/node@22.18.11)(sass@1.93.2)
@@ -2164,8 +2164,8 @@ packages:
   trough@2.2.0:
     resolution: {integrity: sha512-tmMpK00BjZiUyVyvrBK7knerNgmgvcV/KLVyuma/SC+TQN167GrMRciANTz09+k3zW8L8t60jWO1GpfkZdjTaw==}
 
-  typescript@5.8.3:
-    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2965,7 +2965,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.43.0':
     optional: true
 
-  '@storylite/storylite@0.15.1(@types/node@22.18.11)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)':
+  '@storylite/storylite@0.15.1(@types/node@22.18.11)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.9.3)':
     dependencies:
       '@types/node': 22.18.11
       '@types/react': 19.1.8
@@ -2973,7 +2973,7 @@ snapshots:
       clsx: 2.1.1
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
-      typescript: 5.8.3
+      typescript: 5.9.3
       zustand: 4.5.7(@types/react@19.1.8)(react@19.1.0)
     transitivePeerDependencies:
       - immer
@@ -3299,14 +3299,14 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
-  cosmiconfig@9.0.0(typescript@5.8.3):
+  cosmiconfig@9.0.0(typescript@5.9.3):
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.1
       js-yaml: 4.1.0
       parse-json: 5.2.0
     optionalDependencies:
-      typescript: 5.8.3
+      typescript: 5.9.3
 
   css-functions-list@3.2.3: {}
 
@@ -4444,45 +4444,45 @@ snapshots:
     dependencies:
       inline-style-parser: 0.2.4
 
-  stylelint-config-property-sort-order-smacss@10.0.0(stylelint@16.25.0(typescript@5.8.3)):
+  stylelint-config-property-sort-order-smacss@10.0.0(stylelint@16.25.0(typescript@5.9.3)):
     dependencies:
       css-property-sort-order-smacss: 2.2.0
-      stylelint: 16.25.0(typescript@5.8.3)
-      stylelint-order: 6.0.4(stylelint@16.25.0(typescript@5.8.3))
+      stylelint: 16.25.0(typescript@5.9.3)
+      stylelint-order: 6.0.4(stylelint@16.25.0(typescript@5.9.3))
 
-  stylelint-config-recommended-scss@14.1.0(postcss@8.5.5)(stylelint@16.25.0(typescript@5.8.3)):
+  stylelint-config-recommended-scss@14.1.0(postcss@8.5.5)(stylelint@16.25.0(typescript@5.9.3)):
     dependencies:
       postcss-scss: 4.0.9(postcss@8.5.5)
-      stylelint: 16.25.0(typescript@5.8.3)
-      stylelint-config-recommended: 14.0.1(stylelint@16.25.0(typescript@5.8.3))
-      stylelint-scss: 6.12.1(stylelint@16.25.0(typescript@5.8.3))
+      stylelint: 16.25.0(typescript@5.9.3)
+      stylelint-config-recommended: 14.0.1(stylelint@16.25.0(typescript@5.9.3))
+      stylelint-scss: 6.12.1(stylelint@16.25.0(typescript@5.9.3))
     optionalDependencies:
       postcss: 8.5.5
 
-  stylelint-config-recommended@14.0.1(stylelint@16.25.0(typescript@5.8.3)):
+  stylelint-config-recommended@14.0.1(stylelint@16.25.0(typescript@5.9.3)):
     dependencies:
-      stylelint: 16.25.0(typescript@5.8.3)
+      stylelint: 16.25.0(typescript@5.9.3)
 
-  stylelint-config-standard-scss@14.0.0(postcss@8.5.5)(stylelint@16.25.0(typescript@5.8.3)):
+  stylelint-config-standard-scss@14.0.0(postcss@8.5.5)(stylelint@16.25.0(typescript@5.9.3)):
     dependencies:
-      stylelint: 16.25.0(typescript@5.8.3)
-      stylelint-config-recommended-scss: 14.1.0(postcss@8.5.5)(stylelint@16.25.0(typescript@5.8.3))
-      stylelint-config-standard: 36.0.1(stylelint@16.25.0(typescript@5.8.3))
+      stylelint: 16.25.0(typescript@5.9.3)
+      stylelint-config-recommended-scss: 14.1.0(postcss@8.5.5)(stylelint@16.25.0(typescript@5.9.3))
+      stylelint-config-standard: 36.0.1(stylelint@16.25.0(typescript@5.9.3))
     optionalDependencies:
       postcss: 8.5.5
 
-  stylelint-config-standard@36.0.1(stylelint@16.25.0(typescript@5.8.3)):
+  stylelint-config-standard@36.0.1(stylelint@16.25.0(typescript@5.9.3)):
     dependencies:
-      stylelint: 16.25.0(typescript@5.8.3)
-      stylelint-config-recommended: 14.0.1(stylelint@16.25.0(typescript@5.8.3))
+      stylelint: 16.25.0(typescript@5.9.3)
+      stylelint-config-recommended: 14.0.1(stylelint@16.25.0(typescript@5.9.3))
 
-  stylelint-order@6.0.4(stylelint@16.25.0(typescript@5.8.3)):
+  stylelint-order@6.0.4(stylelint@16.25.0(typescript@5.9.3)):
     dependencies:
       postcss: 8.5.5
       postcss-sorting: 8.0.2(postcss@8.5.5)
-      stylelint: 16.25.0(typescript@5.8.3)
+      stylelint: 16.25.0(typescript@5.9.3)
 
-  stylelint-scss@6.12.1(stylelint@16.25.0(typescript@5.8.3)):
+  stylelint-scss@6.12.1(stylelint@16.25.0(typescript@5.9.3)):
     dependencies:
       css-tree: 3.1.0
       is-plain-object: 5.0.0
@@ -4492,9 +4492,9 @@ snapshots:
       postcss-resolve-nested-selector: 0.1.6
       postcss-selector-parser: 7.1.0
       postcss-value-parser: 4.2.0
-      stylelint: 16.25.0(typescript@5.8.3)
+      stylelint: 16.25.0(typescript@5.9.3)
 
-  stylelint@16.25.0(typescript@5.8.3):
+  stylelint@16.25.0(typescript@5.9.3):
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.5(@csstools/css-tokenizer@3.0.4)
       '@csstools/css-tokenizer': 3.0.4
@@ -4503,7 +4503,7 @@ snapshots:
       '@dual-bundle/import-meta-resolve': 4.2.1
       balanced-match: 2.0.0
       colord: 2.9.3
-      cosmiconfig: 9.0.0(typescript@5.8.3)
+      cosmiconfig: 9.0.0(typescript@5.9.3)
       css-functions-list: 3.2.3
       css-tree: 3.1.0
       debug: 4.4.3
@@ -4584,7 +4584,7 @@ snapshots:
 
   trough@2.2.0: {}
 
-  typescript@5.8.3: {}
+  typescript@5.9.3: {}
 
   undici-types@6.21.0: {}
 
