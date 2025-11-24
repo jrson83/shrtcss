@@ -53,7 +53,7 @@
   "dependencies": {
     "@shrtcss/core": "workspace:*",
     "@shrtcss/react-hooks": "workspace:*",
-    "classix": "^2.2.5"
+    "classix": "^2.2.6"
   },
   "devDependencies": {
     "@mdx-js/rollup": "^3.1.1",
