@@ -75,8 +75,8 @@ importers:
         specifier: workspace:*
         version: link:../react-hooks
       classix:
-        specifier: ^2.2.5
-        version: 2.2.5
+        specifier: ^2.2.6
+        version: 2.2.6
     devDependencies:
       '@mdx-js/rollup':
         specifier: ^3.1.1
@@ -1146,8 +1146,8 @@ packages:
     resolution: {integrity: sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA==}
     engines: {node: '>= 14.16.0'}
 
-  classix@2.2.5:
-    resolution: {integrity: sha512-HMrslcmIfjjvdRT0NLE/RpYzjXGcIPGbI4u1t9oyPKWkR5ki8REKfKZEyFmAz+H2ZYoCN9jbecyOGRQ49jda4A==}
+  classix@2.2.6:
+    resolution: {integrity: sha512-GzMhtAyUKS4g2fFY04vAbOhoJ5cnt8M/9KInhh4XQOQ4DnHjHQ5U5LiGf6JK8BwN9EiifbESpEYkpJs4noUWNw==}
 
   cliui@8.0.1:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
@@ -3311,7 +3311,7 @@ snapshots:
     dependencies:
       readdirp: 4.1.2
 
-  classix@2.2.5: {}
+  classix@2.2.6: {}
 
   cliui@8.0.1:
     dependencies:
