@@ -46,12 +46,12 @@
   },
   "devDependencies": {
     "@types/node": "^22.19.3",
-    "@types/react": "^19.0.12",
-    "react": "^19.0.0"
+    "@types/react": "^19.2.7",
+    "react": "^19.2.3"
   },
   "peerDependencies": {
-    "@types/react": ">=19.0.12",
-    "react": ">=19.0.0"
+    "@types/react": ">=19.2.7",
+    "react": ">=19.2.3"
   },
   "peerDependenciesMeta": {
     "@types/react": {
