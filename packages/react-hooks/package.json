@@ -46,11 +46,11 @@
   },
   "devDependencies": {
     "@types/node": "^22.19.5",
-    "@types/react": "^19.2.7",
+    "@types/react": "^19.2.8",
     "react": "^19.2.3"
   },
   "peerDependencies": {
-    "@types/react": ">=19.2.7",
+    "@types/react": ">=19.2.8",
     "react": ">=19.2.3"
   },
   "peerDependenciesMeta": {

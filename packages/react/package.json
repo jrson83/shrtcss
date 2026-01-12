@@ -60,7 +60,7 @@
     "@storylite/storylite": "^0.15.1",
     "@storylite/vite-plugin": "^0.15.0",
     "@types/node": "^22.19.5",
-    "@types/react": "^19.2.7",
+    "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.7.0",
     "react": "^19.2.3",
@@ -70,7 +70,7 @@
     "vite": "^6.4.1"
   },
   "peerDependencies": {
-    "@types/react": ">=19.2.7",
+    "@types/react": ">=19.2.8",
     "react": ">=19.2.3"
   },
   "peerDependenciesMeta": {
