@@ -75,7 +75,7 @@ importers:
         specifier: workspace:*
         version: link:../react-hooks
       classix:
-        specifier: ^2.2.8
+        specifier: ^2.2.11
         version: 2.2.11
     devDependencies:
       '@mdx-js/rollup':
